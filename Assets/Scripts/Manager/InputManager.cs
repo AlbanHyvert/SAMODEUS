@@ -10,6 +10,12 @@ public class InputManager : Singleton<InputManager>
     private string _IDRight = "RIGHT";
     private string _IDInteraction = "INTERACTION";
 
+    private int _vertSensivity = 10;
+    private int _horiSensivity = 10;
+
+    public int VertSensivity { get { return _vertSensivity; } set { _vertSensivity = value; } }
+    public int HoriSensivity { get { return _horiSensivity; } set { _horiSensivity = value; } }
+
     private Vector3 _direction = Vector3.zero;
 
     #region KEYCODE
@@ -148,7 +154,7 @@ public class InputManager : Singleton<InputManager>
     #region METHODS
     private void Start()
     {
-        GameLoopManager.Instance.GetInput += OnUpdate;
+        GameLoopManager.Instance.UpdateInput += OnUpdate;
         GameLoopManager.Instance.Pause += IsPaused;
     }
 
@@ -156,11 +162,11 @@ public class InputManager : Singleton<InputManager>
     {
         if (pause == true)
         {
-            GameLoopManager.Instance.GetInput -= OnUpdate;
+            GameLoopManager.Instance.UpdateInput -= OnUpdate;
         }
         else
         {
-            GameLoopManager.Instance.GetInput += OnUpdate;
+            GameLoopManager.Instance.UpdateInput += OnUpdate;
         }
     }
 
@@ -265,7 +271,7 @@ public class InputManager : Singleton<InputManager>
 
     protected override void OnDestroy()
     {
-        GameLoopManager.Instance.GetInput -= OnUpdate;
+        GameLoopManager.Instance.UpdateInput -= OnUpdate;
         GameLoopManager.Instance.Pause -= IsPaused;
         _direction = Vector3.zero;
         _movement = null;

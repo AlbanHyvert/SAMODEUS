@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 _playerDir = Vector3.zero;
     #endregion FIELDS
 
-    #region Properties
+    #region PROPERTIES
     public Camera PlayerCamera { get { return _playerCam; } set { _playerCam = value; } }
     public float MoveSpeed { get { return _moveSpeed; } set { _moveSpeed = value; } }
     public float SprintMax { get { return _sprintMax; } set { _sprintMax = value; } }
@@ -31,13 +31,13 @@ public class PlayerController : MonoBehaviour
     public InteractionsController InteractionController { get { return _interactController; } }
     public AudioSource PlayerAudio { get { return _source; } }
     public bool IsWet { get { return _isWet; } }
-    #endregion Properties
+    #endregion PROPERTIES
 
     #region METHODS
     private void Start()
     {
         controller = GetComponent<CharacterController>();
-        GameLoopManager.Instance.GetInteractions += _interactController.OnUpdate;
+        GameLoopManager.Instance.UpdateInteractions += _interactController.OnUpdate;
         GameLoopManager.Instance.Pause += _interactController.IsPaused;
 
         InputManager.Instance.Move += Movement;
@@ -45,8 +45,8 @@ public class PlayerController : MonoBehaviour
         InputManager.Instance.ReleaseShift += Walk;
         InputManager.Instance.Jump += Movement;
         InputManager.Instance.Idle += Idle;
-        GameLoopManager.Instance.GetPlayer += OnUpdate;
-        GameLoopManager.Instance.SetGravity += Gravity;
+        GameLoopManager.Instance.UpdatePlayer += OnUpdate;
+        GameLoopManager.Instance.UpdateGravity += Gravity;
         GameLoopManager.Instance.Pause += IsPaused;
     }
 
@@ -58,10 +58,7 @@ public class PlayerController : MonoBehaviour
 
     private void Movement(Vector3 direction)
     {
-        if (controller.isGrounded)
-        {
-            direction *= _moveSpeed * _sprintMult;
-        }
+        direction *= _moveSpeed * _sprintMult;
         _headBobbing.OnHeadBobbing(direction);
         controller.Move(direction * Time.deltaTime);
     }
@@ -87,11 +84,11 @@ public class PlayerController : MonoBehaviour
     {
         if (pause == true)
         {
-            GameLoopManager.Instance.GetPlayer -= OnUpdate;
+            GameLoopManager.Instance.UpdatePlayer -= OnUpdate;
         }
         else
         {
-            GameLoopManager.Instance.GetPlayer += OnUpdate;
+            GameLoopManager.Instance.UpdatePlayer += OnUpdate;
         }
     }
 
@@ -117,7 +114,7 @@ public class PlayerController : MonoBehaviour
         InputManager.Instance.Move -= Movement;
         InputManager.Instance.PressShift -= Sprint;
         InputManager.Instance.ReleaseShift -= Walk;
-        GameLoopManager.Instance.GetPlayer -= OnUpdate;
+        GameLoopManager.Instance.UpdatePlayer -= OnUpdate;
         InputManager.Instance.Idle -= Idle;
     }
     #endregion METHODS

@@ -14,7 +14,7 @@ public class Runes : MonoBehaviour, IAction
     {
         valueZ = transform.eulerAngles.z;
         GameLoopManager.Instance.Pause += Paused;
-        GameLoopManager.Instance.GetInteractions += Rotation;
+        GameLoopManager.Instance.UpdateInteractions += Rotation;
     }
 
     void IAction.Enter()
@@ -29,11 +29,11 @@ public class Runes : MonoBehaviour, IAction
     {
         if (value == false)
         {
-            GameLoopManager.Instance.GetInteractions += Rotation;
+            GameLoopManager.Instance.UpdateInteractions += Rotation;
         }
         else
         {
-            GameLoopManager.Instance.GetInteractions -= Rotation;
+            GameLoopManager.Instance.UpdateInteractions -= Rotation;
         }
     }
 
@@ -47,11 +47,11 @@ public class Runes : MonoBehaviour, IAction
     {
         _isMathing = true;
         _vfxMat.GetComponent<Renderer>().sharedMaterial = _matchMat;
-        GameLoopManager.Instance.GetInteractions -= Rotation;
+        GameLoopManager.Instance.UpdateInteractions -= Rotation;
     }
 
     private void OnDestroy()
     {
-        GameLoopManager.Instance.GetInteractions -= Rotation;
+        GameLoopManager.Instance.UpdateInteractions -= Rotation;
     }
 }

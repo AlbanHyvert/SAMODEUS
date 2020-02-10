@@ -6,6 +6,7 @@
     {
         #region Fields
         private static T _instance = null;
+        private static object _lock = new object();
         #endregion Fields
 
         #region Properties
@@ -13,16 +14,23 @@
         {
             get
             {
-                if (_instance == null)
+                lock(_lock)
                 {
-                    _instance = FindObjectOfType<T>();
-
                     if (_instance == null)
                     {
-                        throw new System.Exception(typeof(T) + " Trying to access a nulled instance of a singleton. Exiting.");
+                        _instance = FindObjectOfType<T>();
+
+                        /*if (_instance == null)
+                        {
+                            var singletonObject = new GameObject();
+                            _instance = singletonObject.AddComponent<T>();
+                            singletonObject.name = typeof(T).ToString() + "(Singleton)";
+
+                            DontDestroyOnLoad(singletonObject);
+                        }*/
                     }
+                    return _instance;
                 }
-                return _instance;
             }
         }
         #endregion Properties
@@ -36,6 +44,7 @@
         protected virtual void OnDestroy()
         {
             _instance = null;
+            _lock = null;
         }
         #endregion Methods
     }

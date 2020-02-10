@@ -18,29 +18,12 @@ public class PlayerManager : Singleton<PlayerManager>
 
     private PlayerController _player = null;
     public PlayerController Player { get { return _player; } }
-
-    private PlayerState _currentState = PlayerState.ALIVE;
-    private Dictionary<PlayerState, IPlayerState> _states = null;
-
-    #region Properties
-    public PlayerState CurrentState { get { return _currentState; } }
-    public IPlayerState CurrentStateType { get { return _states[_currentState]; } }
-    #endregion Properties
-
     #endregion Fields
 
     #region Methods
     public void InstantiatePlayer(Vector3 position, Quaternion rotation)
     {
         _player = Instantiate(_playerPrefab, position, rotation);
-    }
-
-    private void Start()
-    {
-        if (_playerPrefab == null)
-        {
-            throw new System.Exception("PlayerManager is trying to access a missing component." + _playerPrefab + "Exiting.");
-        }
     }
     #endregion Methods
 }

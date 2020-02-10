@@ -14,7 +14,7 @@ public class CameraController : MonoBehaviour
 
     private void Start()
     {
-        GameLoopManager.Instance.GetCamera += OnUpdate;
+        GameLoopManager.Instance.UpdateCamera += OnUpdate;
         GameLoopManager.Instance.Pause += IsPaused;
 
         if (_cam == null)
@@ -27,11 +27,11 @@ public class CameraController : MonoBehaviour
     {
         if (pause == true)
         {
-            GameLoopManager.Instance.GetCamera -= OnUpdate;
+            GameLoopManager.Instance.UpdateCamera -= OnUpdate;
         }
         else
         {
-            GameLoopManager.Instance.GetCamera += OnUpdate;
+            GameLoopManager.Instance.UpdateCamera += OnUpdate;
         }
     }
 
@@ -40,8 +40,8 @@ public class CameraController : MonoBehaviour
         float mouseX = Input.GetAxis("Mouse X");
         float mouseY = Input.GetAxis("Mouse Y");
 
-        _player.Rotate(0, mouseX * InputFieldManager.Instance.HorizontalSensivity, 0);
-        _rotationX -= mouseY * InputFieldManager.Instance.VerticalSensivity;
+        _player.Rotate(0, mouseX * InputManager.Instance.HoriSensivity, 0);
+        _rotationX -= mouseY * InputManager.Instance.VertSensivity;
         _rotationX = Mathf.Clamp(_rotationX, _minVert, _maxVert);
 
         float rotationY = _player.localEulerAngles.y;
@@ -52,6 +52,6 @@ public class CameraController : MonoBehaviour
 
     private void OnDestroy()
     {
-        GameLoopManager.Instance.GetCamera -= OnUpdate;
+        GameLoopManager.Instance.UpdateCamera -= OnUpdate;
     }
 }

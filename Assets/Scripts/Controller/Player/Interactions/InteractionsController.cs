@@ -76,11 +76,11 @@ public class InteractionsController : MonoBehaviour
     {
         if (pause == true)
         {
-            GameLoopManager.Instance.GetInteractions -= OnUpdate;
+            GameLoopManager.Instance.UpdateInteractions -= OnUpdate;
         }
         else
         {
-            GameLoopManager.Instance.GetInteractions += OnUpdate;
+            GameLoopManager.Instance.UpdateInteractions += OnUpdate;
         }
     }
 
@@ -147,7 +147,7 @@ public class InteractionsController : MonoBehaviour
     {
         InputManager.Instance.Interact -= PickUp;
         InputManager.Instance.Interact -= OnInteract;
-        GameLoopManager.Instance.GetInteractions -= OnUpdate;
+        GameLoopManager.Instance.UpdateInteractions -= OnUpdate;
         InputManager.Instance.Interact -= Drop;
         InputManager.Instance.Interact -= Throw;
     }

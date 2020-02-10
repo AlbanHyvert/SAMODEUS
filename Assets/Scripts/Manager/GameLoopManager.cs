@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameLoopManager : Singleton<GameLoopManager>
 {
-    #region Fields
+    #region FIELDS
     private bool _isPaused = false;
     private Vector3 _direction = Vector3.zero;
     public bool IsPaused { get { return _isPaused; }
@@ -15,45 +15,46 @@ public class GameLoopManager : Singleton<GameLoopManager>
         }
     }
 
-    private event Action _getPlayer = null;
-    public event Action GetPlayer
+    #region EVENT UPDATE
+    private event Action _updatePlayer = null;
+    public event Action UpdatePlayer
     {
         add
         {
-            _getPlayer -= value;
-            _getPlayer += value;
+            _updatePlayer -= value;
+            _updatePlayer += value;
         }
         remove
         {
-            _getPlayer -= value;
+            _updatePlayer -= value;
         }
     }
 
-    private event Action<Vector3> _setGravity = null;
-    public event Action<Vector3> SetGravity
+    private event Action<Vector3> _updateGravity = null;
+    public event Action<Vector3> UpdateGravity
     {
         add
         {
-            _setGravity -= value;
-            _setGravity += value;
+            _updateGravity -= value;
+            _updateGravity += value;
         }
         remove
         {
-            _setGravity -= value;
+            _updateGravity -= value;
         }
     }
 
-    private event Action _getOther = null;
-    public event Action GetOther
+    private event Action _updateOther = null;
+    public event Action UpdateOther
     {
         add
         {
-            _getOther -= value;
-            _getOther += value;
+            _updateOther -= value;
+            _updateOther += value;
         }
         remove
         {
-            _getOther -= value;
+            _updateOther -= value;
         }
     }
 
@@ -71,76 +72,78 @@ public class GameLoopManager : Singleton<GameLoopManager>
         }
     }
 
-    private event Action _getInput = null;
-    public event Action GetInput
+    private event Action _updateInput = null;
+    public event Action UpdateInput
     {
         add
         {
-            _getInput -= value;
-            _getInput += value;
+            _updateInput -= value;
+            _updateInput += value;
         }
         remove
         {
-            _getInput -= value;
+            _updateInput -= value;
         }
     }
 
-    private event Action _getCamera = null;
-    public event Action GetCamera
+    private event Action _updateCamera = null;
+    public event Action UpdateCamera
     {
         add
         {
-            _getCamera -= value;
-            _getCamera += value;
+            _updateCamera -= value;
+            _updateCamera += value;
         }
         remove
         {
-            _getCamera -= value;
+            _updateCamera -= value;
         }
     }
 
-    private event Action _getHeadBobbing = null;
-    public event Action GetHeadBobbing
+    private event Action _updateHeadBobbing = null;
+    public event Action UpdateHeadBobbing
     {
         add
         {
-            _getHeadBobbing -= value;
-            _getHeadBobbing += value;
+            _updateHeadBobbing -= value;
+            _updateHeadBobbing += value;
         }
         remove
         {
-            _getHeadBobbing -= value;
+            _updateHeadBobbing -= value;
         }
     }
 
-    private event Action _getInteractions = null;
-    public event Action GetInteractions
+    private event Action _updateInteractions = null;
+    public event Action UpdateInteractions
     {
         add
         {
-            _getInteractions -= value;
-            _getInteractions += value;
+            _updateInteractions -= value;
+            _updateInteractions += value;
         }
         remove
         {
-            _getInteractions -= value;
+            _updateInteractions -= value;
         }
     }
 
-    private event Action _getCanvas = null;
-    public event Action GetCanvas
+    private event Action _updateCanvas = null;
+    public event Action UpdateCanvas
     {
         add
         {
-            _getCanvas -= value;
-            _getCanvas += value;
+            _updateCanvas -= value;
+            _updateCanvas += value;
         }
         remove
         {
-            _getCanvas -= value;
+            _updateCanvas -= value;
         }
     }
-    #endregion Fields
+    #endregion EVENT UPDATE
+
+    #endregion FIELDS
 
     private void Start()
     {
@@ -154,38 +157,39 @@ public class GameLoopManager : Singleton<GameLoopManager>
             IsPaused = !IsPaused;
         }
 
-        if(_setGravity != null)
+        if(_updateGravity != null)
         {
-            _setGravity(_direction);
-        }
-        if(_getCanvas != null)
-        {
-            _getCanvas();
+            _updateGravity(_direction);
         }
 
-        if (_getPlayer != null)
-            {
-                _getPlayer();
-            }
-
-        if (_getCamera != null)
-            {
-                _getCamera();
-            }
-
-        if (_getHeadBobbing != null)
-            {
-                _getHeadBobbing();
-            }
-
-        if (_getInteractions != null)
-            {
-                _getInteractions();
-            }
-
-        if(_getOther != null)
+        if(_updateCanvas != null)
         {
-            _getOther();
+            _updateCanvas();
+        }
+
+        if (_updatePlayer != null)
+            {
+                _updatePlayer();
+            }
+
+        if (_updateCamera != null)
+            {
+                _updateCamera();
+            }
+
+        if (_updateHeadBobbing != null)
+            {
+                _updateHeadBobbing();
+            }
+
+        if (_updateInteractions != null)
+            {
+                _updateInteractions();
+            }
+
+        if(_updateOther != null)
+        {
+            _updateOther();
         }
     }
 
@@ -193,22 +197,22 @@ public class GameLoopManager : Singleton<GameLoopManager>
     {
         if (_isPaused == false)
         {
-            if (_getInput != null)
+            if (_updateInput != null)
             {
-                _getInput();
+                _updateInput();
             }
         }
     }
 
     protected override void OnDestroy()
     {
-        _getPlayer = null;
-        _getInput = null;
-        _getCamera = null;
-        _getInteractions = null;
-        _getHeadBobbing = null;
-        _getCanvas = null;
+        _updatePlayer = null;
+        _updateInput = null;
+        _updateCamera = null;
+        _updateInteractions = null;
+        _updateHeadBobbing = null;
+        _updateCanvas = null;
         _isPaused = false;
-        _getOther = null;
+        _updateOther = null;
     }
 }

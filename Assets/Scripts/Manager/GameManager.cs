@@ -23,6 +23,7 @@ public class GameManager : Singleton<GameManager>
     #endregion Properties
 
     #region Methods
+
     private void Start()
     {
         _states = new Dictionary<GameState, IGameState>();

@@ -12,19 +12,19 @@ public class UIController : MonoBehaviour
         _hud.SetActive(GameLoopManager.Instance.IsPaused);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = GameLoopManager.Instance.IsPaused;
-        GameLoopManager.Instance.GetCanvas += OnUpdate;
+        GameLoopManager.Instance.UpdateCanvas += OnUpdate;
     }
 
     private void IsPaused(bool pause)
     {
         if(pause == false)
         {
-            GameLoopManager.Instance.GetCanvas -= OnUpdate;
+            GameLoopManager.Instance.UpdateCanvas -= OnUpdate;
             Cursor.lockState = CursorLockMode.Locked;
         }
         else
         {
-            GameLoopManager.Instance.GetCanvas += OnUpdate;
+            GameLoopManager.Instance.UpdateCanvas += OnUpdate;
         }
         _hud.SetActive(pause);
     }
@@ -73,6 +73,6 @@ public class UIController : MonoBehaviour
 
     private void OnDestroy()
     {
-        GameLoopManager.Instance.GetCanvas -= OnUpdate;
+        GameLoopManager.Instance.UpdateCanvas -= OnUpdate;
     }
 }
