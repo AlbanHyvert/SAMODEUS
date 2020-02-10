@@ -6,6 +6,7 @@ public class GameLoopManager : Singleton<GameLoopManager>
 {
     #region Fields
     private bool _isPaused = false;
+    private Vector3 _direction = Vector3.zero;
     public bool IsPaused { get { return _isPaused; }
         set
         {
@@ -25,6 +26,20 @@ public class GameLoopManager : Singleton<GameLoopManager>
         remove
         {
             _getPlayer -= value;
+        }
+    }
+
+    private event Action<Vector3> _setGravity = null;
+    public event Action<Vector3> SetGravity
+    {
+        add
+        {
+            _setGravity -= value;
+            _setGravity += value;
+        }
+        remove
+        {
+            _setGravity -= value;
         }
     }
 
@@ -139,6 +154,10 @@ public class GameLoopManager : Singleton<GameLoopManager>
             IsPaused = !IsPaused;
         }
 
+        if(_setGravity != null)
+        {
+            _setGravity(_direction);
+        }
         if(_getCanvas != null)
         {
             _getCanvas();

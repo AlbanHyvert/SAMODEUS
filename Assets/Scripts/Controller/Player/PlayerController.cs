@@ -1,18 +1,17 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField, Header("player Camera")] private Camera _playerCam = null;  
-    [SerializeField, Header("Grounding Velocity"), Range(0, -10)] private float _minVelocity = -0.02f;
+    #region FIELDS
+    [SerializeField, Header("player Camera")] private Camera _playerCam = null;
     [Header("Movement")]
-    [SerializeField, Range(0, int.MaxValue)] private float _moveSpeed = 5f;
-    [SerializeField, Range(0, int.MaxValue)] private float _sprintMax = 2f;
-    [SerializeField, Range(0, int.MaxValue)] private float _jumpForce = 10f;
-    [SerializeField, Header("Check Ground Distance"), Range(0, 0.7f)] private float _checkDistGround = 0.5f;
+    [SerializeField, Range(0f, 1000f)] private float _moveSpeed = 5f;
+    [SerializeField, Range(0f, 1000f)] private float _sprintMax = 2f;
+    [SerializeField, Range(0f, 1000f)] private float _jumpForce = 10f;
+    [SerializeField, Range(0f, 1000f)] private float _gravity = 9.81f;
     [SerializeField, Header("Wet Duration"), Range(0, 10)] private float _wetTime = 0.5f;
     [SerializeField, Header("Interaction Controller")] private InteractionsController _interactController = null;
-    [SerializeField, Header("RigidBoddy")] private Rigidbody _rb = null;
+    [SerializeField] private CharacterController controller = null;
     [SerializeField, Header("Head Bobbing")] private HeadBobbing _headBobbing = null;
     [SerializeField, Header("Audio Source")] private AudioSource _source = null;
 
@@ -20,59 +19,58 @@ public class PlayerController : MonoBehaviour
     private float _sprintMult = 1f;
     private float _timer = 0;
     private float _maxVelocity = 0f;
+    private Vector3 _playerDir = Vector3.zero;
+    #endregion FIELDS
+
     #region Properties
     public Camera PlayerCamera { get { return _playerCam; } set { _playerCam = value; } }
-    public float MinVelocity { get { return _minVelocity; } set { _minVelocity = value; } }
     public float MoveSpeed { get { return _moveSpeed; } set { _moveSpeed = value; } }
     public float SprintMax { get { return _sprintMax; } set { _sprintMax = value; } }
     public float JumpForce { get { return _jumpForce; } set { _jumpForce = value; } }
     public float WetTime { get { return _wetTime; } set { _wetTime = value; } }
-    public Rigidbody PlayerRigidbody { get { return _rb; } }
     public InteractionsController InteractionController { get { return _interactController; } }
     public AudioSource PlayerAudio { get { return _source; } }
     public bool IsWet { get { return _isWet; } }
     #endregion Properties
 
+    #region METHODS
     private void Start()
     {
+        controller = GetComponent<CharacterController>();
         GameLoopManager.Instance.GetInteractions += _interactController.OnUpdate;
         GameLoopManager.Instance.Pause += _interactController.IsPaused;
 
         InputManager.Instance.Move += Movement;
         InputManager.Instance.PressShift += Sprint;
         InputManager.Instance.ReleaseShift += Walk;
-        InputManager.Instance.Jump += Jump;
+        InputManager.Instance.Jump += Movement;
         InputManager.Instance.Idle += Idle;
         GameLoopManager.Instance.GetPlayer += OnUpdate;
+        GameLoopManager.Instance.SetGravity += Gravity;
         GameLoopManager.Instance.Pause += IsPaused;
-
-        if(_rb == null)
-        {
-            _rb = GetComponent<Rigidbody>();
-            if(_rb == null)
-            {
-                throw new System.Exception(_rb + "PlayerController is trying to access a non existant Rigidbody. Exiting.");
-            }
-        }
     }
 
     private void Idle()
     {
+        Debug.Log("IDLE");
         _headBobbing.OnIdle();
     }
 
     private void Movement(Vector3 direction)
     {
+        if (controller.isGrounded)
+        {
+            direction *= _moveSpeed * _sprintMult;
+        }
         _headBobbing.OnHeadBobbing(direction);
-        _rb.AddForce(direction * _moveSpeed * _sprintMult, ForceMode.Force);
+        controller.Move(direction * Time.deltaTime);
     }
 
-    private void Jump(Vector3 direction)
+    private void Gravity(Vector3 dir)
     {
-        if(CheckGround() == true)
-        {
-            _rb.AddForce(direction * _jumpForce, ForceMode.Impulse);
-        }
+        dir.y -= _gravity;
+
+        controller.Move(dir * Time.deltaTime);
     }
 
     private void Sprint()
@@ -82,9 +80,7 @@ public class PlayerController : MonoBehaviour
 
     private void Walk()
     {
-        float t = 0;
-        t += 0.1f;
-        _sprintMult = Mathf.Lerp(_sprintMax, 1, t);
+        _sprintMult = 1;
     }
 
     private void IsPaused(bool pause)
@@ -107,19 +103,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private bool CheckGround()
-    {
-        if (_rb.velocity.y > _minVelocity && _rb.velocity.y <= _maxVelocity)
-        {
-            return true;
-        }
-        else
-            return false;
-    }
-
     private void OnTriggerStay(Collider other)
     {
-        if(other.tag.Equals("WaterPond"))
+        if (other.tag.Equals("WaterPond"))
         {
             _isWet = true;
             _timer = Time.time + _wetTime;
@@ -129,10 +115,10 @@ public class PlayerController : MonoBehaviour
     private void OnDestroy()
     {
         InputManager.Instance.Move -= Movement;
-        InputManager.Instance.Jump -= Jump;
         InputManager.Instance.PressShift -= Sprint;
         InputManager.Instance.ReleaseShift -= Walk;
         GameLoopManager.Instance.GetPlayer -= OnUpdate;
         InputManager.Instance.Idle -= Idle;
     }
+    #endregion METHODS
 }

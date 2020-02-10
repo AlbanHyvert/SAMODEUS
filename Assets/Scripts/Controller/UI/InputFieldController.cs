@@ -4,18 +4,28 @@ using UnityEngine.UI;
 
 public class InputFieldController : MonoBehaviour
 {
+    private enum MyEnum
+    {
+        FORWARD,
+        LEFT,
+        BACKWARD,
+        RIGHT,
+        INTERACTION,
+        THROW
+    }
+    private MyEnum _myEnum = MyEnum.FORWARD;
+
     [SerializeField] private TMP_InputField _forwardMovement = null;
     [SerializeField] private TMP_InputField _leftMovement = null;
     [SerializeField] private TMP_InputField _backwardMovement = null;
     [SerializeField] private TMP_InputField _rightMovement = null;
-
     [SerializeField] private Slider _verticalSensivity = null;
     [SerializeField] private Slider _horizontalSensivity = null;
-
     [SerializeField] private TextMeshProUGUI _verticalSensivtTmp = null;
     [SerializeField] private TextMeshProUGUI _horizontalSensivityTmp = null;
-
     [SerializeField] private TMP_InputField _interactions = null;
+
+    private bool _isPress = false;
 
     private void Start()
     {
@@ -28,6 +38,12 @@ public class InputFieldController : MonoBehaviour
         _horizontalSensivityTmp.text = _horizontalSensivity.value.ToString();
         _verticalSensivtTmp.text = _verticalSensivity.value.ToString();
         _interactions.text = InputFieldManager.Instance.Interactions.ToString();
+    }
+
+
+    public void OnButtonPress()
+    {
+        _isPress = true;
     }
 
     public void OnInteractions()

@@ -4,9 +4,24 @@ using UnityEngine;
 
 public class InputManager : Singleton<InputManager>
 {
-    private Vector3 _direction = Vector3.zero;
-    private int _speed = 2;
+    private string _IDForward = "FORWARD";
+    private string _IDLeft = "LEFT";
+    private string _IDBack = "BACK";
+    private string _IDRight = "RIGHT";
+    private string _IDInteraction = "INTERACTION";
 
+    private Vector3 _direction = Vector3.zero;
+
+    #region KEYCODE
+    private KeyCode _keyForward = KeyCode.Z;
+    private KeyCode _keyLeft = KeyCode.Q;
+    private KeyCode _keyBack = KeyCode.S;
+    private KeyCode _keyRight = KeyCode.D;
+    private KeyCode _keyInteraction = KeyCode.E;
+    private KeyCode _keyThrow = KeyCode.F;
+    #endregion KEYCODE
+
+    #region EVENT
     private event Action<Vector3> _movement = null;
     public event Action<Vector3> Move
     {
@@ -18,6 +33,20 @@ public class InputManager : Singleton<InputManager>
         remove
         {
             _movement -= value;
+        }
+    }
+
+    private event Action _anyKey = null;
+    public event Action AnyKey
+    {
+        add
+        {
+            _anyKey -= value;
+            _anyKey += value;
+        }
+        remove
+        {
+            _anyKey -= value;
         }
     }
 
@@ -104,7 +133,19 @@ public class InputManager : Singleton<InputManager>
             _launch -= value;
         }
     }
+    #endregion EVENT
 
+    #region PROPERTIES
+    public Vector3 Direction { get {return _direction; } }
+    public KeyCode KeyForward { get => _keyForward; set => _keyForward = value; }
+    public KeyCode KeyLeft { get => _keyLeft; set => _keyLeft = value; }
+    public KeyCode KeyBack { get => _keyBack; set => _keyBack = value; }
+    public KeyCode KeyRight { get => _keyRight; set => _keyRight = value; }
+    public KeyCode KeyInteraction { get => _keyInteraction; set => _keyInteraction = value; }
+    public KeyCode KeyThrow { get => _keyThrow; set => _keyThrow = value; }
+    #endregion PROPERTIES
+
+    #region METHODS
     private void Start()
     {
         GameLoopManager.Instance.GetInput += OnUpdate;
@@ -125,68 +166,107 @@ public class InputManager : Singleton<InputManager>
 
     private void OnUpdate()
     {
+        if (_anyKey != null)
+        {
+            _anyKey();
+        }
+
         _direction = Vector3.zero;
-        if (Input.GetKey(InputFieldManager.Instance.ForwardMovement))
+
+        if (Input.GetKey(_keyForward))
         {
             _direction += PlayerManager.Instance.Player.transform.forward;
         }
 
-        if (Input.GetKey(InputFieldManager.Instance.LeftMovement))
+        if (Input.GetKey(_keyLeft))
         {
             _direction += -PlayerManager.Instance.Player.transform.right;
         }
 
-        if (Input.GetKey(InputFieldManager.Instance.BackwardMovement))
+        if (Input.GetKey(_keyBack))
         {
             _direction += -PlayerManager.Instance.Player.transform.forward;
         }
 
-        if (Input.GetKey(InputFieldManager.Instance.RightMovement))
+        if (Input.GetKey(_keyRight))
         {
             _direction += PlayerManager.Instance.Player.transform.right;
         }
 
-        if(Input.GetKeyDown(KeyCode.LeftShift) && _pressShift != null)
+        if (_interact != null && Input.GetKeyDown(_keyInteraction))
+        {
+            _interact();
+        }
+
+        if (_pressShift != null && Input.GetKey(KeyCode.LeftShift))
         {
             _pressShift();
         }
-
-        if (Input.GetKeyUp(KeyCode.LeftShift) && _releaseShift != null)
+        else if(_releaseShift != null)
         {
             _releaseShift();
         }
-    
-        if(_movement != null && _direction != Vector3.zero)
+        /*if (_releaseShift != null && Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            _releaseShift();
+        }*/
+
+        if (_movement != null && _direction != Vector3.zero)
         {
             _movement(_direction);
         }
-        else if(_idle != null && _direction == Vector3.zero)
+        else if (_idle != null && _direction == Vector3.zero)
         {
             _idle();
+            //_movement(_direction);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && _jump != null)
+        if (_jump != null && Input.GetKeyDown(KeyCode.Space))
         {
             _direction = PlayerManager.Instance.Player.transform.up;
             _jump(_direction);
             _direction = Vector3.zero;
         }
 
-        if(Input.GetKeyDown(InputFieldManager.Instance.Interactions.Normalize()) && _interact != null)
-        {
-            _interact();
-        }
-
-        if(Input.GetMouseButtonDown(0) && _launch != null)
+        if (_launch != null && Input.GetMouseButtonDown(0))
         {
             _launch();
+        }
+    }
+
+    public void ChangeKey(string ID, KeyCode keyCode)
+    {
+        if (ID == _IDForward)
+        {
+            _keyForward = keyCode;
+            Debug.Log(_keyForward);
+        }
+        else if (ID == _IDLeft)
+        {
+            _keyLeft = keyCode;
+            Debug.Log(_keyLeft);
+        }
+        else if (ID == _IDBack)
+        {
+            _keyBack = keyCode;
+            Debug.Log(_keyBack);
+        }
+        else if (ID == _IDRight)
+        {
+            _keyRight = keyCode;
+            Debug.Log(_keyRight);
+        }
+        else if (ID == _IDInteraction)
+        {
+            _keyInteraction = keyCode;
+            Debug.Log(_keyInteraction);
         }
     }
 
     protected override void OnDestroy()
     {
         GameLoopManager.Instance.GetInput -= OnUpdate;
-        GameLoopManager.Instance.Pause  -= IsPaused;
+        GameLoopManager.Instance.Pause -= IsPaused;
         _direction = Vector3.zero;
         _movement = null;
         _jump = null;
@@ -195,4 +275,5 @@ public class InputManager : Singleton<InputManager>
         _releaseShift = null;
         _pressShift = null;
     }
+    #endregion METHODS
 }
