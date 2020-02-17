@@ -5,7 +5,7 @@ public class UIController : MonoBehaviour
     [SerializeField ,Header("GO Hud")] private GameObject _hud = null;
     [SerializeField ,Header("GO PauseHud")] private GameObject _pausedHud = null;
     [SerializeField ,Header("Setting Hud")] private GameObject _settingHud = null;
-
+    [SerializeField] private GameManager.GameState _gameState = GameManager.GameState.GAME;
     private void Start()
     {
         GameLoopManager.Instance.Pause += IsPaused;
@@ -47,7 +47,7 @@ public class UIController : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         _hud.SetActive(GameLoopManager.Instance.IsPaused);
-        GameManager.Instance.ChangeState(GameManager.GameState.GAME);
+        GameManager.Instance.ChangeState(_gameState);
     }
 
     public void OnMenu()

@@ -9,9 +9,10 @@ public class GameManager : Singleton<GameManager>
     {
         PRELOAD,
         MAINMENU,
-        GAME
+        GAME,
+        GCF,
+        VERTUMNE
     }
-
     private GameState _currentState = GameState.PRELOAD;
     private Dictionary<GameState, IGameState> _states = null;
     private Rigidbody _physics = null;
@@ -29,7 +30,9 @@ public class GameManager : Singleton<GameManager>
         _states = new Dictionary<GameState, IGameState>();
         _states.Add(GameState.PRELOAD, new PreloadState());
         _states.Add(GameState.MAINMENU, new MainMenuState());
-        _states.Add(GameState.GAME, new global::GameState());
+        _states.Add(GameState.GAME, new InGameState());
+        _states.Add(GameState.GCF, new GCF_1State());
+        _states.Add(GameState.VERTUMNE, new VertumneState());
         _currentState = GameState.PRELOAD;
         ChangeState(GameState.MAINMENU);
     }
