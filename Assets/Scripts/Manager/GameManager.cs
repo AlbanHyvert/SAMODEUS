@@ -11,11 +11,11 @@ public class GameManager : Singleton<GameManager>
         MAINMENU,
         GAME,
         GCF,
-        VERTUMNE
+        VERTUMNE,
+        LOADING
     }
     private GameState _currentState = GameState.PRELOAD;
     private Dictionary<GameState, IGameState> _states = null;
-    private Rigidbody _physics = null;
     #endregion Fields
 
     #region Properties
@@ -30,6 +30,7 @@ public class GameManager : Singleton<GameManager>
         _states = new Dictionary<GameState, IGameState>();
         _states.Add(GameState.PRELOAD, new PreloadState());
         _states.Add(GameState.MAINMENU, new MainMenuState());
+        _states.Add(GameState.LOADING, new LoadingState());
         _states.Add(GameState.GAME, new InGameState());
         _states.Add(GameState.GCF, new GCF_1State());
         _states.Add(GameState.VERTUMNE, new VertumneState());

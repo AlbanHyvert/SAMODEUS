@@ -5,7 +5,7 @@ public class VertumneState : IGameState
     void IGameState.Enter()
     {
         GameLoopManager.Instance.IsPaused = false;
-        SceneManager.LoadScene("Vertumne_1");
+        SceneManager.LoadSceneAsync("Vertumne_1");
     }
 
     void IGameState.Exit()

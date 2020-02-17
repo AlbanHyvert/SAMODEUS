@@ -2,7 +2,6 @@
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField] private GameManager.GameState _gameState = GameManager.GameState.GAME;
     private void Start()
     {
         GameLoopManager.Instance.IsPaused = false;
@@ -12,7 +11,7 @@ public class MainMenu : MonoBehaviour
 
     public void OnStart()
     {
-        GameManager.Instance.ChangeState(_gameState);
+        GameManager.Instance.ChangeState(GameManager.GameState.LOADING);
     }
 
     public void OnQuit()
