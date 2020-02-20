@@ -13,11 +13,21 @@ public class GCFWalkCube : MonoBehaviour
     private float _frequency = 1f;
     private float _timePass = 0f;
     private float _timeResetPos = 0f;
-
+    private bool _orientationMove = false;
     private void Randomize()
     {
         float rdmMinRange = Random.Range(_speed, _speed * _speedMult);
         float rdmMaxRange = Random.Range(rdmMinRange, _speedMax);
+        int chooseMove = Random.Range(1, 3);
+
+        if(chooseMove <= 1)
+        {
+            _orientationMove = false;
+        }
+        else
+        {
+            _orientationMove = true;
+        }
 
         _frequency = Random.Range(rdmMinRange, rdmMaxRange);
     }
@@ -39,11 +49,13 @@ public class GCFWalkCube : MonoBehaviour
         // Get Player Position
         _playerPosition = PlayerManager.Instance.Player.transform.position;
         // Set the time by the frequency
-        _timePass += Time.deltaTime * _frequency;
+        _timePass += Time.deltaTime;
         //Get the amplitude by the Start pos of the obj minus the one by the Player
-        _amplitude = Vector3.Distance(_startPosition, _playerPosition);
+        float tempAmplitude = Vector3.Distance(_startPosition, _playerPosition);
 
-        _amplitude = Mathf.Clamp(_amplitude, 0, 50);
+        _amplitude = Mathf.Lerp(_amplitude, tempAmplitude, _timePass);
+
+        _amplitude = Mathf.Clamp(_amplitude, 0, GCFManager.Instance.MaxAmplitude);
 
         if (_amplitude <= _actionRayon)
         {
@@ -55,6 +67,14 @@ public class GCFWalkCube : MonoBehaviour
             _timeResetPos = 0;
         }
 
-        transform.position = _startPosition + Vector3.down * Mathf.Sin(_timePass) * _amplitude;
+        if(_orientationMove == false)
+        {
+            transform.position = _startPosition + Vector3.forward * Mathf.Sin(_timePass * _frequency) * _amplitude;
+        }
+        else if(_orientationMove == true)
+        {
+            transform.position = _startPosition + Vector3.up * Mathf.Sin(_timePass * _frequency) * _amplitude;
+        }
+
     }
 }
