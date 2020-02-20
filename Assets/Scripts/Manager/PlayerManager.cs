@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
 using Engine.Singleton;
-using System;
-using System.Collections.Generic;
 
 public class PlayerManager : Singleton<PlayerManager>
 {
