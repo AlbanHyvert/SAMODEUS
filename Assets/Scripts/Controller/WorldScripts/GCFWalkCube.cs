@@ -6,12 +6,13 @@ public class GCFWalkCube : MonoBehaviour
     private int _speedMult = 2;
     private float _speedMax = 10;
     private float _actionRayon = 10;
-
+    private float _amplitude = 0f;
     private Vector3 _playerPosition = Vector3.zero;
     private Vector3 _startPosition = Vector3.zero;
     private Transform _object = null;
     private float _frequency = 1f;
     private float _timePass = 0f;
+    private float _timeResetPos = 0f;
 
     private void Randomize()
     {
@@ -27,25 +28,33 @@ public class GCFWalkCube : MonoBehaviour
         _speedMult = GCFManager.Instance.SpeedMult;
         _speedMax = GCFManager.Instance.SpeedMax;
         _actionRayon = GCFManager.Instance.ActionRayon;
-
+        _amplitude = 0f;
         Randomize();
         _object = this.transform;
         _startPosition = transform.position;
     }
 
-    private void Update()
+    private void LateUpdate()
     {
+        // Get Player Position
         _playerPosition = PlayerManager.Instance.Player.transform.position;
-        _timePass += Time.deltaTime * Time.timeScale * _frequency;
-        float amplitude = Vector3.Distance(_object.position, _playerPosition);
+        // Set the time by the frequency
+        _timePass += Time.deltaTime * _frequency;
+        //Get the amplitude by the Start pos of the obj minus the one by the Player
+        _amplitude = Vector3.Distance(_startPosition, _playerPosition);
 
-        amplitude = Mathf.Clamp(amplitude, 0, 100);
+        _amplitude = Mathf.Clamp(_amplitude, 0, 50);
 
-        if (amplitude <= _actionRayon)
+        if (_amplitude <= _actionRayon)
         {
-            amplitude = 0;
+            _timeResetPos += Time.deltaTime;
+            _amplitude = Mathf.Lerp(_amplitude, 0, _timeResetPos);
+        }
+        else
+        {
+            _timeResetPos = 0;
         }
 
-        transform.position = _startPosition + Vector3.down * Mathf.Sin(_timePass) * amplitude;
+        transform.position = _startPosition + Vector3.down * Mathf.Sin(_timePass) * _amplitude;
     }
 }
