@@ -39,7 +39,7 @@ public class GCFWalkCube : MonoBehaviour
         _timePass += Time.deltaTime * Time.timeScale * _frequency;
         float amplitude = Vector3.Distance(_object.position, _playerPosition);
 
-        amplitude = Mathf.Clamp(amplitude, 0, 7);
+        amplitude = Mathf.Clamp(amplitude, 0, 100);
 
         if (amplitude <= _actionRayon)
         {
