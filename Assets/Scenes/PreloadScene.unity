@@ -143,8 +143,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 0.1
   _speedMult: 2
-  _speedMax: 1
+  _speedMax: 0.5
   _actionRayon: 25
+  _maxAmplitude: 30
+  _minAmplitude: 10
 --- !u!4 &54475727
 Transform:
   m_ObjectHideFlags: 0

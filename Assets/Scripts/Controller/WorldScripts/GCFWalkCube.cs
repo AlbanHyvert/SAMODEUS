@@ -54,8 +54,6 @@ public class GCFWalkCube : MonoBehaviour
         //Get the amplitude by the Start pos of the obj minus the one by the Player
         float OffsetDiffPlayer = Vector3.Distance(_startPosition, _playerPosition);
 
-        _amplitude = Mathf.Lerp(_amplitude, OffsetDiffPlayer, _timePass);
-
         _amplitude = Mathf.Clamp(_amplitude, 0, GCFManager.Instance.MaxAmplitude);
 
         if (OffsetDiffPlayer <= _actionRayon)
@@ -70,7 +68,7 @@ public class GCFWalkCube : MonoBehaviour
 
         if(_orientationMove == false)
         {
-            transform.position = _startPosition + Vector3.forward * Mathf.Sin(  * _frequency) * _amplitude;
+            transform.position = _startPosition + Vector3.forward * Mathf.Sin(_timePass * _frequency) * _amplitude;
         }
         else if(_orientationMove == true)
         {
