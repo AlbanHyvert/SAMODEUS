@@ -52,7 +52,6 @@ public class PlayerController : MonoBehaviour
 
     private void Idle()
     {
-        Debug.Log("IDLE");
         _headBobbing.OnIdle();
     }
 

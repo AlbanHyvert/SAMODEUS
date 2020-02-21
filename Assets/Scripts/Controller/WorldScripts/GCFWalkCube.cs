@@ -7,6 +7,7 @@ public class GCFWalkCube : MonoBehaviour
     private float _speedMax = 10;
     private float _actionRayon = 10;
     private float _amplitude = 0f;
+    private float _tempAmplitude = 0f;
     private Vector3 _playerPosition = Vector3.zero;
     private Vector3 _startPosition = Vector3.zero;
     private Transform _object = null;
@@ -21,6 +22,7 @@ public class GCFWalkCube : MonoBehaviour
         int chooseMove = Random.Range(1, 3);
         float rdmAmplitude = Random.Range(GCFManager.Instance.MinAmplitude, GCFManager.Instance.MaxAmplitude);
         _amplitude = rdmAmplitude;
+        _tempAmplitude = _amplitude;
         if(chooseMove <= 1)
         {
             _orientationMove = false;
@@ -58,12 +60,18 @@ public class GCFWalkCube : MonoBehaviour
 
         if (OffsetDiffPlayer <= _actionRayon)
         {
+            _timeResetPos = 0;
             _timeResetPos += Time.deltaTime;
             _amplitude = Mathf.Lerp(_amplitude, 0, _timeResetPos);
         }
         else
         {
             _timeResetPos = 0;
+            _timeResetPos += Time.deltaTime;
+            if(_amplitude < _tempAmplitude)
+            {
+                _amplitude = Mathf.Lerp(_amplitude, _tempAmplitude, _timeResetPos);
+            }
         }
 
         if(_orientationMove == false)
