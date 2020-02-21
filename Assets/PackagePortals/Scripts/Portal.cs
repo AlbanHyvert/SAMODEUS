@@ -133,7 +133,6 @@ public class Portal : MonoBehaviour
         var traveller = other.GetComponent<PortalTraveller>();
         if(traveller)
         {
-            Debug.Log("In");
             OnTravellerEnterPortal(traveller);
         }
     }

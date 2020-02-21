@@ -68,7 +68,10 @@ public class GCFWalkCube : MonoBehaviour
         {
             _timeResetPos = 0;
             _timeResetPos += Time.deltaTime;
-            _amplitude = Mathf.Lerp(_amplitude, _tempAmplitude, _timeResetPos);
+            if(_amplitude < _tempAmplitude)
+            {
+                _amplitude = Mathf.Lerp(_amplitude, _tempAmplitude, _timeResetPos);
+            }
         }
 
         if(_orientationMove == false)
