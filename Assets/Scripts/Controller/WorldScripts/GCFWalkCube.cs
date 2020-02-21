@@ -19,7 +19,8 @@ public class GCFWalkCube : MonoBehaviour
         float rdmMinRange = Random.Range(_speed, _speed * _speedMult);
         float rdmMaxRange = Random.Range(rdmMinRange, _speedMax);
         int chooseMove = Random.Range(1, 3);
-
+        float rdmAmplitude = Random.Range(GCFManager.Instance.MinAmplitude, GCFManager.Instance.MaxAmplitude);
+        _amplitude = rdmAmplitude;
         if(chooseMove <= 1)
         {
             _orientationMove = false;
@@ -51,13 +52,13 @@ public class GCFWalkCube : MonoBehaviour
         // Set the time by the frequency
         _timePass += Time.deltaTime;
         //Get the amplitude by the Start pos of the obj minus the one by the Player
-        float tempAmplitude = Vector3.Distance(_startPosition, _playerPosition);
+        float OffsetDiffPlayer = Vector3.Distance(_startPosition, _playerPosition);
 
-        _amplitude = Mathf.Lerp(_amplitude, tempAmplitude, _timePass);
+        _amplitude = Mathf.Lerp(_amplitude, OffsetDiffPlayer, _timePass);
 
         _amplitude = Mathf.Clamp(_amplitude, 0, GCFManager.Instance.MaxAmplitude);
 
-        if (_amplitude <= _actionRayon)
+        if (OffsetDiffPlayer <= _actionRayon)
         {
             _timeResetPos += Time.deltaTime;
             _amplitude = Mathf.Lerp(_amplitude, 0, _timeResetPos);
@@ -69,7 +70,7 @@ public class GCFWalkCube : MonoBehaviour
 
         if(_orientationMove == false)
         {
-            transform.position = _startPosition + Vector3.forward * Mathf.Sin(_timePass * _frequency) * _amplitude;
+            transform.position = _startPosition + Vector3.forward * Mathf.Sin(  * _frequency) * _amplitude;
         }
         else if(_orientationMove == true)
         {
