@@ -12,6 +12,7 @@ public class GameManager : Singleton<GameManager>
         GAME,
         GCF,
         VERTUMNE,
+        VERTUMNE_PREFABS,
         LOADING
     }
     private GameState _currentState = GameState.PRELOAD;
@@ -34,6 +35,7 @@ public class GameManager : Singleton<GameManager>
         _states.Add(GameState.GAME, new InGameState());
         _states.Add(GameState.GCF, new GCF_1State());
         _states.Add(GameState.VERTUMNE, new VertumneState());
+        _states.Add(GameState.VERTUMNE_PREFABS, new VertumnePrefabsState());
         _currentState = GameState.PRELOAD;
         ChangeState(GameState.MAINMENU);
     }
