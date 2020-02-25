@@ -2,6 +2,8 @@
 
 public class GCFRotatingCube : MonoBehaviour
 {
+    [SerializeField] private Transform _orbitTarget = null;
+    private Quaternion _startRotation = Quaternion.identity;
     private float _rotatingSpeed = 0;
     private float _distFromStartingPoint = 0f;
     private float _tempDistFromStartPosition = 0f;
@@ -13,6 +15,7 @@ public class GCFRotatingCube : MonoBehaviour
     private void Start()
     {
         _startPosition = transform.position;
+        _startRotation = transform.rotation;
         _rotatingSpeed = GCFManager.Instance.Speed;
         _distFromStartingPoint = (int)Random.Range(GCFManager.Instance.MinAmplitude, GCFManager.Instance.MaxAmplitude);
         _tempDistFromStartPosition = _distFromStartingPoint;
@@ -30,18 +33,14 @@ public class GCFRotatingCube : MonoBehaviour
         {
             _timeResetPos = 0;
             _timeResetPos += Time.deltaTime;
-            _distFromStartingPoint = Mathf.Lerp(_distFromStartingPoint, 0, _timeResetPos * _returnSpeedPosition);
+            transform.position = _startPosition;
         }
         else
         {
-            _timeResetPos = 0;
-            _timeResetPos += Time.deltaTime;
-            if (_distFromStartingPoint < _tempDistFromStartPosition)
-            {
-                _distFromStartingPoint = Mathf.Lerp(_distFromStartingPoint, _tempDistFromStartPosition, _timeResetPos * _returnSpeedPosition);
-            }
+            transform.RotateAround(_orbitTarget.position, Vector3.forward, _distFromStartingPoint * Time.deltaTime);
+            transform.rotation = _startRotation;
         }
 
-        transform.position = _startPosition + Vector3.forward * Mathf.Sin(_timePass * _rotatingSpeed) * _distFromStartingPoint;
+
     }
 }
