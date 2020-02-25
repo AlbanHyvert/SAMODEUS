@@ -141,11 +141,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0f15345357499a4ab7c36558cf69edc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 0.1
+  _speed: 4
+  _returnSpeed: 4
   _speedMult: 2
   _speedMax: 0.5
   _actionRayon: 25
-  _maxAmplitude: 30
+  _maxAmplitude: 90
   _minAmplitude: 10
 --- !u!4 &54475727
 Transform:

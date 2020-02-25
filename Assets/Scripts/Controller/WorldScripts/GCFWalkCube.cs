@@ -58,11 +58,11 @@ public class GCFWalkCube : MonoBehaviour
 
         _amplitude = Mathf.Clamp(_amplitude, 0, GCFManager.Instance.MaxAmplitude);
 
-        if (OffsetDiffPlayer <= _actionRayon)
+        if (OffsetDiffPlayer <= GCFManager.Instance.ActionRayon)
         {
             _timeResetPos = 0;
             _timeResetPos += Time.deltaTime;
-            _amplitude = Mathf.Lerp(_amplitude, 0, _timeResetPos);
+            _amplitude = Mathf.Lerp(_amplitude, 0, _timeResetPos * GCFManager.Instance.ReturnSpeed);
         }
         else
         {
@@ -70,7 +70,7 @@ public class GCFWalkCube : MonoBehaviour
             _timeResetPos += Time.deltaTime;
             if(_amplitude < _tempAmplitude)
             {
-                _amplitude = Mathf.Lerp(_amplitude, _tempAmplitude, _timeResetPos);
+                _amplitude = Mathf.Lerp(_amplitude, _tempAmplitude, _timeResetPos * GCFManager.Instance.ReturnSpeed);
             }
         }
 
