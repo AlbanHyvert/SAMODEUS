@@ -4,7 +4,7 @@ using UnityEngine;
 public class GCFManager : Singleton<GCFManager>
 {
     [SerializeField, Range(0, 4)] private float _speed = 0.2f;
-    [SerializeField, Range(0, 4)] private float _returnSpeed = 0.5f;
+    [SerializeField, Range(1, 10)] private float _returnSpeed = 1f;
     [SerializeField] private int _speedMult = 2;
     [SerializeField] private float _speedMax = 1f;
     [Header("Effect Range of the player")]

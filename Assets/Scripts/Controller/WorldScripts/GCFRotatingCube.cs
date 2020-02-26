@@ -5,6 +5,7 @@ public class GCFRotatingCube : MonoBehaviour
     private float _distFromStartingPoint = 0f;
     private float _distMin = 0f;
     private float _distMax = 0f;
+    private float _resetPositionTimer = 0f;
     private Vector3 _startPosition = Vector3.zero;
     private Quaternion _startRotation = Quaternion.identity;
     private Vector3 _playerPosition = Vector3.zero;
@@ -27,7 +28,9 @@ public class GCFRotatingCube : MonoBehaviour
 
         if (OffsetDiffFromPlayer <= GCFManager.Instance.ActionRayon)
         {
-            transform.position = _startPosition;
+            _resetPositionTimer = 0;
+            _resetPositionTimer += Time.deltaTime;
+            transform.position = Vector3.Lerp(transform.position, _startPosition, _resetPositionTimer * GCFManager.Instance.ReturnSpeed);
         }
         else
         {
