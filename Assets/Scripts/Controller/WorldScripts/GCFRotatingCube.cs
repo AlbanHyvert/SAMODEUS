@@ -9,6 +9,7 @@ public class GCFRotatingCube : MonoBehaviour
     private Vector3 _startPosition = Vector3.zero;
     private Quaternion _startRotation = Quaternion.identity;
     private Vector3 _playerPosition = Vector3.zero;
+
     private void Start()
     {
         _startPosition = transform.position;
