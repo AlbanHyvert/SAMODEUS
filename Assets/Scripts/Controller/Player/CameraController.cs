@@ -11,6 +11,7 @@ public class CameraController : MonoBehaviour
     [Range(0,360)]
     [SerializeField] private float _maxVert = 45f;
     private float _rotationX = 0f;
+    private float _rotationY = 0f;
 
     private void Start()
     {
@@ -37,17 +38,18 @@ public class CameraController : MonoBehaviour
 
     private void OnUpdate()
     {
+        _rotationY = _player.eulerAngles.y;
+
         float mouseX = Input.GetAxis("Mouse X");
         float mouseY = Input.GetAxis("Mouse Y");
 
-        _player.Rotate(0, mouseX * InputManager.Instance.HoriSensivity, 0);
+        _rotationY += mouseX * InputManager.Instance.HoriSensivity;
         _rotationX -= mouseY * InputManager.Instance.VertSensivity;
         _rotationX = Mathf.Clamp(_rotationX, _minVert, _maxVert);
 
-        float rotationY = _player.localEulerAngles.y;
 
         _cam.transform.localEulerAngles = new Vector3(_rotationX, 0, 0);
-        _player.localEulerAngles = new Vector3(0, rotationY, 0);
+        _player.eulerAngles = new Vector3(0, _rotationY, 0);
     }
 
     private void OnDestroy()

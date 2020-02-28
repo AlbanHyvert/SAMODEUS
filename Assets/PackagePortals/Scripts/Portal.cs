@@ -38,8 +38,10 @@ public class Portal : MonoBehaviour
             Transform travellerT = traveller.transform;
 
             Vector3 offsetFromPortal = travellerT.position - transform.position;
+
             int portalSide = System.Math.Sign(Vector3.Dot(offsetFromPortal, transform.forward));
             int portalSideOld = System.Math.Sign(Vector3.Dot(traveller.PreviousOffsetFromPortal, transform.forward));
+
             // Teleport the traveller if it has crossed from one side of the portal to the other
             if(portalSide != portalSideOld)
             {
@@ -57,18 +59,6 @@ public class Portal : MonoBehaviour
             }
         }
     }
-
-   /* private void ProtectScreenFromClipping()
-    {
-        float halfHeight = _playerCamera.nearClipPlane * Mathf.Tan(_playerCamera.fieldOfView * 0.5f * Mathf.Deg2Rad);
-        float halfWidth = halfHeight * _playerCamera.aspect;
-        float dstToNearClipPlaneCorner = new Vector3(halfWidth, halfHeight, _playerCamera.nearClipPlane).magnitude;
-
-        Transform screenT = _screen.transform;
-        bool camFacingSameDirAsPortal = Vector3.Dot(transform.forward, transform.position - _playerCamera.transform.position) > 0;
-        screenT.localScale = new Vector3(screenT.localScale.x, screenT.localScale.y, dstToNearClipPlaneCorner);
-        screenT.localPosition = Vector3.forward * dstToNearClipPlaneCorner * ((camFacingSameDirAsPortal) ? 0.5f : -0.5f);
-    }*/
 
     private void CreateViewTexture()
     {
@@ -130,7 +120,7 @@ public class Portal : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        var traveller = other.GetComponent<PortalTraveller>();
+        PortalTraveller traveller = other.GetComponent<PortalTraveller>();
         if(traveller)
         {
             OnTravellerEnterPortal(traveller);
