@@ -16,7 +16,12 @@ ModelImporter:
     3300002: Pied_1_low
     4300000: Chapeau_1_low
     4300002: Pied_1_low
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: c2335f8922bfd9d4f954886c720ab692, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

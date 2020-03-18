@@ -41,7 +41,12 @@ ModelImporter:
     4300008: Boucle_chaine_3
     4300010: Chaine64
     4300012: Structure_pierre1
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: df2352d1766c5aa4a8db3a9bd1eddd44, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
