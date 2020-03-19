@@ -29,14 +29,11 @@ public class InputButton : MonoBehaviour
         {
             _text.text = InputManager.Keys.INTERACTION.ToString();
         }
-        Debug.Log(_ID);
     }
 
     public void OnButtonPress()
     {
-        Debug.Log(_ID);
         InputManager.Instance.ChangeInput += ChangeInput;
-        Debug.Log("Click");
     }
 
     private void ChangeInput()
