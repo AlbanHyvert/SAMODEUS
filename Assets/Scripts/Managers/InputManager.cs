@@ -1,0 +1,175 @@
+﻿using System;
+using UnityEngine;
+using Engine.Singleton;
+
+public class InputManager : Singleton<InputManager>
+{
+    public enum Keys
+    {
+        FORWARD,
+        LEFT,
+        BACK,
+        RIGHT,
+        INTERACTION
+    }
+
+    [SerializeField] private DataKeycode _dataKeyCode = null;
+    [SerializeField] private float _verticalSensitivity = 10f; 
+    [SerializeField] private float _horizontalSensitivity = 10f;
+
+    private Vector3 _direction = Vector3.zero;
+
+    public Vector3 Direction { get { return _direction; } }
+    public float VerticalSensitivity { get { return _verticalSensitivity; } set { _verticalSensitivity = value; } }
+    public float HorizontalSensitivity { get { return _horizontalSensitivity; } set { _horizontalSensitivity = value; } }
+
+    #region EVENTS
+    private event Action<Vector3> _movement = null;
+    public event Action<Vector3> Movement
+    {
+        add
+        {
+            _movement -= value;
+            _movement += value;
+        }
+        remove
+        {
+            _movement -= value;
+        }
+    }
+
+    private event Action _idle = null;
+    public event Action Idle
+    {
+        add
+        {
+            _idle -= value;
+            _idle += value;
+        }
+        remove
+        {
+            _idle -= value;
+        }
+    }
+
+    private event Action _interaction = null;
+    public event Action Interaction
+    {
+        add
+        {
+            _interaction -= value;
+            _interaction += value;
+        }
+        remove
+        {
+            _interaction -= value;
+        }
+    }
+
+    private event Action _throw = null;
+    public event Action Throw
+    {
+        add
+        {
+            _throw -= value;
+            _throw += value;
+        }
+        remove
+        {
+            _throw -= value;
+        }
+    }
+
+    #endregion EVENTS
+
+    public void ChangeKey(Keys keys, KeyCode keyCode)
+    {
+        if(keys == Keys.FORWARD)
+        {
+            _dataKeyCode.KeyForward = keyCode;
+        }
+
+        else if (keys == Keys.LEFT)
+        {
+            _dataKeyCode.KeyLeft = keyCode;
+        }
+
+        else if (keys == Keys.BACK)
+        {
+            _dataKeyCode.KeyBack = keyCode;
+        }
+
+        else if (keys == Keys.RIGHT)
+        {
+            _dataKeyCode.KeyRight = keyCode;
+        }
+
+        else if(keys == Keys.INTERACTION)
+        {
+            _dataKeyCode.KeyInteraction = keyCode;
+        }
+    }
+
+    private void Start()
+    {
+        GameLoopManager.Instance.Inputs += OnUpdate;
+        GameLoopManager.Instance.Pause += IsPause;
+    }
+
+    private void IsPause(bool pause)
+    {
+        if(pause == true)
+        {
+            GameLoopManager.Instance.Inputs -= OnUpdate;
+        }
+        else
+        {
+            GameLoopManager.Instance.Inputs += OnUpdate;
+        }
+    }
+
+    private void OnUpdate()
+    {
+        _direction = Vector3.zero;
+
+        if(Input.GetKey(_dataKeyCode.KeyForward))
+        {
+            _direction += PlayerManager.Instance.Player.transform.forward;
+        }
+        
+        if(Input.GetKey(_dataKeyCode.KeyBack))
+        {
+            _direction += -PlayerManager.Instance.Player.transform.forward;
+        }
+
+        if(Input.GetKey(_dataKeyCode.KeyLeft))
+        {
+            _direction += -PlayerManager.Instance.Player.transform.right;
+        }
+        
+        if(Input.GetKey(_dataKeyCode.KeyRight))
+        {
+            _direction += PlayerManager.Instance.Player.transform.right;
+        }
+
+        if(_interaction != null && Input.GetKeyDown(_dataKeyCode.KeyInteraction))
+        {
+            _interaction();
+        }
+
+        if(_throw != null && Input.GetMouseButtonDown(0))
+        {
+            _throw();
+        }
+
+        if(_movement != null && _direction != Vector3.zero)
+        {
+            _movement(_direction);
+        }
+
+        if(_idle != null && _direction == Vector3.zero)
+        {
+            _idle();
+        }
+    }
+}

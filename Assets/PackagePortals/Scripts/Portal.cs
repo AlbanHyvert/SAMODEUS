@@ -11,7 +11,7 @@ public class Portal : MonoBehaviour
     private RenderTexture _viewTexture = null;
     private List<PortalTraveller> trackedTravellers = null;
 
-    private void Awake()
+    private void Start()
     {
         if(_playerCamera == null)
         {
@@ -19,7 +19,7 @@ public class Portal : MonoBehaviour
             
             if(_playerCamera == null)
             {
-                _playerCamera = PlayerManager.Instance.Player.PlayerCamera;
+                _playerCamera = PlayerManager.Instance.Player.Camera;
             }
         }
 
