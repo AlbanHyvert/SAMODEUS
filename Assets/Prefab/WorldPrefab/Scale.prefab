@@ -1295,7 +1295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3492709837057244471}
   - component: {fileID: 3492709837057244470}
-  - component: {fileID: 3492709837057244469}
+  - component: {fileID: 2642498845999308568}
   m_Layer: 0
   m_Name: Scale
   m_TagString: Untagged
@@ -1336,7 +1336,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 2, z: 1.5}
   m_Center: {x: 2.1, y: 1.07, z: 0}
---- !u!114 &3492709837057244469
+--- !u!114 &2642498845999308568
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1345,21 +1345,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 3492709837057244456}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 327d3de4b333fc048bc8e54f450372b1, type: 3}
+  m_Script: {fileID: 11500000, guid: 39f5e354322d73c40a966462cb325e88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mat:
-  - {fileID: 3492709835723381196}
-  - {fileID: 3492709836299309195}
-  - {fileID: 3492709835652959759}
-  - {fileID: 3492709836746561977}
-  - {fileID: 3492709835831808957}
-  - {fileID: 3492709836110614599}
-  - {fileID: 3492709836460641743}
-  - {fileID: 3492709835619740089}
-  - {fileID: 3492709836988227562}
-  - {fileID: 3492709836790807065}
-  - {fileID: 3492709836271910527}
-  - {fileID: 3492709836527457618}
-  _active: {fileID: 2100000, guid: 2e73a9fee2fe15949980c42dde3b8c71, type: 2}
-  _objectPlace: {fileID: 3492709836795163089}
+  _objectTag: Diamond
+  _setPosition: {fileID: 3492709836795163089}
