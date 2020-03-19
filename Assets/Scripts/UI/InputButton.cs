@@ -35,7 +35,7 @@ public class InputButton : MonoBehaviour
     public void OnButtonPress()
     {
         Debug.Log(_ID);
-        //InputManager.Instance.AnyKey += ChangeInput;
+        InputManager.Instance.ChangeInput += ChangeInput;
         Debug.Log("Click");
     }
 
@@ -47,7 +47,7 @@ public class InputButton : MonoBehaviour
             {
                 InputManager.Instance.ChangeKey(_ID, kcode);
                 _text.text = kcode.ToString();
-                //InputManager.Instance.AnyKey -= ChangeInput;
+                InputManager.Instance.ChangeInput -= ChangeInput;
             }
         }
     }

@@ -80,6 +80,19 @@ public class InputManager : Singleton<InputManager>
         }
     }
 
+    private event Action _changeInput = null;
+    public event Action ChangeInput
+    {
+        add
+        {
+            _changeInput -= value;
+            _changeInput += value;
+        }
+        remove
+        {
+            _changeInput -= value;
+        }
+    }
     #endregion EVENTS
 
     public void ChangeKey(Keys keys, KeyCode keyCode)
@@ -132,24 +145,31 @@ public class InputManager : Singleton<InputManager>
     {
         _direction = Vector3.zero;
 
-        if(Input.GetKey(_dataKeyCode.KeyForward))
+        if(_changeInput != null)
         {
-            _direction += PlayerManager.Instance.Player.transform.forward;
+            _changeInput();
         }
-        
-        if(Input.GetKey(_dataKeyCode.KeyBack))
+        if(PlayerManager.Instance.Player != null)
         {
-            _direction += -PlayerManager.Instance.Player.transform.forward;
-        }
+            if (Input.GetKey(_dataKeyCode.KeyForward))
+            {
+                _direction += PlayerManager.Instance.Player.transform.forward;
+            }
 
-        if(Input.GetKey(_dataKeyCode.KeyLeft))
-        {
-            _direction += -PlayerManager.Instance.Player.transform.right;
-        }
-        
-        if(Input.GetKey(_dataKeyCode.KeyRight))
-        {
-            _direction += PlayerManager.Instance.Player.transform.right;
+            if (Input.GetKey(_dataKeyCode.KeyBack))
+            {
+                _direction += -PlayerManager.Instance.Player.transform.forward;
+            }
+
+            if (Input.GetKey(_dataKeyCode.KeyLeft))
+            {
+                _direction += -PlayerManager.Instance.Player.transform.right;
+            }
+
+            if (Input.GetKey(_dataKeyCode.KeyRight))
+            {
+                _direction += PlayerManager.Instance.Player.transform.right;
+            }
         }
 
         if(_interaction != null && Input.GetKeyDown(_dataKeyCode.KeyInteraction))
