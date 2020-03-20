@@ -15,10 +15,9 @@ public class RoomsSpawner : MonoBehaviour
     {
         _player = PlayerManager.Instance.Player.transform;
         GameLoopManager.Instance.Puzzles += OnUpdate;
-
         for (int i = 0; i < _amountRoomsOnScreen; i++)
         {
-            CreateRooms();
+            CreateRooms(Random.Range(0, _roomsPrefab.Length));
         }
     }
 
@@ -26,15 +25,14 @@ public class RoomsSpawner : MonoBehaviour
     {
         if(_player.position.x > (_spawnZ - _amountRoomsOnScreen * _roomsLenth))
         {
-            CreateRooms();
+            CreateRooms(Random.Range(0,_roomsPrefab.Length));
         }
     }
 
-    private void CreateRooms(int prefabIndex = -1)
+    private void CreateRooms(int prefabIndex)
     {
-        GameObject go = Instantiate(_roomsPrefab[0]) as GameObject;
-        go.transform.SetParent(transform);
-        go.transform.position = Vector3.right * _spawnZ;
+       GameObject go = Instantiate(_roomsPrefab[prefabIndex], transform.position, transform.rotation);
+        go.transform.position += transform.right * _spawnZ;
         _spawnZ += _roomsLenth;
     }
 }
