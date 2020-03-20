@@ -7,10 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: All_Rock
+  m_Name: Rock_4
   m_Shader: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
-  m_ShaderKeywords: _MASKMAP _MATERIAL_FEATURE_SPECULAR_COLOR _NORMALMAP _NORMALMAP_TANGENT_SPACE
-    _SPECULARCOLORMAP
+  m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP _NORMALMAP_TANGENT_SPACE _SPECGLOSSMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -30,7 +29,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColorMap:
-        m_Texture: {fileID: 2800000, guid: 45a082f46e3090e4899f579bd23f3161, type: 3}
+        m_Texture: {fileID: 2800000, guid: ed879ca0aa390fb46b9d13db63e824be, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BentNormalMap:
@@ -42,7 +41,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 70fa4d26e329c50409cce6358b66b9e7, type: 3}
+        m_Texture: {fileID: 2800000, guid: c42029e10c690e74d94a8232d1b4cb0d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CoatMaskMap:
@@ -90,19 +89,19 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 45a082f46e3090e4899f579bd23f3161, type: 3}
+        m_Texture: {fileID: 2800000, guid: ed879ca0aa390fb46b9d13db63e824be, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
-        m_Texture: {fileID: 2800000, guid: 1168504d45a5b1246a75b0c70bf17b25, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 98c6f17cd9d2cde4db94a5b2e90a5191, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0e85d9c5f092f1d4e91c9bd161f7158c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: 70fa4d26e329c50409cce6358b66b9e7, type: 3}
+        m_Texture: {fileID: 2800000, guid: c42029e10c690e74d94a8232d1b4cb0d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMapOS:
@@ -118,11 +117,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
-        m_Texture: {fileID: 2800000, guid: 98c6f17cd9d2cde4db94a5b2e90a5191, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0e85d9c5f092f1d4e91c9bd161f7158c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecularColorMap:
-        m_Texture: {fileID: 2800000, guid: 98c6f17cd9d2cde4db94a5b2e90a5191, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SubsurfaceMaskMap:
@@ -215,8 +214,8 @@ Material:
     - _Ior: 1
     - _IridescenceMask: 1
     - _IridescenceThickness: 1
-    - _LinkDetailsWithBase: 0
-    - _MaterialID: 4
+    - _LinkDetailsWithBase: 1
+    - _MaterialID: 1
     - _Metallic: 0
     - _Mode: 0
     - _NormalMapSpace: 0
@@ -234,7 +233,7 @@ Material:
     - _SSRefractionProjectionModel: 0
     - _ShiverDirectionality: 0.5
     - _ShiverDrag: 0.2
-    - _Smoothness: 0.5
+    - _Smoothness: 0
     - _SmoothnessRemapMax: 1
     - _SmoothnessRemapMin: 0
     - _SmoothnessTextureChannel: 0
