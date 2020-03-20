@@ -8,6 +8,8 @@ public class TriggerLoadNextScene : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         PlayerController player = other.GetComponent<PlayerController>();
+        Pickable pickable = other.GetComponent<Pickable>();
+
         if(player != null)
         {
             PlayerManager.Instance.DestroyPlayer();
@@ -15,7 +17,7 @@ public class TriggerLoadNextScene : MonoBehaviour
             GameManager.Instance.ChangeState(GameManager.GameState.LOADING);
         }
 
-        if(other.transform != null && _specialItem == true)
+        if(pickable != null && _specialItem == true)
         {
             Rigidbody rb = transform.GetComponent<Rigidbody>();
 

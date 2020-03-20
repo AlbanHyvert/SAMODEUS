@@ -41,4 +41,10 @@ public class Runes : MonoBehaviour, IInteract
     {
 
     }
+
+
+    private void OnDestroy()
+    {
+        GameLoopManager.Instance.Puzzles -= OnUpdate;
+    }
 }

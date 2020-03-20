@@ -16,7 +16,10 @@ public class PlayerManager : Singleton<PlayerManager>
 
     public void DestroyPlayer()
     {
-        Object.DestroyImmediate(_player);
-        _player = null;
+        if(_player != null)
+        {
+            Object.Destroy(_player);
+            _player = null;
+        }
     }
 }

@@ -139,4 +139,14 @@ public class PlayerController : MonoBehaviour
         InputManager.Instance.Interaction -= OnDrop;
         InputManager.Instance.Throw -= OnThrow;
     }
+
+    private void OnDestroy()
+    {
+        GameLoopManager.Instance.Player -= OnRaycast;
+        GameLoopManager.Instance.Pause -= IsPaused;
+        InputManager.Instance.Movement -= OnMovements;
+        InputManager.Instance.Idle -= OnIdle;
+        InputManager.Instance.Interaction -= OnPickUp;
+        InputManager.Instance.Interaction -= OnInteract;
+    }
 }

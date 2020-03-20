@@ -30,11 +30,14 @@ public class GCFParentRotatingCube : MonoBehaviour
 
     private void LateUpdate()
     {
-        for (int i = 0; i < _childList.Count; i++)
+        if(PlayerManager.Instance.Player != null)
         {
-            if(_childList[i] != null)
+            for (int i = 0; i < _childList.Count; i++)
             {
-                _childList[i].Orbit(PlayerManager.Instance.Player.transform.position, _orbitTarget, Vector3.forward);
+                if (_childList[i] != null)
+                {
+                    _childList[i].Orbit(PlayerManager.Instance.Player.transform.position, _orbitTarget, Vector3.forward);
+                }
             }
         }
     }
