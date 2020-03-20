@@ -14,6 +14,7 @@ public class PlayerCamera : MonoBehaviour
         GameLoopManager.Instance.Camera += OnUpdate;
         GameLoopManager.Instance.Pause += IsPaused;
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     private void IsPaused (bool pause)
@@ -45,5 +46,11 @@ public class PlayerCamera : MonoBehaviour
 
         this.transform.localEulerAngles = new Vector3(_rotationX, 0, 0);
         _body.eulerAngles = new Vector3(0, _rotationY, 0);
+    }
+
+    private void OnDestroy()
+    {
+        GameLoopManager.Instance.Camera -= OnUpdate;
+        GameLoopManager.Instance.Pause -= IsPaused;
     }
 }

@@ -6,7 +6,6 @@
     {
         #region Fields
         private static T _instance = null;
-        private static object _lock = new object();
         #endregion Fields
 
         #region Properties
@@ -14,8 +13,6 @@
         {
             get
             {
-                lock(_lock)
-                {
                     if (_instance == null)
                     {
                         _instance = FindObjectOfType<T>();
@@ -30,7 +27,6 @@
                         }*/
                     }
                     return _instance;
-                }
             }
         }
         #endregion Properties
@@ -44,7 +40,6 @@
         protected virtual void OnDestroy()
         {
             _instance = null;
-            _lock = null;
         }
         #endregion Methods
     }
