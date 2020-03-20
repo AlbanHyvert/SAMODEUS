@@ -1,7 +1,32 @@
 fileFormatVersion: 2
 guid: 5b196e5b19c03ca49bca8e6a6c4eac73
 SpeedTreeImporter:
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 2_LOD0
+    second: {fileID: 2100000, guid: aff495eb324e0ce4590376e424102373, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 2_LOD1
+    second: {fileID: 2100000, guid: 74cb9808f1352d446b433ae54dc6a75d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 2_LOD2
+    second: {fileID: 2100000, guid: 09ea0946cc316cf4588d8ea8930220e9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2_LOD0
+    second: {fileID: 2100000, guid: efd6b4e5efcaccf49968c90bacc9854c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2_LOD1
+    second: {fileID: 2100000, guid: aa7a9e6cd85493649a66e11dba4b05ed, type: 2}
   serializedVersion: 5
   mainColor: {r: 1, g: 1, b: 1, a: 1}
   hueVariation: {r: 1, g: 0.5, b: 0, a: 0.1}
@@ -9,7 +34,7 @@ SpeedTreeImporter:
   bestWindQuality: 3
   hasBillboard: 0
   lODSettings:
-  - height: 0.016235732
+  - height: 0.49550793
     castShadows: 1
     receiveShadows: 1
     useLightProbes: 1
@@ -18,7 +43,7 @@ SpeedTreeImporter:
     enableHue: 1
     enableSubsurface: 1
     windQuality: 3
-  - height: 0.012763616
+  - height: 0.13638614
     castShadows: 1
     receiveShadows: 1
     useLightProbes: 1
