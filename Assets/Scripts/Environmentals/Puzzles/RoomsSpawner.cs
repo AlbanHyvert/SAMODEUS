@@ -33,11 +33,12 @@ public class RoomsSpawner : MonoBehaviour
             DeleteRooms();
         }
     }
-
+    
     private void CreateRooms(int prefabIndex)
     {
        GameObject go = Instantiate(_roomsPrefab[prefabIndex], transform.position, transform.rotation);
         go.transform.position += transform.right * _spawnZ;
+        go.transform.SetParent(transform);
         _roomsList.Add(go);
         _spawnZ += _roomsLenth;
     }
