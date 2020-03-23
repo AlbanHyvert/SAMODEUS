@@ -88,7 +88,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000004, guid: e4c429487686f4d4cb617d7c4e4b9f40,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -287,7 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57891743a991d46478055c57dd0f461e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameState: 3
+  _gameState: 5
   _defaultLoadingTime: 2
 --- !u!4 &1790694030
 Transform:
