@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class Board : MonoBehaviour
 {
@@ -6,18 +7,20 @@ public class Board : MonoBehaviour
     [SerializeField] private Transform _setPosition = null;
     [SerializeField] private GCFParentRotatingCube[] _activatedBridge = null;
 
-    private BoxCollider[] _colliders = null;
+    private List<BoxCollider> _collidersList = null;
 
     private void Start()
     {
+        _collidersList = new List<BoxCollider>();
+
         if (_activatedBridge != null)
         {
             for (int i = 0; i < _activatedBridge.Length; i++)
             {
                 for (int j = 0; j < _activatedBridge[i].GetComponents<BoxCollider>().Length; j++)
                 {
-                    _colliders = _activatedBridge[i].GetComponents<BoxCollider>();
-                    _colliders[j].enabled = false;
+                    _collidersList.Add(_activatedBridge[i].GetComponents<BoxCollider>()[j]);
+                    _collidersList[j].enabled = false;
                 }
             }
         }
@@ -38,10 +41,14 @@ public class Board : MonoBehaviour
                 {
                     _activatedBridge[i].DistMovingCube = 0;
                     
-                    for (int j = 0; j < _activatedBridge[i].GetComponents<BoxCollider>().Length; j++)
+                    if(_collidersList != null)
                     {
-                        _colliders[j].enabled = true;
+                        for (int j = 0; j < _activatedBridge[i].GetComponents<BoxCollider>().Length; j++)
+                        {
+                            _collidersList[j].enabled = true;
+                        }
                     }
+
                 }
             }
         }

@@ -19,9 +19,19 @@ public class GCFParentRotatingCube : MonoBehaviour
         _childList = new List<GCFRotatingCube>();
         _distMin = GCFManager.Instance.MinDistance;
         _distMax = GCFManager.Instance.MaxDistance;
+
         foreach (Transform item in transform)
         {
-            _childList.Add(item.GetComponent<GCFRotatingCube>());
+            GCFRotatingCube rotatingCube = item.GetComponent<GCFRotatingCube>();
+
+            if (rotatingCube == null)
+            {
+                _childList.Add(item.GetComponentInChildren<GCFRotatingCube>());
+            }
+            else
+            {
+                _childList.Add(rotatingCube);
+            }
         }
 
         for (int i = 0; i < _childList.Count; i++)

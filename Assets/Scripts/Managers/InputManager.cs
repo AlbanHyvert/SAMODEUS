@@ -22,6 +22,7 @@ public class InputManager : Singleton<InputManager>
     public Vector3 Direction { get { return _direction; } }
     public float VerticalSensitivity { get { return _verticalSensitivity; } set { _verticalSensitivity = value; } }
     public float HorizontalSensitivity { get { return _horizontalSensitivity; } set { _horizontalSensitivity = value; } }
+    public  DataKeycode DataKeycode { get { return _dataKeyCode; } }
 
     #region EVENTS
     private event Action<Vector3> _movement = null;

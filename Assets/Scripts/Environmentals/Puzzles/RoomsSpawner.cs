@@ -8,8 +8,8 @@ public class RoomsSpawner : MonoBehaviour
     [SerializeField] private float _roomsLenth = 0;
     [SerializeField] private int _safeZone = 10;
     [SerializeField] private int _amountRoomsOnScreen = 7;
-    [SerializeField] private List<GameObject> _roomsList = null;
-
+    
+    private List<GameObject> _roomsList = null;
     private Transform _player = null;
     private float _spawnZ = 0.0f;
 

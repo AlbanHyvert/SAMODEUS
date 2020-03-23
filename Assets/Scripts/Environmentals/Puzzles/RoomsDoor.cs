@@ -41,11 +41,10 @@ public class RoomsDoor : MonoBehaviour
             {
                 for (int j = 0; j < _others.Length; j++)
                 {
-                    _others[j].SetActive(false);
+                    Object.Destroy(_others[j], 1);
                 }
             }
             Destroy(this);
         }
-
     }
 }

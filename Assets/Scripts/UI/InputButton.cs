@@ -7,27 +7,27 @@ public class InputButton : MonoBehaviour
     [SerializeField] private InputManager.Keys _ID = InputManager.Keys.FORWARD;
     [SerializeField] private TextMeshProUGUI _text = null;
 
-    private void Awake()
+    private void Start()
     {
         if(_ID == InputManager.Keys.FORWARD)
         {
-            _text.text = InputManager.Keys.FORWARD.ToString();
+            _text.text = InputManager.Instance.DataKeycode.KeyForward.ToString();
         }
         else if(_ID == InputManager.Keys.LEFT)
         {
-            _text.text = InputManager.Keys.LEFT.ToString();
+            _text.text = InputManager.Instance.DataKeycode.KeyLeft.ToString();
         }
         else if(_ID == InputManager.Keys.BACK)
         {
-            _text.text = InputManager.Keys.BACK.ToString();
+            _text.text = InputManager.Instance.DataKeycode.KeyBack.ToString();
         }
         else if(_ID == InputManager.Keys.RIGHT)
         {
-            _text.text = InputManager.Keys.RIGHT.ToString();
+            _text.text = InputManager.Instance.DataKeycode.KeyRight.ToString(); ;
         }
         else if(_ID == InputManager.Keys.INTERACTION)
         {
-            _text.text = InputManager.Keys.INTERACTION.ToString();
+            _text.text = InputManager.Instance.DataKeycode.KeyInteraction.ToString();
         }
     }
 
