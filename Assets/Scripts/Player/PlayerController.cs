@@ -15,9 +15,12 @@ public class PlayerController : MonoBehaviour
     private bool hit = false;
     private GameObject _interactableObj = null;
 
+    [SerializeField] private PlayerManager.WorldTag _worldTag = PlayerManager.WorldTag.VERTUMNE;
+
     public Camera Camera { get { return _camera; } }
     public AudioSource AudioSource { get { return _audioSource; } }
 
+    public PlayerManager.WorldTag WorldTaged { get { return _worldTag; } set { _worldTag = value; } }
     private void Start()
     {
         _controller = GetComponent<CharacterController>();
