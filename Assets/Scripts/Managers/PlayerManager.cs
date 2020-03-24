@@ -3,6 +3,13 @@ using UnityEngine;
 
 public class PlayerManager : Singleton<PlayerManager>
 {
+    public enum WorldTag
+    {
+        VERTUMNE,
+        GCF,
+        DEV
+    }
+
     [SerializeField] private PlayerController _playerController = null;
 
     private PlayerController _player = null;

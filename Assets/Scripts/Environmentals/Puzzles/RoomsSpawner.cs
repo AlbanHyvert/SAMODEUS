@@ -8,8 +8,8 @@ public class RoomsSpawner : MonoBehaviour
     [SerializeField] private float _roomsLenth = 0;
     [SerializeField] private int _safeZone = 10;
     [SerializeField] private int _amountRoomsOnScreen = 7;
-    [SerializeField] private List<GameObject> _roomsList = null;
-
+    
+    private List<GameObject> _roomsList = null;
     private Transform _player = null;
     private float _spawnZ = 0.0f;
 
@@ -33,11 +33,12 @@ public class RoomsSpawner : MonoBehaviour
             DeleteRooms();
         }
     }
-
+    
     private void CreateRooms(int prefabIndex)
     {
        GameObject go = Instantiate(_roomsPrefab[prefabIndex], transform.position, transform.rotation);
         go.transform.position += transform.right * _spawnZ;
+        go.transform.SetParent(transform);
         _roomsList.Add(go);
         _spawnZ += _roomsLenth;
     }

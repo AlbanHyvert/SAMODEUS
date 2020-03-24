@@ -39,4 +39,19 @@ public class GCFRotatingCube : MonoBehaviour
             transform.rotation = _startRotation;
         }
     }
+
+    public void Orbit(int distance, Transform target, Vector3 orientation)
+    {
+        if (distance <= 0)
+        {
+            _resetPositionTimer = 0;
+            _resetPositionTimer += Time.deltaTime;
+            transform.position = Vector3.Lerp(transform.position, _startPosition, _resetPositionTimer * GCFManager.Instance.ReturnSpeed);
+        }
+        else
+        {
+            transform.RotateAround(target.position, orientation, _distFromStartingPoint * Time.deltaTime);
+            transform.rotation = _startRotation;
+        }
+    }
 }
