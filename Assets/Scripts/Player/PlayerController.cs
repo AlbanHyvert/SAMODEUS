@@ -41,6 +41,8 @@ public class PlayerController : MonoBehaviour
         InputManager.Instance.Idle += OnIdle;
         InputManager.Instance.Interaction += OnPickUp;
         InputManager.Instance.Interaction += OnInteract;
+        InputManager.Instance.PressSprint += OnSprint;
+        InputManager.Instance.ReleaseSprint += OnWalk;
     }
 
     private void IsPaused(bool pause)
@@ -151,5 +153,7 @@ public class PlayerController : MonoBehaviour
         InputManager.Instance.Idle -= OnIdle;
         InputManager.Instance.Interaction -= OnPickUp;
         InputManager.Instance.Interaction -= OnInteract;
+        InputManager.Instance.PressSprint -= OnSprint;
+        InputManager.Instance.ReleaseSprint -= OnWalk;
     }
 }
