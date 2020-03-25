@@ -1,25 +1,32 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class CheckPoints : MonoBehaviour
 {
-    [Header("Starting Point")]
-    [SerializeField] private Transform _firstCheckPoint = null;
-    [Header("DeathZone")]
-    [SerializeField] private DeathZone _respawnPoint = null;
-    [Header("Place To Respawn")]
-    [SerializeField] private Transform _placeToSpawn = null;
+    [SerializeField] private bool _isFirstCheckPoint = false;
 
     private void Start()
     {
-        if (_firstCheckPoint != null)
-            _respawnPoint.SetCheckPoint(_firstCheckPoint.position);
+        Rigidbody rigidbody = transform.GetComponent<Rigidbody>();
+        rigidbody.isKinematic = true;
+
+        CheckPointsManager.Instance.AddCheckPoints(this);
+
+        if(_isFirstCheckPoint == true)
+        {
+            CheckPointsManager.Instance.UpdateFirstCheckPoint(transform);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag.Equals("Player"))
+        PlayerController playerController = other.GetComponent<PlayerController>();
+
+        if(playerController != null && _isFirstCheckPoint == false)
         {
-            _respawnPoint.SetCheckPoint(_placeToSpawn.position);
+            CheckPointsManager.Instance.ChangeCheckPoint(transform);
+            CheckPointsManager.Instance.RemoveCheckPoints(this);
+            Object.Destroy(this);
         }
     }
 }
