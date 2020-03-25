@@ -5,7 +5,7 @@ public class WorldCamera : MonoBehaviour
     [SerializeField] private Camera[] _camsScene = null;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         if(_camsScene != null)
         {

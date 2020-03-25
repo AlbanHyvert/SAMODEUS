@@ -20,6 +20,8 @@ public class GCFParentRotatingCube : MonoBehaviour
         _distMin = GCFManager.Instance.MinDistance;
         _distMax = GCFManager.Instance.MaxDistance;
 
+        GameLoopManager.Instance.Puzzles += OnUpdate;
+
         foreach (Transform item in transform)
         {
             GCFRotatingCube rotatingCube = item.GetComponent<GCFRotatingCube>();
@@ -44,7 +46,7 @@ public class GCFParentRotatingCube : MonoBehaviour
         }
     }
 
-    private void LateUpdate()
+    private void OnUpdate()
     {
         if(_isSpecialEvent == false)
         {
@@ -69,5 +71,10 @@ public class GCFParentRotatingCube : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void DestroyChild(GCFRotatingCube rotatingCube)
+    {
+        _childList.Remove(rotatingCube);
     }
 }
