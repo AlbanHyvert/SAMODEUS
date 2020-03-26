@@ -10,7 +10,9 @@ public class InputManager : Singleton<InputManager>
         LEFT,
         BACK,
         RIGHT,
-        INTERACTION
+        INTERACTION,
+        SPRINT,
+        DIALOGUE
     }
 
     [SerializeField] private DataKeycode _dataKeyCode = null;
@@ -36,6 +38,34 @@ public class InputManager : Singleton<InputManager>
         remove
         {
             _movement -= value;
+        }
+    }
+
+    private event Action _pressSprint = null;
+    public event Action PressSprint
+    {
+        add
+        {
+            _pressSprint -= value;
+            _pressSprint += value;
+        }
+        remove
+        {
+            _pressSprint -= value;
+        }
+    }
+
+    private event Action _releaseSprint = null;
+    public event Action ReleaseSprint
+    {
+        add
+        {
+            _releaseSprint -= value;
+            _releaseSprint += value;
+        }
+        remove
+        {
+            _releaseSprint -= value;
         }
     }
 
@@ -81,6 +111,20 @@ public class InputManager : Singleton<InputManager>
         }
     }
 
+    private event Action _passDialogue = null;
+    public event Action PassDialogue
+    {
+        add
+        {
+            _passDialogue -= value;
+            _passDialogue += value;
+        }
+        remove
+        {
+            _passDialogue -= value;
+        }
+    }
+
     private event Action _changeInput = null;
     public event Action ChangeInput
     {
@@ -122,6 +166,14 @@ public class InputManager : Singleton<InputManager>
         {
             _dataKeyCode.KeyInteraction = keyCode;
         }
+        else if(keys == Keys.SPRINT)
+        {
+            _dataKeyCode.KeySprint = keyCode;
+        }
+        else if (keys == Keys.DIALOGUE)
+        {
+            _dataKeyCode.KeyDialogue = keyCode;
+        }
     }
 
     private void Start()
@@ -150,6 +202,7 @@ public class InputManager : Singleton<InputManager>
         {
             _changeInput();
         }
+
         if(PlayerManager.Instance.Player != null)
         {
             if (Input.GetKey(_dataKeyCode.KeyForward))
@@ -176,6 +229,21 @@ public class InputManager : Singleton<InputManager>
         if(_interaction != null && Input.GetKeyDown(_dataKeyCode.KeyInteraction))
         {
             _interaction();
+        }
+
+        if (_pressSprint != null && Input.GetKeyDown(_dataKeyCode.KeySprint))
+        {
+            _pressSprint();
+        }
+
+        if (_releaseSprint != null && Input.GetKeyUp(_dataKeyCode.KeySprint))
+        {
+            _releaseSprint();
+        }
+
+        if(_passDialogue != null && Input.GetKeyDown(_dataKeyCode.KeyDialogue))
+        {
+            _passDialogue();
         }
 
         if(_throw != null && Input.GetMouseButtonDown(0))

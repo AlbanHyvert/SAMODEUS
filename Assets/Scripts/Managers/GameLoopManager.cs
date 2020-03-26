@@ -18,7 +18,6 @@ public class GameLoopManager : Singleton<GameLoopManager>
 
     #region EVENTS
 
-
     private event Action<bool> _pause = null;
     public event Action<bool> Pause
     {
@@ -89,6 +88,20 @@ public class GameLoopManager : Singleton<GameLoopManager>
         }
     }
 
+    private event Action _ui = null;
+    public event Action UI
+    {
+        add
+        {
+            _ui -= value;
+            _ui += value;
+        }
+        remove
+        {
+            _ui -= value;
+        }
+    }
+
     #endregion EVENTS
 
     private void Start()
@@ -121,6 +134,11 @@ public class GameLoopManager : Singleton<GameLoopManager>
         if(_puzzles != null)
         {
             _puzzles();
+        }
+
+        if(_ui != null)
+        {
+            _ui();
         }
     }
 }
