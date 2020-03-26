@@ -24,9 +24,8 @@ public class CheckPoints : MonoBehaviour
 
         if(playerController != null && _isFirstCheckPoint == false)
         {
+            Debug.Log("checkpoint hit");
             CheckPointsManager.Instance.ChangeCheckPoint(transform);
-            CheckPointsManager.Instance.RemoveCheckPoints(this);
-            Object.Destroy(this);
         }
     }
 }

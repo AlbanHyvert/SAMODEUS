@@ -6,7 +6,7 @@ public class Runes : MonoBehaviour, IInteract
     [SerializeField] private int _rotateSpeed = 2;
     private int _matchingValueX = 0;
 
-    private float _valueX = 0;
+    private float _valueZ = 0;
     private bool _isMatching = false;
 
     public bool IsMatching { get { return _isMatching; } }
@@ -14,7 +14,6 @@ public class Runes : MonoBehaviour, IInteract
 
     private void Start()
     {
-        _valueX = transform.eulerAngles.z;
         GameLoopManager.Instance.Puzzles += OnUpdate;
     }
 
@@ -22,18 +21,18 @@ public class Runes : MonoBehaviour, IInteract
     {
         if(_isMatching == false)
         {
-            _valueX += _rotateForce;
+            _valueZ += _rotateForce;
         }
     }
 
     private void OnUpdate()
     {
-        if(_valueX == _matchingValueX)
+        if(_valueZ == _matchingValueX)
         {
             _isMatching = true;
         }
 
-        Quaternion targetRot = Quaternion.Euler(_valueX, 0, 0);
+        Quaternion targetRot = Quaternion.Euler(transform.rotation.x, transform.rotation.y, _valueZ);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * _rotateSpeed);
     }
 

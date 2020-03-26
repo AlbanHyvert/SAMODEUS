@@ -51,13 +51,13 @@ public class CheckPointsManager : Singleton<CheckPointsManager>
     {
         if(_lastCheckpointPast == null)
         {
-            player.position = _firstCheckPoint.localPosition;
-            player.rotation = _firstCheckPoint.localRotation;
+            player.position = _firstCheckPoint.position;
+            player.rotation = _firstCheckPoint.rotation;
         }
         else
         {
-            player.position = _lastCheckpointPast.localPosition;
-            player.rotation = _lastCheckpointPast.localRotation;
+            player.position = _lastCheckpointPast.position;
+            player.rotation = _lastCheckpointPast.rotation;
         }
 
         Debug.Log("RespawnPlayer");
