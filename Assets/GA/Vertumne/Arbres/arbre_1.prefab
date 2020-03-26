@@ -188,6 +188,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7478613598360261612}
   - component: {fileID: 7478613598375610188}
+  - component: {fileID: 6170471021736680449}
   m_Layer: 0
   m_Name: arbre_1
   m_TagString: Untagged
@@ -239,6 +240,20 @@ LODGroup:
     renderers:
     - renderer: {fileID: 7478613598358360328}
   m_Enabled: 1
+--- !u!136 &6170471021736680449
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7478613598360358860}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 9.68
+  m_Direction: 1
+  m_Center: {x: 0, y: 2.73, z: 0}
 --- !u!1 &7478613598360358862
 GameObject:
   m_ObjectHideFlags: 0

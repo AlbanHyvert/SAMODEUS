@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8463069648813453853}
   - component: {fileID: 3222401395966301600}
   - component: {fileID: 4530748791373865421}
+  - component: {fileID: 5776450636655318030}
   m_Layer: 0
   m_Name: New_rock_4_low (2)
   m_TagString: Untagged
@@ -77,6 +78,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5776450636655318030
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2602282364302136766}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: fc3e03a250c8a794db6edf5467063ace, type: 3}
 --- !u!1 &2994274543472387225
 GameObject:
   m_ObjectHideFlags: 0
@@ -88,6 +103,7 @@ GameObject:
   - component: {fileID: 759247997193167459}
   - component: {fileID: 6475854992287142035}
   - component: {fileID: 3354493386929714157}
+  - component: {fileID: 4845705394998278316}
   m_Layer: 0
   m_Name: New_rock_1_low (1)
   m_TagString: Untagged
@@ -154,6 +170,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4845705394998278316
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2994274543472387225}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: b0e631f632dd7ca49af5f3e54a682760, type: 3}
 --- !u!1 &3402382794603636293
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,6 +195,7 @@ GameObject:
   - component: {fileID: 3402382794604132965}
   - component: {fileID: 3402382794607032903}
   - component: {fileID: 3402382794605901959}
+  - component: {fileID: 2261679456399137817}
   m_Layer: 0
   m_Name: New_rock_5_low
   m_TagString: Untagged
@@ -231,6 +262,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2261679456399137817
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3402382794603636293}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 30118246092d6c14191769db267b1685, type: 3}
 --- !u!1 &3402382794603636295
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,6 +287,7 @@ GameObject:
   - component: {fileID: 3402382794604132967}
   - component: {fileID: 3402382794607032905}
   - component: {fileID: 3402382794605901961}
+  - component: {fileID: 346080927978421989}
   m_Layer: 0
   m_Name: New_rock_4_low
   m_TagString: Untagged
@@ -308,6 +354,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &346080927978421989
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3402382794603636295}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: fc3e03a250c8a794db6edf5467063ace, type: 3}
 --- !u!1 &3402382794603636297
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,6 +379,7 @@ GameObject:
   - component: {fileID: 3402382794604132969}
   - component: {fileID: 3402382794607032907}
   - component: {fileID: 3402382794605901963}
+  - component: {fileID: 7829660175464554526}
   m_Layer: 0
   m_Name: New_rock_3_low
   m_TagString: Untagged
@@ -385,6 +446,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7829660175464554526
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3402382794603636297}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: bf4b9ef071996214480e02318a261944, type: 3}
 --- !u!1 &3402382794603636301
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,6 +471,7 @@ GameObject:
   - component: {fileID: 3402382794604132973}
   - component: {fileID: 3402382794607032911}
   - component: {fileID: 3402382794605901967}
+  - component: {fileID: 1451786949411622543}
   m_Layer: 0
   m_Name: New_rock_1_low
   m_TagString: Untagged
@@ -462,6 +538,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1451786949411622543
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3402382794603636301}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 35f90f953a11cba499b6721874e979b2, type: 3}
 --- !u!1 &3610196031120349207
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,6 +606,7 @@ GameObject:
   - component: {fileID: 849704799881388767}
   - component: {fileID: 7904238225978075538}
   - component: {fileID: 2101444468655666799}
+  - component: {fileID: 8613827582713294120}
   m_Layer: 0
   m_Name: New_rock_1_low (2)
   m_TagString: Untagged
@@ -582,6 +673,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8613827582713294120
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4155273908669931815}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: b0e631f632dd7ca49af5f3e54a682760, type: 3}
 --- !u!1 &4258330759185714430
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,6 +698,7 @@ GameObject:
   - component: {fileID: 2266710522673221262}
   - component: {fileID: 8767682048715293882}
   - component: {fileID: 461929856366637487}
+  - component: {fileID: 4605901144490876499}
   m_Layer: 0
   m_Name: New_rock_3_low (2)
   m_TagString: Untagged
@@ -659,6 +765,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4605901144490876499
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4258330759185714430}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: bf4b9ef071996214480e02318a261944, type: 3}
 --- !u!1 &5007407112778316788
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,6 +790,7 @@ GameObject:
   - component: {fileID: 6360506304623918679}
   - component: {fileID: 804360443955803222}
   - component: {fileID: 7659918469084223944}
+  - component: {fileID: 6985474558708234754}
   m_Layer: 0
   m_Name: New_rock_1_low (3)
   m_TagString: Untagged
@@ -736,6 +857,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6985474558708234754
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5007407112778316788}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: b0e631f632dd7ca49af5f3e54a682760, type: 3}
 --- !u!1 &5172886002023848081
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,6 +882,7 @@ GameObject:
   - component: {fileID: 1791428015920377939}
   - component: {fileID: 8596404880507731978}
   - component: {fileID: 8403422532939988862}
+  - component: {fileID: 4316266743828024810}
   m_Layer: 0
   m_Name: New_rock_3_low (3)
   m_TagString: Untagged
@@ -813,6 +949,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4316266743828024810
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5172886002023848081}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: bf4b9ef071996214480e02318a261944, type: 3}
 --- !u!1 &5600831284026270388
 GameObject:
   m_ObjectHideFlags: 0
@@ -824,6 +974,7 @@ GameObject:
   - component: {fileID: 7865834633573230621}
   - component: {fileID: 9214152497577329534}
   - component: {fileID: 7406537135928584223}
+  - component: {fileID: 8857273410948748627}
   m_Layer: 0
   m_Name: New_rock_4_low (1)
   m_TagString: Untagged
@@ -890,6 +1041,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8857273410948748627
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5600831284026270388}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: fc3e03a250c8a794db6edf5467063ace, type: 3}
 --- !u!1 &5867630954277135015
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,6 +1066,7 @@ GameObject:
   - component: {fileID: 3651277859189098281}
   - component: {fileID: 4841371725853078247}
   - component: {fileID: 796573230770916790}
+  - component: {fileID: 5659323692025266704}
   m_Layer: 0
   m_Name: New_rock_3_low (4)
   m_TagString: Untagged
@@ -967,6 +1133,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5659323692025266704
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5867630954277135015}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: bf4b9ef071996214480e02318a261944, type: 3}
 --- !u!1 &7151513492132065752
 GameObject:
   m_ObjectHideFlags: 0
@@ -978,6 +1158,7 @@ GameObject:
   - component: {fileID: 3149179116008068498}
   - component: {fileID: 7634836891861582583}
   - component: {fileID: 5482050320033499390}
+  - component: {fileID: 5599018504028811473}
   m_Layer: 0
   m_Name: New_rock_3_low (1)
   m_TagString: Untagged
@@ -1044,3 +1225,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5599018504028811473
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7151513492132065752}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: bf4b9ef071996214480e02318a261944, type: 3}
