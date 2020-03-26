@@ -6,6 +6,7 @@ public class DialBoxController : MonoBehaviour
 {
     [SerializeField ,Header("TmPro Text Zone")] private TextMeshProUGUI _text = null;
     [SerializeField ,Header("Blank Time Between Text")] private float _blankThreshold = 0.1f;
+    [SerializeField] private TextMeshProUGUI _buttonsToPressText = null;
 
     private AudioSource _source = null;
     private float _timeStamp = 0.0f;
@@ -14,6 +15,9 @@ public class DialBoxController : MonoBehaviour
 
     private void Start()
     {
+        if (_buttonsToPressText != null)
+            _buttonsToPressText.text = string.Empty;
+
         _text.text = string.Empty;
         _source = PlayerManager.Instance.Player.AudioSource;
         NarrativeManager.Instance.OnTriggerNarrative += OnTriggerNarrative;
@@ -51,6 +55,7 @@ public class DialBoxController : MonoBehaviour
             _timeStamp = Time.time + (_dialBoxDataList[0].Clip.length + _dialBoxDataList[0].LifeTime);
             _timerIsStarted = true;
             _dialBoxDataList.RemoveAt(0);
+            _buttonsToPressText.text = InputManager.Instance.DataKeycode.KeyDialogue.ToString();
         }
     }
 
@@ -73,6 +78,7 @@ public class DialBoxController : MonoBehaviour
             else if(Time.time >= _timeStamp - _blankThreshold)
             {
                 _text.text = string.Empty;
+                _buttonsToPressText.text = string.Empty;
             }
         }
     }
@@ -80,6 +86,7 @@ public class DialBoxController : MonoBehaviour
     private void PassDials()
     {
         _text.text = string.Empty;
+        _buttonsToPressText.text = string.Empty;
         _timeStamp = 0;
         _source.Stop();
     }
