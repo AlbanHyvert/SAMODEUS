@@ -14,6 +14,9 @@ public class Runes : MonoBehaviour, IInteract
 
     private void Start()
     {
+        Quaternion quaternion = transform.rotation;
+        quaternion = new Quaternion(0, 0, 90, 0);
+
         GameLoopManager.Instance.Puzzles += OnUpdate;
     }
 
@@ -26,7 +29,13 @@ public class Runes : MonoBehaviour, IInteract
     }
 
     private void OnUpdate()
-    {
+    {   
+        if(_valueZ > 180)
+        {
+            _valueZ = 0;
+        }
+
+        
         if(_valueZ == _matchingValueX)
         {
             _isMatching = true;

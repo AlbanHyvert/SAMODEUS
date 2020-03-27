@@ -8,16 +8,16 @@ public class RunesDoor : MonoBehaviour
 
     private void Start()
     {
-        for (int i = 0; i < _matchingRunes.Length; i++)
-        {
-            _runesList[i].MatchingValueX = (int)_matchingRunes[i].eulerAngles.z;
-        }
-        GameLoopManager.Instance.Puzzles += OnUpdate;
+        /*for (int i = 0; i < _matchingRunes.Length; i++)
+          {
+              _runesList[i].MatchingValueX = (int)_matchingRunes[i].eulerAngles.z;
+          }
+          GameLoopManager.Instance.Puzzles += OnUpdate;*/
     }
 
     private void OnUpdate()
     {
-        for (int i = 0; i < _runesList.Length; i++)
+      /*for (int i = 0; i < _runesList.Length; i++)
         {
             if(_runesList[0].IsMatching == true && _runesList[1].IsMatching == true && _runesList[2].IsMatching == true)
             {
@@ -32,6 +32,6 @@ public class RunesDoor : MonoBehaviour
                     }
                 }
             }
-        }
+        }*/
     }
 }
