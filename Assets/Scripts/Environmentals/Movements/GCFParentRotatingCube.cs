@@ -65,7 +65,7 @@ public class GCFParentRotatingCube : MonoBehaviour
         {
             Vector3 playerPosition = PlayerManager.Instance.Player.transform.position;
 
-            if (PlayerManager.Instance.Player != null && _rotatingChildList != null)
+            if (PlayerManager.Instance.Player != null && _rotatingChildList != null && _orbitTarget != null)
             {
                 for (int i = 0; i < _rotatingChildList.Count; i++)
                 {
@@ -91,7 +91,7 @@ public class GCFParentRotatingCube : MonoBehaviour
         {
             for (int i = 0; i < _rotatingChildList.Count; i++)
             {
-                if (_rotatingChildList[i] != null)
+                if (_rotatingChildList[i] != null && _orbitTarget != null)
                 {
                     _rotatingChildList[i].Orbit(_distanceMoveCube, _orbitTarget, Vector3.forward);
                 }

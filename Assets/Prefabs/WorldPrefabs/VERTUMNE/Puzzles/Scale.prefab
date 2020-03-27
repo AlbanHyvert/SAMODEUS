@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4495730413545713361}
   - component: {fileID: 4495730413548580599}
   - component: {fileID: 4495730413547482167}
-  - component: {fileID: 1380192978947823306}
+  - component: {fileID: 5504739721610646943}
   m_Layer: 0
   m_Name: Boucle_chaine_3
   m_TagString: Untagged
@@ -78,8 +78,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &1380192978947823306
-MeshCollider:
+--- !u!65 &5504739721610646943
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -88,10 +88,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300008, guid: bcc5f2e1f0d0acf409b70c71c6356dab, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 70, y: 1.15, z: 70}
+  m_Center: {x: 0, y: -62.79, z: 0}
 --- !u!1 &4495730413545222899
 GameObject:
   m_ObjectHideFlags: 0
@@ -657,6 +656,7 @@ MonoBehaviour:
   _objectTag: Diamond
   _setPosition: {fileID: 7619754017025898973}
   _activatedObject: []
+  _desactivedObject: []
 --- !u!65 &6828435638104133021
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -2,47 +2,46 @@
 
 public class Runes : MonoBehaviour, IInteract
 {
-    [SerializeField] private int _rotateForce = 30;
-    [SerializeField] private int _rotateSpeed = 2;
-    private int _matchingValueX = 0;
+    private int _positionValue = 1;
+    private Vector3 _rotation = Vector3.zero;
 
-    private float _valueZ = 0;
-    private bool _isMatching = false;
-
-    public bool IsMatching { get { return _isMatching; } }
-    public int MatchingValueX { get { return _matchingValueX; } set { _matchingValueX = value; } }
+    public int PositionValue { get { return _positionValue; } }
 
     private void Start()
     {
-        Quaternion quaternion = transform.rotation;
-        quaternion = new Quaternion(0, 0, 90, 0);
-
         GameLoopManager.Instance.Puzzles += OnUpdate;
     }
 
     void IInteract.Enter()
     {
-        if(_isMatching == false)
+        if(_positionValue > 3)
         {
-            _valueZ += _rotateForce;
+            _positionValue = 1;
+        }
+        else
+        {
+            _positionValue++;
         }
     }
 
     private void OnUpdate()
-    {   
-        if(_valueZ > 180)
+    {
+        if(_positionValue == 1)
         {
-            _valueZ = 0;
+            transform.rotation = Quaternion.Euler(0,0, 90);
         }
-
-        
-        if(_valueZ == _matchingValueX)
+        else if(_positionValue == 2)
         {
-            _isMatching = true;
+            transform.rotation = Quaternion.Euler(0, 0, 30);
         }
-
-        Quaternion targetRot = Quaternion.Euler(transform.rotation.x, transform.rotation.y, _valueZ);
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * _rotateSpeed);
+        else if (_positionValue == 3)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 10);
+        }
+        else if (_positionValue == 4)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 180);
+        }
     }
 
     void IInteract.Exit()
