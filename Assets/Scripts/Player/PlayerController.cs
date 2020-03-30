@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private int _throwForce = 20;
 
     private CharacterController _controller = null;
-    private bool hit = false;
+    private bool _hit = false;
     private GameObject _interactableObj = null;
 
     [SerializeField] private PlayerManager.WorldTag _worldTag = PlayerManager.WorldTag.VERTUMNE;
@@ -93,9 +93,9 @@ public class PlayerController : MonoBehaviour
     private void OnRaycast()
     {
         RaycastHit raycastHit;
-        hit = Physics.Raycast(_camera.transform.position, _camera.transform.forward, out raycastHit, _distanceInteract, _activeLayer);
+        _hit = Physics.Raycast(_camera.transform.position, _camera.transform.forward, out raycastHit, _distanceInteract, _activeLayer);
 
-        if(hit == true)
+        if(_hit == true)
         {
             _interactableObj = null;
             _interactableObj = raycastHit.transform.gameObject;
@@ -105,7 +105,7 @@ public class PlayerController : MonoBehaviour
     private void OnInteract()
     {
         IInteract interact = _interactableObj.GetComponent<IInteract>();
-        if(hit == true && interact != null)
+        if(_hit == true && interact != null)
         {
             interact.Enter();
         }
@@ -114,7 +114,8 @@ public class PlayerController : MonoBehaviour
     private void OnPickUp()
     {
         IAction action = _interactableObj.GetComponent<IAction>();
-        if(hit == true && action != null)
+
+        if (action != null && _hit == true)
         {
             action.Enter(_camera.transform);
             InputManager.Instance.Interaction += OnDrop;
