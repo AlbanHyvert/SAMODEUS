@@ -15,12 +15,7 @@ public class Portal : MonoBehaviour
     {
         if(_playerCamera == null)
         {
-            _playerCamera = Camera.main;
-            
-            if(_playerCamera == null)
-            {
-                _playerCamera = PlayerManager.Instance.Player.Camera;
-            }
+            _playerCamera = PlayerManager.Instance.Player.Camera;
         }
 
         _portalCamera = GetComponentInChildren<Camera>();
@@ -29,51 +24,55 @@ public class Portal : MonoBehaviour
         Render();
     }
 
-    private void LateUpdate()
+    private void Update()
     {
         Render();
-        for (int i = 0; i < trackedTravellers.Count; i++)
+        if(trackedTravellers != null)
         {
-            PortalTraveller traveller = trackedTravellers[i];
-            Transform travellerT = traveller.transform;
-
-            Vector3 offsetFromPortal = travellerT.position - transform.position;
-
-            int portalSide = System.Math.Sign(Vector3.Dot(offsetFromPortal, transform.forward));
-            int portalSideOld = System.Math.Sign(Vector3.Dot(traveller.PreviousOffsetFromPortal, transform.forward));
-
-            // Teleport the traveller if it has crossed from one side of the portal to the other
-            if(portalSide != portalSideOld)
+            for (int i = 0; i < trackedTravellers.Count; i++)
             {
-                Matrix4x4 m = _linkedPortal.transform.localToWorldMatrix * transform.worldToLocalMatrix * travellerT.localToWorldMatrix;
-                traveller.Teleport(transform, _linkedPortal.transform, m.GetColumn(3), m.rotation);
+                PortalTraveller traveller = trackedTravellers[i];
+                Transform travellerT = traveller.transform;
 
-                // Can't rely on OnTriggerEnter/Exit to be called next frame because it depends on when FixedUpdate runs
-                _linkedPortal.OnTravellerEnterPortal(traveller);
-                trackedTravellers.RemoveAt(i);
-                i--;
-            }
-            else
-            {
-                traveller.PreviousOffsetFromPortal = offsetFromPortal;
+                Vector3 offsetFromPortal = travellerT.position - transform.position;
+
+                int portalSide = System.Math.Sign(Vector3.Dot(offsetFromPortal, transform.forward));
+                int portalSideOld = System.Math.Sign(Vector3.Dot(traveller.PreviousOffsetFromPortal, transform.forward));
+
+                // Teleport the traveller if it has crossed from one side of the portal to the other
+                if (portalSide != portalSideOld)
+                {
+                    Matrix4x4 m = _linkedPortal.transform.localToWorldMatrix * transform.worldToLocalMatrix * travellerT.localToWorldMatrix;
+                    traveller.Teleport(transform, _linkedPortal.transform, m.GetColumn(3), m.rotation);
+
+                    // Can't rely on OnTriggerEnter/Exit to be called next frame because it depends on when FixedUpdate runs
+                    _linkedPortal.OnTravellerEnterPortal(traveller);
+                    trackedTravellers.RemoveAt(i);
+                    i--;
+                }
+                else
+                {
+                    traveller.PreviousOffsetFromPortal = offsetFromPortal;
+                }
             }
         }
+
     }
 
     private void CreateViewTexture()
     {
-        if(_viewTexture == null || _viewTexture.width != Screen.width || _viewTexture.height != Screen.height)
-        {
-            if(_viewTexture != null)
+            if (_viewTexture == null || _viewTexture.width != Screen.width || _viewTexture.height != Screen.height)
             {
-                _viewTexture.Release();
+                if (_viewTexture != null)
+                {
+                    _viewTexture.Release();
+                }
+                _viewTexture = new RenderTexture(Screen.width, Screen.height, 0);
+                //Render the view from the portal camera to the view texture
+                _portalCamera.targetTexture = _viewTexture;
+                // Display the view texture on the screen of the linked portal
+                _linkedPortal._screen.material.SetTexture("_MainTex", _viewTexture);
             }
-            _viewTexture = new RenderTexture(Screen.width, Screen.height, 0);
-            //Render the view from the portal camera to the view texture
-            _portalCamera.targetTexture = _viewTexture;
-            // Display the view texture on the screen of the linked portal
-            _linkedPortal._screen.material.SetTexture("_MainTex", _viewTexture);
-        }
     }
 
     private static bool VisibleFromCamera(Renderer renderer, Camera camera)
@@ -87,23 +86,25 @@ public class Portal : MonoBehaviour
     {
         if(!VisibleFromCamera(_linkedPortal._screen, _playerCamera))
         {
-            var testTexture = new Texture2D(1, 1);
-            testTexture.SetPixel(0, 0, Color.red);
-            testTexture.Apply();
-            _linkedPortal._screen.material.SetTexture("_MainTex", testTexture);
             return;
         }
 
         _linkedPortal._screen.material.SetTexture("_MainTex", _viewTexture);
         _screen.enabled = false;
+
         CreateViewTexture();
 
         // Make portal cam position and rotation the same relative to this portal as player cam relative linked portal
         Matrix4x4 m = transform.localToWorldMatrix * _linkedPortal.transform.worldToLocalMatrix * _playerCamera.transform.localToWorldMatrix;
-        _portalCamera.transform.SetPositionAndRotation(m.GetColumn(3), m.rotation);
 
-        //Render Camera
-        _portalCamera.Render();
+        if(_portalCamera != null)
+        {
+            _portalCamera.transform.SetPositionAndRotation(m.GetColumn(3), m.rotation);
+
+            //Render Camera
+            _portalCamera.Render();
+        }
+
         //ProtectScreenFromClipping();
         _screen.enabled = true; 
     }
@@ -129,7 +130,7 @@ public class Portal : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        var traveller = other.GetComponent<PortalTraveller>();
+        PortalTraveller traveller = other.GetComponent<PortalTraveller>();
         if (traveller && trackedTravellers.Contains(traveller))
         {
             traveller.ExitPortalThreshold();

@@ -31,7 +31,7 @@ Transform:
   m_LocalScale: {x: 3, y: 10, z: 15.552}
   m_Children: []
   m_Father: {fileID: 8382414840422806842}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &4606805956143347837
 BoxCollider:
@@ -265,9 +265,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 409105459140474686}
   - {fileID: 8382414840422806844}
   - {fileID: 7465939170676669957}
-  - {fileID: 409105459140474686}
   - {fileID: 4949576361967130692}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -424,7 +424,7 @@ Transform:
   - {fileID: 8382414840422806846}
   - {fileID: 8382414840422806874}
   m_Father: {fileID: 8382414840422806842}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!33 &8382414840423609684
 MeshFilter:
@@ -12995,7 +12995,7 @@ PrefabInstance:
     - target: {fileID: 569940938718209257, guid: 4ddbe632af3fe1f4ea6b95d9c5f75cfe,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 569940938718209257, guid: 4ddbe632af3fe1f4ea6b95d9c5f75cfe,
         type: 3}
@@ -13012,8 +13012,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5085455389472227580, guid: 4ddbe632af3fe1f4ea6b95d9c5f75cfe,
+        type: 3}
+      propertyPath: _screen
+      value: 
+      objectReference: {fileID: 5782508633969546077}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ddbe632af3fe1f4ea6b95d9c5f75cfe, type: 3}
+--- !u!23 &5782508633969546077 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5943099543089283210, guid: 4ddbe632af3fe1f4ea6b95d9c5f75cfe,
+    type: 3}
+  m_PrefabInstance: {fileID: 163740907000943575}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &409105459140474686 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 569940938718209257, guid: 4ddbe632af3fe1f4ea6b95d9c5f75cfe,
