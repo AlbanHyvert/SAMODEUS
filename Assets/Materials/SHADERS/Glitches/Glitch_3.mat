@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Disolve_Mat
-  m_Shader: {fileID: 4800000, guid: 8832e649856d7a9419966d229fb26a17, type: 3}
-  m_ShaderKeywords: BOOLEAN_9AF1B332_ON
+  m_Name: Glitch_3
+  m_Shader: {fileID: 4800000, guid: e89b45fbc72e6f84fb6ac4f6eb1bbd89, type: 3}
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -21,12 +21,16 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - Texture2D_BB00FC84:
-        m_Texture: {fileID: 2800000, guid: dd61af2ec9847eb4d8e17529fa61b143, type: 3}
+    - Texture2D_1DCED2:
+        m_Texture: {fileID: 2800000, guid: fb8c2b067d694db4bb0c064bdf55755f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - Texture2D_BE09B77B:
-        m_Texture: {fileID: 2800000, guid: e9d4d4eca54a83541b324ceb1c7d0b73, type: 3}
+    - Texture2D_BDF96431:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_F058CF76:
+        m_Texture: {fileID: 2800000, guid: dd61af2ec9847eb4d8e17529fa61b143, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AnisotropyMap:
@@ -114,10 +118,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Boolean_9AF1B332: 1
-    - Vector1_3996BBE4: 1
-    - Vector1_7D2F29BA: 0.05
-    - Vector1_E14A7B6D: 24.32
+    - Vector1_50072DC: 5
+    - Vector1_66DC0AC1: 5
+    - Vector1_68BD2B5: 5
+    - Vector1_C36F2A0B: 0
+    - Vector1_C8F15509: 5
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ATDistance: 1
@@ -228,7 +233,8 @@ Material:
     - _ZTestModeDistortion: 8
     - _ZWrite: 1
     m_Colors:
-    - Color_A1B82D0D: {r: 0.12381935, g: 1, b: 0, a: 0}
+    - Color_4836E88B: {r: 2, g: 0.8705882, b: 0, a: 0}
+    - Color_F9167D0F: {r: 0.850945, g: 0, b: 1, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
