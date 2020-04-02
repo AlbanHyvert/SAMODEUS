@@ -7,9 +7,12 @@ ModelImporter:
     400000: //RootNode
     2100000: lambert3
     2100002: lambert1
+    2100004: lambert4
     2300000: //RootNode
     3300000: //RootNode
     4300000: polySurface501
+    4300002: Pont
+    4300004: pont
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -21,6 +24,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: lambert3
     second: {fileID: 2100000, guid: d3433eb7c2fa42640ae889e5fddcc76f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert4
+    second: {fileID: 2100000, guid: ff5da3c21605c2f4db8ef9ed718a7d02, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
