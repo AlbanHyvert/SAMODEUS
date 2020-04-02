@@ -8,6 +8,7 @@ public class RoomsSpawner : MonoBehaviour
     [SerializeField] private float _roomsLenth = 0;
     [SerializeField] private int _distanceBeforeSpawning = 10;
     [SerializeField] private int _amountRoomsOnScreen = 7;
+    [SerializeField] private Camera _paintingCam = null;
 
     private float _distance = 100;
     private List<GameObject> _roomsList = null;
@@ -43,6 +44,13 @@ public class RoomsSpawner : MonoBehaviour
         go.transform.SetParent(transform);
         go.transform.position += transform.right * _spawnZ;
         _roomsList.Add(go);
+
+        TriggerLoadNextScene loadNextScene = go.GetComponentInChildren<TriggerLoadNextScene>();
+        if(loadNextScene != null)
+        {
+            loadNextScene.Camera = _paintingCam;
+        }
+
         _spawnZ += _roomsLenth;
     }
 

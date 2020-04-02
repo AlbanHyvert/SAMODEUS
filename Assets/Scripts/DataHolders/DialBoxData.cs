@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(fileName = "DialBoxData", menuName = "DataBase/DialBoxData")]
+[CreateAssetMenu(fileName = "DialBoxData", menuName = "Data/DialBoxData")]
 public class DialBoxData : ScriptableObject
 {
     [SerializeField] private string _ID = "";

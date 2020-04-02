@@ -13,7 +13,8 @@ public class GameManager : Singleton<GameManager>
         GCF,
         VERTUMNE,
         NE,
-        PREFABS
+        PREFABS,
+        DEV
     }
 
     [SerializeField] private GameState _gameState = GameState.GAME;
@@ -37,6 +38,7 @@ public class GameManager : Singleton<GameManager>
         _states.Add(GameState.PREFABS, new PrefabsSceneState());
         _states.Add(GameState.GCF, new GCFState());
         _states.Add(GameState.NE, new NE1State());
+        _states.Add(GameState.DEV, new DevState());
         _currentState = GameState.PRELOAD;
         ChangeState(GameState.MAINMENU);
     }

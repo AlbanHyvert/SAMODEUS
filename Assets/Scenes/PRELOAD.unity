@@ -380,7 +380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameState: 3
-  _defaultLoadingTime: 2
+  _defaultLoadingTime: 1
 --- !u!4 &1790694030
 Transform:
   m_ObjectHideFlags: 0
@@ -468,15 +468,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b883cc1983df1b48a699028f1d6db4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 0.2
-  _returnSpeed: 4
-  _speedMult: 2
-  _speedMax: 1
-  _actionRayon: 15
-  _maxAmplitude: 100
-  _minAmplitude: 10
-  _maxDistance: 100
-  _minDistance: 10
+  _dataGCFRotatingCube: {fileID: 11400000, guid: 5dd7dd75c28d6e74e82af095f78cf4d7,
+    type: 2}
+  _dataGCFMovingCube: {fileID: 11400000, guid: 3adb74be32be3be48afc51ddba680974, type: 2}
 --- !u!4 &2135046754
 Transform:
   m_ObjectHideFlags: 0

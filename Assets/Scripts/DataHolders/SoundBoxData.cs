@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(fileName = "SoundBoxData", menuName = "DataBase/SoundBoxData")]
+[CreateAssetMenu(fileName = "SoundBoxData", menuName = "Data/SoundBoxData")]
 public class SoundBoxData : ScriptableObject
 {
     [SerializeField] private string _ID = "";
