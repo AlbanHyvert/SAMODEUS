@@ -4,6 +4,7 @@
 public class DestroyPortals : MonoBehaviour
 {
     [SerializeField] private Portal[] _portals = null;
+    [SerializeField] private PortalNoScreen[] _portalsNoScreen = null;
     [SerializeField] private GameObject[] _plane = null;
     [SerializeField] private GameObject[] _gameObject = null;
 
@@ -36,7 +37,15 @@ public class DestroyPortals : MonoBehaviour
                 }
             }
 
-            if(_plane != null)
+            if (_portalsNoScreen != null)
+            {
+                for (int i = 0; i < _portalsNoScreen.Length; i++)
+                {
+                    Object.Destroy(_portalsNoScreen[i], 1);
+                }
+            }
+
+            if (_plane != null)
             {
                 for (int i = 0; i < _plane.Length; i++)
                 {

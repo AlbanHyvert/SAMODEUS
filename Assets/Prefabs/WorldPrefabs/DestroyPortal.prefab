@@ -74,9 +74,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a47094b9fcb6c40a2b7ae7620ef339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _portals:
-  - {fileID: 0}
-  - {fileID: 0}
-  _plane:
-  - {fileID: 0}
-  - {fileID: 0}
+  _portals: []
+  _portalsNoScreen: []
+  _plane: []
+  _gameObject: []
+  _speedDisolve: 1
+  _maximalTimerValue: 10

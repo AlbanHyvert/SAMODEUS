@@ -13,19 +13,19 @@ public class RunesDoor : MonoBehaviour
         {
             if(_matchingValue[i] == 1)
             {
-                _matchingRunes[i].rotation = Quaternion.Euler(0, 0, 90);
+                _matchingRunes[i].rotation = Quaternion.Euler(_matchingRunes[i].rotation.eulerAngles.x, _matchingRunes[i].rotation.eulerAngles.y, 10);
             }
             else if(_matchingValue[i] == 2)
             {
-                _matchingRunes[i].rotation = Quaternion.Euler(0, 0, 30);
+                _matchingRunes[i].rotation = Quaternion.Euler(_matchingRunes[i].rotation.eulerAngles.x, _matchingRunes[i].rotation.eulerAngles.y, 45);
             }
             else if (_matchingValue[i] == 3)
             {
-                _matchingRunes[i].rotation = Quaternion.Euler(0, 0, 10);
+                _matchingRunes[i].rotation = Quaternion.Euler(_matchingRunes[i].rotation.eulerAngles.x, _matchingRunes[i].rotation.eulerAngles.y, 30);
             }
             else if(_matchingValue[i] == 4)
             {
-                _matchingRunes[i].rotation = Quaternion.Euler(0, 0, 180);
+                _matchingRunes[i].rotation = Quaternion.Euler(_matchingRunes[i].rotation.eulerAngles.x, _matchingRunes[i].rotation.eulerAngles.y, 90);
             }
         }
         GameLoopManager.Instance.Puzzles += OnUpdate;
@@ -40,6 +40,14 @@ public class RunesDoor : MonoBehaviour
             {
                 Debug.Log("Matching");
                 GameLoopManager.Instance.Puzzles -= OnUpdate;
+
+                for (int j = 0; j < _runesList.Length; j++)
+                {
+                    Runes runes = _runesList[j];
+
+                    if(runes != null)
+                        Object.Destroy(runes);
+                }
 
                 if(_desactivedObject != null)
                 {
