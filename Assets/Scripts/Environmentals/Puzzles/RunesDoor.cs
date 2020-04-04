@@ -13,7 +13,7 @@ public class RunesDoor : MonoBehaviour
         {
             if(_matchingValue[i] == 1)
             {
-                _matchingRunes[i].rotation = Quaternion.Euler(_matchingRunes[i].rotation.eulerAngles.x, _matchingRunes[i].rotation.eulerAngles.y, 10);
+                _matchingRunes[i].rotation = Quaternion.Euler(_matchingRunes[i].rotation.eulerAngles.x, _matchingRunes[i].rotation.eulerAngles.y, 0);
             }
             else if(_matchingValue[i] == 2)
             {

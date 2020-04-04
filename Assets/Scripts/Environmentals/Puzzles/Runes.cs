@@ -11,7 +11,7 @@ public class Runes : MonoBehaviour, IInteract
     {
         GameLoopManager.Instance.Puzzles += OnUpdate;
 
-        int rdmRot = Random.Range(1, 3);
+        int rdmRot = Random.Range(2, 4);
 
         if(rdmRot > 1 && rdmRot < 4)
         {
@@ -37,7 +37,7 @@ public class Runes : MonoBehaviour, IInteract
 
         if (_positionValue == 1)
         {
-            transform.rotation = Quaternion.Euler(10, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
+            transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
         }
         else if(_positionValue == 2)
         {
