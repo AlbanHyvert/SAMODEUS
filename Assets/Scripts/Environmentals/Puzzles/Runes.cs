@@ -2,7 +2,7 @@
 
 public class Runes : MonoBehaviour, IInteract
 {
-    private int _positionValue = 1;
+    [Range(1,4)] private int _positionValue = 1;
     private Vector3 _rotation = Vector3.zero;
 
     public int PositionValue { get { return _positionValue; } }
@@ -10,37 +10,46 @@ public class Runes : MonoBehaviour, IInteract
     private void Start()
     {
         GameLoopManager.Instance.Puzzles += OnUpdate;
+
+        int rdmRot = Random.Range(1, 3);
+
+        if(rdmRot > 1 && rdmRot < 4)
+        {
+            _positionValue = rdmRot;
+        }
+        else
+        {
+            _positionValue = 2;
+        }
     }
 
     void IInteract.Enter()
     {
-        if(_positionValue > 3)
-        {
-            _positionValue = 1;
-        }
-        else
-        {
-            _positionValue++;
-        }
+        _positionValue++;
     }
 
     private void OnUpdate()
     {
-        if(_positionValue == 1)
+        if (_positionValue > 4)
         {
-            transform.rotation = Quaternion.Euler(0,0, 90);
+            _positionValue = 1;
+        }
+
+        if (_positionValue == 1)
+        {
+            transform.rotation = Quaternion.Euler(10, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
         }
         else if(_positionValue == 2)
         {
-            transform.rotation = Quaternion.Euler(0, 0, 30);
+            transform.rotation = Quaternion.Euler(45, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
         }
         else if (_positionValue == 3)
         {
-            transform.rotation = Quaternion.Euler(0, 0, 10);
+            transform.rotation = Quaternion.Euler(30, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
         }
         else if (_positionValue == 4)
         {
-            transform.rotation = Quaternion.Euler(0, 0, 180);
+            transform.rotation = Quaternion.Euler(90, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
         }
     }
 

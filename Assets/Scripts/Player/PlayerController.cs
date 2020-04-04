@@ -115,7 +115,7 @@ public class PlayerController : MonoBehaviour
     {
         IAction action = _interactableObj.GetComponent<IAction>();
 
-        if (action != null && _hit == true)
+        if (_hit == true && action != null)
         {
             action.Enter(_camera.transform);
             InputManager.Instance.Interaction += OnDrop;
