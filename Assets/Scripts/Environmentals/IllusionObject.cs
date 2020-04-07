@@ -3,6 +3,7 @@
 public class IllusionObject : MonoBehaviour
 {
     [SerializeField] private Renderer _renderer = null;
+    [SerializeField] private bool _isSpecialEvent = false;
 
     private float _alphaValue = 0.0f;
     private float _maxValue = 1f;
@@ -10,25 +11,35 @@ public class IllusionObject : MonoBehaviour
 
     private void Update()
     {
-        if(_alphaValue >= 1)
+        if(_isSpecialEvent == true)
         {
-            _pingPong = true;
-        }
-        else if(_alphaValue <= 0)
-        {
-            _pingPong = false;
-        }
+            if (_alphaValue >= 1)
+            {
+                _pingPong = true;
+            }
+            else if (_alphaValue <= 0)
+            {
+                _pingPong = false;
+            }
 
             if (_alphaValue <= 1 && _pingPong == false)
-        {
-            _alphaValue += 0.1f * Time.deltaTime;
-        }
-        else if (_alphaValue >= 0 && _pingPong == true)
-        {
-            _alphaValue -= 0.1f * Time.deltaTime;
+            {
+                _alphaValue += 0.1f * Time.deltaTime;
+            }
+            else if (_alphaValue >= 0 && _pingPong == true)
+            {
+                _alphaValue -= 0.1f * Time.deltaTime;
+            }
         }
 
+        float _distanceFromPlayer = Vector3.Distance(PlayerManager.Instance.Player.transform.position, transform.position);
+
         Material material = _renderer.material;
+
+        if(_isSpecialEvent == false && _distanceFromPlayer <= 100)
+        {
+            _alphaValue = _distanceFromPlayer / 100;
+        }
 
         material.SetColor("_BaseColor", (new Color(1, 1, 1, _alphaValue)));
 
