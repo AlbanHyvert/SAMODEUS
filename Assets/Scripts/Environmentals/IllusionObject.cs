@@ -10,7 +10,12 @@ public class IllusionObject : MonoBehaviour
     private float _maxValue = 1f;
     private bool _pingPong = false;
 
-    private void Update()
+    private void Start()
+    {
+        GameLoopManager.Instance.Puzzles += OnUpdate;
+    }
+
+    private void OnUpdate()
     {
         if(_isSpecialEvent == true)
         {
