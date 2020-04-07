@@ -1,24 +1,25 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 public class RoomsDoor : MonoBehaviour
 {
     [SerializeField] private GameObject[] _door = null;
-    [SerializeField] private GameObject[] _others = null;
 
+    private List<bool> _isActive = null;
     private void Start()
     {
+        _isActive = new List<bool>();
+
         Rigidbody rigidbody = GetComponent<Rigidbody>();
 
         rigidbody.isKinematic = true;
 
-        if(_door != null)
+        if (_door != null)
         {
             for (int i = 0; i < _door.Length; i++)
             {
-                _door[i].SetActive(false);
+                _isActive.Add(_door[i].activeSelf);
             }
         }
     }
@@ -27,24 +28,32 @@ public class RoomsDoor : MonoBehaviour
     {
         PlayerController player = other.GetComponent<PlayerController>();
 
-        if(player != null)
+        if (player != null)
         {
             if (_door != null)
             {
                 for (int i = 0; i < _door.Length; i++)
                 {
-                    _door[i].SetActive(true);
+                    _door[i].SetActive(!_isActive[i]);
                 }
             }
+        }
+    }
 
-            if(_others != null)
+    private void OnTriggerExit(Collider other)
+    {
+        PlayerController player = other.GetComponent<PlayerController>();
+        if (player != null)
+        {
+            _isActive.Clear();
+
+            if (_door != null)
             {
-                for (int j = 0; j < _others.Length; j++)
+                for (int i = 0; i < _door.Length; i++)
                 {
-                    Object.Destroy(_others[j], 1);
+                    _isActive.Add(_door[i].activeSelf);
                 }
             }
-            Destroy(this);
         }
     }
 }
