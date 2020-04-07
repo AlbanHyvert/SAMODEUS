@@ -14,10 +14,10 @@ public class TriggerLoadNextScene : MonoBehaviour
 
     private void Start()
     {
-        Render();
-        GameLoopManager.Instance.Puzzles += OnUpdate;
+        //Render();
+        //GameLoopManager.Instance.Puzzles += OnUpdate;
     }
-
+/*
     private void OnUpdate()
     {
         Render();
@@ -58,7 +58,7 @@ public class TriggerLoadNextScene : MonoBehaviour
 
         _screen.enabled = true;
     }
-
+*/
     private void OnTriggerEnter(Collider other)
     {
         PlayerController player = other.GetComponent<PlayerController>();
