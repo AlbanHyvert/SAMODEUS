@@ -69,31 +69,29 @@ public class GCFMovingCube : MonoBehaviour
         transform.position = _startPosition + _movingSide * Mathf.Sin(_timePass * frequency) * _amplitude;
     }
 
-    public void MovingCube(float distance, float frequency)
+    public void MovingCube(float distance, float amplitude, float frequency)
     {
         // Set the time by the frequency
         _timePass += Time.deltaTime;
 
-        _amplitude = Mathf.Clamp(_amplitude, 0, GCFManager.Instance.DataGCFMovingCube.MaxAmplitude);
-
         // if the distance is below or equal zero then move the block to their original position
-        if (distance <= 0)
+        /*if (distance <= 0)
         {
             _timeResetPos = 0;
             _timeResetPos += Time.deltaTime;
-            _amplitude = Mathf.Lerp(_amplitude, 0, _timeResetPos * GCFManager.Instance.DataGCFMovingCube.ReturnSpeed);
+            amplitude = Mathf.Lerp(amplitude, 0, _timeResetPos * GCFManager.Instance.DataGCFMovingCube.ReturnSpeed);
         }
         else
         {
-            _timeResetPos = 0;
+            /*_timeResetPos = 0;
             _timeResetPos += Time.deltaTime;
 
-            if (_amplitude < _tempAmplitude)
+            if (amplitude < _tempAmplitude)
             {
-                _amplitude = Mathf.Lerp(_amplitude, _tempAmplitude, _timeResetPos * GCFManager.Instance.DataGCFMovingCube.ReturnSpeed);
+                amplitude = Mathf.Lerp(amplitude, _tempAmplitude, _timeResetPos * GCFManager.Instance.DataGCFMovingCube.ReturnSpeed);
             }
-        }
-
-        transform.position = _startPosition + _movingSide * Mathf.Sin(_timePass * frequency) * _amplitude;
+        }*/
+    
+        transform.position = _startPosition + _movingSide * Mathf.Sin(_timePass * frequency) * amplitude;
     }
 }

@@ -38,7 +38,7 @@ public class GCFRotatingCube : MonoBehaviour
         }
     }
 
-    public void Orbit(int distance, Transform target, Vector3 orientation)
+    public void Orbit(float distance, Transform target, Vector3 orientation)
     {
         if (distance <= 0)
         {

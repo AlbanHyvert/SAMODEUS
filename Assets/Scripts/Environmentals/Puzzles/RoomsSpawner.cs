@@ -9,6 +9,7 @@ public class RoomsSpawner : MonoBehaviour
     [SerializeField] private int _amountRoomsOnScreen = 7;
 
     private float _distance = 100;
+    private float _distanceFirstRoom = 100;
     private List<GameObject> _roomsList = null;
     private Transform _player = null;
     private float _spawnZ = 0.0f;
@@ -21,22 +22,22 @@ public class RoomsSpawner : MonoBehaviour
 
         for (int i = 0; i < _amountRoomsOnScreen; i++)
         {
-            CreateRooms(Random.Range(0, _roomsPrefab.Length));
+            CreateRoomsForward(Random.Range(0, _roomsPrefab.Length));
         }
     }
 
     private void OnUpdate()
     {
          _distance = Vector3.Distance(_player.position, _roomsList[_roomsList.Count -1].transform.position);
+        _distanceFirstRoom = Vector3.Distance(_player.position, _roomsList[1].transform.position);
 
          if (_distance < _distanceBeforeSpawning)
          {
-             CreateRooms(Random.Range(0, _roomsPrefab.Length));
-             DeleteRooms();
+             CreateRoomsForward(Random.Range(0, _roomsPrefab.Length));
          }
     }
     
-    private void CreateRooms(int prefabIndex)
+    private void CreateRoomsForward(int prefabIndex)
     {
        GameObject go = Instantiate(_roomsPrefab[prefabIndex], transform.position, transform.rotation);
         go.transform.SetParent(transform);

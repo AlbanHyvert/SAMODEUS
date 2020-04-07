@@ -5,7 +5,7 @@ public class Board : MonoBehaviour
 {
     [SerializeField] private string _objectTag = "Diamond";
     [SerializeField] private Transform _setPosition = null;
-    [SerializeField] private GCFParentRotatingCube[] _activatedBridge = null;
+    [SerializeField] private GCFParentControllerCube[] _activatedBridge = null;
 
     private List<BoxCollider> _collidersList = null;
 

@@ -3,7 +3,7 @@
 [RequireComponent(typeof(Rigidbody))]
 public class TriggerEnvironmental : MonoBehaviour
 {
-    [SerializeField] private GCFParentRotatingCube[] _activatedOBJ = null;
+    [SerializeField] private GCFParentControllerCube[] _activatedOBJ = null;
 
     private void Start()
     {
