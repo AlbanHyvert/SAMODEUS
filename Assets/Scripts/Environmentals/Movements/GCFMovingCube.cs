@@ -49,7 +49,7 @@ public class GCFMovingCube : MonoBehaviour
         _amplitude = Mathf.Clamp(_amplitude, 0, GCFManager.Instance.DataGCFMovingCube.MaxAmplitude);
 
         // if the OffsetDiffPlayer is below or equal to the ActionRayon then move the block to their original position
-        if (OffsetDiffPlayer <= GCFManager.Instance.DataGCFMovingCube.ActionRayon)
+        if (OffsetDiffPlayer <= GCFManager.Instance.ActionRayonMoving)
         {
             _timeResetPos = 0;
             _timeResetPos += Time.deltaTime;

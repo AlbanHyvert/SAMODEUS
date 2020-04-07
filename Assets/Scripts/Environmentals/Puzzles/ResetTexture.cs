@@ -1,31 +1,22 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
 public class ResetTexture : MonoBehaviour
 {
     [SerializeField] private Material _material = null;
-    [SerializeField] private Material _shader = null;
-    [SerializeField] private LayerMask _layer;
-
-    private Rigidbody _rigidBody = null;
-
-    private void Start()
-    {
-        _rigidBody = GetComponent<Rigidbody>();
-    }
-
+    [SerializeField] private bool _isPortal = false;
+ 
     private void OnTriggerEnter(Collider other)
     {
-        Renderer renderer = other.GetComponent<Renderer>();
-        PlayerController playerController = other.GetComponent<PlayerController>();
+        Pickable pickable = other.GetComponent<Pickable>();
 
-        if (other.tag == "Puzzles" && renderer != null && playerController == null)
+        if(_isPortal == false && pickable != null)
         {
-            renderer.material = _shader;
+            GetComponent<Renderer>().material = _material;
         }
-        else if (renderer != null && playerController == null)
+        else if(_isPortal == true && pickable != null)
         {
-            renderer.material = _material;
+            GetComponent<Renderer>().material = _material;
+            GetComponent<Collider>().enabled = false;
         }
     }
 }
