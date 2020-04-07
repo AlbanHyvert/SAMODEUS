@@ -25,7 +25,7 @@ public class GCFRotatingCube : MonoBehaviour
     {
         _offsetDiffFromPlayer = Vector3.Distance(_startPosition, playerPosition);;
 
-        if (_offsetDiffFromPlayer <= GCFManager.Instance.DataGCFRotatingCube.ActionRayon)
+        if (_offsetDiffFromPlayer <= GCFManager.Instance.ActionRayonRotating)
         {
             _resetPositionTimer = 0;
             _resetPositionTimer += Time.deltaTime;
@@ -38,7 +38,7 @@ public class GCFRotatingCube : MonoBehaviour
         }
     }
 
-    public void Orbit(int distance, Transform target, Vector3 orientation)
+    public void Orbit(float distance, Transform target, Vector3 orientation)
     {
         if (distance <= 0)
         {

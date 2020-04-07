@@ -1,17 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class GCFParentRotatingCube : MonoBehaviour
+public class GCFParentControllerCube : MonoBehaviour
 {
     [SerializeField] private Transform _orbitTarget = null;
-    [SerializeField] private int _distanceMoveCube = 10;
+    [SerializeField] private int _distanceRotatingCube = 10;
+    [SerializeField] private float _customEventAmplitude = 10;
+    [SerializeField] private float _customEventSpeed = 10;
     [SerializeField] private bool _isSpecialEvent = false;
 
     private List<GCFRotatingCube> _rotatingChildList = null;
     private List<GCFMovingCube> _movingChildList = null;
 
-    public int DistMovingCube { get { return _distanceMoveCube; } set { _distanceMoveCube = value; } }
+    public int DistMovingCube { get { return _distanceRotatingCube; } set { _distanceRotatingCube = value; } }
+    public float CustomEventAmplitude { get { return _customEventAmplitude; } set { _customEventAmplitude = value; } }
+    public float CustomEventSpeed { get { return _customEventSpeed; } set { _customEventSpeed = value; } }
+
     private void Start()
     {
         _rotatingChildList = new List<GCFRotatingCube>();
@@ -93,7 +97,7 @@ public class GCFParentRotatingCube : MonoBehaviour
             {
                 if (_rotatingChildList[i] != null && _orbitTarget != null)
                 {
-                    _rotatingChildList[i].Orbit(_distanceMoveCube, _orbitTarget, Vector3.forward);
+                    _rotatingChildList[i].Orbit(_distanceRotatingCube, _orbitTarget, Vector3.forward);
                 }
             }
 
@@ -101,18 +105,18 @@ public class GCFParentRotatingCube : MonoBehaviour
             {
                 if (_movingChildList[i] != null)
                 {
-                    _movingChildList[i].MovingCube(_distanceMoveCube, GCFManager.Instance.DataGCFMovingCube.Speed);
+                    _movingChildList[i].MovingCube(_distanceRotatingCube, _customEventAmplitude, _customEventSpeed);
                 }
             }
         }
     }
 
-    private void DestroyRotatingChild(GCFRotatingCube rotatingCube)
+    public void DestroyRotatingChild(GCFRotatingCube rotatingCube)
     {
         _rotatingChildList.Remove(rotatingCube);
     }
 
-    private void DestroyMovingChild(GCFMovingCube movingCube)
+    public void DestroyMovingChild(GCFMovingCube movingCube)
     {
         _movingChildList.Remove(movingCube);
     }
