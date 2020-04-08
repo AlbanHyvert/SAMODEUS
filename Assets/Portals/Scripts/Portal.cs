@@ -15,7 +15,7 @@ public class Portal : MonoBehaviour
     {
         if(_playerCamera == null)
         {
-            _playerCamera = PlayerManager.Instance.Player.Camera;
+            _playerCamera = PlayerManager.Instance.Player.PlayerCamera.Camera;
         }
 
         _portalCamera = GetComponentInChildren<Camera>();

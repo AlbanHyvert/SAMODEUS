@@ -55,17 +55,23 @@ public class IllusionObject : MonoBehaviour
 
         if(_alphaValue <= _valueBeforeDesactivate)
         {
-            bool value = transform.GetComponent<Collider>().enabled;
-
-            if(value != false)
-                transform.GetComponent<Collider>().enabled = !value;
+            transform.GetComponent<Collider>().isTrigger = true;
         }
         else
         {
-            bool value = transform.GetComponent<Collider>().enabled;
+            transform.GetComponent<Collider>().isTrigger = false;
+        }
+    }
 
-            if (value != true)
-                transform.GetComponent<Collider>().enabled = !value;
+    private void OnTriggerEnter(Collider other)
+    {
+        PlayerController playerController = other.GetComponent<PlayerController>();
+
+        if(playerController != null)
+        {
+            PlayerCamera playerCamera = playerController.PlayerCamera;
+
+            playerCamera.ShouldShake = true;
         }
     }
 }

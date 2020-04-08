@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 136276686866146812}
   - component: {fileID: 54774378497458732}
   - component: {fileID: 114814661139743508}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Player_CharacterController
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dataMovements: {fileID: 11400000, guid: 79ca51f8dcac3ac4fbea9097e06f3b4b, type: 2}
-  _camera: {fileID: 3888013851373145405}
+  _playerCamera: {fileID: 733162154058672749}
   _audioSource: {fileID: 553480574331706748}
   _activeLayer:
     serializedVersion: 2
@@ -352,7 +352,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 47895
+    m_Bits: 13079
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -547,6 +547,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dataCamera: {fileID: 11400000, guid: 6ba26dac78d37d84cbae87aadc80d45c, type: 2}
   _body: {fileID: 3888013851304386843}
+  _power: 0.7
+  _duration: 1
+  _slowDownAmount: 1
+  _camera: {fileID: 3888013851373145405}
 --- !u!1 &7023151060861828948
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,7 +562,7 @@ GameObject:
   - component: {fileID: 8457860062920947548}
   - component: {fileID: 4217462637027991287}
   - component: {fileID: 3047152056581299684}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: VFXPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
