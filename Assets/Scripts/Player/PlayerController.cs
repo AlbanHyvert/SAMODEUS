@@ -5,7 +5,7 @@ using SAMODEUS.Movements;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private DataMovements _dataMovements = null;
-    [SerializeField] private Camera _camera = null;
+    [SerializeField] private PlayerCamera _playerCamera = null;
     [SerializeField] private AudioSource _audioSource = null;
     [SerializeField] private LayerMask _activeLayer = 0;
     [SerializeField] private int _distanceInteract = 5;
@@ -17,19 +17,20 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private PlayerManager.WorldTag _worldTag = PlayerManager.WorldTag.VERTUMNE;
 
-    public Camera Camera { get { return _camera; } }
+    public PlayerCamera PlayerCamera { get { return _playerCamera; } }
     public AudioSource AudioSource { get { return _audioSource; } }
 
     public PlayerManager.WorldTag WorldTaged { get { return _worldTag; } set { _worldTag = value; } }
+
     private void Start()
     {
         _controller = GetComponent<CharacterController>();
 
-        if(_camera == null)
+        if(_playerCamera == null)
         {
-            _camera = GetComponentInChildren<Camera>();
+            _playerCamera = GetComponentInChildren<PlayerCamera>();
 
-            if (_camera == null)
+            if (_playerCamera == null)
             {
                 Debug.LogError("Missing Component : " + typeof(Camera));
             }
@@ -93,7 +94,7 @@ public class PlayerController : MonoBehaviour
     private void OnRaycast()
     {
         RaycastHit raycastHit;
-        _hit = Physics.Raycast(_camera.transform.position, _camera.transform.forward, out raycastHit, _distanceInteract, _activeLayer);
+        _hit = Physics.Raycast(_playerCamera.Camera.transform.position, _playerCamera.Camera.transform.forward, out raycastHit, _distanceInteract, _activeLayer);
 
         if(_hit == true)
         {
@@ -117,7 +118,7 @@ public class PlayerController : MonoBehaviour
 
         if (_hit == true && action != null)
         {
-            action.Enter(_camera.transform);
+            action.Enter(_playerCamera.Camera.transform);
             InputManager.Instance.Interaction += OnDrop;
             InputManager.Instance.Throw += OnThrow;
             InputManager.Instance.Interaction -= OnPickUp;
@@ -139,7 +140,7 @@ public class PlayerController : MonoBehaviour
         Pickable pickable = _interactableObj.GetComponent<Pickable>();
 
         action.Exit();
-        pickable.Rigidbody.AddForce(_camera.transform.forward * _throwForce, ForceMode.Impulse);
+        pickable.Rigidbody.AddForce(_playerCamera.Camera.transform.forward * _throwForce, ForceMode.Impulse);
 
         InputManager.Instance.Interaction += OnPickUp;
         InputManager.Instance.Interaction -= OnDrop;
