@@ -97,8 +97,6 @@ public class PlayerController : MonoBehaviour
 
     private void OnUpdate()
     {
-        Debug.Log("Current speed " + _currentSpeed);
-
         _currentSpeed = Mathf.Lerp(_currentSpeed, _speed, _smoothTime * Time.deltaTime);
     }
 
