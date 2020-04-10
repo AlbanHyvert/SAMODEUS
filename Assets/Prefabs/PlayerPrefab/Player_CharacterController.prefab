@@ -149,6 +149,7 @@ MonoBehaviour:
     m_Bits: 512
   _distanceInteract: 5
   _throwForce: 20
+  _smoothTime: 3
   _worldTag: 0
 --- !u!82 &553480574331706748
 AudioSource:
@@ -550,6 +551,7 @@ MonoBehaviour:
   _power: 0.7
   _duration: 1
   _slowDownAmount: 1
+  _smoothTime: 15
   _camera: {fileID: 3888013851373145405}
 --- !u!1 &7023151060861828948
 GameObject:

@@ -8,10 +8,13 @@ public class PlayerCamera : MonoBehaviour
     [SerializeField] private float _power = 0.7f;
     [SerializeField] private float _duration = 1f;
     [SerializeField] private float _slowDownAmount = 1f;
+    [SerializeField] private int _smoothTime = 5;
     [SerializeField] private Camera _camera = null;
 
     private float _rotationX = 0f;
     private float _rotationY = 0f;
+    private float _currentY = 0.0f;
+    private float _currentX = 0.0f;
     private bool _shouldShake = false;
     private Vector3 _startPosition = Vector3.zero;
     private float _initialDuration = 0.0f;
@@ -72,17 +75,24 @@ public class PlayerCamera : MonoBehaviour
 
     private void CameraRotation()
     {
-        _rotationY = _body.eulerAngles.y;
+        _rotationX = _body.localEulerAngles.y;
 
         float mouseX = Input.GetAxis("Mouse X");
         float mouseY = Input.GetAxis("Mouse Y");
 
-        _rotationY += mouseX * InputManager.Instance.VerticalSensitivity;
-        _rotationX -= mouseY * InputManager.Instance.HorizontalSensitivity;
-        _rotationX = Mathf.Clamp(_rotationX, _dataCamera.MinimalVertRotation, _dataCamera.MaximalVertRotation);
+        mouseX *= InputManager.Instance.HorizontalSensitivity * Time.deltaTime;
+        mouseY *= InputManager.Instance.VerticalSensitivity * Time.deltaTime;
 
-        _camera.transform.localEulerAngles = new Vector3(_rotationX, 0, 0);
-        _body.eulerAngles = new Vector3(0, _rotationY, 0);
+        _currentX = Mathf.Lerp(_currentX, mouseX, _smoothTime * Time.deltaTime);
+        _currentY = Mathf.Lerp(_currentY, mouseY, _smoothTime * Time.deltaTime);
+
+        _rotationX = _body.localEulerAngles.y + _currentX * InputManager.Instance.HorizontalSensitivity;
+
+        _rotationY += _currentY * InputManager.Instance.VerticalSensitivity;
+        _rotationY = Mathf.Clamp(_rotationY, -90, 90);
+
+        _body.rotation = Quaternion.Euler(new Vector3(0, _rotationX, 0));
+        _camera.transform.localRotation = Quaternion.Euler(-_rotationY, 0, 0);
     }
 
     private void OnDestroy()

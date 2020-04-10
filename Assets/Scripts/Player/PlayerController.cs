@@ -10,7 +10,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask _activeLayer = 0;
     [SerializeField] private int _distanceInteract = 5;
     [SerializeField] private int _throwForce = 20;
+    [SerializeField] private float _smoothTime = 10;
 
+    private float _speed = 0;
+    private float _currentSpeed = 0;
     private CharacterController _controller = null;
     private bool _hit = false;
     private GameObject _interactableObj = null;
@@ -37,6 +40,7 @@ public class PlayerController : MonoBehaviour
         }
 
         GameLoopManager.Instance.Player += OnRaycast;
+        GameLoopManager.Instance.Player += OnUpdate;
         GameLoopManager.Instance.Pause += IsPaused;
         InputManager.Instance.Movement += OnMovements;
         InputManager.Instance.Idle += OnIdle;
@@ -51,12 +55,14 @@ public class PlayerController : MonoBehaviour
         if(pause == true)
         {
             GameLoopManager.Instance.Player -= OnRaycast;
+            GameLoopManager.Instance.Player -= OnUpdate;
             InputManager.Instance.Movement -= OnMovements;
             InputManager.Instance.Idle -= OnIdle;
         }
         else
         {
             GameLoopManager.Instance.Player += OnRaycast;
+            GameLoopManager.Instance.Player += OnUpdate;
             InputManager.Instance.Movement += OnMovements;
             InputManager.Instance.Idle += OnIdle;
         }
@@ -64,13 +70,18 @@ public class PlayerController : MonoBehaviour
 
     private void OnIdle()
     {
+        _speed = 0;
         OnGravity(Vector3.zero);
     }
 
     private void OnMovements(Vector3 dir)
     {
-        dir *= _dataMovements.MoveSpeed * _dataMovements.SprintMult;
+        _speed = _dataMovements.MoveSpeed * _dataMovements.SprintMult;
+
+        dir *= _currentSpeed;
+
         OnGravity(dir);
+
         _controller.Move(dir * Time.deltaTime);
     }
 
@@ -89,6 +100,13 @@ public class PlayerController : MonoBehaviour
         direction.y -= _dataMovements.Gravity;
 
         _controller.Move(direction * Time.deltaTime);
+    }
+
+    private void OnUpdate()
+    {
+        Debug.Log("Current speed " + _currentSpeed);
+
+        _currentSpeed = Mathf.Lerp(_currentSpeed, _speed, _smoothTime * Time.deltaTime);
     }
 
     private void OnRaycast()
