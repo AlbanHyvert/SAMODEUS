@@ -10,6 +10,7 @@ public class PlayerCamera : MonoBehaviour
     [SerializeField] private float _slowDownAmount = 1f;
     [SerializeField] private int _smoothTime = 5;
     [SerializeField] private Camera _camera = null;
+    [SerializeField] private HeadBobbing _headBobbing = null;
 
     private float _rotationX = 0f;
     private float _rotationY = 0f;
@@ -20,6 +21,7 @@ public class PlayerCamera : MonoBehaviour
     private float _initialDuration = 0.0f;
 
     public bool ShouldShake { get { return _shouldShake; } set { _shouldShake = value; } }
+    public HeadBobbing HeadBobbing { get { return _headBobbing; } }
     public Camera Camera { get { return _camera; } }
 
     private void Start()

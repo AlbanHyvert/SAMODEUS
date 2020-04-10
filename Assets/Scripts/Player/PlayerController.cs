@@ -29,16 +29,6 @@ public class PlayerController : MonoBehaviour
     {
         _controller = GetComponent<CharacterController>();
 
-        if(_playerCamera == null)
-        {
-            _playerCamera = GetComponentInChildren<PlayerCamera>();
-
-            if (_playerCamera == null)
-            {
-                Debug.LogError("Missing Component : " + typeof(Camera));
-            }
-        }
-
         GameLoopManager.Instance.Player += OnRaycast;
         GameLoopManager.Instance.Player += OnUpdate;
         GameLoopManager.Instance.Pause += IsPaused;
@@ -71,6 +61,7 @@ public class PlayerController : MonoBehaviour
     private void OnIdle()
     {
         _speed = 0;
+        _playerCamera.HeadBobbing.OnIdle();
         OnGravity(Vector3.zero);
     }
 
@@ -79,6 +70,8 @@ public class PlayerController : MonoBehaviour
         _speed = _dataMovements.MoveSpeed * _dataMovements.SprintMult;
 
         dir *= _currentSpeed;
+
+        _playerCamera.HeadBobbing.OnHeadBobbing(dir);
 
         OnGravity(dir);
 
