@@ -12,10 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb98d2656b83474a982f54eefa9058e, type: 3}
   m_Name: DataCameras
   m_EditorClassIdentifier: 
-  _camera: {fileID: 0}
   _minimalVertRotation: -70
   _maximalVertRotation: 70
-  _bobbingSpeed: 0.2
-  _bobbingAmount: 0.2
+  _bobbingSpeed: 10
+  _bobbingAmount: 10
   _midpoint: 0
-  _timeMult: 0.1
+  _timeMult: 0.5
