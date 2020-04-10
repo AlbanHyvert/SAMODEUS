@@ -19,7 +19,7 @@ public class DialBoxController : MonoBehaviour
             _buttonsToPressText.text = string.Empty;
 
         _text.text = string.Empty;
-        _source = PlayerManager.Instance.Player.AudioSource;
+        _source = PlayerManager.Instance.Player.DialsAudioSource;
         NarrativeManager.Instance.OnTriggerNarrative += OnTriggerNarrative;
         GameLoopManager.Instance.Pause += IsPause;
         GameLoopManager.Instance.UI += OnUpdate;
