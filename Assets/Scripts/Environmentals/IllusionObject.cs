@@ -7,7 +7,6 @@ public class IllusionObject : MonoBehaviour
     [SerializeField, Range(0.01f, 0.9f)] private float _valueBeforeDesactivate = 0.3f;
 
     private float _alphaValue = 0.0f;
-    private float _maxValue = 1f;
     private bool _pingPong = false;
 
     private void Start()
