@@ -4,11 +4,11 @@ public class VertumneState : IGameStates
 {
     void IGameStates.Enter()
     {
-        SceneManager.LoadSceneAsync("Vertumne_1");
+        SceneAsyncManager.Instance.LoadScene("Vertumne_1");
     }
 
     void IGameStates.Exit()
     {
-        SceneManager.UnloadSceneAsync("Vertumne_1");
+        SceneAsyncManager.Instance.UnloadScene("Vertumne_1");
     }
 }

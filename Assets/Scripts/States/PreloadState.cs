@@ -4,7 +4,7 @@ public class PreloadState : IGameStates
 {
     void IGameStates.Enter()
     {
-        SceneManager.LoadScene("PRELOAD");
+        SceneAsyncManager.Instance.LoadScene("PRELOAD");
     }
 
     void IGameStates.Exit()

@@ -1,14 +1,15 @@
-﻿using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 
 public class LoadingState : IGameStates
 {
     void IGameStates.Enter()
     {
-        SceneManager.LoadSceneAsync("LOADING");
+        SceneAsyncManager.Instance.LoadScene("LOADING");
     }
 
     void IGameStates.Exit()
     {
-        SceneManager.UnloadSceneAsync("LOADING");
+        Debug.Log("unload");
+        SceneAsyncManager.Instance.UnloadScene("LOADING");
     }
 }
