@@ -84,27 +84,29 @@ public class Portal : MonoBehaviour
     // Called just before player camera is rendered
     public void Render()
     {
-        if(!VisibleFromCamera(_linkedPortal._screen, _playerCamera))
+        if(_playerCamera != null)
         {
-            return;
+            if (!VisibleFromCamera(_linkedPortal._screen, _playerCamera))
+            {
+                return;
+            }
+
+            _linkedPortal._screen.material.SetTexture("_MainTex", _viewTexture);
+            _screen.enabled = false;
+
+            CreateViewTexture();
+
+            // Make portal cam position and rotation the same relative to this portal as player cam relative linked portal
+            Matrix4x4 m = transform.localToWorldMatrix * _linkedPortal.transform.worldToLocalMatrix * _playerCamera.transform.localToWorldMatrix;
+
+            if (_portalCamera != null)
+            {
+                _portalCamera.transform.SetPositionAndRotation(m.GetColumn(3), m.rotation);
+
+                //Render Camera
+                _portalCamera.Render();
+            }
         }
-
-        _linkedPortal._screen.material.SetTexture("_MainTex", _viewTexture);
-        _screen.enabled = false;
-
-        CreateViewTexture();
-
-        // Make portal cam position and rotation the same relative to this portal as player cam relative linked portal
-        Matrix4x4 m = transform.localToWorldMatrix * _linkedPortal.transform.worldToLocalMatrix * _playerCamera.transform.localToWorldMatrix;
-
-        if(_portalCamera != null)
-        {
-            _portalCamera.transform.SetPositionAndRotation(m.GetColumn(3), m.rotation);
-
-            //Render Camera
-            _portalCamera.Render();
-        }
-
         //ProtectScreenFromClipping();
         _screen.enabled = true; 
     }

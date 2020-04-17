@@ -65,7 +65,7 @@ public class GCFParentControllerCube : MonoBehaviour
 
     private void OnUpdate()
     {
-        if(_isSpecialEvent == false)
+        if(_isSpecialEvent == false && PlayerManager.Instance.Player != null)
         {
             Vector3 playerPosition = PlayerManager.Instance.Player.transform.position;
 

@@ -27,6 +27,11 @@ public class PlayerManager : Singleton<PlayerManager>
         _player.DialsAudioSource.volume = _dialsVolume;
     }
 
+    public void AddPlayer(PlayerController playerController)
+    {
+        _player = playerController;
+    }
+
     public void DestroyPlayer()
     {
         if(_player != null)
