@@ -4,11 +4,11 @@ public class MainMenuState : IGameStates
 {
     void IGameStates.Enter()
     {
-        SceneManager.LoadScene("MENU");
+        SceneAsyncManager.Instance.LoadScene("MENU");
     }
 
     void IGameStates.Exit()
     {
-        SceneManager.UnloadSceneAsync("MENU");
+        SceneAsyncManager.Instance.UnloadScene("MENU");
     }
 }

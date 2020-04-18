@@ -1,6 +1,7 @@
 ﻿using Engine.Singleton;
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -20,6 +21,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private GameState _gameState = GameState.GAME;
     [SerializeField] private int _defaultLoadingTime = 2;
 
+    private bool _isChangingState = false;
     private GameState _currentState = GameState.PRELOAD;
     private Dictionary<GameState, IGameStates> _states = null;
 
@@ -45,8 +47,20 @@ public class GameManager : Singleton<GameManager>
 
     public void ChangeState(GameState nextState)
     {
-        _states[_currentState].Exit();
+        _isChangingState = true;
         _states[nextState].Enter();
         _currentState = nextState;
+    }
+
+    private void Update()
+    {
+        if(_isChangingState == true)
+        {
+            if(SceneAsyncManager.Instance.AsEndedLoading == true)
+            {
+                _states[_currentState].Exit();
+                _isChangingState = false;
+            }
+        }
     }
 }

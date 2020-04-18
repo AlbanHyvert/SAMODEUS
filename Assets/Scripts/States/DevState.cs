@@ -4,11 +4,11 @@ public class DevState : IGameStates
 {
     void IGameStates.Enter()
     {
-        SceneManager.LoadSceneAsync("DEV");
+        SceneAsyncManager.Instance.LoadScene("DEV");
     }
 
     void IGameStates.Exit()
     {
-        SceneManager.UnloadSceneAsync("DEV");
+        SceneAsyncManager.Instance.UnloadScene("DEV");
     }
 }
