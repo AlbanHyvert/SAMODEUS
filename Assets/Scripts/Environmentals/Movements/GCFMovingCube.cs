@@ -11,6 +11,9 @@ public class GCFMovingCube : MonoBehaviour
     private float _frequency = 1f;
     private float _timePass = 0f;
     private float _timeResetPos = 0f;
+    private float _offsetDiffFromPlayer = 0.0f;
+
+    public float OffsetDiffFromPlayer { get { return _offsetDiffFromPlayer; } }
 
     private void Randomize(float minAmplitude, float maxAmplitude)
     {
@@ -44,12 +47,12 @@ public class GCFMovingCube : MonoBehaviour
         _timePass += Time.deltaTime;
 
         //Get the amplitude by the Start pos of the obj minus the one by the Player
-        float OffsetDiffPlayer = Vector3.Distance(_startPosition, playerPosition);
+        _offsetDiffFromPlayer = Vector3.Distance(_startPosition, playerPosition);
 
         _amplitude = Mathf.Clamp(_amplitude, 0, GCFManager.Instance.DataGCFMovingCube.MaxAmplitude);
 
         // if the OffsetDiffPlayer is below or equal to the ActionRayon then move the block to their original position
-        if (OffsetDiffPlayer <= GCFManager.Instance.ActionRayonMoving)
+        if (_offsetDiffFromPlayer <= GCFManager.Instance.ActionRayonMoving)
         {
             _timeResetPos = 0;
             _timeResetPos += Time.deltaTime;
