@@ -198,11 +198,6 @@ public class InputManager : Singleton<InputManager>
     {
         _direction = Vector3.zero;
 
-        if(_changeInput != null)
-        {
-            _changeInput();
-        }
-
         if(PlayerManager.Instance.Player != null)
         {
             if (Input.GetKey(_dataKeyCode.KeyForward))
@@ -259,6 +254,14 @@ public class InputManager : Singleton<InputManager>
         if(_idle != null && _direction == Vector3.zero)
         {
             _idle();
+        }
+    }
+
+    private void LateUpdate()
+    {
+        if (_changeInput != null)
+        {
+            _changeInput();
         }
     }
 }

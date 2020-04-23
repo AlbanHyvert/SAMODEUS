@@ -56,8 +56,6 @@ public class SceneAsyncManager : Singleton<SceneAsyncManager>
 
     private void Update()
     {
-        
-
         if (_scenesName != null)
         {
             if (_asyncOperation == null)
