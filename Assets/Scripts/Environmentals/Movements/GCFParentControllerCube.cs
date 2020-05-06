@@ -29,6 +29,7 @@ public class GCFParentControllerCube : MonoBehaviour
 
         foreach (Transform item in transform)
         {
+            int quantityOfNullObj = 0;
             GCFRotatingCube rotatingCube = item.GetComponent<GCFRotatingCube>();
             GCFMovingCube movingCube = item.GetComponent<GCFMovingCube>();
             Renderer renderer = item.GetComponent<Renderer>();
@@ -77,20 +78,64 @@ public class GCFParentControllerCube : MonoBehaviour
             {
                 value++;
             }
-        }
 
-        for (int i = 0; i < _rotatingChildList.Count; i++)
-        {
-            if(_rotatingChildList[i] != null)
+            if(_rotatingChildList != null)
             {
-                _rotatingChildList[i].transform.name = transform.name + '_' + "Child" + '_' + i;
-                _rotatingChildList[i].Init(GCFManager.Instance.DataGCFRotatingCube.MinDistance, GCFManager.Instance.DataGCFRotatingCube.MaxDistance);
+                for (int i = 0; i < _rotatingChildList.Count; i++)
+                {
+                    if (_rotatingChildList[i] == null)
+                    {
+                        quantityOfNullObj++;
+                    }
+                }
+
+                if (_rotatingChildList.Count <= quantityOfNullObj)
+                {
+                    _rotatingChildList.Clear();
+                    quantityOfNullObj = 0;
+                }
             }
 
-            if (_movingChildList[i] != null)
+            if(_movingChildList != null)
             {
-                _movingChildList[i].transform.name = transform.name + '_' + "Child" + '_' + i;
-                _movingChildList[i].Init(GCFManager.Instance.DataGCFMovingCube.MinAmplitude, GCFManager.Instance.DataGCFMovingCube.MaxAmplitude);
+                for (int i = 0; i < _movingChildList.Count; i++)
+                {
+                    if (_movingChildList[i] == null)
+                    {
+                        quantityOfNullObj++;
+                    }
+                }
+
+                if (_movingChildList.Count <= quantityOfNullObj)
+                {
+                    _movingChildList.Clear();
+                    quantityOfNullObj = 0;
+                }
+            }
+
+        }
+
+        if (_rotatingChildList != null)
+        {
+            for (int i = 0; i < _rotatingChildList.Count; i++)
+            {
+                if (_rotatingChildList[i] != null)
+                {
+                    _rotatingChildList[i].transform.name = transform.name + '_' + "Child" + '_' + i;
+                    _rotatingChildList[i].Init(GCFManager.Instance.DataGCFRotatingCube.MinDistance, GCFManager.Instance.DataGCFRotatingCube.MaxDistance);
+                }
+            }
+        }
+        
+        if(_movingChildList != null)
+        {
+            for (int i = 0; i < _movingChildList.Count; i++)
+            {
+                if (_movingChildList[i] != null)
+                {
+                    _movingChildList[i].transform.name = transform.name + '_' + "Child" + '_' + i;
+                    _movingChildList[i].Init(GCFManager.Instance.DataGCFMovingCube.MinAmplitude, GCFManager.Instance.DataGCFMovingCube.MaxAmplitude);
+                }
             }
         }
     }
@@ -114,7 +159,7 @@ public class GCFParentControllerCube : MonoBehaviour
 
             if (_movingChildList != null)
             {
-                for (int i = 0; i < _rotatingChildList.Count; i++)
+                for (int i = 0; i < _movingChildList.Count; i++)
                 {
                     if (_movingChildList[i] != null)
                     {

@@ -6,7 +6,7 @@ using UnityEngine.Rendering.PostProcessing;
 public class SwapPostProcess : MonoBehaviour
 {
     [SerializeField] private PostProcessVolume _postProcessVolume = null;
-    [SerializeField] private Volume _volume = null;
+    //[SerializeField] private Volume _volume = null;
     [SerializeField] private PlayerManager.WorldTag _worldTag = PlayerManager.WorldTag.VERTUMNE;
 
     private void Start()
@@ -24,7 +24,7 @@ public class SwapPostProcess : MonoBehaviour
             volume = null;
         }
 
-        volume = _volume;
+      //  volume = _volume;
         PostProcessManager.Instance.Volume = volume;
 
         postProcessManagerVolume = _postProcessVolume;
@@ -39,11 +39,11 @@ public class SwapPostProcess : MonoBehaviour
         {
             if(_worldTag == PlayerManager.WorldTag.VERTUMNE)
             {
-                PostProcessManager.Instance.ChangePostProcess(PostProcessManager.Instance.ProfileVertumne, PostProcessManager.Instance.SceneSettingsProfileVertumne);
+                PostProcessManager.Instance.ChangePostProcess(PostProcessManager.Instance.ProfileVertumne);
             }
             else if( _worldTag == PlayerManager.WorldTag.GCF)
             {
-                PostProcessManager.Instance.ChangePostProcess(PostProcessManager.Instance.ProfileGCF, PostProcessManager.Instance.SceneSettingsProfileGCF);
+                PostProcessManager.Instance.ChangePostProcess(PostProcessManager.Instance.ProfileGCF);
             }
             playerController.WorldTaged = _worldTag;
         }

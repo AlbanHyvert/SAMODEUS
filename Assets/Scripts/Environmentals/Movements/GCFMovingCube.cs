@@ -74,26 +74,8 @@ public class GCFMovingCube : MonoBehaviour
 
     public void MovingCube(float distance, float amplitude, float frequency)
     {
-        // Set the time by the frequency
+       // Set the time by the frequency
         _timePass += Time.deltaTime;
-
-        // if the distance is below or equal zero then move the block to their original position
-        /*if (distance <= 0)
-        {
-            _timeResetPos = 0;
-            _timeResetPos += Time.deltaTime;
-            amplitude = Mathf.Lerp(amplitude, 0, _timeResetPos * GCFManager.Instance.DataGCFMovingCube.ReturnSpeed);
-        }
-        else
-        {
-            /*_timeResetPos = 0;
-            _timeResetPos += Time.deltaTime;
-
-            if (amplitude < _tempAmplitude)
-            {
-                amplitude = Mathf.Lerp(amplitude, _tempAmplitude, _timeResetPos * GCFManager.Instance.DataGCFMovingCube.ReturnSpeed);
-            }
-        }*/
     
         transform.position = _startPosition + _movingSide * Mathf.Sin(_timePass * frequency) * amplitude;
     }
