@@ -16,7 +16,9 @@ MonoBehaviour:
   - {fileID: 114355555273988372}
   - {fileID: 114009934693020596}
   - {fileID: 114313008702729330}
-  - {fileID: 114514519075956314}
+  - {fileID: 114755448857433392}
+  - {fileID: 114905852839849224}
+  - {fileID: 114485289379534048}
 --- !u!114 &114009934693020596
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -41,10 +43,10 @@ MonoBehaviour:
     value: 1.93
   color:
     overrideState: 1
-    value: {r: 0, g: 0, b: 0, a: 1}
+    value: {r: 0.020792259, g: 0.00978996, b: 0.18867922, a: 1}
   ambientOnly:
-    overrideState: 1
-    value: 1
+    overrideState: 0
+    value: 0
   noiseFilterTolerance:
     overrideState: 1
     value: 0
@@ -56,7 +58,7 @@ MonoBehaviour:
     value: -12
   thicknessModifier:
     overrideState: 1
-    value: 2.73
+    value: 8.19
   directLightingStrength:
     overrideState: 1
     value: 0.292
@@ -90,8 +92,8 @@ MonoBehaviour:
     value: {fileID: 0}
     defaultState: 1
   tonemapper:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 2
   toneCurveToeStrength:
     overrideState: 0
     value: 0
@@ -118,8 +120,8 @@ MonoBehaviour:
     overrideState: 0
     value: 1
   temperature:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: -10
   tint:
     overrideState: 0
     value: 0
@@ -136,10 +138,10 @@ MonoBehaviour:
     overrideState: 0
     value: 0
   postExposure:
-    overrideState: 0
-    value: 0.08
-  contrast:
     overrideState: 1
+    value: 0.2
+  contrast:
+    overrideState: 0
     value: 0
   mixerRedOutRedIn:
     overrideState: 0
@@ -170,13 +172,13 @@ MonoBehaviour:
     value: 100
   lift:
     overrideState: 1
-    value: {x: 0.5805657, y: 0.88726276, z: 1, w: -0.021629527}
+    value: {x: 0.8623693, y: 0.9052444, z: 1, w: 0}
   gamma:
     overrideState: 1
-    value: {x: 1, y: 0.45468503, z: 0.61443126, w: 0.0072098025}
+    value: {x: 0.91477716, y: 0.9233382, z: 1, w: 0}
   gain:
     overrideState: 1
-    value: {x: 0.87906885, y: 1, z: 0.69638395, w: 0.007209803}
+    value: {x: 0.8647068, y: 0.9880163, z: 1, w: 0}
   masterCurve:
     overrideState: 0
     value:
@@ -1398,21 +1400,21 @@ MonoBehaviour:
     value: 0
   color:
     overrideState: 1
-    value: {r: 0.11658952, g: 0.14758152, b: 0.18867922, a: 1}
+    value: {r: 0.020792259, g: 0.00978996, b: 0.18867922, a: 1}
   center:
     overrideState: 1
     value: {x: 0.5, y: 0.5}
   intensity:
     overrideState: 1
-    value: 0.17
+    value: 0.15
   smoothness:
     overrideState: 1
-    value: 0.992
+    value: 0.5
   roundness:
-    overrideState: 1
+    overrideState: 0
     value: 1
   rounded:
-    overrideState: 1
+    overrideState: 0
     value: 0
   mask:
     overrideState: 1
@@ -1421,7 +1423,33 @@ MonoBehaviour:
   opacity:
     overrideState: 1
     value: 1
---- !u!114 &114514519075956314
+--- !u!114 &114485289379534048
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6050e2d5de785ce4d931e4dbdbf2d755, type: 3}
+  m_Name: ChromaticAberration
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  spectralLut:
+    overrideState: 0
+    value: {fileID: 0}
+    defaultState: 1
+  intensity:
+    overrideState: 1
+    value: 0.383
+  fastMode:
+    overrideState: 0
+    value: 1
+--- !u!114 &114755448857433392
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1439,32 +1467,60 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 12.4
+    value: 2.5
   threshold:
-    overrideState: 1
+    overrideState: 0
     value: 1
   softKnee:
-    overrideState: 1
-    value: 0.553
+    overrideState: 0
+    value: 0.5
   clamp:
-    overrideState: 1
-    value: 1
+    overrideState: 0
+    value: 65472
   diffusion:
     overrideState: 1
-    value: 6.18
+    value: 9
   anamorphicRatio:
     overrideState: 1
-    value: 0
+    value: 0.85
   color:
-    overrideState: 1
+    overrideState: 0
     value: {r: 1, g: 1, b: 1, a: 1}
   fastMode:
-    overrideState: 1
+    overrideState: 0
     value: 0
   dirtTexture:
-    overrideState: 1
+    overrideState: 0
     value: {fileID: 0}
     defaultState: 1
   dirtIntensity:
-    overrideState: 1
+    overrideState: 0
     value: 0
+--- !u!114 &114905852839849224
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 556797029e73b2347956b6579e77e05b, type: 3}
+  m_Name: DepthOfField
+  m_EditorClassIdentifier: 
+  active: 0
+  enabled:
+    overrideState: 1
+    value: 1
+  focusDistance:
+    overrideState: 1
+    value: 30
+  aperture:
+    overrideState: 1
+    value: 3
+  focalLength:
+    overrideState: 1
+    value: 120
+  kernelSize:
+    overrideState: 1
+    value: 1

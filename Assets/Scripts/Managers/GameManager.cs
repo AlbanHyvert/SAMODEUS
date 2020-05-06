@@ -15,6 +15,7 @@ public class GameManager : Singleton<GameManager>
         VERTUMNE,
         NE,
         PREFABS,
+        GCF_HUGO,
         DEV
     }
 
@@ -41,6 +42,7 @@ public class GameManager : Singleton<GameManager>
         _states.Add(GameState.GCF, new GCFState());
         _states.Add(GameState.NE, new NE1State());
         _states.Add(GameState.DEV, new DevState());
+        _states.Add(GameState.GCF_HUGO, new GCFHugoState());
         _currentState = GameState.PRELOAD;
         ChangeState(GameState.MAINMENU);
     }

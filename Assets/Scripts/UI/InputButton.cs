@@ -33,11 +33,14 @@ public class InputButton : MonoBehaviour
 
     public void OnButtonPress()
     {
+        Debug.Log("Press");
         InputManager.Instance.ChangeInput += ChangeInput;
     }
 
     private void ChangeInput()
     {
+        Debug.Log("in");
+
         foreach (KeyCode kcode in Enum.GetValues(typeof(KeyCode)))
         {
             if (Input.GetKeyDown(kcode))

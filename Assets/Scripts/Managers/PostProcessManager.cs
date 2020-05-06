@@ -7,8 +7,6 @@ public class PostProcessManager : Singleton<PostProcessManager>
 {
     [SerializeField] private PostProcessProfile _profileVertumne = null;
     [SerializeField] private PostProcessProfile _profileGCF = null;
-    [SerializeField] private VolumeProfile _sceneSettingsVertumne = null;
-    [SerializeField] private VolumeProfile _sceneSettingsGCF = null;
 
     private Volume _volume = null;
     private PostProcessVolume _postProcessVolume = null;
@@ -18,19 +16,12 @@ public class PostProcessManager : Singleton<PostProcessManager>
     public PostProcessVolume PostProcessVolume { get { return _postProcessVolume; } set { _postProcessVolume = value; } }
     public Volume Volume { get { return _volume; } set { _volume = value; } }
 
-    public VolumeProfile SceneSettingsProfileVertumne { get { return _sceneSettingsVertumne; } }
-    public VolumeProfile SceneSettingsProfileGCF { get { return _sceneSettingsGCF; } }
 
-    public void ChangePostProcess(PostProcessProfile PPprofile, VolumeProfile volumeProfile)
+    public void ChangePostProcess(PostProcessProfile PPprofile)
     {
         if(PostProcessVolume != null)
         {
             PostProcessVolume.profile = PPprofile;
-        }
-
-        if(Volume != null)
-        {
-            Volume.profile = volumeProfile;
         }
     }
 }
