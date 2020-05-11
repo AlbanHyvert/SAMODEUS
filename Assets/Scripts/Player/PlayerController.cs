@@ -30,7 +30,8 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         _controller = GetComponent<CharacterController>();
-
+        _musicAudioSource.volume = PlayerManager.Instance.MusicVolume;
+        _dialsAudioSource.volume = PlayerManager.Instance.DialsVolume;
         GameLoopManager.Instance.Player += OnRaycast;
         GameLoopManager.Instance.Player += OnUpdate;
         GameLoopManager.Instance.Pause += IsPaused;

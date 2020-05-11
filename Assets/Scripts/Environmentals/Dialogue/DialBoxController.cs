@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using TMPro;
+using UnityEditor.ShaderGraph;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DialBoxController : MonoBehaviour
 {
@@ -10,20 +12,23 @@ public class DialBoxController : MonoBehaviour
 
     private AudioSource _source = null;
     private float _timeStamp = 0.0f;
-    private List<DialBoxData> _dialBoxDataList = null;
+    private List<TextDialBoxData> _textDialBoxDataList = null;
+    private List<VoiceDialBoxData> _voiceDialBoxDataList = null;
     private bool _timerIsStarted = false;
+
+    public bool TimerIsStarted { get { return _timerIsStarted; } }
 
     private void Start()
     {
         if (_buttonsToPressText != null)
             _buttonsToPressText.text = string.Empty;
 
+        NarrativeManager.Instance.DialBoxController = this;
         _text.text = string.Empty;
         _source = PlayerManager.Instance.Player.DialsAudioSource;
-        NarrativeManager.Instance.OnTriggerNarrative += OnTriggerNarrative;
+        NarrativeManager.Instance.OnCallNarration += OnTriggerNarration;
         GameLoopManager.Instance.Pause += IsPause;
         GameLoopManager.Instance.UI += OnUpdate;
-        InputManager.Instance.PassDialogue += PassDials;
     }
 
     private void IsPause(bool pause)
@@ -40,54 +45,90 @@ public class DialBoxController : MonoBehaviour
         }
     }
 
-    private void OnTriggerNarrative(DialBoxData[] dialBoxs)
+    private void OnTriggerNarration(VoiceDialBoxData[] voiceDials, TextDialBoxData[] textDials)
     {
-        _dialBoxDataList = new List<DialBoxData>(dialBoxs);
-        TriggerFirstElementDialBox();
+        _voiceDialBoxDataList = new List<VoiceDialBoxData>(voiceDials);
+        _textDialBoxDataList = new List<TextDialBoxData>(textDials);
+        TriggerFirstAudioDialsElement();
+        TriggerFirstTextDialsElement();
+        InputManager.Instance.PassDialogue += PassDials;
     }
 
-    private void TriggerFirstElementDialBox()
+    private void TriggerFirstAudioDialsElement()
     {
         if (_text.text == string.Empty)
         {
-            _text.text = _dialBoxDataList[0].Text;
-            _source.PlayOneShot(_dialBoxDataList[0].Clip);
-            _timeStamp = Time.time + (_dialBoxDataList[0].Clip.length + _dialBoxDataList[0].LifeTime);
+            _text.text = _textDialBoxDataList[0].Text;
+            _timeStamp = Time.time + _textDialBoxDataList[0].LifeTime;
             _timerIsStarted = true;
-            _dialBoxDataList.RemoveAt(0);
-            _buttonsToPressText.text = InputManager.Instance.DataKeycode.KeyDialogue.ToString();
+            _textDialBoxDataList.RemoveAt(0);         
         }
+    }
+
+    private void TriggerFirstTextDialsElement()
+    {
+        _source.PlayOneShot(_voiceDialBoxDataList[0].Clip);
+        Debug.Log("SoundsPlaying");
+        _voiceDialBoxDataList.RemoveAt(0);
     }
 
     private void OnUpdate()
     {
         if(_timerIsStarted == true)
         {
-            if(Time.time >= _timeStamp)
+            _buttonsToPressText.text = InputManager.Instance.DataKeycode.KeyDialogue.ToString();
+
+            if (Time.time >= _timeStamp)
             {
-                if (_dialBoxDataList.Count > 0)
+                if(_textDialBoxDataList!= null && _textDialBoxDataList.Count > 0)
                 {
-                    TriggerFirstElementDialBox();
+                    TriggerFirstTextDialsElement();
                 }
                 else
                 {
-                    _dialBoxDataList = null;
+                    _textDialBoxDataList = null;
+                }
+
+                if(_voiceDialBoxDataList != null && _voiceDialBoxDataList.Count > 0)
+                {
+                    TriggerFirstAudioDialsElement();
+                }
+                else
+                {
+                    _voiceDialBoxDataList = null;
+                }
+
+                if(_voiceDialBoxDataList == null && _textDialBoxDataList == null && _source.isPlaying == false)
+                {
                     _timerIsStarted = false;
                 }
             }
             else if(Time.time >= _timeStamp - _blankThreshold)
             {
                 _text.text = string.Empty;
+                InputManager.Instance.PassDialogue -= PassDials;
                 _buttonsToPressText.text = string.Empty;
             }
         }
     }
 
     private void PassDials()
-    {
+    {      
         _text.text = string.Empty;
         _buttonsToPressText.text = string.Empty;
         _timeStamp = 0;
         _source.Stop();
+    }
+
+    public void ClearAll()
+    {
+        PassDials();
+        if (_voiceDialBoxDataList != null)
+            _voiceDialBoxDataList.Clear();
+        _voiceDialBoxDataList = null;
+        if(_textDialBoxDataList != null)
+            _textDialBoxDataList.Clear();
+        _textDialBoxDataList = null;
+        _timerIsStarted = false;
     }
 }

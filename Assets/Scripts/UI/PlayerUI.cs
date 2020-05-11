@@ -4,10 +4,14 @@ using UnityEngine.UI;
 public class PlayerUI : MonoBehaviour
 {
     [SerializeField] private GameObject _hudPause = null;
+    [SerializeField] private GameObject _hudSettings = null;
+    [SerializeField] private GameObject _hudCredits = null;
 
     private void Start()
     {
         _hudPause.SetActive(false);
+        _hudSettings.SetActive(false);
+        _hudCredits.SetActive(false);
         GameLoopManager.Instance.Pause += IsPaused;
     }
     private void IsPaused(bool pause)
@@ -22,6 +26,8 @@ public class PlayerUI : MonoBehaviour
         else
         {
             _hudPause.SetActive(false);
+            _hudSettings.SetActive(false);
+            _hudCredits.SetActive(false);
         }
     }
 

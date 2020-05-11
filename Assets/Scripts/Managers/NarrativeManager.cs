@@ -2,46 +2,71 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NarrativeManager : Singleton<NarrativeManager>
 {
     [SerializeField, Header("Dials Boxs Data")] private DialBoxData[] _dialBoxData = null;
-    private Dictionary<string, DialBoxData> _dialBoxs = null;
+    [SerializeField, Header("Text Dials Boxs Data")] private TextDialBoxData[] _textDialBoxData = null;
+    [SerializeField, Header("Voice Dials Boxs Data")] private VoiceDialBoxData[] _voiceDialBoxData = null;
+    
+    private DialBoxController _dialBoxController = null;
 
-    private event Action<DialBoxData[]> _onTriggerNarrative = null;
-    public event Action<DialBoxData[]> OnTriggerNarrative
+    private Dictionary<string, DialBoxData> _dialBoxs = null;
+    private Dictionary<string, TextDialBoxData> _textDialBoxs = null;
+    private Dictionary<string, VoiceDialBoxData> _voiceDialBoxs = null;
+
+    private event Action<VoiceDialBoxData[], TextDialBoxData[]> _onCallNarration = null;
+    public event Action<VoiceDialBoxData[], TextDialBoxData[]> OnCallNarration
     {
         add
         {
-            _onTriggerNarrative -= value;
-            _onTriggerNarrative += value;
+            _onCallNarration -= value;
+            _onCallNarration += value;
         }
         remove
         {
-            _onTriggerNarrative -= value;
+            _onCallNarration -= value;
         }
     }
 
+    public DialBoxController DialBoxController { get { return _dialBoxController; } set { _dialBoxController = value; } }
+
     private void Start()
     {
-        _dialBoxs = new Dictionary<string, DialBoxData>();
-        for (int i = 0; i < _dialBoxData.Length; i++)
+        _textDialBoxs = new Dictionary<string, TextDialBoxData>();
+        _voiceDialBoxs = new Dictionary<string, VoiceDialBoxData>();
+
+        for (int i = 0; i < _textDialBoxData.Length; i++)
         {
-            _dialBoxs.Add(_dialBoxData[i].ID, _dialBoxData[i]);
+            _textDialBoxs.Add(_textDialBoxData[i].ID, _textDialBoxData[i]);
+        }
+
+        for (int i = 0; i < _voiceDialBoxData.Length; i++)
+        {
+            _voiceDialBoxs.Add(_voiceDialBoxData[i].ID, _voiceDialBoxData[i]);
         }
     }
 
     public void TriggerNarrative(string[] ID)
     {
-        if (_onTriggerNarrative != null)
+        if(_onCallNarration != null)
         {
-            List<DialBoxData> dialBoxDatas = new List<DialBoxData>();
+            List<VoiceDialBoxData> voiceDialBoxData = new List<VoiceDialBoxData>();
+            List<TextDialBoxData> textDialBoxDatas = new List<TextDialBoxData>();
 
             for (int i = 0; i < ID.Length; i++)
             {
-                dialBoxDatas.Add(_dialBoxs[ID[i]]);
+                voiceDialBoxData.Add(_voiceDialBoxs[ID[i]]);
+                textDialBoxDatas.Add(_textDialBoxs[ID[i]]);
             }
-            _onTriggerNarrative(dialBoxDatas.ToArray());
+
+            Debug.Log("Index Size : " + _voiceDialBoxs.Count);
+            Debug.Log("Index Size : " + _textDialBoxs.Count);
+            Debug.Log("Index Temp Size : " + voiceDialBoxData.Count);
+            Debug.Log("Index Temp Size : " + textDialBoxDatas.Count);
+
+            _onCallNarration(voiceDialBoxData.ToArray(), textDialBoxDatas.ToArray());
         }
     }
 }
