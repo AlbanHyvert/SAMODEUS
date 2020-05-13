@@ -1,7 +1,6 @@
 ﻿using Engine.Singleton;
 using UnityEngine;
 using System.Collections.Generic;
-using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -17,6 +16,12 @@ public class GameManager : Singleton<GameManager>
         PREFABS,
         GCF_HUGO,
         DEV
+    }
+
+    public enum Language
+    {
+        ENGLISH,
+        FRENCH
     }
 
     [SerializeField] private GameState _gameState = GameState.GAME;
