@@ -24,7 +24,6 @@ public class GameManager : Singleton<GameManager>
         FRENCH
     }
 
-    [SerializeField] private Language _languages = Language.FRENCH;
     [SerializeField] private GameState _gameState = GameState.GAME;
     [SerializeField] private int _defaultLoadingTime = 2;
 
@@ -32,7 +31,6 @@ public class GameManager : Singleton<GameManager>
     private GameState _currentState = GameState.PRELOAD;
     private Dictionary<GameState, IGameStates> _states = null;
 
-    public Language Languages { get { return _languages; } set { _languages = value; } }
     public IGameStates CurrentStateType { get { return _states[_currentState]; } }
     public int DefaultLoadingTime { get { return _defaultLoadingTime; } }
     public GameState ChoosenScene { get { return _gameState; } set { _gameState = value; } }

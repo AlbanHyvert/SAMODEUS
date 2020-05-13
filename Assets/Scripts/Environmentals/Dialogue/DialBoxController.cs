@@ -1,8 +1,6 @@
 ﻿using System.Collections.Generic;
 using TMPro;
-using UnityEditor.ShaderGraph;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class DialBoxController : MonoBehaviour
 {
@@ -11,7 +9,8 @@ public class DialBoxController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _buttonsToPressText = null;
 
     private AudioSource _source = null;
-    private float _timeStamp = 0.0f;
+    private float _textTimeStamp = 0.0f;
+    private float _voiceTimeStamp = 0.0f;
     private List<TextDialBoxData> _textDialBoxDataList = null;
     private List<VoiceDialBoxData> _voiceDialBoxDataList = null;
     private bool _timerIsStarted = false;
@@ -56,20 +55,20 @@ public class DialBoxController : MonoBehaviour
 
     private void TriggerFirstAudioDialsElement()
     {
-        if (_text.text == string.Empty)
-        {
-            _text.text = _textDialBoxDataList[0].Text;
-            _timeStamp = Time.time + _textDialBoxDataList[0].LifeTime;
-            _timerIsStarted = true;
-            _textDialBoxDataList.RemoveAt(0);         
-        }
+        _source.PlayOneShot(_voiceDialBoxDataList[0].Clip);
+        _voiceTimeStamp = Time.time + (_voiceDialBoxDataList[0].Clip.length + _voiceDialBoxDataList[0].LifeTime);
+        _voiceDialBoxDataList.RemoveAt(0);
     }
 
     private void TriggerFirstTextDialsElement()
     {
-        _source.PlayOneShot(_voiceDialBoxDataList[0].Clip);
-        Debug.Log("SoundsPlaying");
-        _voiceDialBoxDataList.RemoveAt(0);
+        if (_text.text == string.Empty)
+        {
+            _text.text = _textDialBoxDataList[0].Text;
+            _textTimeStamp = Time.time + _textDialBoxDataList[0].LifeTime;
+            _timerIsStarted = true;
+            _textDialBoxDataList.RemoveAt(0);
+        }
     }
 
     private void OnUpdate()
@@ -78,9 +77,9 @@ public class DialBoxController : MonoBehaviour
         {
             _buttonsToPressText.text = InputManager.Instance.DataKeycode.KeyDialogue.ToString();
 
-            if (Time.time >= _timeStamp)
+            if (Time.time >= _textTimeStamp)
             {
-                if(_textDialBoxDataList!= null && _textDialBoxDataList.Count > 0)
+                if(_textDialBoxDataList != null && _textDialBoxDataList.Count > 0)
                 {
                     TriggerFirstTextDialsElement();
                 }
@@ -88,8 +87,15 @@ public class DialBoxController : MonoBehaviour
                 {
                     _textDialBoxDataList = null;
                 }
+            }
+            else if(Time.time >= _textTimeStamp - _blankThreshold)
+            {
+                _text.text = string.Empty;
+            }
 
-                if(_voiceDialBoxDataList != null && _voiceDialBoxDataList.Count > 0)
+            if(Time.time >= _voiceTimeStamp)
+            {
+                if (_voiceDialBoxDataList != null && _voiceDialBoxDataList.Count > 0)
                 {
                     TriggerFirstAudioDialsElement();
                 }
@@ -97,18 +103,19 @@ public class DialBoxController : MonoBehaviour
                 {
                     _voiceDialBoxDataList = null;
                 }
+            }
 
-                if(_voiceDialBoxDataList == null && _textDialBoxDataList == null && _source.isPlaying == false)
-                {
-                    _timerIsStarted = false;
-                }
-            }
-            else if(Time.time >= _timeStamp - _blankThreshold)
+            if (_voiceDialBoxDataList == null && _textDialBoxDataList == null && _source.isPlaying == false)
             {
-                _text.text = string.Empty;
-                InputManager.Instance.PassDialogue -= PassDials;
                 _buttonsToPressText.text = string.Empty;
+                InputManager.Instance.PassDialogue -= PassDials;
+                _timerIsStarted = false;
             }
+        }
+        else
+        {
+            _buttonsToPressText.text = string.Empty;
+            InputManager.Instance.PassDialogue -= PassDials;
         }
     }
 
@@ -116,7 +123,7 @@ public class DialBoxController : MonoBehaviour
     {      
         _text.text = string.Empty;
         _buttonsToPressText.text = string.Empty;
-        _timeStamp = 0;
+        _textTimeStamp = 0;
         _source.Stop();
     }
 

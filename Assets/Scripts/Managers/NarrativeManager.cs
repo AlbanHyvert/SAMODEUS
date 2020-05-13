@@ -2,17 +2,14 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class NarrativeManager : Singleton<NarrativeManager>
 {
-    [SerializeField, Header("Dials Boxs Data")] private DialBoxData[] _dialBoxData = null;
     [SerializeField, Header("Text Dials Boxs Data")] private TextDialBoxData[] _textDialBoxData = null;
     [SerializeField, Header("Voice Dials Boxs Data")] private VoiceDialBoxData[] _voiceDialBoxData = null;
-    
-    private DialBoxController _dialBoxController = null;
+    [SerializeField] private GameManager.Language _choosenLanguage = GameManager.Language.FRENCH;
 
-    private Dictionary<string, DialBoxData> _dialBoxs = null;
+    private DialBoxController _dialBoxController = null;
     private Dictionary<string, TextDialBoxData> _textDialBoxs = null;
     private Dictionary<string, VoiceDialBoxData> _voiceDialBoxs = null;
 
@@ -30,7 +27,28 @@ public class NarrativeManager : Singleton<NarrativeManager>
         }
     }
 
+    private event Action<GameManager.Language> _changeLanguages = null;
+    public event Action<GameManager.Language> ChangeLanguages
+    {
+        add
+        {
+            _changeLanguages -= value;
+            _changeLanguages += value;
+        }
+        remove
+        {
+            _changeLanguages -= value;
+        }
+    }
+
     public DialBoxController DialBoxController { get { return _dialBoxController; } set { _dialBoxController = value; } }
+    public GameManager.Language ChoosenLanguage { get { return _choosenLanguage; } 
+        set
+        {
+            _choosenLanguage = value;
+            _changeLanguages(_choosenLanguage);
+        }
+    }
 
     private void Start()
     {
@@ -48,23 +66,22 @@ public class NarrativeManager : Singleton<NarrativeManager>
         }
     }
 
-    public void TriggerNarrative(string[] ID)
+    public void TriggerNarrative(string[] textID, string[] voiceID)
     {
         if(_onCallNarration != null)
         {
             List<VoiceDialBoxData> voiceDialBoxData = new List<VoiceDialBoxData>();
             List<TextDialBoxData> textDialBoxDatas = new List<TextDialBoxData>();
 
-            for (int i = 0; i < ID.Length; i++)
+            for (int i = 0; i < textID.Length; i++)
             {
-                voiceDialBoxData.Add(_voiceDialBoxs[ID[i]]);
-                textDialBoxDatas.Add(_textDialBoxs[ID[i]]);
+                textDialBoxDatas.Add(_textDialBoxs[textID[i]]);
             }
 
-            Debug.Log("Index Size : " + _voiceDialBoxs.Count);
-            Debug.Log("Index Size : " + _textDialBoxs.Count);
-            Debug.Log("Index Temp Size : " + voiceDialBoxData.Count);
-            Debug.Log("Index Temp Size : " + textDialBoxDatas.Count);
+            for (int i = 0; i < voiceID.Length; i++)
+            {
+                voiceDialBoxData.Add(_voiceDialBoxs[voiceID[i]]);
+            }
 
             _onCallNarration(voiceDialBoxData.ToArray(), textDialBoxDatas.ToArray());
         }
