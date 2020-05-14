@@ -9,6 +9,9 @@ public class GCFParentControllerCube : MonoBehaviour
     [SerializeField] private float _customEventSpeed = 10;
     [SerializeField] private bool _isSpecialEvent = false;
     [SerializeField] private Renderer[] _renderersSpecialEvent = null;
+    [SerializeField] private int _startValue = 1;
+    [SerializeField] private int _ChoosenPieces = 2;
+    [SerializeField] private int _addingValue = 2;
 
     private List<Renderer> _rendererList = null;
     private List<GCFRotatingCube> _rotatingChildList = null;
@@ -23,9 +26,12 @@ public class GCFParentControllerCube : MonoBehaviour
         _rotatingChildList = new List<GCFRotatingCube>();
         _rendererList = new List<Renderer>();
         _movingChildList = new List<GCFMovingCube>();
-        int value = 1;
-        int ChoosenPieces = 2;
+
         GameLoopManager.Instance.Puzzles += OnUpdate;
+        GameLoopManager.Instance.Pause += IsPaused;
+
+        int value = _startValue;
+        int tempChoosenValue = _ChoosenPieces;
 
         foreach (Transform item in transform)
         {
@@ -52,9 +58,9 @@ public class GCFParentControllerCube : MonoBehaviour
                 _movingChildList.Add(movingCube);
             }
 
-            if(value == ChoosenPieces)
+            if(value == _ChoosenPieces)
             {
-                ChoosenPieces += 2;
+                _ChoosenPieces += _addingValue;
 
                 if (rotatingCube == null)
                 {
@@ -114,6 +120,7 @@ public class GCFParentControllerCube : MonoBehaviour
             }
 
         }
+        _ChoosenPieces = tempChoosenValue;
 
         if (_rotatingChildList != null)
         {
@@ -137,6 +144,18 @@ public class GCFParentControllerCube : MonoBehaviour
                     _movingChildList[i].Init(GCFManager.Instance.DataGCFMovingCube.MinAmplitude, GCFManager.Instance.DataGCFMovingCube.MaxAmplitude);
                 }
             }
+        }
+    }
+
+    private void IsPaused(bool value)
+    {
+        if(value == true)
+        {
+            GameLoopManager.Instance.Puzzles -= OnUpdate;
+        }
+        else
+        {
+            GameLoopManager.Instance.Puzzles += OnUpdate;
         }
     }
 
