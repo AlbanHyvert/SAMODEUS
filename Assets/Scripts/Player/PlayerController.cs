@@ -159,6 +159,18 @@ public class PlayerController : MonoBehaviour
         InputManager.Instance.Throw -= OnThrow;
     }
 
+    public void MovementShouldStop(bool status)
+    {
+        if(status == true)
+        {
+            InputManager.Instance.Movement -= OnMovements;
+        }
+        else
+        {
+            InputManager.Instance.Movement += OnMovements;
+        }
+    }
+
     private void OnDestroy()
     {
         GameLoopManager.Instance.Player -= OnRaycast;

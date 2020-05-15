@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class OnOffLight : MonoBehaviour
+public class OnOffObject : MonoBehaviour
 {
     [SerializeField] private double _range = 100;
 
