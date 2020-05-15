@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class NarrativeManager : Singleton<NarrativeManager>
 {
-    [SerializeField, Header("Text Dials Boxs Data")] private TextDialBoxData[] _textDialBoxData = null;
     [SerializeField, Header("Voice Dials Boxs Data")] private VoiceDialBoxData[] _voiceDialBoxData = null;
+    [SerializeField] private TextAsset _neTextAsset = null;
+    [SerializeField] private TextAsset _gcfTextAsset = null;
     [SerializeField] private GameManager.Language _choosenLanguage = GameManager.Language.FRENCH;
 
     private DialBoxController _dialBoxController = null;
+    private List<TextDialBoxData> _textDialBoxDataList = new List<TextDialBoxData>();
     private Dictionary<string, TextDialBoxData> _textDialBoxs = null;
     private Dictionary<string, VoiceDialBoxData> _voiceDialBoxs = null;
 
@@ -55,9 +57,30 @@ public class NarrativeManager : Singleton<NarrativeManager>
         _textDialBoxs = new Dictionary<string, TextDialBoxData>();
         _voiceDialBoxs = new Dictionary<string, VoiceDialBoxData>();
 
-        for (int i = 0; i < _textDialBoxData.Length; i++)
+        string[] dataNEText = _neTextAsset.text.Split(new char[] { '\n' });
+
+        for (int i = 1; i < dataNEText.Length -1; i++)
         {
-            _textDialBoxs.Add(_textDialBoxData[i].ID, _textDialBoxData[i]);
+            string[] row = dataNEText[i].Split(new char[] { ';' });
+            TextDialBoxData dialBoxData = new TextDialBoxData();
+
+            float tempLifeTimeValue = 0;
+
+            if(row[1] != "")
+            {
+                dialBoxData.ID = row[0];
+                dialBoxData.Text = row[1];
+                float.TryParse(row[2], out tempLifeTimeValue);
+
+                dialBoxData.LifeTime = tempLifeTimeValue;
+
+                _textDialBoxDataList.Add(dialBoxData);
+            }
+        }
+
+        for (int i = 0; i < _textDialBoxDataList.Count; i++)
+        {
+            _textDialBoxs.Add(_textDialBoxDataList[i].ID, _textDialBoxDataList[i]);
         }
 
         for (int i = 0; i < _voiceDialBoxData.Length; i++)
