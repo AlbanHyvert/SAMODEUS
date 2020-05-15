@@ -7,7 +7,7 @@ public class TextDialBoxData : ScriptableObject
     [SerializeField, TextArea] private string _text = "";
     [SerializeField] private float _lifeTime = 0.0f;
 
-    public string ID { get { return _ID; } }
-    public string Text { get { return _text; } }
-    public float LifeTime { get { return _lifeTime; } }
+    public string ID { get { return _ID; } set { _ID = value; } }
+    public string Text { get { return _text; } set { _text = value; } }
+    public float LifeTime { get { return _lifeTime; } set { _lifeTime = value; } }
 }
