@@ -24,7 +24,6 @@ public class PlayerController : MonoBehaviour
     public PlayerCamera PlayerCamera { get { return _playerCamera; } }
     public AudioSource MusicAudioSource { get { return _musicAudioSource; } }
     public AudioSource DialsAudioSource { get { return _dialsAudioSource; } }
-
     public PlayerManager.WorldTag WorldTaged { get { return _worldTag; } set { _worldTag = value; } }
 
     private void Start()

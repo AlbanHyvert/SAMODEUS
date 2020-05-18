@@ -11,7 +11,23 @@ public class CandleLight : MonoBehaviour
     private float _time = 0.0f;
     private bool _pingPong = false;
 
-    private void Update()
+    private void Start()
+    {
+        GameLoopManager.Instance.Puzzles += OnUpdate;
+        GameLoopManager.Instance.Pause += IsPaused;
+    }
+
+    private void IsPaused (bool value)
+    {
+        if(value == true)
+        {
+            GameLoopManager.Instance.Puzzles -= OnUpdate;
+        }
+        else
+            GameLoopManager.Instance.Puzzles += OnUpdate;
+    }
+
+    private void OnUpdate()
     {
         if (_time >= 1)
         {

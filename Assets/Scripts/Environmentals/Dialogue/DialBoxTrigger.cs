@@ -58,11 +58,14 @@ public class DialBoxTrigger : MonoBehaviour
 
     private void OnUpdate()
     {
-        if(Time.time <= _timer)
+        if(_stopPlayer == true)
         {
-            if (_stopPlayer == true)
+            if (Time.time <= _timer)
             {
                 PlayerManager.Instance.Player.MovementShouldStop(_shouldStopPlayer);
+            }
+            else
+            {
                 _stopPlayer = false;
             }
         }
