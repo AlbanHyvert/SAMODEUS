@@ -24,7 +24,6 @@ public class PlayerController : MonoBehaviour
     public PlayerCamera PlayerCamera { get { return _playerCamera; } }
     public AudioSource MusicAudioSource { get { return _musicAudioSource; } }
     public AudioSource DialsAudioSource { get { return _dialsAudioSource; } }
-
     public PlayerManager.WorldTag WorldTaged { get { return _worldTag; } set { _worldTag = value; } }
 
     private void Start()
@@ -157,6 +156,18 @@ public class PlayerController : MonoBehaviour
         InputManager.Instance.Interaction += OnPickUp;
         InputManager.Instance.Interaction -= OnDrop;
         InputManager.Instance.Throw -= OnThrow;
+    }
+
+    public void MovementShouldStop(bool status)
+    {
+        if(status == true)
+        {
+            InputManager.Instance.Movement -= OnMovements;
+        }
+        else
+        {
+            InputManager.Instance.Movement += OnMovements;
+        }
     }
 
     private void OnDestroy()
