@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UnityEditor;
+using UnityEngine;
 
 public class Room2 : MonoBehaviour
 {
@@ -6,27 +7,48 @@ public class Room2 : MonoBehaviour
     [SerializeField, Header("Voice Boxs ID")] private string[] _voiceBoxID = null;
     [SerializeField] private bool _shouldStopPlayer = false;
     [SerializeField] private float _stopPlayerDuration = 5;
+    [SerializeField] private float _timeBeforeSpawnObj = 5;
+    [SerializeField] private GameObject _wrongObjToSpawn = null;
+    [SerializeField] private GameObject _goodObjToSpawn = null;
+    [SerializeField] private Transform _objSpawnPosition = null;
 
     private bool _stopPlayer = false;
-    private float _timer = 0;
+    private float _stopPlayerTimer = 0;
+    private float _spawnObjTimer = 0;
+    private bool _shouldSpawnObj = false;
+    private GameObject _objToDestroy = null;
+
+    public GameObject ObjectToDestroy { get { return _objToDestroy; } set { _objToDestroy = value; } }
 
     private void Start()
     {
         NarrativeManager.Instance.ChangeLanguages += OnLanguageChange;
 
-        for (int i = 0; i < _textBoxID.Length; i++)
+        if (_textBoxID != null)
         {
-            string newID = _textBoxID[i] + "_" + NarrativeManager.Instance.ChoosenLanguage.ToString();
-            _textBoxID[i] = newID;
+            for (int i = 0; i < _textBoxID.Length; i++)
+            {
+                if (_textBoxID[i] != string.Empty)
+                {
+                    string newID = _textBoxID[i] + "_" + NarrativeManager.Instance.ChoosenLanguage.ToString();
+                    _textBoxID[i] = newID;
+                }
+            }
         }
     }
 
     private void OnLanguageChange(GameManager.Language language)
     {
-        for (int i = 0; i < _textBoxID.Length; i++)
+        if(_textBoxID != null)
         {
-            string newID = _textBoxID[i] + "_" + language.ToString();
-            _textBoxID[i] = newID;
+            for (int i = 0; i < _textBoxID.Length; i++)
+            {
+                if (_textBoxID[i] != string.Empty)
+                {
+                    string newID = _textBoxID[i] + "_" + language.ToString();
+                    _textBoxID[i] = newID;
+                }
+            }
         }
     }
 
@@ -34,32 +56,44 @@ public class Room2 : MonoBehaviour
     {
         if (other.tag.Equals("Player"))
         {
-            if (NarrativeManager.Instance.DialBoxController.TimerIsStarted == false)
+            if(_textBoxID.Length > 1)
             {
-                NarrativeManager.Instance.TriggerNarrative(_textBoxID, _voiceBoxID);
-                gameObject.SetActive(false);
+                if (NarrativeManager.Instance.DialBoxController.TimerIsStarted == false)
+                {
+                    NarrativeManager.Instance.TriggerNarrative(_textBoxID, _voiceBoxID);
+                    
+                }
+                else
+                {
+                    NarrativeManager.Instance.DialBoxController.ClearAll();
+                    NarrativeManager.Instance.TriggerNarrative(_textBoxID, _voiceBoxID);
+                }
             }
-            else
-            {
-                NarrativeManager.Instance.DialBoxController.ClearAll();
-                NarrativeManager.Instance.TriggerNarrative(_textBoxID, _voiceBoxID);
-                gameObject.SetActive(false);
-            }
+
+            _spawnObjTimer = Time.time + _timeBeforeSpawnObj;
+            _shouldSpawnObj = true;
+            GameLoopManager.Instance.Puzzles += OnUpdate;
 
             if (_shouldStopPlayer == true)
             {
-                GameLoopManager.Instance.Puzzles += OnUpdate;
                 _stopPlayer = true;
-                _timer = Time.time + _stopPlayerDuration;
+                _stopPlayerTimer = Time.time + _stopPlayerDuration;
             }
+
+            gameObject.SetActive(false);
         }
     }
 
     private void OnUpdate()
     {
+        if (_stopPlayer == false && _shouldSpawnObj == false)
+        {
+            GameLoopManager.Instance.Puzzles -= OnUpdate;
+        }
+
         if (_stopPlayer == true)
         {
-            if (Time.time <= _timer)
+            if (Time.time <= _stopPlayerTimer)
             {
                 PlayerManager.Instance.Player.MovementShouldStop(_shouldStopPlayer);
             }
@@ -71,8 +105,17 @@ public class Room2 : MonoBehaviour
         else
         {
             PlayerManager.Instance.Player.MovementShouldStop(false);
-            _timer = 0;
-            GameLoopManager.Instance.Puzzles -= OnUpdate;
+            _stopPlayerTimer = 0;
+        }
+
+        if(_shouldSpawnObj == true && Time.time >= _spawnObjTimer)
+        {
+            if(_wrongObjToSpawn != null)
+            {
+                _objToDestroy = Instantiate(_wrongObjToSpawn, _objSpawnPosition.position, Quaternion.identity);
+            }
+
+            _shouldSpawnObj = false;
         }
     }
 }
