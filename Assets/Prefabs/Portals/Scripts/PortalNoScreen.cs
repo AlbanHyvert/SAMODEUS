@@ -4,6 +4,8 @@ using UnityEngine;
 public class PortalNoScreen : MonoBehaviour
 {
     [SerializeField] private PortalNoScreen _linkedPortal = null;
+    [SerializeField] private bool _shouldShake = false;
+
     private List<PortalTraveller> trackedTravellers = null;
 
     private void Start()
@@ -29,7 +31,7 @@ public class PortalNoScreen : MonoBehaviour
                 if (portalSide != portalSideOld)
                 {
                     Matrix4x4 m = _linkedPortal.transform.localToWorldMatrix * transform.worldToLocalMatrix * travellerT.localToWorldMatrix;
-                    traveller.Teleport(transform, _linkedPortal.transform, m.GetColumn(3), m.rotation);
+                    traveller.Teleport(transform, _linkedPortal.transform, m.GetColumn(3), m.rotation, _shouldShake);
 
                     // Can't rely on OnTriggerEnter/Exit to be called next frame because it depends on when FixedUpdate runs
                     _linkedPortal.OnTravellerEnterPortal(traveller);

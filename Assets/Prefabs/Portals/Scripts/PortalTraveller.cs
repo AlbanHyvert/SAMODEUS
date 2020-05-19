@@ -4,11 +4,11 @@ public class PortalTraveller : MonoBehaviour
 {
     public Vector3 PreviousOffsetFromPortal { get; set; }
 
-    public virtual void Teleport(Transform fromPortal, Transform toPortal, Vector3 pos, Quaternion rot)
+    public virtual void Teleport(Transform fromPortal, Transform toPortal, Vector3 pos, Quaternion rot, bool shakeValue)
     {
         transform.position = pos;
         transform.rotation = rot;
-        PlayerManager.Instance.Player.PlayerCamera.ShouldShake = true;
+        PlayerManager.Instance.Player.PlayerCamera.ShouldShake = shakeValue;
     }
 
     public virtual void EnterPortalThreshold()

@@ -1,11 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class Portal : MonoBehaviour
 {
     [SerializeField] private Portal _linkedPortal = null;
     [SerializeField] private MeshRenderer _screen = null;
+    [SerializeField] private bool _shouldShake = false;
+
     private Camera _playerCamera = null;
     private Camera _portalCamera = null;
     private RenderTexture _viewTexture = null;
@@ -43,7 +44,7 @@ public class Portal : MonoBehaviour
                 if (portalSide != portalSideOld)
                 {
                     Matrix4x4 m = _linkedPortal.transform.localToWorldMatrix * transform.worldToLocalMatrix * travellerT.localToWorldMatrix;
-                    traveller.Teleport(transform, _linkedPortal.transform, m.GetColumn(3), m.rotation);
+                    traveller.Teleport(transform, _linkedPortal.transform, m.GetColumn(3), m.rotation, _shouldShake);
 
                     // Can't rely on OnTriggerEnter/Exit to be called next frame because it depends on when FixedUpdate runs
                     _linkedPortal.OnTravellerEnterPortal(traveller);

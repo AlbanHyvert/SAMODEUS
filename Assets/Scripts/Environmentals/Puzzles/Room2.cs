@@ -1,13 +1,19 @@
-﻿using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Room2 : MonoBehaviour
 {
-    [SerializeField, Header("Text Boxs ID")] private string[] _textBoxID = null;
-    [SerializeField, Header("Voice Boxs ID")] private string[] _voiceBoxID = null;
+    [Header("First Dial Event")]
+    [SerializeField] private string[] _firstTextBoxID = null;
+    [SerializeField] private string[] _firstVoiceBoxID = null;
+
+    [Header("Second Dial Event")]
+    [SerializeField] private string[] _secondTextBoxID = null;
+    [SerializeField] private string[] _secondVoiceBoxID = null;
+
     [SerializeField] private bool _shouldStopPlayer = false;
     [SerializeField] private float _stopPlayerDuration = 5;
     [SerializeField] private float _timeBeforeSpawnObj = 5;
+
     [SerializeField] private GameObject _wrongObjToSpawn = null;
     [SerializeField] private GameObject _goodObjToSpawn = null;
     [SerializeField] private Transform _objSpawnPosition = null;
@@ -24,14 +30,26 @@ public class Room2 : MonoBehaviour
     {
         NarrativeManager.Instance.ChangeLanguages += OnLanguageChange;
 
-        if (_textBoxID != null)
+        if (_firstTextBoxID != null)
         {
-            for (int i = 0; i < _textBoxID.Length; i++)
+            for (int i = 0; i < _firstTextBoxID.Length; i++)
             {
-                if (_textBoxID[i] != string.Empty)
+                if (_firstTextBoxID[i] != string.Empty)
                 {
-                    string newID = _textBoxID[i] + "_" + NarrativeManager.Instance.ChoosenLanguage.ToString();
-                    _textBoxID[i] = newID;
+                    string newID = _firstTextBoxID[i] + "_" + NarrativeManager.Instance.ChoosenLanguage.ToString();
+                    _firstTextBoxID[i] = newID;
+                }
+            }
+        }
+
+        if (_secondTextBoxID != null)
+        {
+            for (int i = 0; i < _secondTextBoxID.Length; i++)
+            {
+                if (_secondTextBoxID[i] != string.Empty)
+                {
+                    string newID = _secondTextBoxID[i] + "_" + NarrativeManager.Instance.ChoosenLanguage.ToString();
+                    _secondTextBoxID[i] = newID;
                 }
             }
         }
@@ -39,14 +57,26 @@ public class Room2 : MonoBehaviour
 
     private void OnLanguageChange(GameManager.Language language)
     {
-        if(_textBoxID != null)
+        if(_firstTextBoxID != null)
         {
-            for (int i = 0; i < _textBoxID.Length; i++)
+            for (int i = 0; i < _firstTextBoxID.Length; i++)
             {
-                if (_textBoxID[i] != string.Empty)
+                if (_firstTextBoxID[i] != string.Empty)
                 {
-                    string newID = _textBoxID[i] + "_" + language.ToString();
-                    _textBoxID[i] = newID;
+                    string newID = _firstTextBoxID[i] + "_" + language.ToString();
+                    _firstTextBoxID[i] = newID;
+                }
+            }
+        }
+
+        if (_secondTextBoxID != null)
+        {
+            for (int i = 0; i < _secondTextBoxID.Length; i++)
+            {
+                if (_secondTextBoxID[i] != string.Empty)
+                {
+                    string newID = _secondTextBoxID[i] + "_" + language.ToString();
+                    _secondTextBoxID[i] = newID;
                 }
             }
         }
@@ -56,17 +86,17 @@ public class Room2 : MonoBehaviour
     {
         if (other.tag.Equals("Player"))
         {
-            if(_textBoxID.Length > 1)
+            if(_firstTextBoxID.Length >= 1)
             {
                 if (NarrativeManager.Instance.DialBoxController.TimerIsStarted == false)
                 {
-                    NarrativeManager.Instance.TriggerNarrative(_textBoxID, _voiceBoxID);
+                    NarrativeManager.Instance.TriggerNarrative(_firstTextBoxID, _firstVoiceBoxID);
                     
                 }
                 else
                 {
                     NarrativeManager.Instance.DialBoxController.ClearAll();
-                    NarrativeManager.Instance.TriggerNarrative(_textBoxID, _voiceBoxID);
+                    NarrativeManager.Instance.TriggerNarrative(_firstTextBoxID, _firstVoiceBoxID);
                 }
             }
 
@@ -80,7 +110,11 @@ public class Room2 : MonoBehaviour
                 _stopPlayerTimer = Time.time + _stopPlayerDuration;
             }
 
-            gameObject.SetActive(false);
+            Collider collider = gameObject.GetComponent<Collider>();
+
+            collider.enabled = false;
+
+
         }
     }
 
@@ -114,8 +148,37 @@ public class Room2 : MonoBehaviour
             {
                 _objToDestroy = Instantiate(_wrongObjToSpawn, _objSpawnPosition.position, Quaternion.identity);
             }
+            else
+            {
+                _objToDestroy = Instantiate(_goodObjToSpawn, _objSpawnPosition.position, Quaternion.identity);
+            }
 
+            _wrongObjToSpawn = null;
             _shouldSpawnObj = false;
         }
+    }
+
+    public void StartSecondEvent()
+    {
+        if (_firstTextBoxID.Length >= 1)
+        {
+            if (NarrativeManager.Instance.DialBoxController.TimerIsStarted == false)
+            {
+                NarrativeManager.Instance.TriggerNarrative(_secondTextBoxID, _secondVoiceBoxID);
+            }
+            else
+            {
+                NarrativeManager.Instance.DialBoxController.ClearAll();
+                NarrativeManager.Instance.TriggerNarrative(_secondTextBoxID, _secondVoiceBoxID);
+            }
+        }
+
+        _spawnObjTimer = Time.time + _timeBeforeSpawnObj;
+        _shouldSpawnObj = true;
+
+        Object.Destroy(_objToDestroy);
+        _objToDestroy = null;
+
+        GameLoopManager.Instance.Puzzles += OnUpdate;
     }
 }
