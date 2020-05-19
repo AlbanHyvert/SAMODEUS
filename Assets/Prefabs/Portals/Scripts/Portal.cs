@@ -6,17 +6,42 @@ public class Portal : MonoBehaviour
     [SerializeField] private Portal _linkedPortal = null;
     [SerializeField] private MeshRenderer _screen = null;
     [SerializeField] private bool _shouldShake = false;
+    [SerializeField] private PortalManager.PortalID _portalID = PortalManager.PortalID.PORTAL_A;
 
     private Camera _playerCamera = null;
     private Camera _portalCamera = null;
     private RenderTexture _viewTexture = null;
     private List<PortalTraveller> trackedTravellers = null;
 
+    private void Awake()
+    {
+        if (_portalID == PortalManager.PortalID.PORTAL_A)
+        {
+            PortalManager.Instance.PortalA = this;
+        }
+        else
+        {
+            PortalManager.Instance.PortalB = this;
+        }
+    }
+
     private void Start()
     {
         if(_playerCamera == null)
         {
             _playerCamera = PlayerManager.Instance.Player.PlayerCamera.Camera;
+        }
+
+        if(_linkedPortal == null)
+        {
+            if(_portalID == PortalManager.PortalID.PORTAL_B)
+            {
+                _linkedPortal = PortalManager.Instance.PortalA;
+            }
+            else
+            {
+                _linkedPortal = PortalManager.Instance.PortalB;
+            }
         }
 
         _portalCamera = GetComponentInChildren<Camera>();
