@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2425094803555874047
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2425094803555874045}
+  - component: {fileID: 2425094803555874046}
+  m_Layer: 0
+  m_Name: InfiniteRoomManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2425094803555874045
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2425094803555874047}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &2425094803555874046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2425094803555874047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aef4c54b10f0ee64a8019a60293082ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _roomsPrefab:
+  - {fileID: 7524914038447797897, guid: d50704360fb65374eb97a0fbd81e0cb9, type: 3}
+  - {fileID: 8382414840422637850, guid: 69507d8377a061f46b492ac525657c4a, type: 3}
+  - {fileID: 7972413545619644124, guid: 72d2b06d9798aec43ac205aa16438ce1, type: 3}
+  _roomsLenth: 19.995
+  _distanceBeforeSpawning: 10
+  _amountRoomsOnScreen: 5

@@ -18,7 +18,6 @@ public class DeathZone : MonoBehaviour
         if(playerController != null)
         {
             CheckPointsManager.Instance.RespawnPlayer(playerController.transform);
-            Debug.Log("player hit");
         }
     }
 

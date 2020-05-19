@@ -5,6 +5,7 @@ public class IllusionObject : MonoBehaviour
     [SerializeField] private Renderer _renderer = null;
     [SerializeField] private bool _isSpecialEvent = false;
     [SerializeField, Range(0.01f, 0.9f)] private float _valueBeforeDesactivate = 0.3f;
+    [SerializeField] private bool _shouldShake = false;
 
     private float _alphaValue = 0.0f;
     private bool _pingPong = false;
@@ -66,7 +67,7 @@ public class IllusionObject : MonoBehaviour
     {
         PlayerController playerController = other.GetComponent<PlayerController>();
 
-        if(playerController != null)
+        if(_shouldShake == true && playerController != null)
         {
             PlayerCamera playerCamera = playerController.PlayerCamera;
 

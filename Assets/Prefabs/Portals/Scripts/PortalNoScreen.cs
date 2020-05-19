@@ -4,11 +4,33 @@ using UnityEngine;
 public class PortalNoScreen : MonoBehaviour
 {
     [SerializeField] private PortalNoScreen _linkedPortal = null;
+    [SerializeField] private bool _shouldShake = false;
+    [SerializeField] private PortalManager.PortalID _portalID = PortalManager.PortalID.PORTAL_A;
+
     private List<PortalTraveller> trackedTravellers = null;
 
     private void Start()
     {
         trackedTravellers = new List<PortalTraveller>();
+
+
+        if (_portalID == PortalManager.PortalID.PORTAL_A)
+        {
+            PortalManager.Instance.PortalNSA = this;
+        }
+        else if (_portalID == PortalManager.PortalID.PORTAL_B)
+        {
+            PortalManager.Instance.PortalNSB = this;
+        }
+
+        if (_linkedPortal == null && _portalID == PortalManager.PortalID.PORTAL_A)
+        {
+            _linkedPortal = PortalManager.Instance.PortalNSB;
+        }
+        else if (_linkedPortal == null && _portalID == PortalManager.PortalID.PORTAL_B)
+        {
+            _linkedPortal = PortalManager.Instance.PortalNSA;
+        }
     }
 
     private void Update()
@@ -29,7 +51,7 @@ public class PortalNoScreen : MonoBehaviour
                 if (portalSide != portalSideOld)
                 {
                     Matrix4x4 m = _linkedPortal.transform.localToWorldMatrix * transform.worldToLocalMatrix * travellerT.localToWorldMatrix;
-                    traveller.Teleport(transform, _linkedPortal.transform, m.GetColumn(3), m.rotation);
+                    traveller.Teleport(transform, _linkedPortal.transform, m.GetColumn(3), m.rotation, _shouldShake);
 
                     // Can't rely on OnTriggerEnter/Exit to be called next frame because it depends on when FixedUpdate runs
                     _linkedPortal.OnTravellerEnterPortal(traveller);
