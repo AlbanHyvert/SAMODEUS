@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1717350744293296694}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.361, y: 0.79, z: -4.89}
+  m_LocalPosition: {x: -0, y: 0.33, z: -6.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3096167001520405251}
@@ -93,12 +93,12 @@ MonoBehaviour:
   _firstVoiceBoxID: []
   _secondTextBoxID: []
   _secondVoiceBoxID: []
-  _shouldStopPlayer: 0
-  _stopPlayerDuration: 5.68
-  _timeBeforeSpawnObj: 3
-  _wrongObjToSpawn: {fileID: 8172042317959092183, guid: 6ae67a8f26c1ddc4c8e8b8ec2c622512,
+  _shouldStopPlayer: 1
+  _stopPlayerDuration: 3
+  _timeBeforeSpawnObj: 1.5
+  _wrongObjToSpawn: {fileID: 1394196038530421014, guid: 0e7968c056adc624296dfb935fddd478,
     type: 3}
-  _goodObjToSpawn: {fileID: 1235433939115340336, guid: 0bb330c5889112246a4bdf13137b3f37,
+  _goodObjToSpawn: {fileID: 6496640836698752448, guid: 9a35217e61fc41d479cf8b056ee8138b,
     type: 3}
   _objSpawnPosition: {fileID: 1717350744293296693}
 --- !u!1 &3096167002154428000
@@ -148,7 +148,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3096167002154428000}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
