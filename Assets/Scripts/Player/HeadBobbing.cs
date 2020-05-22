@@ -14,7 +14,7 @@ public class HeadBobbing : MonoBehaviour
     private float _timer = 0.0f;
     private void Start()
     {
-        _cam = PlayerManager.Instance.Player.PlayerCamera.Camera.transform;
+        _cam = PlayerManager.Instance.Player.CameraController.Camera.transform;
         _camStartPos = _cam.localPosition;
     }
 

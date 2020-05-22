@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private PlayerManager.WorldTag _worldTag = PlayerManager.WorldTag.VERTUMNE;
 
-    public PlayerCamera PlayerCamera { get { return _playerCamera; } }
+    public PlayerCamera CameraController { get { return _playerCamera; } }
     public AudioSource MusicAudioSource { get { return _musicAudioSource; } }
     public AudioSource DialsAudioSource { get { return _dialsAudioSource; } }
     public PlayerManager.WorldTag WorldTaged { get { return _worldTag; } set { _worldTag = value; } }

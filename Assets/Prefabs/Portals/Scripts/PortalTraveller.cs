@@ -8,7 +8,7 @@ public class PortalTraveller : MonoBehaviour
     {
         transform.position = pos;
         transform.rotation = rot;
-        PlayerManager.Instance.Player.PlayerCamera.ShouldShake = shakeValue;
+        PlayerManager.Instance.Player.CameraController.ShouldShake = shakeValue;
     }
 
     public virtual void EnterPortalThreshold()

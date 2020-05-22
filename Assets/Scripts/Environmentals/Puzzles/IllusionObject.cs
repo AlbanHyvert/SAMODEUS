@@ -69,7 +69,7 @@ public class IllusionObject : MonoBehaviour
 
         if(_shouldShake == true && playerController != null)
         {
-            PlayerCamera playerCamera = playerController.PlayerCamera;
+            PlayerCamera playerCamera = playerController.CameraController;
 
             playerCamera.ShouldShake = true;
         }
