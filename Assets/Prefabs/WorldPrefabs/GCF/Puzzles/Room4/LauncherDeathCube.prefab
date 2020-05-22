@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 237618532}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 28.483713, y: -0.027684372, z: 0.2715785}
+  m_LocalPosition: {x: 31.51, y: 0.268, z: 0.272}
   m_LocalScale: {x: 0.10349824, y: 0.07909828, z: 0.020042693}
   m_Children: []
   m_Father: {fileID: 6563424106183047472}
@@ -103,7 +103,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 607534587}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.4299965, y: -0.027684372, z: -0.22948882}
+  m_LocalPosition: {x: 1.4299965, y: 0.52, z: -0.22948882}
   m_LocalScale: {x: 0.10349824, y: 0.07909828, z: 0.020042693}
   m_Children: []
   m_Father: {fileID: 6563424106183047472}
@@ -180,7 +180,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 680489460}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.43, y: -0.027684372, z: 0.2715785}
+  m_LocalPosition: {x: 1.43, y: 0.268, z: 0.2715785}
   m_LocalScale: {x: 0.10349824, y: 0.07909828, z: 0.020042693}
   m_Children: []
   m_Father: {fileID: 6563424106183047472}
@@ -257,7 +257,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 779891516}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 28.483713, y: -0.027684372, z: 0.0070149414}
+  m_LocalPosition: {x: 31.51, y: -0.027684372, z: 0.008}
   m_LocalScale: {x: 0.10349824, y: 0.07909828, z: 0.020042693}
   m_Children: []
   m_Father: {fileID: 6563424106183047472}
@@ -334,7 +334,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 896911123}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 28.483713, y: -0.027684372, z: -0.22948882}
+  m_LocalPosition: {x: 31.51, y: 0.52, z: -0.229}
   m_LocalScale: {x: 0.10349824, y: 0.07909828, z: 0.020042693}
   m_Children: []
   m_Father: {fileID: 6563424106183047472}
@@ -517,7 +517,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 956005142121159907}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -580,7 +580,9 @@ MonoBehaviour:
   - {fileID: 680489461}
   - {fileID: 1534735217}
   - {fileID: 607534588}
-  _deathCube: {fileID: 6691061839308328936, guid: eae944021370d2b41a21a408d6084372,
-    type: 3}
-  _timeBeforeSpawn: 5
-  _deathCubeSpeed: 0.5
+  _deathCube:
+  - {fileID: 7505525474139593908, guid: f46795941cadc0042a4a053d48a83ebe, type: 3}
+  - {fileID: 8426337015551865785, guid: e270405eeaf5dae4399a06111cc6b490, type: 3}
+  - {fileID: 2665637684738231466, guid: 1483f1b07a110f74987938fa0d625da3, type: 3}
+  _timeBeforeSpawn: 1
+  _deathCubeSpeed: 0.1

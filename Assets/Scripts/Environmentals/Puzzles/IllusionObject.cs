@@ -74,4 +74,9 @@ public class IllusionObject : MonoBehaviour
             playerCamera.ShouldShake = true;
         }
     }
+
+    private void OnDestroy()
+    {
+        GameLoopManager.Instance.Puzzles -= OnUpdate;
+    }
 }

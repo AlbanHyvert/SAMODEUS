@@ -32,16 +32,15 @@ public class MovingDeathCube : MonoBehaviour
     {
         float distBeforeDesctruct = Vector3.Distance(transform.position, _distanceBeforeDesctruction.position);
 
-        if( distBeforeDesctruct > 2)
-        {
-            _timer = _speed * Time.deltaTime;
+        _timer = _speed * Time.deltaTime;
 
-            transform.position = Vector3.Lerp(transform.position, _distanceBeforeDesctruction.position, _timer);
+        if ( distBeforeDesctruct > 2)
+        {
+            transform.position = Vector3.Lerp(transform.position, _distanceBeforeDesctruction.position, _timer * Time.deltaTime);
         }
         else
         {
             Object.Destroy(gameObject);
-            Debug.Log("Destroyed");
         }
     }
 

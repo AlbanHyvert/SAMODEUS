@@ -72,4 +72,10 @@ public class CandleLight : MonoBehaviour
             }
         }
     }
+
+    private void OnDestroy()
+    {
+        GameLoopManager.Instance.Puzzles -= OnUpdate;
+        GameLoopManager.Instance.Pause -= IsPaused;
+    }
 }

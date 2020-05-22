@@ -5,7 +5,7 @@ public class PortalNoScreen : MonoBehaviour
 {
     [SerializeField] private PortalNoScreen _linkedPortal = null;
     [SerializeField] private bool _shouldShake = false;
-    [SerializeField] private PortalManager.PortalID _portalID = PortalManager.PortalID.PORTAL_A;
+    [SerializeField] private PortalManager.PortalID _portalID = PortalManager.PortalID.PORTAL_VERTUMNE;
 
     private List<PortalTraveller> trackedTravellers = null;
 
@@ -14,20 +14,20 @@ public class PortalNoScreen : MonoBehaviour
         trackedTravellers = new List<PortalTraveller>();
 
 
-        if (_portalID == PortalManager.PortalID.PORTAL_A)
+        if (_portalID == PortalManager.PortalID.PORTAL_VERTUMNE)
         {
             PortalManager.Instance.PortalNSA = this;
         }
-        else if (_portalID == PortalManager.PortalID.PORTAL_B)
+        else if (_portalID == PortalManager.PortalID.PORTAL_GCF)
         {
             PortalManager.Instance.PortalNSB = this;
         }
 
-        if (_linkedPortal == null && _portalID == PortalManager.PortalID.PORTAL_A)
+        if (_linkedPortal == null && _portalID == PortalManager.PortalID.PORTAL_VERTUMNE)
         {
             _linkedPortal = PortalManager.Instance.PortalNSB;
         }
-        else if (_linkedPortal == null && _portalID == PortalManager.PortalID.PORTAL_B)
+        else if (_linkedPortal == null && _portalID == PortalManager.PortalID.PORTAL_GCF)
         {
             _linkedPortal = PortalManager.Instance.PortalNSA;
         }

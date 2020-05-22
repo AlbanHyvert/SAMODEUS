@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Portal : MonoBehaviour
@@ -6,22 +7,30 @@ public class Portal : MonoBehaviour
     [SerializeField] private Portal _linkedPortal = null;
     [SerializeField] private MeshRenderer _screen = null;
     [SerializeField] private bool _shouldShake = false;
-    [SerializeField] private PortalManager.PortalID _portalID = PortalManager.PortalID.PORTAL_A;
+    [SerializeField] private PortalManager.PortalID _portalID = PortalManager.PortalID.PORTAL_VERTUMNE;
+
 
     private Camera _playerCamera = null;
     private Camera _portalCamera = null;
     private RenderTexture _viewTexture = null;
     private List<PortalTraveller> trackedTravellers = null;
 
+    public Portal LinkedPortal { get { return _linkedPortal; } set { _linkedPortal = value;} }
+
+    public MeshRenderer MeshScreen { get { return _screen; } }
+
     private void Awake()
     {
-        if (_portalID == PortalManager.PortalID.PORTAL_A)
+        _portalCamera = GetComponentInChildren<Camera>();
+        _portalCamera.enabled = false;
+
+        if (_portalID == PortalManager.PortalID.PORTAL_VERTUMNE)
         {
-            PortalManager.Instance.PortalA = this;
+            PortalManager.Instance.PortalVertumne = this;
         }
         else
         {
-            PortalManager.Instance.PortalB = this;
+            PortalManager.Instance.PortalGCF = this;
         }
     }
 
@@ -34,23 +43,51 @@ public class Portal : MonoBehaviour
 
         if(_linkedPortal == null)
         {
-            if(_portalID == PortalManager.PortalID.PORTAL_B)
+            if(_portalID == PortalManager.PortalID.PORTAL_GCF)
             {
-                _linkedPortal = PortalManager.Instance.PortalA;
+                if(PortalManager.Instance.PortalVertumne != null)
+                {
+                    _linkedPortal = PortalManager.Instance.PortalVertumne;
+                }
+
             }
             else
             {
-                _linkedPortal = PortalManager.Instance.PortalB;
+                if(PortalManager.Instance.PortalGCF != null)
+                {
+                    _linkedPortal = PortalManager.Instance.PortalGCF;
+                }
             }
         }
 
-        _portalCamera = GetComponentInChildren<Camera>();
-        _portalCamera.enabled = false;
+        if (_portalID == PortalManager.PortalID.PORTAL_GCF)
+        {
+            if (PortalManager.Instance.PortalVertumne != null)
+            {
+                if (PortalManager.Instance.PortalVertumne.LinkedPortal == null)
+                {
+                    PortalManager.Instance.PortalVertumne.LinkedPortal = this;
+                }
+            }
+        }
+        else
+        {
+            if(PortalManager.Instance.PortalGCF != null)
+            {
+                if (PortalManager.Instance.PortalGCF.LinkedPortal == null)
+                {
+                    PortalManager.Instance.PortalGCF.LinkedPortal = this;
+                }
+            }
+
+        }
+
         trackedTravellers = new List<PortalTraveller>();
+        GameLoopManager.Instance.Puzzles += OnUpdate;
         Render();
     }
 
-    private void Update()
+    private void OnUpdate()
     {
         Render();
         if(trackedTravellers != null)
@@ -103,14 +140,16 @@ public class Portal : MonoBehaviour
 
     private static bool VisibleFromCamera(Renderer renderer, Camera camera)
     {
+
         Plane[] frustrumPlanes = GeometryUtility.CalculateFrustumPlanes(camera);
+
         return GeometryUtility.TestPlanesAABB(frustrumPlanes, renderer.bounds);
     }
     
     // Called just before player camera is rendered
     public void Render()
     {
-        if(_playerCamera != null)
+        if(_playerCamera != null && _screen != null && _linkedPortal._screen != null)
         {
             if (!VisibleFromCamera(_linkedPortal._screen, _playerCamera))
             {
@@ -134,23 +173,27 @@ public class Portal : MonoBehaviour
             }
         }
         //ProtectScreenFromClipping();
-        _screen.enabled = true; 
+        if(_screen != null)
+            _screen.enabled = true; 
     }
 
     private void OnTravellerEnterPortal(PortalTraveller traveller)
     {
-        if(!trackedTravellers.Contains(traveller))
+        if(traveller != null)
         {
-            traveller.EnterPortalThreshold();
-            traveller.PreviousOffsetFromPortal = traveller.transform.position - transform.position;
-            trackedTravellers.Add(traveller);
+            if (!trackedTravellers.Contains(traveller))
+            {
+                traveller.EnterPortalThreshold();
+                traveller.PreviousOffsetFromPortal = traveller.transform.position - transform.position;
+                trackedTravellers.Add(traveller);
+            }
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         PortalTraveller traveller = other.GetComponent<PortalTraveller>();
-        if(traveller)
+        if(traveller != null)
         {
             OnTravellerEnterPortal(traveller);
         }
@@ -164,5 +207,10 @@ public class Portal : MonoBehaviour
             traveller.ExitPortalThreshold();
             trackedTravellers.Remove(traveller);
         }
+    }
+
+    private void OnDestroy()
+    {
+        GameLoopManager.Instance.Puzzles -= OnUpdate;
     }
 }

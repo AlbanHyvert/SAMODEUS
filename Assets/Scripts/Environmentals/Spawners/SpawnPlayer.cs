@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class SpawnPlayer : MonoBehaviour
 {
@@ -14,7 +13,9 @@ public class SpawnPlayer : MonoBehaviour
         {
             _camera.enabled = false;
         }
-        PlayerManager.Instance.CreatePlayer(transform.localPosition, transform.rotation);
+
+        PlayerManager.Instance.PlayerStartingPosition = transform;
+        PlayerManager.Instance.CreatePlayer(transform.position, transform.rotation);
 
         _playerController = PlayerManager.Instance.Player;
     }

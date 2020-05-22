@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-public class LoadingState : IGameStates
+﻿public class LoadingState : IGameStates
 {
     void IGameStates.Enter()
     {
@@ -9,7 +7,6 @@ public class LoadingState : IGameStates
 
     void IGameStates.Exit()
     {
-        Debug.Log("unload");
         SceneAsyncManager.Instance.UnloadScene("LOADING");
     }
 }

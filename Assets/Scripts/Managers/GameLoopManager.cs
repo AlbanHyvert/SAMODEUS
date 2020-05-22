@@ -102,6 +102,20 @@ public class GameLoopManager : Singleton<GameLoopManager>
         }
     }
 
+    private event Action _managers = null;
+    public event Action Managers
+    {
+        add
+        {
+            _managers -= value;
+            _managers += value;
+        }
+        remove
+        {
+            _managers -= value;
+        }
+    }
+
     #endregion EVENTS
 
     private void Start()
@@ -114,6 +128,11 @@ public class GameLoopManager : Singleton<GameLoopManager>
         if(Input.GetKeyDown(_dataKeycode.KeyPause) || Input.GetKeyDown(_dataKeycode.KeyPauseAlt))
         {
             IsPaused = !IsPaused;
+        }
+
+        if(_managers != null)
+        {
+            _managers();
         }
 
         if(_inputManager != null)

@@ -24,45 +24,49 @@ public class OnOffObject : MonoBehaviour
     {
         Renderer renderer = transform.GetComponent<Renderer>();
 
-        Vector3 playerPos = PlayerManager.Instance.Player.transform.position;
-
-        double distFromPlayer = Vector3.Distance(playerPos, transform.position);
-
-        if(distFromPlayer >= _range)
+        if(PlayerManager.Instance.Player != null)
         {
-            if(renderer != null)
-            {
-                renderer.enabled = false;
-            }
+            Vector3 playerPos = PlayerManager.Instance.Player.transform.position;
 
-            if(_childsList != null)
+            double distFromPlayer = Vector3.Distance(playerPos, transform.position);
+
+            if (distFromPlayer >= _range)
             {
-                for (int i = 0; i < _childsList.Count; i++)
+                if (renderer != null)
                 {
-                    if(_childsList[i] != null)
+                    renderer.enabled = false;
+                }
+
+                if (_childsList != null)
+                {
+                    for (int i = 0; i < _childsList.Count; i++)
                     {
-                        _childsList[i].SetActive(false);
+                        if (_childsList[i] != null)
+                        {
+                            _childsList[i].SetActive(false);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                if (renderer != null)
+                {
+                    renderer.enabled = true;
+                }
+
+                if (_childsList != null)
+                {
+                    for (int i = 0; i < _childsList.Count; i++)
+                    {
+                        if (_childsList[i] != null)
+                        {
+                            _childsList[i].SetActive(true);
+                        }
                     }
                 }
             }
         }
-        else
-        {
-            if (renderer != null)
-            {
-                renderer.enabled = true;
-            }
 
-            if (_childsList != null)
-            {
-                for (int i = 0; i < _childsList.Count; i++)
-                {
-                    if (_childsList[i] != null)
-                    {
-                        _childsList[i].SetActive(true);
-                    }
-                }
-            }
-        }
     }
 }

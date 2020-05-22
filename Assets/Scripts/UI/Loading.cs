@@ -4,7 +4,7 @@ public class Loading : MonoBehaviour
 {
     private void Start()
     {
-        Invoke("LoadScene", GameManager.Instance.DefaultLoadingTime);
+        Invoke("LoadScene", SceneAsyncManager.Instance.DefaultLoadingTime);
 
     }
 

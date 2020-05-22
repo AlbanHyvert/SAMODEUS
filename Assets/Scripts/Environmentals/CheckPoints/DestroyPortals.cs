@@ -1,11 +1,12 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 public class DestroyPortals : MonoBehaviour
 {
-    [SerializeField] private Portal[] _portals = null;
-    [SerializeField] private PortalNoScreen[] _portalsNoScreen = null;
-    [SerializeField] private GameObject[] _plane = null;
+    private List<Portal> _portals = null;
+    private List<PortalNoScreen> _portalsNoScreen = null;
+    private List<MeshRenderer> _plane = null;
     [SerializeField] private GameObject[] _gameObject = null;
 
     [SerializeField] private float _speedDisolve = 1;
@@ -16,8 +17,18 @@ public class DestroyPortals : MonoBehaviour
 
     private void Start()
     {
+        _portals = new List<Portal>();
+        _portalsNoScreen = new List<PortalNoScreen>();
+        _plane = new List<MeshRenderer>();
+
+        _portals.Add(PortalManager.Instance.PortalVertumne);
+        _portals.Add(PortalManager.Instance.PortalVertumne.LinkedPortal);
+        _plane.Add(PortalManager.Instance.PortalVertumne.MeshScreen);
+        _plane.Add(PortalManager.Instance.PortalGCF.MeshScreen);
+
         GameLoopManager.Instance.Puzzles += OnUpdate;
         _timer = 0.0f;
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -31,27 +42,29 @@ public class DestroyPortals : MonoBehaviour
 
             if(_portals != null)
             {
-                for (int i = 0; i < _portals.Length; i++)
+                for (int i = 0; i < _portals.Count; i++)
                 {
-                    Object.Destroy(_portals[i], 1);
+                    Object.Destroy(_portals[i].gameObject, 1);
                 }
             }
 
             if (_portalsNoScreen != null)
             {
-                for (int i = 0; i < _portalsNoScreen.Length; i++)
+                for (int i = 0; i < _portalsNoScreen.Count; i++)
                 {
-                    Object.Destroy(_portalsNoScreen[i], 1);
+                    Object.Destroy(_portalsNoScreen[i].gameObject, 1);
                 }
             }
 
             if (_plane != null)
             {
-                for (int i = 0; i < _plane.Length; i++)
+                for (int i = 0; i < _plane.Count; i++)
                 {
                     Object.Destroy(_plane[i], 1);
                 }
             }
+
+            SceneAsyncManager.Instance.UnloadScene("Vertumne_1");
         }
     }
 

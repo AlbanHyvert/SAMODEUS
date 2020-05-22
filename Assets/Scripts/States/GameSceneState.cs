@@ -16,7 +16,7 @@ public class GameSceneState : IGameStates
 
     void IGameStates.Exit()
     {
-        SceneAsyncManager.Instance.UnloadScenes(_nameList.ToArray());
-        _nameList.Clear();
+        /*SceneAsyncManager.Instance.UnloadScenes(_nameList.ToArray());
+        _nameList.Clear();*/
     }
 }
