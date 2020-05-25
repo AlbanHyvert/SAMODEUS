@@ -36,11 +36,6 @@ public class Portal : MonoBehaviour
 
     private void Start()
     {
-        if(_playerCamera == null)
-        {
-            _playerCamera = PlayerManager.Instance.Player.PlayerCamera.Camera;
-        }
-
         if(_linkedPortal == null)
         {
             if(_portalID == PortalManager.PortalID.PORTAL_GCF)
@@ -83,8 +78,33 @@ public class Portal : MonoBehaviour
         }
 
         trackedTravellers = new List<PortalTraveller>();
-        GameLoopManager.Instance.Puzzles += OnUpdate;
-        Render();
+        GameLoopManager.Instance.Player += CheckPlayerStatus;
+        PlayerManager.Instance.GetPlayer += FindPlayer;
+    }
+
+    private void CheckPlayerStatus()
+    {
+        if(PlayerManager.Instance.Player != null)
+        {
+            _playerCamera = PlayerManager.Instance.Player.CameraController.Camera;
+            Render();
+            GameLoopManager.Instance.Puzzles += OnUpdate;
+            GameLoopManager.Instance.Player -= CheckPlayerStatus;
+        }
+    }
+
+    private void FindPlayer(PlayerController player)
+    {
+        if(player != null)
+        {
+            _playerCamera = player.CameraController.Camera;
+            Render();
+            GameLoopManager.Instance.Puzzles += OnUpdate;
+        }
+        else
+        {
+            GameLoopManager.Instance.Puzzles -= OnUpdate;
+        }
     }
 
     private void OnUpdate()
@@ -212,5 +232,7 @@ public class Portal : MonoBehaviour
     private void OnDestroy()
     {
         GameLoopManager.Instance.Puzzles -= OnUpdate;
+        PlayerManager.Instance.GetPlayer -= FindPlayer;
+        GameLoopManager.Instance.Player -= CheckPlayerStatus;
     }
 }

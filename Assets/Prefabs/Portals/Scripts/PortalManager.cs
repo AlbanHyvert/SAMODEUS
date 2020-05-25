@@ -11,6 +11,7 @@ public class PortalManager : Singleton<PortalManager>
     public enum PortalID
     {
         PORTAL_VERTUMNE,
-        PORTAL_GCF
+        PORTAL_GCF,
+        PORTALS
     }
 }

@@ -11,31 +11,14 @@ public class SwapPostProcess : MonoBehaviour
 
     private void Start()
     {
-        PostProcessVolume postProcessManagerVolume = PostProcessManager.Instance.PostProcessVolume;
-        Volume volume = PostProcessManager.Instance.Volume;
-
-        if (postProcessManagerVolume != null)
-        {
-            postProcessManagerVolume = null;
-        }
-
-        if (volume != null)
-        {
-            volume = null;
-        }
-
-      //  volume = _volume;
-        PostProcessManager.Instance.Volume = volume;
-
-        postProcessManagerVolume = _postProcessVolume;
-        PostProcessManager.Instance.PostProcessVolume = postProcessManagerVolume;
+        PostProcessManager.Instance.GetPPVolume(_postProcessVolume);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         PlayerController playerController = other.GetComponent<PlayerController>();
 
-        if (playerController != null && PlayerManager.Instance.Player.WorldTaged != _worldTag)
+        if (playerController != null && playerController.WorldTaged != _worldTag)
         {
             if(_worldTag == PlayerManager.WorldTag.VERTUMNE)
             {

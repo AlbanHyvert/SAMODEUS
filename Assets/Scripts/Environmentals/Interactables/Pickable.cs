@@ -4,6 +4,7 @@
 public class Pickable : MonoBehaviour, IAction
 {
     private Rigidbody _rigidbody = null;
+    private FixedJoint _joint = null;
 
     public Rigidbody Rigidbody { get { return _rigidbody; } }
     private void Start()
@@ -11,23 +12,24 @@ public class Pickable : MonoBehaviour, IAction
         _rigidbody = GetComponent<Rigidbody>();
     }
 
-    void IAction.Enter(Transform obj)
+    void IAction.Enter(PlayerController player)
     {
-        _rigidbody.transform.SetParent(obj);
-        _rigidbody.isKinematic = true;
+        //_rigidbody.transform.SetParent(obj);
+        _rigidbody.isKinematic = false;
         _rigidbody.useGravity = false;
+        _joint = player.CameraController.HandTransform.gameObject.AddComponent<FixedJoint>();
+        _joint.connectedBody = _rigidbody;
     }
 
     void IAction.Exit()
     {
-        _rigidbody.transform.SetParent(null);
-        _rigidbody.isKinematic = false;
         _rigidbody.useGravity = true;
+        Destroy(_joint);
     }
 
     void IAction.DestroySelf(Transform parent)
     {
-        _rigidbody.transform.SetParent(null);
+        Destroy(_joint);
         _rigidbody.transform.SetParent(parent);
         transform.position = parent.position;
         _rigidbody.useGravity = true;

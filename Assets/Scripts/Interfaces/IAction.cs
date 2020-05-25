@@ -2,7 +2,7 @@
 
 public interface IAction
 {
-    void Enter(Transform obj);
+    void Enter(PlayerController player = null);
 
     void Exit();
 

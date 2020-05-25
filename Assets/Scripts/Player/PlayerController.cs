@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private PlayerManager.WorldTag _worldTag = PlayerManager.WorldTag.VERTUMNE;
 
-    public PlayerCamera PlayerCamera { get { return _playerCamera; } }
+    public PlayerCamera CameraController { get { return _playerCamera; } }
     public AudioSource MusicAudioSource { get { return _musicAudioSource; } }
     public AudioSource DialsAudioSource { get { return _dialsAudioSource; } }
     public PlayerManager.WorldTag WorldTaged { get { return _worldTag; } set { _worldTag = value; } }
@@ -129,7 +129,8 @@ public class PlayerController : MonoBehaviour
 
         if (_hit == true && action != null)
         {
-            action.Enter(_playerCamera.Camera.transform);
+            Rigidbody rb = GetComponent<Rigidbody>();
+            action.Enter(this);
             InputManager.Instance.Interaction += OnDrop;
             InputManager.Instance.Throw += OnThrow;
             InputManager.Instance.Interaction -= OnPickUp;
@@ -172,13 +173,21 @@ public class PlayerController : MonoBehaviour
 
     private void OnDestroy()
     {
-        GameLoopManager.Instance.Player -= OnRaycast;
-        GameLoopManager.Instance.Pause -= IsPaused;
-        InputManager.Instance.Movement -= OnMovements;
-        InputManager.Instance.Idle -= OnIdle;
-        InputManager.Instance.Interaction -= OnPickUp;
-        InputManager.Instance.Interaction -= OnInteract;
-        InputManager.Instance.PressSprint -= OnSprint;
-        InputManager.Instance.ReleaseSprint -= OnWalk;
+        if(GameLoopManager.Instance != null)
+        {
+            GameLoopManager.Instance.Player -= OnRaycast;
+            GameLoopManager.Instance.Pause -= IsPaused;
+        }
+
+        if(InputManager.Instance != null)
+        {
+            InputManager.Instance.Movement -= OnMovements;
+            InputManager.Instance.Idle -= OnIdle;
+            InputManager.Instance.Interaction -= OnPickUp;
+            InputManager.Instance.Interaction -= OnInteract;
+            InputManager.Instance.PressSprint -= OnSprint;
+            InputManager.Instance.ReleaseSprint -= OnWalk;
+        }
+
     }
 }

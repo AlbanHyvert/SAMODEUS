@@ -11,6 +11,7 @@ public class PlayerCamera : MonoBehaviour
     [SerializeField] private int _smoothTime = 5;
     [SerializeField] private Camera _camera = null;
     [SerializeField] private HeadBobbing _headBobbing = null;
+    [SerializeField] private Transform _handTransform = null;
 
     private float _rotationX = 0f;
     private float _rotationY = 0f;
@@ -23,6 +24,7 @@ public class PlayerCamera : MonoBehaviour
     public bool ShouldShake { get { return _shouldShake; } set { _shouldShake = value; } }
     public HeadBobbing HeadBobbing { get { return _headBobbing; } }
     public Camera Camera { get { return _camera; } }
+    public Transform HandTransform { get { return _handTransform; } }
 
     private void Start()
     {
@@ -99,7 +101,10 @@ public class PlayerCamera : MonoBehaviour
 
     private void OnDestroy()
     {
-        GameLoopManager.Instance.Camera -= OnUpdate;
-        GameLoopManager.Instance.Pause -= IsPaused;
+        if(GameLoopManager.Instance != null)
+        {
+            GameLoopManager.Instance.Camera -= OnUpdate;
+            GameLoopManager.Instance.Pause -= IsPaused;
+        }
     }
 }
