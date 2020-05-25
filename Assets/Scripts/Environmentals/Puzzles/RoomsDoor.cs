@@ -37,6 +37,7 @@ public class RoomsDoor : MonoBehaviour
                     _door[i].SetActive(!_isActive[i]);
                 }
             }
+            gameObject.SetActive(false);
         }
     }
 

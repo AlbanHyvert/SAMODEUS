@@ -13,15 +13,20 @@ public class PostProcessManager : Singleton<PostProcessManager>
 
     public PostProcessProfile ProfileVertumne { get { return _profileVertumne; } }
     public PostProcessProfile ProfileGCF { get { return _profileGCF; } }
-    public PostProcessVolume PostProcessVolume { get { return _postProcessVolume; } set { _postProcessVolume = value; } }
+    public PostProcessVolume PostProcessVolume { get { return _postProcessVolume; } set { GetPPVolume(value); } }
     public Volume Volume { get { return _volume; } set { _volume = value; } }
 
 
+    public void GetPPVolume(PostProcessVolume volume)
+    {
+        _postProcessVolume = volume;
+    }
+
     public void ChangePostProcess(PostProcessProfile PPprofile)
     {
-        if(PostProcessVolume != null)
+        if(_postProcessVolume != null)
         {
-            PostProcessVolume.profile = PPprofile;
+            _postProcessVolume.profile = PPprofile;
         }
     }
 }

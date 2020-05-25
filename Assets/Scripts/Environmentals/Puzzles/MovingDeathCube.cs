@@ -2,7 +2,7 @@
 
 public class MovingDeathCube : MonoBehaviour
 {
-    [SerializeField] private Transform _distanceBeforeDesctruction;
+    [SerializeField] private Transform _distanceBeforeDesctruction = null;
     [SerializeField] private float _speed = 3;
 
     private float _timer = 0;
@@ -14,6 +14,7 @@ public class MovingDeathCube : MonoBehaviour
     {
         GameLoopManager.Instance.Puzzles += OnUpdate;
         GameLoopManager.Instance.Pause += IsPaused;
+        _timer = 0;
     }
 
     private void IsPaused(bool value)
@@ -32,7 +33,7 @@ public class MovingDeathCube : MonoBehaviour
     {
         float distBeforeDesctruct = Vector3.Distance(transform.position, _distanceBeforeDesctruction.position);
 
-        _timer = _speed * Time.deltaTime;
+        _timer += _speed;
 
         if ( distBeforeDesctruct > 2)
         {

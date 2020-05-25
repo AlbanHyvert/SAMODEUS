@@ -34,6 +34,7 @@ public class RoomsSpawner : MonoBehaviour
          if (_distance < _distanceBeforeSpawning)
          {
              CreateRoomsForward(Random.Range(0, _roomsPrefab.Length));
+             DeleteRooms();
          }
     }
     
@@ -44,23 +45,18 @@ public class RoomsSpawner : MonoBehaviour
         go.transform.position += transform.right * _spawnZ;
         _roomsList.Add(go);
 
-        TriggerLoadNextScene loadNextScene = go.GetComponentInChildren<TriggerLoadNextScene>();
-        if(loadNextScene != null)
-        {
-            //loadNextScene.Camera = _paintingCam;
-        }
-
         _spawnZ += _roomsLenth;
     }
 
     private void DeleteRooms()
     {
-        Object.Destroy(_roomsList[0]);
+        Destroy(_roomsList[0]);
         _roomsList.RemoveAt(0);
     }
 
     private void OnDestroy()
     {
-        GameLoopManager.Instance.Puzzles -= OnUpdate;
+        if(GameLoopManager.Instance != null)
+            GameLoopManager.Instance.Puzzles -= OnUpdate;
     }
 }
