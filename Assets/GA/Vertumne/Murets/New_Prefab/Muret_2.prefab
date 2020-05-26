@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 920768410252622950}
   - component: {fileID: 920768410256047170}
   - component: {fileID: 920768410255048322}
+  - component: {fileID: 7817644012981601835}
   m_Layer: 0
-  m_Name: Muret_2
+  m_Name: Muret_22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,6 +79,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &7817644012981601835
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920768410252845126}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.0266602, y: 1.627966, z: 0.2716217}
+  m_Center: {x: -1.4999999, y: 0.8139829, z: -0.000000014901161}
 --- !u!1001 &7595014062834834427
 PrefabInstance:
   m_ObjectHideFlags: 0
