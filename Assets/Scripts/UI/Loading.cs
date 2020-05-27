@@ -1,10 +1,11 @@
-﻿using UnityEngine;
+﻿using Engine.Loading;
+using UnityEngine;
 
 public class Loading : MonoBehaviour
 {
     private void Start()
     {
-        Invoke("LoadScene", SceneAsyncManager.Instance.DefaultLoadingTime);
+        Invoke("LoadScene", LoadingManager.Instance.DefaultLoadingTime);
 
     }
 

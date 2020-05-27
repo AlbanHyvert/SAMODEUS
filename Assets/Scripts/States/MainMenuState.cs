@@ -1,14 +1,15 @@
-﻿using UnityEngine.SceneManagement;
+﻿using Engine.Loading;
+using UnityEngine.SceneManagement;
 
 public class MainMenuState : IGameStates
 {
     void IGameStates.Enter()
     {
-        SceneAsyncManager.Instance.LoadScene("MENU");
+        LoadingManager.Instance.LoadScene("MENU");
     }
 
     void IGameStates.Exit()
     {
-        SceneAsyncManager.Instance.UnloadScene("MENU");
+        LoadingManager.Instance.UnloadScene("MENU");
     }
 }

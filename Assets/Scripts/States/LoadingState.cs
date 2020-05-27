@@ -1,12 +1,18 @@
-﻿public class LoadingState : IGameStates
+﻿using Engine.Loading;
+using System.Collections.Generic;
+
+public class LoadingState : IGameStates
 {
+    private List<string> _nameList = new List<string>();
+
     void IGameStates.Enter()
     {
-        SceneAsyncManager.Instance.LoadScene("LOADING");
+        _nameList.Add("LOADING");
+        LoadingManager.Instance.LoadScene("LOADING");
     }
 
     void IGameStates.Exit()
     {
-        SceneAsyncManager.Instance.UnloadScene("LOADING");
+        LoadingManager.Instance.SceneToUnload = "LOADING";
     }
 }

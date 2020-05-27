@@ -231,8 +231,15 @@ public class Portal : MonoBehaviour
 
     private void OnDestroy()
     {
-        GameLoopManager.Instance.Puzzles -= OnUpdate;
-        PlayerManager.Instance.GetPlayer -= FindPlayer;
-        GameLoopManager.Instance.Player -= CheckPlayerStatus;
+        if(GameLoopManager.Instance != null)
+        {
+            GameLoopManager.Instance.Puzzles -= OnUpdate;
+            GameLoopManager.Instance.Player -= CheckPlayerStatus;
+        }
+
+        if(PlayerManager.Instance != null)
+        {
+            PlayerManager.Instance.GetPlayer -= FindPlayer;
+        }
     }
 }

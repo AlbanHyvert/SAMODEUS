@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using UnityEngine.SceneManagement;
+﻿using Engine.Loading;
+using System.Collections.Generic;
 
 public class VertumneState : IGameStates
 {
@@ -7,15 +7,15 @@ public class VertumneState : IGameStates
 
     void IGameStates.Enter()
     {
-        _nameList.Add("Vertumne_2_1");
         _nameList.Add("Vertumne_2_2");
+        _nameList.Add("Vertumne_2_1");
 
-        SceneAsyncManager.Instance.LoadScenes(_nameList.ToArray());
+        LoadingManager.Instance.LoadScene(_nameList.ToArray());
     }
 
     void IGameStates.Exit()
     {
-        SceneAsyncManager.Instance.UnloadScenes(_nameList.ToArray());
+        LoadingManager.Instance.UnloadScene(_nameList.ToArray());
         _nameList.Clear();
     }
 }

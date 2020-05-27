@@ -52,20 +52,21 @@ public class GameManager : Singleton<GameManager>
 
     public void ChangeState(GameState nextState)
     {
-        _isChangingState = true;
+        //_isChangingState = true;
+        _states[_currentState].Exit();
         _states[nextState].Enter();
         _currentState = nextState;
     }
 
-    private void Update()
+   /* private void Update()
     {
         if(_isChangingState == true)
         {
             if(SceneAsyncManager.Instance.AsEndedLoading == true)
             {
-                _states[_currentState].Exit();
+                
                 _isChangingState = false;
             }
         }
-    }
+    }*/
 }
