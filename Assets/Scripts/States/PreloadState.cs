@@ -1,10 +1,10 @@
-﻿using UnityEngine.SceneManagement;
+﻿using Engine.Loading;
 
 public class PreloadState : IGameStates
 {
     void IGameStates.Enter()
     {
-        SceneAsyncManager.Instance.LoadScene("PRELOAD");
+        LoadingManager.Instance.LoadScene("PRELOAD");
     }
 
     void IGameStates.Exit()

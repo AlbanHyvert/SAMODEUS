@@ -1,12 +1,14 @@
-﻿public class GCFHugoState : IGameStates
+﻿using Engine.Loading;
+
+public class GCFHugoState : IGameStates
 {
     void IGameStates.Enter()
     {
-        SceneAsyncManager.Instance.LoadScene("GCF_HUGO");
+        LoadingManager.Instance.LoadScene("GCF_HUGO");
     }
 
     void IGameStates.Exit()
     {
-        SceneAsyncManager.Instance.UnloadScene("GCF_HUGO");
+        LoadingManager.Instance.UnloadScene("GCF_HUGO");
     }
 }

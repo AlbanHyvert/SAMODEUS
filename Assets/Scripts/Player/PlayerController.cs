@@ -28,6 +28,8 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        DontDestroyOnLoad(this);
+
         _controller = GetComponent<CharacterController>();
         _musicAudioSource.volume = PlayerManager.Instance.MusicVolume;
         _dialsAudioSource.volume = PlayerManager.Instance.DialsVolume;

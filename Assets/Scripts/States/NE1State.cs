@@ -1,14 +1,14 @@
-﻿using UnityEngine.SceneManagement;
+﻿using Engine.Loading;
 
 public class NE1State : IGameStates
 {
     void IGameStates.Enter()
     {
-        SceneAsyncManager.Instance.LoadScene("NE_1");
+        LoadingManager.Instance.LoadScene("NE_1");
     }
 
     void IGameStates.Exit()
     {
-        SceneAsyncManager.Instance.UnloadScene("NE_1");
+        LoadingManager.Instance.UnloadScene("NE_1");
     }
 }

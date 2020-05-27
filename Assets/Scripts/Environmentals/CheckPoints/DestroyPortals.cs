@@ -1,17 +1,18 @@
-﻿using System.Collections.Generic;
+﻿using Engine.Loading;
+using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 public class DestroyPortals : MonoBehaviour
 {
-    private List<Portal> _portals = null;
-    private List<PortalNoScreen> _portalsNoScreen = null;
-    private List<MeshRenderer> _plane = null;
     [SerializeField] private GameObject[] _gameObject = null;
-
+    [SerializeField] private List<string> _scenesToUnload = new List<string>();
     [SerializeField] private float _speedDisolve = 1;
     [SerializeField] private float _maximalTimerValue = 10;
 
+    private List<Portal> _portals = null;
+    private List<PortalNoScreen> _portalsNoScreen = null;
+    private List<MeshRenderer> _plane = null;
     private bool _isActive = false;
     private float _timer = 0f;
 
@@ -64,7 +65,10 @@ public class DestroyPortals : MonoBehaviour
                 }
             }
 
-            SceneAsyncManager.Instance.UnloadScene("Vertumne_1");
+            if(_scenesToUnload != null)
+            {
+                LoadingManager.Instance.UnloadScene(_scenesToUnload.ToArray());
+            }
         }
     }
 
