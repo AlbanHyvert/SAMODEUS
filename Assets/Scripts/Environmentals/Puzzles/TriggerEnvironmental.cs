@@ -3,7 +3,7 @@
 [RequireComponent(typeof(Rigidbody))]
 public class TriggerEnvironmental : MonoBehaviour
 {
-    [SerializeField] private GCFParentControllerCube[] _activatedOBJ = null;
+    [SerializeField] private RotatingCube[] _activatedOBJ = null;
 
     private void Start()
     {
@@ -20,10 +20,7 @@ public class TriggerEnvironmental : MonoBehaviour
         {
             if (_activatedOBJ != null)
             {
-                for (int i = 0; i < _activatedOBJ.Length; i++)
-                {
-                    _activatedOBJ[i].DistMovingCube = 0;
-                }
+                // no idear
             }
         }
     }
