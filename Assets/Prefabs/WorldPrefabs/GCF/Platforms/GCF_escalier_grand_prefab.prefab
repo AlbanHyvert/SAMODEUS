@@ -42,8 +42,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7.3, y: 1.06, z: 24}
-  m_Center: {x: 0, y: -0.6, z: 0}
+  m_Size: {x: 7.3, y: 1.0600001, z: 24.531124}
+  m_Center: {x: 0, y: -0.6, z: 0.26556158}
 --- !u!1 &786143905
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 7317375539954736224}
   - component: {fileID: 7317375539953933326}
   - component: {fileID: 7317375539952967246}
-  - component: {fileID: 7333388784971242581}
+  - component: {fileID: 5982774933925763871}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -166,7 +166,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7333388784971242581
+--- !u!114 &5982774933925763871
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -175,9 +175,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958336}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958344
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,7 +205,7 @@ GameObject:
   - component: {fileID: 7317375539954736232}
   - component: {fileID: 7317375539953933334}
   - component: {fileID: 7317375539952967254}
-  - component: {fileID: 927330795819307262}
+  - component: {fileID: 7459213425293713485}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -256,7 +272,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &927330795819307262
+--- !u!114 &7459213425293713485
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -265,9 +281,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958344}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958346
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,7 +311,7 @@ GameObject:
   - component: {fileID: 7317375539954736234}
   - component: {fileID: 7317375539953933320}
   - component: {fileID: 7317375539952967240}
-  - component: {fileID: 2889625972547872070}
+  - component: {fileID: 5896482388004284511}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -346,7 +378,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &2889625972547872070
+--- !u!114 &5896482388004284511
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -355,9 +387,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958346}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958348
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,7 +417,7 @@ GameObject:
   - component: {fileID: 7317375539954736236}
   - component: {fileID: 7317375539953933322}
   - component: {fileID: 7317375539952967242}
-  - component: {fileID: 7169995867338476846}
+  - component: {fileID: 8435067969665008068}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -436,7 +484,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7169995867338476846
+--- !u!114 &8435067969665008068
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -445,9 +493,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958348}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958350
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,7 +523,7 @@ GameObject:
   - component: {fileID: 7317375539954736238}
   - component: {fileID: 7317375539953933324}
   - component: {fileID: 7317375539952967244}
-  - component: {fileID: 3550113595594081722}
+  - component: {fileID: 5877814717120736874}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -526,7 +590,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &3550113595594081722
+--- !u!114 &5877814717120736874
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -535,9 +599,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958350}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958352
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,7 +629,7 @@ GameObject:
   - component: {fileID: 7317375539954736240}
   - component: {fileID: 7317375539953933342}
   - component: {fileID: 7317375539952967262}
-  - component: {fileID: 5539910486164555210}
+  - component: {fileID: 7147051528200427363}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -616,7 +696,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5539910486164555210
+--- !u!114 &7147051528200427363
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -625,9 +705,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958352}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958354
 GameObject:
   m_ObjectHideFlags: 0
@@ -639,7 +735,7 @@ GameObject:
   - component: {fileID: 7317375539954736242}
   - component: {fileID: 7317375539953933328}
   - component: {fileID: 7317375539952967248}
-  - component: {fileID: 7507467410709640412}
+  - component: {fileID: 5389431826069945432}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -706,7 +802,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7507467410709640412
+--- !u!114 &5389431826069945432
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -715,9 +811,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958354}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958356
 GameObject:
   m_ObjectHideFlags: 0
@@ -729,7 +841,7 @@ GameObject:
   - component: {fileID: 7317375539954736244}
   - component: {fileID: 7317375539953933330}
   - component: {fileID: 7317375539952967250}
-  - component: {fileID: 3689140727321822411}
+  - component: {fileID: 7370618459473008213}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -796,7 +908,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &3689140727321822411
+--- !u!114 &7370618459473008213
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -805,9 +917,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958356}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958358
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,7 +947,7 @@ GameObject:
   - component: {fileID: 7317375539954736246}
   - component: {fileID: 7317375539953933332}
   - component: {fileID: 7317375539952967252}
-  - component: {fileID: 380534485430827001}
+  - component: {fileID: 1826167888075391690}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -886,7 +1014,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &380534485430827001
+--- !u!114 &1826167888075391690
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -895,9 +1023,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958358}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958360
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,7 +1053,7 @@ GameObject:
   - component: {fileID: 7317375539954736248}
   - component: {fileID: 7317375539953933414}
   - component: {fileID: 7317375539952967590}
-  - component: {fileID: 5947500602701876441}
+  - component: {fileID: 2767398992206637706}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -976,7 +1120,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5947500602701876441
+--- !u!114 &2767398992206637706
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -985,9 +1129,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958360}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958362
 GameObject:
   m_ObjectHideFlags: 0
@@ -999,7 +1159,7 @@ GameObject:
   - component: {fileID: 7317375539954736250}
   - component: {fileID: 7317375539953933336}
   - component: {fileID: 7317375539952967256}
-  - component: {fileID: 1303068566318482537}
+  - component: {fileID: 4164303433449404097}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -1066,7 +1226,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1303068566318482537
+--- !u!114 &4164303433449404097
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1075,9 +1235,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958362}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958364
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,7 +1265,7 @@ GameObject:
   - component: {fileID: 7317375539954736252}
   - component: {fileID: 7317375539953933338}
   - component: {fileID: 7317375539952967258}
-  - component: {fileID: 1824840758273467831}
+  - component: {fileID: 6916045276502675334}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -1156,7 +1332,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1824840758273467831
+--- !u!114 &6916045276502675334
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1165,9 +1341,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958364}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958366
 GameObject:
   m_ObjectHideFlags: 0
@@ -1179,7 +1371,7 @@ GameObject:
   - component: {fileID: 7317375539954736254}
   - component: {fileID: 7317375539953933340}
   - component: {fileID: 7317375539952967260}
-  - component: {fileID: 7622571713274500746}
+  - component: {fileID: 2976106617823280165}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -1246,7 +1438,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7622571713274500746
+--- !u!114 &2976106617823280165
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1255,9 +1447,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958366}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958400
 GameObject:
   m_ObjectHideFlags: 0
@@ -1269,7 +1477,7 @@ GameObject:
   - component: {fileID: 7317375539954736544}
   - component: {fileID: 7317375539953933390}
   - component: {fileID: 7317375539952967566}
-  - component: {fileID: 470184718972015346}
+  - component: {fileID: 9150702377534865307}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -1336,7 +1544,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &470184718972015346
+--- !u!114 &9150702377534865307
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1345,9 +1553,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958400}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958402
 GameObject:
   m_ObjectHideFlags: 0
@@ -1359,7 +1583,7 @@ GameObject:
   - component: {fileID: 7317375539954736546}
   - component: {fileID: 7317375539953933376}
   - component: {fileID: 7317375539952967552}
-  - component: {fileID: 1319316362495126570}
+  - component: {fileID: 3519835443292815609}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -1426,7 +1650,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1319316362495126570
+--- !u!114 &3519835443292815609
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1435,9 +1659,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958402}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958404
 GameObject:
   m_ObjectHideFlags: 0
@@ -1449,7 +1689,7 @@ GameObject:
   - component: {fileID: 7317375539954736548}
   - component: {fileID: 7317375539953933378}
   - component: {fileID: 7317375539952967554}
-  - component: {fileID: 7576878981097625566}
+  - component: {fileID: 4700437463128179756}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -1516,7 +1756,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7576878981097625566
+--- !u!114 &4700437463128179756
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1525,9 +1765,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958404}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958406
 GameObject:
   m_ObjectHideFlags: 0
@@ -1539,7 +1795,7 @@ GameObject:
   - component: {fileID: 7317375539954736550}
   - component: {fileID: 7317375539953933380}
   - component: {fileID: 7317375539952967556}
-  - component: {fileID: 7309113371012112345}
+  - component: {fileID: 658495154777994127}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -1606,7 +1862,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7309113371012112345
+--- !u!114 &658495154777994127
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1615,9 +1871,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958406}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958408
 GameObject:
   m_ObjectHideFlags: 0
@@ -1629,7 +1901,7 @@ GameObject:
   - component: {fileID: 7317375539954736552}
   - component: {fileID: 7317375539953933398}
   - component: {fileID: 7317375539952967574}
-  - component: {fileID: 5573350689366088711}
+  - component: {fileID: 6304139038307634856}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -1696,7 +1968,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5573350689366088711
+--- !u!114 &6304139038307634856
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1705,9 +1977,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958408}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958410
 GameObject:
   m_ObjectHideFlags: 0
@@ -1719,7 +2007,7 @@ GameObject:
   - component: {fileID: 7317375539954736554}
   - component: {fileID: 7317375539953933384}
   - component: {fileID: 7317375539952967560}
-  - component: {fileID: 5608206660855406027}
+  - component: {fileID: 1117456628988637239}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -1786,7 +2074,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5608206660855406027
+--- !u!114 &1117456628988637239
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1795,9 +2083,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958410}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958412
 GameObject:
   m_ObjectHideFlags: 0
@@ -1809,7 +2113,7 @@ GameObject:
   - component: {fileID: 7317375539954736556}
   - component: {fileID: 7317375539953933386}
   - component: {fileID: 7317375539952967562}
-  - component: {fileID: 2211993281789299678}
+  - component: {fileID: 2260882087255757709}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -1876,7 +2180,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &2211993281789299678
+--- !u!114 &2260882087255757709
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1885,9 +2189,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958412}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958414
 GameObject:
   m_ObjectHideFlags: 0
@@ -1899,7 +2219,7 @@ GameObject:
   - component: {fileID: 7317375539954736558}
   - component: {fileID: 7317375539953933388}
   - component: {fileID: 7317375539952967564}
-  - component: {fileID: 7021311491402716729}
+  - component: {fileID: 501822888072174051}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -1966,7 +2286,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7021311491402716729
+--- !u!114 &501822888072174051
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1975,9 +2295,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958414}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958416
 GameObject:
   m_ObjectHideFlags: 0
@@ -1989,7 +2325,7 @@ GameObject:
   - component: {fileID: 7317375539954736560}
   - component: {fileID: 7317375539953933406}
   - component: {fileID: 7317375539952967582}
-  - component: {fileID: 2864360503258504278}
+  - component: {fileID: 152104783001007555}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -2056,7 +2392,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &2864360503258504278
+--- !u!114 &152104783001007555
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2065,9 +2401,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958416}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958418
 GameObject:
   m_ObjectHideFlags: 0
@@ -2079,7 +2431,7 @@ GameObject:
   - component: {fileID: 7317375539954736562}
   - component: {fileID: 7317375539953933392}
   - component: {fileID: 7317375539952967568}
-  - component: {fileID: 7176818964028656177}
+  - component: {fileID: 8653097668440274640}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -2146,7 +2498,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7176818964028656177
+--- !u!114 &8653097668440274640
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2155,9 +2507,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958418}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958420
 GameObject:
   m_ObjectHideFlags: 0
@@ -2169,7 +2537,7 @@ GameObject:
   - component: {fileID: 7317375539954736564}
   - component: {fileID: 7317375539953933394}
   - component: {fileID: 7317375539952967570}
-  - component: {fileID: 7878781864670653644}
+  - component: {fileID: 6902396417261133167}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -2236,7 +2604,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7878781864670653644
+--- !u!114 &6902396417261133167
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2245,9 +2613,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958420}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958422
 GameObject:
   m_ObjectHideFlags: 0
@@ -2259,7 +2643,7 @@ GameObject:
   - component: {fileID: 7317375539954736566}
   - component: {fileID: 7317375539953933396}
   - component: {fileID: 7317375539952967572}
-  - component: {fileID: 7547652473996467275}
+  - component: {fileID: 4780196682373469986}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -2326,7 +2710,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7547652473996467275
+--- !u!114 &4780196682373469986
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2335,9 +2719,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958422}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958424
 GameObject:
   m_ObjectHideFlags: 0
@@ -2349,7 +2749,7 @@ GameObject:
   - component: {fileID: 7317375539954736568}
   - component: {fileID: 7317375539953933734}
   - component: {fileID: 7317375539952967654}
-  - component: {fileID: 7179279027953285930}
+  - component: {fileID: 4729887140626514122}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -2416,7 +2816,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7179279027953285930
+--- !u!114 &4729887140626514122
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2425,9 +2825,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958424}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958426
 GameObject:
   m_ObjectHideFlags: 0
@@ -2439,7 +2855,7 @@ GameObject:
   - component: {fileID: 7317375539954736570}
   - component: {fileID: 7317375539953933400}
   - component: {fileID: 7317375539952967576}
-  - component: {fileID: 2096540719219955167}
+  - component: {fileID: 2330258610509195055}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -2506,7 +2922,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &2096540719219955167
+--- !u!114 &2330258610509195055
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2515,9 +2931,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958426}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958428
 GameObject:
   m_ObjectHideFlags: 0
@@ -2529,7 +2961,7 @@ GameObject:
   - component: {fileID: 7317375539954736572}
   - component: {fileID: 7317375539953933402}
   - component: {fileID: 7317375539952967578}
-  - component: {fileID: 8544334142322425650}
+  - component: {fileID: 8409712086087561177}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -2596,7 +3028,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8544334142322425650
+--- !u!114 &8409712086087561177
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2605,9 +3037,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958428}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958430
 GameObject:
   m_ObjectHideFlags: 0
@@ -2619,7 +3067,7 @@ GameObject:
   - component: {fileID: 7317375539954736574}
   - component: {fileID: 7317375539953933404}
   - component: {fileID: 7317375539952967580}
-  - component: {fileID: 3269047030737851693}
+  - component: {fileID: 7467834639689927821}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -2686,7 +3134,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &3269047030737851693
+--- !u!114 &7467834639689927821
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2695,9 +3143,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958430}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958432
 GameObject:
   m_ObjectHideFlags: 0
@@ -2709,7 +3173,7 @@ GameObject:
   - component: {fileID: 7317375539954736192}
   - component: {fileID: 7317375539953933422}
   - component: {fileID: 7317375539952967598}
-  - component: {fileID: 4266285409292682393}
+  - component: {fileID: 6780109860341429499}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -2776,7 +3240,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4266285409292682393
+--- !u!114 &6780109860341429499
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2785,9 +3249,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958432}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958434
 GameObject:
   m_ObjectHideFlags: 0
@@ -2799,7 +3279,7 @@ GameObject:
   - component: {fileID: 7317375539954736194}
   - component: {fileID: 7317375539953933408}
   - component: {fileID: 7317375539952967584}
-  - component: {fileID: 1070920265879872075}
+  - component: {fileID: 2712436767834565450}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -2866,7 +3346,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1070920265879872075
+--- !u!114 &2712436767834565450
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2875,9 +3355,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958434}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958436
 GameObject:
   m_ObjectHideFlags: 0
@@ -2889,7 +3385,7 @@ GameObject:
   - component: {fileID: 7317375539954736196}
   - component: {fileID: 7317375539953933410}
   - component: {fileID: 7317375539952967586}
-  - component: {fileID: 5962338508495870922}
+  - component: {fileID: 7405213297781709709}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -2956,7 +3452,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5962338508495870922
+--- !u!114 &7405213297781709709
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2965,9 +3461,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958436}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958438
 GameObject:
   m_ObjectHideFlags: 0
@@ -2979,7 +3491,7 @@ GameObject:
   - component: {fileID: 7317375539954736198}
   - component: {fileID: 7317375539953933412}
   - component: {fileID: 7317375539952967588}
-  - component: {fileID: 8561953021595780419}
+  - component: {fileID: 393162995879073526}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -3046,7 +3558,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8561953021595780419
+--- !u!114 &393162995879073526
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3055,9 +3567,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958438}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958440
 GameObject:
   m_ObjectHideFlags: 0
@@ -3069,7 +3597,7 @@ GameObject:
   - component: {fileID: 7317375539954736200}
   - component: {fileID: 7317375539953933430}
   - component: {fileID: 7317375539952967606}
-  - component: {fileID: 7071297397196869498}
+  - component: {fileID: 4586614085442696993}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -3136,7 +3664,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7071297397196869498
+--- !u!114 &4586614085442696993
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3145,9 +3673,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958440}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958442
 GameObject:
   m_ObjectHideFlags: 0
@@ -3159,7 +3703,7 @@ GameObject:
   - component: {fileID: 7317375539954736202}
   - component: {fileID: 7317375539953933416}
   - component: {fileID: 7317375539952967592}
-  - component: {fileID: 5586490353552656747}
+  - component: {fileID: 8038583834028212811}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -3226,7 +3770,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5586490353552656747
+--- !u!114 &8038583834028212811
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3235,9 +3779,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958442}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958444
 GameObject:
   m_ObjectHideFlags: 0
@@ -3249,7 +3809,7 @@ GameObject:
   - component: {fileID: 7317375539954736204}
   - component: {fileID: 7317375539953933418}
   - component: {fileID: 7317375539952967594}
-  - component: {fileID: 4046771859687339632}
+  - component: {fileID: 3185325549556843117}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -3316,7 +3876,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4046771859687339632
+--- !u!114 &3185325549556843117
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3325,9 +3885,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958444}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958446
 GameObject:
   m_ObjectHideFlags: 0
@@ -3339,7 +3915,7 @@ GameObject:
   - component: {fileID: 7317375539954736206}
   - component: {fileID: 7317375539953933420}
   - component: {fileID: 7317375539952967596}
-  - component: {fileID: 4277787245542472324}
+  - component: {fileID: 7679641104266737318}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -3406,7 +3982,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4277787245542472324
+--- !u!114 &7679641104266737318
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3415,9 +3991,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958446}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958448
 GameObject:
   m_ObjectHideFlags: 0
@@ -3429,7 +4021,7 @@ GameObject:
   - component: {fileID: 7317375539954736208}
   - component: {fileID: 7317375539953933438}
   - component: {fileID: 7317375539952967614}
-  - component: {fileID: 6903956832974972942}
+  - component: {fileID: 1355252418750203174}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -3496,7 +4088,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &6903956832974972942
+--- !u!114 &1355252418750203174
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3505,9 +4097,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958448}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958450
 GameObject:
   m_ObjectHideFlags: 0
@@ -3519,7 +4127,7 @@ GameObject:
   - component: {fileID: 7317375539954736210}
   - component: {fileID: 7317375539953933424}
   - component: {fileID: 7317375539952967600}
-  - component: {fileID: 2385828293103521101}
+  - component: {fileID: 652131968744171151}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -3586,7 +4194,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &2385828293103521101
+--- !u!114 &652131968744171151
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3595,9 +4203,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958450}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958452
 GameObject:
   m_ObjectHideFlags: 0
@@ -3609,7 +4233,7 @@ GameObject:
   - component: {fileID: 7317375539954736212}
   - component: {fileID: 7317375539953933426}
   - component: {fileID: 7317375539952967602}
-  - component: {fileID: 12393510310085895}
+  - component: {fileID: 7138642383005701469}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -3676,7 +4300,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &12393510310085895
+--- !u!114 &7138642383005701469
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3685,9 +4309,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958452}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958454
 GameObject:
   m_ObjectHideFlags: 0
@@ -3699,7 +4339,7 @@ GameObject:
   - component: {fileID: 7317375539954736214}
   - component: {fileID: 7317375539953933428}
   - component: {fileID: 7317375539952967604}
-  - component: {fileID: 4287556473851014845}
+  - component: {fileID: 3912977967666651298}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -3766,7 +4406,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4287556473851014845
+--- !u!114 &3912977967666651298
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3775,9 +4415,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958454}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958456
 GameObject:
   m_ObjectHideFlags: 0
@@ -3789,7 +4445,7 @@ GameObject:
   - component: {fileID: 7317375539954736216}
   - component: {fileID: 7317375539953933382}
   - component: {fileID: 7317375539952967558}
-  - component: {fileID: 7789783146665113669}
+  - component: {fileID: 2417341003715214892}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -3856,7 +4512,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7789783146665113669
+--- !u!114 &2417341003715214892
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3865,9 +4521,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958456}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958458
 GameObject:
   m_ObjectHideFlags: 0
@@ -3879,7 +4551,7 @@ GameObject:
   - component: {fileID: 7317375539954736218}
   - component: {fileID: 7317375539953933432}
   - component: {fileID: 7317375539952967608}
-  - component: {fileID: 7656199981939048727}
+  - component: {fileID: 4742686483716111428}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -3946,7 +4618,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7656199981939048727
+--- !u!114 &4742686483716111428
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3955,9 +4627,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958458}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958460
 GameObject:
   m_ObjectHideFlags: 0
@@ -3969,7 +4657,7 @@ GameObject:
   - component: {fileID: 7317375539954736220}
   - component: {fileID: 7317375539953933434}
   - component: {fileID: 7317375539952967610}
-  - component: {fileID: 470513824372115217}
+  - component: {fileID: 7442801989394999586}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -4036,7 +4724,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &470513824372115217
+--- !u!114 &7442801989394999586
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4045,9 +4733,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958460}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958462
 GameObject:
   m_ObjectHideFlags: 0
@@ -4059,7 +4763,7 @@ GameObject:
   - component: {fileID: 7317375539954736222}
   - component: {fileID: 7317375539953933436}
   - component: {fileID: 7317375539952967612}
-  - component: {fileID: 8898724677656818803}
+  - component: {fileID: 986175406465173347}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -4126,7 +4830,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8898724677656818803
+--- !u!114 &986175406465173347
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4135,9 +4839,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958462}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958720
 GameObject:
   m_ObjectHideFlags: 0
@@ -4149,7 +4869,7 @@ GameObject:
   - component: {fileID: 7317375539954736608}
   - component: {fileID: 7317375539953933710}
   - component: {fileID: 7317375539952967630}
-  - component: {fileID: 7879140813933416272}
+  - component: {fileID: 3018910105937113945}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -4216,7 +4936,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7879140813933416272
+--- !u!114 &3018910105937113945
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4225,9 +4945,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958720}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958722
 GameObject:
   m_ObjectHideFlags: 0
@@ -4239,7 +4975,7 @@ GameObject:
   - component: {fileID: 7317375539954736610}
   - component: {fileID: 7317375539953933696}
   - component: {fileID: 7317375539952967616}
-  - component: {fileID: 2030996494669222997}
+  - component: {fileID: 1843324496408020195}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -4306,7 +5042,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &2030996494669222997
+--- !u!114 &1843324496408020195
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4315,9 +5051,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958722}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958724
 GameObject:
   m_ObjectHideFlags: 0
@@ -4329,7 +5081,7 @@ GameObject:
   - component: {fileID: 7317375539954736612}
   - component: {fileID: 7317375539953933698}
   - component: {fileID: 7317375539952967618}
-  - component: {fileID: 3675964035025608431}
+  - component: {fileID: 8457408476922333434}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -4396,7 +5148,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &3675964035025608431
+--- !u!114 &8457408476922333434
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4405,9 +5157,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958724}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958726
 GameObject:
   m_ObjectHideFlags: 0
@@ -4419,7 +5187,7 @@ GameObject:
   - component: {fileID: 7317375539954736614}
   - component: {fileID: 7317375539953933700}
   - component: {fileID: 7317375539952967620}
-  - component: {fileID: 3637707678580728314}
+  - component: {fileID: 7786888001489247772}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -4486,7 +5254,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &3637707678580728314
+--- !u!114 &7786888001489247772
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4495,9 +5263,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958726}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958728
 GameObject:
   m_ObjectHideFlags: 0
@@ -4509,7 +5293,7 @@ GameObject:
   - component: {fileID: 7317375539954736616}
   - component: {fileID: 7317375539953933718}
   - component: {fileID: 7317375539952967638}
-  - component: {fileID: 5002737598974450029}
+  - component: {fileID: 254740981919024923}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -4576,7 +5360,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5002737598974450029
+--- !u!114 &254740981919024923
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4585,9 +5369,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958728}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958730
 GameObject:
   m_ObjectHideFlags: 0
@@ -4599,7 +5399,7 @@ GameObject:
   - component: {fileID: 7317375539954736618}
   - component: {fileID: 7317375539953933704}
   - component: {fileID: 7317375539952967624}
-  - component: {fileID: 5006881809296247085}
+  - component: {fileID: 288892323547966642}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -4666,7 +5466,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5006881809296247085
+--- !u!114 &288892323547966642
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4675,9 +5475,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958730}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958732
 GameObject:
   m_ObjectHideFlags: 0
@@ -4689,7 +5505,7 @@ GameObject:
   - component: {fileID: 7317375539954736620}
   - component: {fileID: 7317375539953933706}
   - component: {fileID: 7317375539952967626}
-  - component: {fileID: 8389932222725828278}
+  - component: {fileID: 7496180937065408156}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -4756,7 +5572,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8389932222725828278
+--- !u!114 &7496180937065408156
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4765,9 +5581,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958732}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958734
 GameObject:
   m_ObjectHideFlags: 0
@@ -4779,7 +5611,7 @@ GameObject:
   - component: {fileID: 7317375539954736622}
   - component: {fileID: 7317375539953933708}
   - component: {fileID: 7317375539952967628}
-  - component: {fileID: 348942375471296043}
+  - component: {fileID: 1374290842813076625}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -4846,7 +5678,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &348942375471296043
+--- !u!114 &1374290842813076625
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4855,9 +5687,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958734}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958736
 GameObject:
   m_ObjectHideFlags: 0
@@ -4869,7 +5717,7 @@ GameObject:
   - component: {fileID: 7317375539954736624}
   - component: {fileID: 7317375539953933726}
   - component: {fileID: 7317375539952967646}
-  - component: {fileID: 7386114925051930392}
+  - component: {fileID: 7173332981555619395}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -4936,7 +5784,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7386114925051930392
+--- !u!114 &7173332981555619395
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4945,9 +5793,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958736}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958738
 GameObject:
   m_ObjectHideFlags: 0
@@ -4959,7 +5823,7 @@ GameObject:
   - component: {fileID: 7317375539954736626}
   - component: {fileID: 7317375539953933712}
   - component: {fileID: 7317375539952967632}
-  - component: {fileID: 5074522713267274621}
+  - component: {fileID: 2800368932819749918}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -5026,7 +5890,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5074522713267274621
+--- !u!114 &2800368932819749918
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5035,9 +5899,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958738}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958740
 GameObject:
   m_ObjectHideFlags: 0
@@ -5049,7 +5929,7 @@ GameObject:
   - component: {fileID: 7317375539954736628}
   - component: {fileID: 7317375539953933714}
   - component: {fileID: 7317375539952967634}
-  - component: {fileID: 8111531478261534026}
+  - component: {fileID: 2137333116021915053}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -5116,7 +5996,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8111531478261534026
+--- !u!114 &2137333116021915053
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5125,9 +6005,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958740}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958742
 GameObject:
   m_ObjectHideFlags: 0
@@ -5139,7 +6035,7 @@ GameObject:
   - component: {fileID: 7317375539954736630}
   - component: {fileID: 7317375539953933716}
   - component: {fileID: 7317375539952967636}
-  - component: {fileID: 4501635838309077032}
+  - component: {fileID: 6553554658371990081}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -5206,7 +6102,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4501635838309077032
+--- !u!114 &6553554658371990081
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5215,9 +6111,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958742}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958744
 GameObject:
   m_ObjectHideFlags: 0
@@ -5229,7 +6141,7 @@ GameObject:
   - component: {fileID: 7317375539954736632}
   - component: {fileID: 7317375539953933798}
   - component: {fileID: 7317375539952967462}
-  - component: {fileID: 8114905701108594278}
+  - component: {fileID: 871623854916889848}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -5296,7 +6208,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8114905701108594278
+--- !u!114 &871623854916889848
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5305,9 +6217,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958744}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958746
 GameObject:
   m_ObjectHideFlags: 0
@@ -5319,7 +6247,7 @@ GameObject:
   - component: {fileID: 7317375539954736634}
   - component: {fileID: 7317375539953933720}
   - component: {fileID: 7317375539952967640}
-  - component: {fileID: 7851934695850149171}
+  - component: {fileID: 8778157306994145687}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -5386,7 +6314,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7851934695850149171
+--- !u!114 &8778157306994145687
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5395,9 +6323,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958746}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958748
 GameObject:
   m_ObjectHideFlags: 0
@@ -5409,7 +6353,7 @@ GameObject:
   - component: {fileID: 7317375539954736636}
   - component: {fileID: 7317375539953933722}
   - component: {fileID: 7317375539952967642}
-  - component: {fileID: 3947800622014995078}
+  - component: {fileID: 2934427712749069238}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -5476,7 +6420,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &3947800622014995078
+--- !u!114 &2934427712749069238
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5485,9 +6429,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958748}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958750
 GameObject:
   m_ObjectHideFlags: 0
@@ -5499,7 +6459,7 @@ GameObject:
   - component: {fileID: 7317375539954736638}
   - component: {fileID: 7317375539953933724}
   - component: {fileID: 7317375539952967644}
-  - component: {fileID: 471535225710159925}
+  - component: {fileID: 8574204607174512864}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -5566,7 +6526,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &471535225710159925
+--- !u!114 &8574204607174512864
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5575,9 +6535,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958750}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958752
 GameObject:
   m_ObjectHideFlags: 0
@@ -5589,7 +6565,7 @@ GameObject:
   - component: {fileID: 7317375539954736512}
   - component: {fileID: 7317375539953933742}
   - component: {fileID: 7317375539952967662}
-  - component: {fileID: 4811450204609547865}
+  - component: {fileID: 4308732189609940034}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -5656,7 +6632,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4811450204609547865
+--- !u!114 &4308732189609940034
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5665,9 +6641,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958752}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958754
 GameObject:
   m_ObjectHideFlags: 0
@@ -5679,7 +6671,7 @@ GameObject:
   - component: {fileID: 7317375539954736514}
   - component: {fileID: 7317375539953933728}
   - component: {fileID: 7317375539952967648}
-  - component: {fileID: 7377186085256346629}
+  - component: {fileID: 8041910853400311605}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -5746,7 +6738,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7377186085256346629
+--- !u!114 &8041910853400311605
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5755,9 +6747,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958754}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958756
 GameObject:
   m_ObjectHideFlags: 0
@@ -5769,7 +6777,7 @@ GameObject:
   - component: {fileID: 7317375539954736516}
   - component: {fileID: 7317375539953933730}
   - component: {fileID: 7317375539952967650}
-  - component: {fileID: 8800522665362767079}
+  - component: {fileID: 5939557263631260183}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -5836,7 +6844,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8800522665362767079
+--- !u!114 &5939557263631260183
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5845,9 +6853,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958756}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958758
 GameObject:
   m_ObjectHideFlags: 0
@@ -5859,7 +6883,7 @@ GameObject:
   - component: {fileID: 7317375539954736518}
   - component: {fileID: 7317375539953933732}
   - component: {fileID: 7317375539952967652}
-  - component: {fileID: 4938956062793561695}
+  - component: {fileID: 1021850812955932681}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -5926,7 +6950,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4938956062793561695
+--- !u!114 &1021850812955932681
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5935,9 +6959,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958758}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958760
 GameObject:
   m_ObjectHideFlags: 0
@@ -5949,7 +6989,7 @@ GameObject:
   - component: {fileID: 7317375539954736520}
   - component: {fileID: 7317375539953933750}
   - component: {fileID: 7317375539952967670}
-  - component: {fileID: 2504513197081620122}
+  - component: {fileID: 5002193899838705400}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -6016,7 +7056,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &2504513197081620122
+--- !u!114 &5002193899838705400
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6025,9 +7065,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958760}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958762
 GameObject:
   m_ObjectHideFlags: 0
@@ -6039,7 +7095,7 @@ GameObject:
   - component: {fileID: 7317375539954736522}
   - component: {fileID: 7317375539953933736}
   - component: {fileID: 7317375539952967656}
-  - component: {fileID: 1094627239838487857}
+  - component: {fileID: 519736749424469709}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -6106,7 +7162,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1094627239838487857
+--- !u!114 &519736749424469709
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6115,9 +7171,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958762}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958764
 GameObject:
   m_ObjectHideFlags: 0
@@ -6129,7 +7201,7 @@ GameObject:
   - component: {fileID: 7317375539954736524}
   - component: {fileID: 7317375539953933738}
   - component: {fileID: 7317375539952967658}
-  - component: {fileID: 8965624808102644331}
+  - component: {fileID: 8771713849389106756}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -6196,7 +7268,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8965624808102644331
+--- !u!114 &8771713849389106756
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6205,9 +7277,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958764}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958766
 GameObject:
   m_ObjectHideFlags: 0
@@ -6219,7 +7307,7 @@ GameObject:
   - component: {fileID: 7317375539954736526}
   - component: {fileID: 7317375539953933740}
   - component: {fileID: 7317375539952967660}
-  - component: {fileID: 6662733487379181036}
+  - component: {fileID: 3817468509085521982}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -6286,7 +7374,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &6662733487379181036
+--- !u!114 &3817468509085521982
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6295,9 +7383,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958766}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958768
 GameObject:
   m_ObjectHideFlags: 0
@@ -6309,7 +7413,7 @@ GameObject:
   - component: {fileID: 7317375539954736528}
   - component: {fileID: 7317375539953933758}
   - component: {fileID: 7317375539952967678}
-  - component: {fileID: 4279731025467632559}
+  - component: {fileID: 7029619112171833403}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -6376,7 +7480,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4279731025467632559
+--- !u!114 &7029619112171833403
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6385,9 +7489,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958768}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958770
 GameObject:
   m_ObjectHideFlags: 0
@@ -6399,7 +7519,7 @@ GameObject:
   - component: {fileID: 7317375539954736530}
   - component: {fileID: 7317375539953933744}
   - component: {fileID: 7317375539952967664}
-  - component: {fileID: 5652297624273715071}
+  - component: {fileID: 3347138870897984692}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -6466,7 +7586,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5652297624273715071
+--- !u!114 &3347138870897984692
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6475,9 +7595,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958770}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958772
 GameObject:
   m_ObjectHideFlags: 0
@@ -6489,7 +7625,7 @@ GameObject:
   - component: {fileID: 7317375539954736532}
   - component: {fileID: 7317375539953933746}
   - component: {fileID: 7317375539952967666}
-  - component: {fileID: 7287213001376208005}
+  - component: {fileID: 2671232523421107738}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -6556,7 +7692,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7287213001376208005
+--- !u!114 &2671232523421107738
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6565,9 +7701,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958772}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958774
 GameObject:
   m_ObjectHideFlags: 0
@@ -6579,7 +7731,7 @@ GameObject:
   - component: {fileID: 7317375539954736534}
   - component: {fileID: 7317375539953933748}
   - component: {fileID: 7317375539952967668}
-  - component: {fileID: 4967354503465696511}
+  - component: {fileID: 8309880398795647371}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -6646,7 +7798,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4967354503465696511
+--- !u!114 &8309880398795647371
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6655,9 +7807,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958774}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958776
 GameObject:
   m_ObjectHideFlags: 0
@@ -6669,7 +7837,7 @@ GameObject:
   - component: {fileID: 7317375539954736536}
   - component: {fileID: 7317375539953933702}
   - component: {fileID: 7317375539952967622}
-  - component: {fileID: 1477442772896427334}
+  - component: {fileID: 8203472917299925886}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -6736,7 +7904,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1477442772896427334
+--- !u!114 &8203472917299925886
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6745,9 +7913,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958776}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958778
 GameObject:
   m_ObjectHideFlags: 0
@@ -6759,7 +7943,7 @@ GameObject:
   - component: {fileID: 7317375539954736538}
   - component: {fileID: 7317375539953933752}
   - component: {fileID: 7317375539952967672}
-  - component: {fileID: 3008205606253683699}
+  - component: {fileID: 6980619574844732154}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -6826,7 +8010,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &3008205606253683699
+--- !u!114 &6980619574844732154
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6835,9 +8019,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958778}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958780
 GameObject:
   m_ObjectHideFlags: 0
@@ -6849,7 +8049,7 @@ GameObject:
   - component: {fileID: 7317375539954736540}
   - component: {fileID: 7317375539953933754}
   - component: {fileID: 7317375539952967674}
-  - component: {fileID: 2303334168299538205}
+  - component: {fileID: 222623247796969813}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -6916,7 +8116,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &2303334168299538205
+--- !u!114 &222623247796969813
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6925,9 +8125,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958780}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958782
 GameObject:
   m_ObjectHideFlags: 0
@@ -6939,7 +8155,7 @@ GameObject:
   - component: {fileID: 7317375539954736542}
   - component: {fileID: 7317375539953933756}
   - component: {fileID: 7317375539952967676}
-  - component: {fileID: 2825812716420410335}
+  - component: {fileID: 8253800282366528233}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -7006,7 +8222,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &2825812716420410335
+--- !u!114 &8253800282366528233
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7015,9 +8231,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958782}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958816
 GameObject:
   m_ObjectHideFlags: 0
@@ -7029,7 +8261,7 @@ GameObject:
   - component: {fileID: 7317375539954736576}
   - component: {fileID: 7317375539953933806}
   - component: {fileID: 7317375539952967470}
-  - component: {fileID: 307283844452328693}
+  - component: {fileID: 5782526590542743958}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -7096,7 +8328,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &307283844452328693
+--- !u!114 &5782526590542743958
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7105,9 +8337,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958816}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958818
 GameObject:
   m_ObjectHideFlags: 0
@@ -7119,7 +8367,7 @@ GameObject:
   - component: {fileID: 7317375539954736578}
   - component: {fileID: 7317375539953933792}
   - component: {fileID: 7317375539952967456}
-  - component: {fileID: 8957341722823857781}
+  - component: {fileID: 6611488186526292172}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -7186,7 +8434,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8957341722823857781
+--- !u!114 &6611488186526292172
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7195,9 +8443,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958818}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958820
 GameObject:
   m_ObjectHideFlags: 0
@@ -7209,7 +8473,7 @@ GameObject:
   - component: {fileID: 7317375539954736580}
   - component: {fileID: 7317375539953933794}
   - component: {fileID: 7317375539952967458}
-  - component: {fileID: 6440654264449806520}
+  - component: {fileID: 6327552097988614605}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -7276,7 +8540,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &6440654264449806520
+--- !u!114 &6327552097988614605
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7285,9 +8549,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958820}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958822
 GameObject:
   m_ObjectHideFlags: 0
@@ -7299,7 +8579,7 @@ GameObject:
   - component: {fileID: 7317375539954736582}
   - component: {fileID: 7317375539953933796}
   - component: {fileID: 7317375539952967460}
-  - component: {fileID: 8867719833832937757}
+  - component: {fileID: 7257256719416791531}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -7366,7 +8646,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8867719833832937757
+--- !u!114 &7257256719416791531
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7375,9 +8655,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958822}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958824
 GameObject:
   m_ObjectHideFlags: 0
@@ -7389,7 +8685,7 @@ GameObject:
   - component: {fileID: 7317375539954736584}
   - component: {fileID: 7317375539953933814}
   - component: {fileID: 7317375539952967478}
-  - component: {fileID: 1905442841773260092}
+  - component: {fileID: 2887141263137528988}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -7456,7 +8752,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1905442841773260092
+--- !u!114 &2887141263137528988
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7465,9 +8761,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958824}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958826
 GameObject:
   m_ObjectHideFlags: 0
@@ -7479,7 +8791,7 @@ GameObject:
   - component: {fileID: 7317375539954736586}
   - component: {fileID: 7317375539953933800}
   - component: {fileID: 7317375539952967464}
-  - component: {fileID: 5348239303369137011}
+  - component: {fileID: 5624907404260810232}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -7546,7 +8858,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5348239303369137011
+--- !u!114 &5624907404260810232
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7555,9 +8867,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958826}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958828
 GameObject:
   m_ObjectHideFlags: 0
@@ -7569,7 +8897,7 @@ GameObject:
   - component: {fileID: 7317375539954736588}
   - component: {fileID: 7317375539953933802}
   - component: {fileID: 7317375539952967466}
-  - component: {fileID: 8829359973058953005}
+  - component: {fileID: 5486267961227336960}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -7636,7 +8964,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8829359973058953005
+--- !u!114 &5486267961227336960
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7645,9 +8973,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958828}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958830
 GameObject:
   m_ObjectHideFlags: 0
@@ -7659,7 +9003,7 @@ GameObject:
   - component: {fileID: 7317375539954736590}
   - component: {fileID: 7317375539953933804}
   - component: {fileID: 7317375539952967468}
-  - component: {fileID: 1735491548305450540}
+  - component: {fileID: 1785900992220660801}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -7726,7 +9070,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1735491548305450540
+--- !u!114 &1785900992220660801
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7735,9 +9079,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958830}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958832
 GameObject:
   m_ObjectHideFlags: 0
@@ -7749,7 +9109,7 @@ GameObject:
   - component: {fileID: 7317375539954736592}
   - component: {fileID: 7317375539953933822}
   - component: {fileID: 7317375539952967486}
-  - component: {fileID: 1757388663394976996}
+  - component: {fileID: 1330021446087690388}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -7816,7 +9176,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1757388663394976996
+--- !u!114 &1330021446087690388
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7825,9 +9185,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958832}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958834
 GameObject:
   m_ObjectHideFlags: 0
@@ -7839,7 +9215,7 @@ GameObject:
   - component: {fileID: 7317375539954736594}
   - component: {fileID: 7317375539953933808}
   - component: {fileID: 7317375539952967472}
-  - component: {fileID: 4248010467143684692}
+  - component: {fileID: 1501615808941818405}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -7906,7 +9282,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4248010467143684692
+--- !u!114 &1501615808941818405
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7915,9 +9291,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958834}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958836
 GameObject:
   m_ObjectHideFlags: 0
@@ -7929,7 +9321,7 @@ GameObject:
   - component: {fileID: 7317375539954736596}
   - component: {fileID: 7317375539953933810}
   - component: {fileID: 7317375539952967474}
-  - component: {fileID: 6025835995196304541}
+  - component: {fileID: 7683987541500167645}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -7996,7 +9388,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &6025835995196304541
+--- !u!114 &7683987541500167645
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8005,9 +9397,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958836}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958838
 GameObject:
   m_ObjectHideFlags: 0
@@ -8019,7 +9427,7 @@ GameObject:
   - component: {fileID: 7317375539954736598}
   - component: {fileID: 7317375539953933812}
   - component: {fileID: 7317375539952967476}
-  - component: {fileID: 8439326237084422586}
+  - component: {fileID: 4588494850106532283}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -8086,7 +9494,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8439326237084422586
+--- !u!114 &4588494850106532283
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8095,9 +9503,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958838}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958840
 GameObject:
   m_ObjectHideFlags: 0
@@ -8107,7 +9531,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7317375539954736600}
-  - component: {fileID: 1813241154873980378}
   m_Layer: 0
   m_Name: GCF_escalier_grand_prefab
   m_TagString: Untagged
@@ -8123,7 +9546,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7317375539954958840}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.45, y: 28.130257, z: 13.578616}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7317375539954736544}
@@ -8223,23 +9646,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1813241154873980378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ebe9e6c7651d234ca8f5dd02fd1ed4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _orbitTarget: {fileID: 0}
-  _distanceRotatingCube: 10
-  _customEventAmplitude: 10
-  _customEventSpeed: 10
-  _isSpecialEvent: 0
 --- !u!1 &7317375539954958842
 GameObject:
   m_ObjectHideFlags: 0
@@ -8251,7 +9657,7 @@ GameObject:
   - component: {fileID: 7317375539954736602}
   - component: {fileID: 7317375539953933816}
   - component: {fileID: 7317375539952967480}
-  - component: {fileID: 7860692662558196761}
+  - component: {fileID: 8329720568671093918}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -8318,7 +9724,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7860692662558196761
+--- !u!114 &8329720568671093918
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8327,9 +9733,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958842}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958844
 GameObject:
   m_ObjectHideFlags: 0
@@ -8341,7 +9763,7 @@ GameObject:
   - component: {fileID: 7317375539954736604}
   - component: {fileID: 7317375539953933818}
   - component: {fileID: 7317375539952967482}
-  - component: {fileID: 9094782710429002455}
+  - component: {fileID: 2178541547071324741}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -8408,7 +9830,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &9094782710429002455
+--- !u!114 &2178541547071324741
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8417,9 +9839,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958844}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &7317375539954958846
 GameObject:
   m_ObjectHideFlags: 0
@@ -8431,7 +9869,7 @@ GameObject:
   - component: {fileID: 7317375539954736606}
   - component: {fileID: 7317375539953933820}
   - component: {fileID: 7317375539952967484}
-  - component: {fileID: 532286113320447583}
+  - component: {fileID: 1934997647850117866}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -8498,7 +9936,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &532286113320447583
+--- !u!114 &1934997647850117866
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8507,6 +9945,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317375539954958846}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0

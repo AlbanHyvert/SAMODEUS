@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1214421218376152992}
   - component: {fileID: 1214421218379544450}
   - component: {fileID: 1214421218378446146}
-  - component: {fileID: 2843734633201721618}
+  - component: {fileID: 5968208475420444203}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -78,7 +78,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &2843734633201721618
+--- !u!114 &5968208475420444203
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,9 +87,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444800}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444802
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,7 +117,7 @@ GameObject:
   - component: {fileID: 1214421218376152994}
   - component: {fileID: 1214421218379544452}
   - component: {fileID: 1214421218378446148}
-  - component: {fileID: 787618948244807028}
+  - component: {fileID: 8960790855880504326}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -168,7 +184,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &787618948244807028
+--- !u!114 &8960790855880504326
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -177,9 +193,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444802}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444804
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,7 +223,7 @@ GameObject:
   - component: {fileID: 1214421218376152996}
   - component: {fileID: 1214421218379544454}
   - component: {fileID: 1214421218378446150}
-  - component: {fileID: 6907003529874277573}
+  - component: {fileID: 6481392278081313702}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -258,7 +290,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &6907003529874277573
+--- !u!114 &6481392278081313702
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -267,9 +299,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444804}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444808
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,7 +329,7 @@ GameObject:
   - component: {fileID: 1214421218376153000}
   - component: {fileID: 1214421218379544458}
   - component: {fileID: 1214421218378446154}
-  - component: {fileID: 9069478461193056523}
+  - component: {fileID: 7414548305476340529}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -348,7 +396,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &9069478461193056523
+--- !u!114 &7414548305476340529
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -357,9 +405,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444808}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444810
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,7 +435,7 @@ GameObject:
   - component: {fileID: 1214421218376153002}
   - component: {fileID: 1214421218379544460}
   - component: {fileID: 1214421218378446156}
-  - component: {fileID: 4233969334986115098}
+  - component: {fileID: 585281610575334818}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -438,7 +502,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4233969334986115098
+--- !u!114 &585281610575334818
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -447,9 +511,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444810}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444812
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,7 +541,7 @@ GameObject:
   - component: {fileID: 1214421218376153004}
   - component: {fileID: 1214421218379544462}
   - component: {fileID: 1214421218378446158}
-  - component: {fileID: 4356953449640303353}
+  - component: {fileID: 2462320292713933106}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -528,7 +608,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4356953449640303353
+--- !u!114 &2462320292713933106
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -537,9 +617,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444812}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444814
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,7 +647,7 @@ GameObject:
   - component: {fileID: 1214421218376153006}
   - component: {fileID: 1214421218379544448}
   - component: {fileID: 1214421218378446144}
-  - component: {fileID: 8942260455932296267}
+  - component: {fileID: 7991802291199881032}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -618,7 +714,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8942260455932296267
+--- !u!114 &7991802291199881032
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -627,9 +723,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444814}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444816
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,7 +753,7 @@ GameObject:
   - component: {fileID: 1214421218376153008}
   - component: {fileID: 1214421218379544466}
   - component: {fileID: 1214421218378446162}
-  - component: {fileID: 3369261653079465032}
+  - component: {fileID: 3705486375471132260}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -708,7 +820,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &3369261653079465032
+--- !u!114 &3705486375471132260
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -717,9 +829,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444816}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444818
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,7 +859,7 @@ GameObject:
   - component: {fileID: 1214421218376153010}
   - component: {fileID: 1214421218379544468}
   - component: {fileID: 1214421218378446164}
-  - component: {fileID: 5440286560839538866}
+  - component: {fileID: 734560322595988850}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -798,7 +926,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5440286560839538866
+--- !u!114 &734560322595988850
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -807,9 +935,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444818}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444820
 GameObject:
   m_ObjectHideFlags: 0
@@ -821,7 +965,7 @@ GameObject:
   - component: {fileID: 1214421218376153012}
   - component: {fileID: 1214421218379544470}
   - component: {fileID: 1214421218378446166}
-  - component: {fileID: 655019868385336985}
+  - component: {fileID: 3919939523271988228}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -888,7 +1032,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &655019868385336985
+--- !u!114 &3919939523271988228
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -897,9 +1041,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444820}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444822
 GameObject:
   m_ObjectHideFlags: 0
@@ -911,7 +1071,7 @@ GameObject:
   - component: {fileID: 1214421218376153014}
   - component: {fileID: 1214421218379544456}
   - component: {fileID: 1214421218378446152}
-  - component: {fileID: 1385699060291815889}
+  - component: {fileID: 3404032394782069109}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -978,7 +1138,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1385699060291815889
+--- !u!114 &3404032394782069109
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -987,9 +1147,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444822}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444824
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,7 +1177,7 @@ GameObject:
   - component: {fileID: 1214421218376153016}
   - component: {fileID: 1214421218379544474}
   - component: {fileID: 1214421218378446170}
-  - component: {fileID: 845987210181639181}
+  - component: {fileID: 6297334337908092253}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -1068,7 +1244,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &845987210181639181
+--- !u!114 &6297334337908092253
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1077,9 +1253,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444824}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444826
 GameObject:
   m_ObjectHideFlags: 0
@@ -1091,7 +1283,7 @@ GameObject:
   - component: {fileID: 1214421218376153018}
   - component: {fileID: 1214421218379544476}
   - component: {fileID: 1214421218378446172}
-  - component: {fileID: 3878050976927220528}
+  - component: {fileID: 6047013098002754595}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -1158,7 +1350,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &3878050976927220528
+--- !u!114 &6047013098002754595
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1167,9 +1359,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444826}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444828
 GameObject:
   m_ObjectHideFlags: 0
@@ -1181,7 +1389,7 @@ GameObject:
   - component: {fileID: 1214421218376153020}
   - component: {fileID: 1214421218379544478}
   - component: {fileID: 1214421218378446174}
-  - component: {fileID: 2816744231147604610}
+  - component: {fileID: 5564789684772536305}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -1248,7 +1456,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &2816744231147604610
+--- !u!114 &5564789684772536305
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1257,9 +1465,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444828}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444830
 GameObject:
   m_ObjectHideFlags: 0
@@ -1271,7 +1495,7 @@ GameObject:
   - component: {fileID: 1214421218376153022}
   - component: {fileID: 1214421218379544464}
   - component: {fileID: 1214421218378446160}
-  - component: {fileID: 7372806343956567486}
+  - component: {fileID: 6720109456169923741}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -1338,7 +1562,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7372806343956567486
+--- !u!114 &6720109456169923741
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1347,9 +1571,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444830}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444864
 GameObject:
   m_ObjectHideFlags: 0
@@ -1361,7 +1601,7 @@ GameObject:
   - component: {fileID: 1214421218376153056}
   - component: {fileID: 1214421218379544514}
   - component: {fileID: 1214421218378446210}
-  - component: {fileID: 1446542007876827381}
+  - component: {fileID: 1949548990448228280}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -1428,7 +1668,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1446542007876827381
+--- !u!114 &1949548990448228280
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1437,9 +1677,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444864}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444866
 GameObject:
   m_ObjectHideFlags: 0
@@ -1451,7 +1707,7 @@ GameObject:
   - component: {fileID: 1214421218376153058}
   - component: {fileID: 1214421218379544516}
   - component: {fileID: 1214421218378446212}
-  - component: {fileID: 4399398844178405833}
+  - component: {fileID: 5301011350029334111}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -1518,7 +1774,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4399398844178405833
+--- !u!114 &5301011350029334111
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1527,9 +1783,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444866}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444868
 GameObject:
   m_ObjectHideFlags: 0
@@ -1541,7 +1813,7 @@ GameObject:
   - component: {fileID: 1214421218376153060}
   - component: {fileID: 1214421218379544518}
   - component: {fileID: 1214421218378446214}
-  - component: {fileID: 1694183218325752399}
+  - component: {fileID: 5628985033900057974}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -1608,7 +1880,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1694183218325752399
+--- !u!114 &5628985033900057974
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1617,9 +1889,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444868}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444870
 GameObject:
   m_ObjectHideFlags: 0
@@ -1631,7 +1919,7 @@ GameObject:
   - component: {fileID: 1214421218376153062}
   - component: {fileID: 1214421218379544568}
   - component: {fileID: 1214421218378446264}
-  - component: {fileID: 4581943498491247483}
+  - component: {fileID: 6792274830911966453}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -1698,7 +1986,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4581943498491247483
+--- !u!114 &6792274830911966453
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1707,9 +1995,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444870}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444872
 GameObject:
   m_ObjectHideFlags: 0
@@ -1721,7 +2025,7 @@ GameObject:
   - component: {fileID: 1214421218376153064}
   - component: {fileID: 1214421218379544522}
   - component: {fileID: 1214421218378446218}
-  - component: {fileID: 2289478884540870306}
+  - component: {fileID: 4403467289435704343}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -1788,7 +2092,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &2289478884540870306
+--- !u!114 &4403467289435704343
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1797,9 +2101,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444872}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444874
 GameObject:
   m_ObjectHideFlags: 0
@@ -1811,7 +2131,7 @@ GameObject:
   - component: {fileID: 1214421218376153066}
   - component: {fileID: 1214421218379544524}
   - component: {fileID: 1214421218378446220}
-  - component: {fileID: 8113444812333006850}
+  - component: {fileID: 7788096096784346678}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -1878,7 +2198,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8113444812333006850
+--- !u!114 &7788096096784346678
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1887,9 +2207,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444874}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444876
 GameObject:
   m_ObjectHideFlags: 0
@@ -1901,7 +2237,7 @@ GameObject:
   - component: {fileID: 1214421218376153068}
   - component: {fileID: 1214421218379544526}
   - component: {fileID: 1214421218378446222}
-  - component: {fileID: 3083371412145678922}
+  - component: {fileID: 4085079729931206759}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -1968,7 +2304,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &3083371412145678922
+--- !u!114 &4085079729931206759
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1977,9 +2313,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444876}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444878
 GameObject:
   m_ObjectHideFlags: 0
@@ -1991,7 +2343,7 @@ GameObject:
   - component: {fileID: 1214421218376153070}
   - component: {fileID: 1214421218379544512}
   - component: {fileID: 1214421218378446208}
-  - component: {fileID: 1701392872678757926}
+  - component: {fileID: 716102997462378894}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -2058,7 +2410,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1701392872678757926
+--- !u!114 &716102997462378894
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2067,9 +2419,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444878}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444880
 GameObject:
   m_ObjectHideFlags: 0
@@ -2081,7 +2449,7 @@ GameObject:
   - component: {fileID: 1214421218376153072}
   - component: {fileID: 1214421218379544530}
   - component: {fileID: 1214421218378446226}
-  - component: {fileID: 4847091892315194253}
+  - component: {fileID: 6606740337442921873}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -2148,7 +2516,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4847091892315194253
+--- !u!114 &6606740337442921873
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2157,9 +2525,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444880}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444882
 GameObject:
   m_ObjectHideFlags: 0
@@ -2171,7 +2555,7 @@ GameObject:
   - component: {fileID: 1214421218376153074}
   - component: {fileID: 1214421218379544532}
   - component: {fileID: 1214421218378446228}
-  - component: {fileID: 8018953094556189336}
+  - component: {fileID: 1476261655813051447}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -2238,7 +2622,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8018953094556189336
+--- !u!114 &1476261655813051447
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2247,9 +2631,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444882}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444884
 GameObject:
   m_ObjectHideFlags: 0
@@ -2261,7 +2661,7 @@ GameObject:
   - component: {fileID: 1214421218376153076}
   - component: {fileID: 1214421218379544534}
   - component: {fileID: 1214421218378446230}
-  - component: {fileID: 8100728014361904228}
+  - component: {fileID: 2935978636064243383}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -2328,7 +2728,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8100728014361904228
+--- !u!114 &2935978636064243383
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2337,9 +2737,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444884}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444886
 GameObject:
   m_ObjectHideFlags: 0
@@ -2351,7 +2767,7 @@ GameObject:
   - component: {fileID: 1214421218376153078}
   - component: {fileID: 1214421218379544520}
   - component: {fileID: 1214421218378446216}
-  - component: {fileID: 7207364410555770732}
+  - component: {fileID: 360543159822629087}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -2418,7 +2834,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7207364410555770732
+--- !u!114 &360543159822629087
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2427,9 +2843,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444886}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444890
 GameObject:
   m_ObjectHideFlags: 0
@@ -2440,7 +2872,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1214421218376153082}
   - component: {fileID: 1214421218376543523}
-  - component: {fileID: 110602872361849664}
   m_Layer: 0
   m_Name: Sol_Angle_T_Prefab
   m_TagString: Untagged
@@ -2456,7 +2887,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1214421218376444890}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: 26.76, y: -14.580017, z: -2.7}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1214421218376153062}
@@ -2520,23 +2951,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10.382159, y: 0.3, z: 12}
   m_Center: {x: 0.008920193, y: -0.3, z: -6}
---- !u!114 &110602872361849664
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1214421218376444890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ebe9e6c7651d234ca8f5dd02fd1ed4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _orbitTarget: {fileID: 0}
-  _distanceRotatingCube: 10
-  _customEventAmplitude: 10
-  _customEventSpeed: 10
-  _isSpecialEvent: 0
 --- !u!1 &1214421218376444892
 GameObject:
   m_ObjectHideFlags: 0
@@ -2548,7 +2962,7 @@ GameObject:
   - component: {fileID: 1214421218376153084}
   - component: {fileID: 1214421218379544542}
   - component: {fileID: 1214421218378446238}
-  - component: {fileID: 6775683061944478847}
+  - component: {fileID: 5258683015622946764}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -2615,7 +3029,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &6775683061944478847
+--- !u!114 &5258683015622946764
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2624,9 +3038,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444892}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444894
 GameObject:
   m_ObjectHideFlags: 0
@@ -2638,7 +3068,7 @@ GameObject:
   - component: {fileID: 1214421218376153086}
   - component: {fileID: 1214421218379544528}
   - component: {fileID: 1214421218378446224}
-  - component: {fileID: 300421139376542512}
+  - component: {fileID: 5326495168187765700}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -2705,7 +3135,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &300421139376542512
+--- !u!114 &5326495168187765700
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2714,9 +3144,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444894}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444896
 GameObject:
   m_ObjectHideFlags: 0
@@ -2728,7 +3174,7 @@ GameObject:
   - component: {fileID: 1214421218376152960}
   - component: {fileID: 1214421218379544546}
   - component: {fileID: 1214421218378446242}
-  - component: {fileID: 8144086020454086938}
+  - component: {fileID: 8595314470939742760}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -2795,7 +3241,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8144086020454086938
+--- !u!114 &8595314470939742760
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2804,9 +3250,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444896}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444898
 GameObject:
   m_ObjectHideFlags: 0
@@ -2818,7 +3280,7 @@ GameObject:
   - component: {fileID: 1214421218376152962}
   - component: {fileID: 1214421218379544548}
   - component: {fileID: 1214421218378446244}
-  - component: {fileID: 8959051861511683677}
+  - component: {fileID: 4520328023354394733}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -2885,7 +3347,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8959051861511683677
+--- !u!114 &4520328023354394733
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2894,9 +3356,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444898}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444900
 GameObject:
   m_ObjectHideFlags: 0
@@ -2908,7 +3386,7 @@ GameObject:
   - component: {fileID: 1214421218376152964}
   - component: {fileID: 1214421218379544550}
   - component: {fileID: 1214421218378446246}
-  - component: {fileID: 3865956446079825482}
+  - component: {fileID: 3958300825756532068}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -2975,7 +3453,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &3865956446079825482
+--- !u!114 &3958300825756532068
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2984,9 +3462,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444900}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444902
 GameObject:
   m_ObjectHideFlags: 0
@@ -2998,7 +3492,7 @@ GameObject:
   - component: {fileID: 1214421218376152966}
   - component: {fileID: 1214421218379544472}
   - component: {fileID: 1214421218378446168}
-  - component: {fileID: 1321943527237349082}
+  - component: {fileID: 4319379652888612865}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -3065,7 +3559,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1321943527237349082
+--- !u!114 &4319379652888612865
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3074,9 +3568,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444902}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444904
 GameObject:
   m_ObjectHideFlags: 0
@@ -3088,7 +3598,7 @@ GameObject:
   - component: {fileID: 1214421218376152968}
   - component: {fileID: 1214421218379544554}
   - component: {fileID: 1214421218378446250}
-  - component: {fileID: 4269851043563520273}
+  - component: {fileID: 6599608739775977062}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -3155,7 +3665,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4269851043563520273
+--- !u!114 &6599608739775977062
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3164,9 +3674,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444906
 GameObject:
   m_ObjectHideFlags: 0
@@ -3178,7 +3704,7 @@ GameObject:
   - component: {fileID: 1214421218376152970}
   - component: {fileID: 1214421218379544556}
   - component: {fileID: 1214421218378446252}
-  - component: {fileID: 7041471405171854198}
+  - component: {fileID: 321487171825166537}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -3245,7 +3771,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7041471405171854198
+--- !u!114 &321487171825166537
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3254,9 +3780,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444906}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444908
 GameObject:
   m_ObjectHideFlags: 0
@@ -3268,7 +3810,7 @@ GameObject:
   - component: {fileID: 1214421218376152972}
   - component: {fileID: 1214421218379544558}
   - component: {fileID: 1214421218378446254}
-  - component: {fileID: 5760008591461724805}
+  - component: {fileID: 904770061305889336}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -3335,7 +3877,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5760008591461724805
+--- !u!114 &904770061305889336
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3344,9 +3886,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444908}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444910
 GameObject:
   m_ObjectHideFlags: 0
@@ -3358,7 +3916,7 @@ GameObject:
   - component: {fileID: 1214421218376152974}
   - component: {fileID: 1214421218379544544}
   - component: {fileID: 1214421218378446240}
-  - component: {fileID: 5115339239205063995}
+  - component: {fileID: 5192361856977853397}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -3425,7 +3983,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5115339239205063995
+--- !u!114 &5192361856977853397
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3434,9 +3992,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444910}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444912
 GameObject:
   m_ObjectHideFlags: 0
@@ -3448,7 +4022,7 @@ GameObject:
   - component: {fileID: 1214421218376152976}
   - component: {fileID: 1214421218379544562}
   - component: {fileID: 1214421218378446258}
-  - component: {fileID: 1541510505029977527}
+  - component: {fileID: 7219907340463149521}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -3515,7 +4089,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1541510505029977527
+--- !u!114 &7219907340463149521
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3524,9 +4098,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444912}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444914
 GameObject:
   m_ObjectHideFlags: 0
@@ -3538,7 +4128,7 @@ GameObject:
   - component: {fileID: 1214421218376152978}
   - component: {fileID: 1214421218379544564}
   - component: {fileID: 1214421218378446260}
-  - component: {fileID: 3334698106337889138}
+  - component: {fileID: 660310134606413640}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -3605,7 +4195,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &3334698106337889138
+--- !u!114 &660310134606413640
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3614,9 +4204,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444914}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444916
 GameObject:
   m_ObjectHideFlags: 0
@@ -3628,7 +4234,7 @@ GameObject:
   - component: {fileID: 1214421218376152980}
   - component: {fileID: 1214421218379544566}
   - component: {fileID: 1214421218378446262}
-  - component: {fileID: 7845432783894360264}
+  - component: {fileID: 2237064976666183967}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -3695,7 +4301,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7845432783894360264
+--- !u!114 &2237064976666183967
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3704,9 +4310,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444916}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444918
 GameObject:
   m_ObjectHideFlags: 0
@@ -3718,7 +4340,7 @@ GameObject:
   - component: {fileID: 1214421218376152982}
   - component: {fileID: 1214421218379544552}
   - component: {fileID: 1214421218378446248}
-  - component: {fileID: 7265267444235702440}
+  - component: {fileID: 836946552141111918}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -3785,7 +4407,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7265267444235702440
+--- !u!114 &836946552141111918
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3794,9 +4416,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444918}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444920
 GameObject:
   m_ObjectHideFlags: 0
@@ -3808,7 +4446,7 @@ GameObject:
   - component: {fileID: 1214421218376152984}
   - component: {fileID: 1214421218379544570}
   - component: {fileID: 1214421218378446266}
-  - component: {fileID: 4051171223799101277}
+  - component: {fileID: 4825047703664365237}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -3875,7 +4513,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4051171223799101277
+--- !u!114 &4825047703664365237
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3884,9 +4522,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444920}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444922
 GameObject:
   m_ObjectHideFlags: 0
@@ -3898,7 +4552,7 @@ GameObject:
   - component: {fileID: 1214421218376152986}
   - component: {fileID: 1214421218379544572}
   - component: {fileID: 1214421218378446268}
-  - component: {fileID: 5542433698021705014}
+  - component: {fileID: 5302840144315609024}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -3965,7 +4619,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5542433698021705014
+--- !u!114 &5302840144315609024
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3974,9 +4628,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444922}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444924
 GameObject:
   m_ObjectHideFlags: 0
@@ -3988,7 +4658,7 @@ GameObject:
   - component: {fileID: 1214421218376152988}
   - component: {fileID: 1214421218379544574}
   - component: {fileID: 1214421218378446270}
-  - component: {fileID: 5657925238821153949}
+  - component: {fileID: 6124056996214608435}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -4055,7 +4725,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5657925238821153949
+--- !u!114 &6124056996214608435
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4064,9 +4734,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444924}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
 --- !u!1 &1214421218376444926
 GameObject:
   m_ObjectHideFlags: 0
@@ -4078,7 +4764,7 @@ GameObject:
   - component: {fileID: 1214421218376152990}
   - component: {fileID: 1214421218379544560}
   - component: {fileID: 1214421218378446256}
-  - component: {fileID: 169721048647616710}
+  - component: {fileID: 8485334054955299794}
   m_Layer: 0
   m_Name: Sol_Angle_T_Child
   m_TagString: Untagged
@@ -4145,7 +4831,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &169721048647616710
+--- !u!114 &8485334054955299794
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4154,6 +4840,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214421218376444926}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b58761bc20ca44b90e99745ca1fcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stayMaterial: {fileID: 0}
+  _movingOutMaterial: {fileID: 0}
+  _returnMaterial: {fileID: 0}
+  _rotatingMaterial: {fileID: 0}
+  _currentState: 3
+  _target: {fileID: 0}
+  _maxDistanceFromPlayer: 20
+  _shouldRender: 1
+  _maxAmplitude: 30
+  _minAmplitude: 10
+  _stayAmplitude: 1.5
+  _maxSpeed: 30
+  _minSpeed: 10
+  _returnSpeed: 20
+  _staySpeed: 2
+  _isSpecialEvent: 0
