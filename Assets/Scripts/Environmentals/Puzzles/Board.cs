@@ -1,27 +1,19 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Board : MonoBehaviour
 {
     [SerializeField] private string _objectTag = "Diamond";
     [SerializeField] private Transform _setPosition = null;
-    [SerializeField] private GCFParentControllerCube[] _activatedBridge = null;
-
-    private List<BoxCollider> _collidersList = null;
+    [SerializeField] private RotatingCube[] _activatedBridge = null;
+    [SerializeField] private Collider[] _colliders = null;
 
     private void Start()
     {
-        _collidersList = new List<BoxCollider>();
-
-        if (_activatedBridge != null)
+        if (_colliders != null)
         {
-            for (int i = 0; i < _activatedBridge.Length; i++)
+            for (int i = 0; i < _colliders.Length; i++)
             {
-                for (int j = 0; j < _activatedBridge[i].GetComponents<BoxCollider>().Length; j++)
-                {
-                    _collidersList.Add(_activatedBridge[i].GetComponents<BoxCollider>()[j]);
-                    _collidersList[j].enabled = false;
-                }
+                _colliders[i].enabled = false;
             }
         }
     }
@@ -35,20 +27,19 @@ public class Board : MonoBehaviour
             PlayerManager.Instance.Player.GetComponent<PlayerController>().OnDrop();
             action.DestroySelf(_setPosition);
 
+            if(_colliders != null)
+            {
+                for (int i = 0; i < _colliders.Length; i++)
+                {
+                    _colliders[i].enabled = true;
+                }
+            }
+
             if (_activatedBridge != null)
             {
                 for (int i = 0; i < _activatedBridge.Length; i++)
                 {
-                    _activatedBridge[i].DistMovingCube = 0;
-                    
-                    if(_collidersList != null)
-                    {
-                        for (int j = 0; j < _activatedBridge[i].GetComponents<BoxCollider>().Length; j++)
-                        {
-                            _collidersList[j].enabled = true;
-                        }
-                    }
-
+                    _activatedBridge[i].SetOverrideState(true);
                 }
             }
         }
