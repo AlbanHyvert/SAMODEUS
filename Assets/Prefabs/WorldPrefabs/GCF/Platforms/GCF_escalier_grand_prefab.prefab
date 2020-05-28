@@ -42,8 +42,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7.3, y: 1.06, z: 24}
-  m_Center: {x: 0, y: -0.6, z: 0}
+  m_Size: {x: 7.3, y: 1.0600001, z: 24.48647}
+  m_Center: {x: 0, y: -0.6, z: 0.24323656}
 --- !u!1 &786143905
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,7 +99,6 @@ GameObject:
   - component: {fileID: 7317375539954736224}
   - component: {fileID: 7317375539953933326}
   - component: {fileID: 7317375539952967246}
-  - component: {fileID: 7333388784971242581}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -166,18 +165,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7333388784971242581
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958344
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,7 +176,6 @@ GameObject:
   - component: {fileID: 7317375539954736232}
   - component: {fileID: 7317375539953933334}
   - component: {fileID: 7317375539952967254}
-  - component: {fileID: 927330795819307262}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -256,18 +242,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &927330795819307262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958346
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,7 +253,6 @@ GameObject:
   - component: {fileID: 7317375539954736234}
   - component: {fileID: 7317375539953933320}
   - component: {fileID: 7317375539952967240}
-  - component: {fileID: 2889625972547872070}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -346,18 +319,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &2889625972547872070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958348
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,7 +330,6 @@ GameObject:
   - component: {fileID: 7317375539954736236}
   - component: {fileID: 7317375539953933322}
   - component: {fileID: 7317375539952967242}
-  - component: {fileID: 7169995867338476846}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -436,18 +396,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7169995867338476846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958350
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,7 +407,6 @@ GameObject:
   - component: {fileID: 7317375539954736238}
   - component: {fileID: 7317375539953933324}
   - component: {fileID: 7317375539952967244}
-  - component: {fileID: 3550113595594081722}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -526,18 +473,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &3550113595594081722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958352
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,7 +484,6 @@ GameObject:
   - component: {fileID: 7317375539954736240}
   - component: {fileID: 7317375539953933342}
   - component: {fileID: 7317375539952967262}
-  - component: {fileID: 5539910486164555210}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -616,18 +550,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5539910486164555210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958354
 GameObject:
   m_ObjectHideFlags: 0
@@ -639,7 +561,6 @@ GameObject:
   - component: {fileID: 7317375539954736242}
   - component: {fileID: 7317375539953933328}
   - component: {fileID: 7317375539952967248}
-  - component: {fileID: 7507467410709640412}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -706,18 +627,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7507467410709640412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958356
 GameObject:
   m_ObjectHideFlags: 0
@@ -729,7 +638,6 @@ GameObject:
   - component: {fileID: 7317375539954736244}
   - component: {fileID: 7317375539953933330}
   - component: {fileID: 7317375539952967250}
-  - component: {fileID: 3689140727321822411}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -796,18 +704,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &3689140727321822411
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958358
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,7 +715,6 @@ GameObject:
   - component: {fileID: 7317375539954736246}
   - component: {fileID: 7317375539953933332}
   - component: {fileID: 7317375539952967252}
-  - component: {fileID: 380534485430827001}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -886,18 +781,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &380534485430827001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958360
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,7 +792,6 @@ GameObject:
   - component: {fileID: 7317375539954736248}
   - component: {fileID: 7317375539953933414}
   - component: {fileID: 7317375539952967590}
-  - component: {fileID: 5947500602701876441}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -976,18 +858,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5947500602701876441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958362
 GameObject:
   m_ObjectHideFlags: 0
@@ -999,7 +869,6 @@ GameObject:
   - component: {fileID: 7317375539954736250}
   - component: {fileID: 7317375539953933336}
   - component: {fileID: 7317375539952967256}
-  - component: {fileID: 1303068566318482537}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -1066,18 +935,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1303068566318482537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958364
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,7 +946,6 @@ GameObject:
   - component: {fileID: 7317375539954736252}
   - component: {fileID: 7317375539953933338}
   - component: {fileID: 7317375539952967258}
-  - component: {fileID: 1824840758273467831}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -1156,18 +1012,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1824840758273467831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958366
 GameObject:
   m_ObjectHideFlags: 0
@@ -1179,7 +1023,6 @@ GameObject:
   - component: {fileID: 7317375539954736254}
   - component: {fileID: 7317375539953933340}
   - component: {fileID: 7317375539952967260}
-  - component: {fileID: 7622571713274500746}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -1246,18 +1089,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7622571713274500746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958366}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958400
 GameObject:
   m_ObjectHideFlags: 0
@@ -1269,7 +1100,6 @@ GameObject:
   - component: {fileID: 7317375539954736544}
   - component: {fileID: 7317375539953933390}
   - component: {fileID: 7317375539952967566}
-  - component: {fileID: 470184718972015346}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -1336,18 +1166,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &470184718972015346
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958402
 GameObject:
   m_ObjectHideFlags: 0
@@ -1359,7 +1177,6 @@ GameObject:
   - component: {fileID: 7317375539954736546}
   - component: {fileID: 7317375539953933376}
   - component: {fileID: 7317375539952967552}
-  - component: {fileID: 1319316362495126570}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -1426,18 +1243,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1319316362495126570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958404
 GameObject:
   m_ObjectHideFlags: 0
@@ -1449,7 +1254,6 @@ GameObject:
   - component: {fileID: 7317375539954736548}
   - component: {fileID: 7317375539953933378}
   - component: {fileID: 7317375539952967554}
-  - component: {fileID: 7576878981097625566}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -1516,18 +1320,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7576878981097625566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958406
 GameObject:
   m_ObjectHideFlags: 0
@@ -1539,7 +1331,6 @@ GameObject:
   - component: {fileID: 7317375539954736550}
   - component: {fileID: 7317375539953933380}
   - component: {fileID: 7317375539952967556}
-  - component: {fileID: 7309113371012112345}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -1606,18 +1397,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7309113371012112345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958406}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958408
 GameObject:
   m_ObjectHideFlags: 0
@@ -1629,7 +1408,6 @@ GameObject:
   - component: {fileID: 7317375539954736552}
   - component: {fileID: 7317375539953933398}
   - component: {fileID: 7317375539952967574}
-  - component: {fileID: 5573350689366088711}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -1696,18 +1474,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5573350689366088711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958410
 GameObject:
   m_ObjectHideFlags: 0
@@ -1719,7 +1485,6 @@ GameObject:
   - component: {fileID: 7317375539954736554}
   - component: {fileID: 7317375539953933384}
   - component: {fileID: 7317375539952967560}
-  - component: {fileID: 5608206660855406027}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -1786,18 +1551,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5608206660855406027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958412
 GameObject:
   m_ObjectHideFlags: 0
@@ -1809,7 +1562,6 @@ GameObject:
   - component: {fileID: 7317375539954736556}
   - component: {fileID: 7317375539953933386}
   - component: {fileID: 7317375539952967562}
-  - component: {fileID: 2211993281789299678}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -1876,18 +1628,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &2211993281789299678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958414
 GameObject:
   m_ObjectHideFlags: 0
@@ -1899,7 +1639,6 @@ GameObject:
   - component: {fileID: 7317375539954736558}
   - component: {fileID: 7317375539953933388}
   - component: {fileID: 7317375539952967564}
-  - component: {fileID: 7021311491402716729}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -1966,18 +1705,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7021311491402716729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958416
 GameObject:
   m_ObjectHideFlags: 0
@@ -1989,7 +1716,6 @@ GameObject:
   - component: {fileID: 7317375539954736560}
   - component: {fileID: 7317375539953933406}
   - component: {fileID: 7317375539952967582}
-  - component: {fileID: 2864360503258504278}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -2056,18 +1782,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &2864360503258504278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958418
 GameObject:
   m_ObjectHideFlags: 0
@@ -2079,7 +1793,6 @@ GameObject:
   - component: {fileID: 7317375539954736562}
   - component: {fileID: 7317375539953933392}
   - component: {fileID: 7317375539952967568}
-  - component: {fileID: 7176818964028656177}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -2146,18 +1859,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7176818964028656177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958420
 GameObject:
   m_ObjectHideFlags: 0
@@ -2169,7 +1870,6 @@ GameObject:
   - component: {fileID: 7317375539954736564}
   - component: {fileID: 7317375539953933394}
   - component: {fileID: 7317375539952967570}
-  - component: {fileID: 7878781864670653644}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -2236,18 +1936,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7878781864670653644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958422
 GameObject:
   m_ObjectHideFlags: 0
@@ -2259,7 +1947,6 @@ GameObject:
   - component: {fileID: 7317375539954736566}
   - component: {fileID: 7317375539953933396}
   - component: {fileID: 7317375539952967572}
-  - component: {fileID: 7547652473996467275}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -2326,18 +2013,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7547652473996467275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958424
 GameObject:
   m_ObjectHideFlags: 0
@@ -2349,7 +2024,6 @@ GameObject:
   - component: {fileID: 7317375539954736568}
   - component: {fileID: 7317375539953933734}
   - component: {fileID: 7317375539952967654}
-  - component: {fileID: 7179279027953285930}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -2416,18 +2090,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7179279027953285930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958426
 GameObject:
   m_ObjectHideFlags: 0
@@ -2439,7 +2101,6 @@ GameObject:
   - component: {fileID: 7317375539954736570}
   - component: {fileID: 7317375539953933400}
   - component: {fileID: 7317375539952967576}
-  - component: {fileID: 2096540719219955167}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -2506,18 +2167,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &2096540719219955167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958428
 GameObject:
   m_ObjectHideFlags: 0
@@ -2529,7 +2178,6 @@ GameObject:
   - component: {fileID: 7317375539954736572}
   - component: {fileID: 7317375539953933402}
   - component: {fileID: 7317375539952967578}
-  - component: {fileID: 8544334142322425650}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -2596,18 +2244,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8544334142322425650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958430
 GameObject:
   m_ObjectHideFlags: 0
@@ -2619,7 +2255,6 @@ GameObject:
   - component: {fileID: 7317375539954736574}
   - component: {fileID: 7317375539953933404}
   - component: {fileID: 7317375539952967580}
-  - component: {fileID: 3269047030737851693}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -2686,18 +2321,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &3269047030737851693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958432
 GameObject:
   m_ObjectHideFlags: 0
@@ -2709,7 +2332,6 @@ GameObject:
   - component: {fileID: 7317375539954736192}
   - component: {fileID: 7317375539953933422}
   - component: {fileID: 7317375539952967598}
-  - component: {fileID: 4266285409292682393}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -2776,18 +2398,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4266285409292682393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958434
 GameObject:
   m_ObjectHideFlags: 0
@@ -2799,7 +2409,6 @@ GameObject:
   - component: {fileID: 7317375539954736194}
   - component: {fileID: 7317375539953933408}
   - component: {fileID: 7317375539952967584}
-  - component: {fileID: 1070920265879872075}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -2866,18 +2475,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1070920265879872075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958436
 GameObject:
   m_ObjectHideFlags: 0
@@ -2889,7 +2486,6 @@ GameObject:
   - component: {fileID: 7317375539954736196}
   - component: {fileID: 7317375539953933410}
   - component: {fileID: 7317375539952967586}
-  - component: {fileID: 5962338508495870922}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -2956,18 +2552,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5962338508495870922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958438
 GameObject:
   m_ObjectHideFlags: 0
@@ -2979,7 +2563,6 @@ GameObject:
   - component: {fileID: 7317375539954736198}
   - component: {fileID: 7317375539953933412}
   - component: {fileID: 7317375539952967588}
-  - component: {fileID: 8561953021595780419}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -3046,18 +2629,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8561953021595780419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958440
 GameObject:
   m_ObjectHideFlags: 0
@@ -3069,7 +2640,6 @@ GameObject:
   - component: {fileID: 7317375539954736200}
   - component: {fileID: 7317375539953933430}
   - component: {fileID: 7317375539952967606}
-  - component: {fileID: 7071297397196869498}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -3136,18 +2706,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7071297397196869498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958442
 GameObject:
   m_ObjectHideFlags: 0
@@ -3159,7 +2717,6 @@ GameObject:
   - component: {fileID: 7317375539954736202}
   - component: {fileID: 7317375539953933416}
   - component: {fileID: 7317375539952967592}
-  - component: {fileID: 5586490353552656747}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -3226,18 +2783,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5586490353552656747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958444
 GameObject:
   m_ObjectHideFlags: 0
@@ -3249,7 +2794,6 @@ GameObject:
   - component: {fileID: 7317375539954736204}
   - component: {fileID: 7317375539953933418}
   - component: {fileID: 7317375539952967594}
-  - component: {fileID: 4046771859687339632}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -3316,18 +2860,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4046771859687339632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958446
 GameObject:
   m_ObjectHideFlags: 0
@@ -3339,7 +2871,6 @@ GameObject:
   - component: {fileID: 7317375539954736206}
   - component: {fileID: 7317375539953933420}
   - component: {fileID: 7317375539952967596}
-  - component: {fileID: 4277787245542472324}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -3406,18 +2937,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4277787245542472324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958448
 GameObject:
   m_ObjectHideFlags: 0
@@ -3429,7 +2948,6 @@ GameObject:
   - component: {fileID: 7317375539954736208}
   - component: {fileID: 7317375539953933438}
   - component: {fileID: 7317375539952967614}
-  - component: {fileID: 6903956832974972942}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -3496,18 +3014,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &6903956832974972942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958450
 GameObject:
   m_ObjectHideFlags: 0
@@ -3519,7 +3025,6 @@ GameObject:
   - component: {fileID: 7317375539954736210}
   - component: {fileID: 7317375539953933424}
   - component: {fileID: 7317375539952967600}
-  - component: {fileID: 2385828293103521101}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -3586,18 +3091,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &2385828293103521101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958452
 GameObject:
   m_ObjectHideFlags: 0
@@ -3609,7 +3102,6 @@ GameObject:
   - component: {fileID: 7317375539954736212}
   - component: {fileID: 7317375539953933426}
   - component: {fileID: 7317375539952967602}
-  - component: {fileID: 12393510310085895}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -3676,18 +3168,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &12393510310085895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958454
 GameObject:
   m_ObjectHideFlags: 0
@@ -3699,7 +3179,6 @@ GameObject:
   - component: {fileID: 7317375539954736214}
   - component: {fileID: 7317375539953933428}
   - component: {fileID: 7317375539952967604}
-  - component: {fileID: 4287556473851014845}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -3766,18 +3245,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4287556473851014845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958454}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958456
 GameObject:
   m_ObjectHideFlags: 0
@@ -3789,7 +3256,6 @@ GameObject:
   - component: {fileID: 7317375539954736216}
   - component: {fileID: 7317375539953933382}
   - component: {fileID: 7317375539952967558}
-  - component: {fileID: 7789783146665113669}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -3856,18 +3322,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7789783146665113669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958458
 GameObject:
   m_ObjectHideFlags: 0
@@ -3879,7 +3333,6 @@ GameObject:
   - component: {fileID: 7317375539954736218}
   - component: {fileID: 7317375539953933432}
   - component: {fileID: 7317375539952967608}
-  - component: {fileID: 7656199981939048727}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -3946,18 +3399,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7656199981939048727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958460
 GameObject:
   m_ObjectHideFlags: 0
@@ -3969,7 +3410,6 @@ GameObject:
   - component: {fileID: 7317375539954736220}
   - component: {fileID: 7317375539953933434}
   - component: {fileID: 7317375539952967610}
-  - component: {fileID: 470513824372115217}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -4036,18 +3476,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &470513824372115217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958462
 GameObject:
   m_ObjectHideFlags: 0
@@ -4059,7 +3487,6 @@ GameObject:
   - component: {fileID: 7317375539954736222}
   - component: {fileID: 7317375539953933436}
   - component: {fileID: 7317375539952967612}
-  - component: {fileID: 8898724677656818803}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -4126,18 +3553,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8898724677656818803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958720
 GameObject:
   m_ObjectHideFlags: 0
@@ -4149,7 +3564,6 @@ GameObject:
   - component: {fileID: 7317375539954736608}
   - component: {fileID: 7317375539953933710}
   - component: {fileID: 7317375539952967630}
-  - component: {fileID: 7879140813933416272}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -4216,18 +3630,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7879140813933416272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958722
 GameObject:
   m_ObjectHideFlags: 0
@@ -4239,7 +3641,6 @@ GameObject:
   - component: {fileID: 7317375539954736610}
   - component: {fileID: 7317375539953933696}
   - component: {fileID: 7317375539952967616}
-  - component: {fileID: 2030996494669222997}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -4306,18 +3707,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &2030996494669222997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958724
 GameObject:
   m_ObjectHideFlags: 0
@@ -4329,7 +3718,6 @@ GameObject:
   - component: {fileID: 7317375539954736612}
   - component: {fileID: 7317375539953933698}
   - component: {fileID: 7317375539952967618}
-  - component: {fileID: 3675964035025608431}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -4396,18 +3784,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &3675964035025608431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958726
 GameObject:
   m_ObjectHideFlags: 0
@@ -4419,7 +3795,6 @@ GameObject:
   - component: {fileID: 7317375539954736614}
   - component: {fileID: 7317375539953933700}
   - component: {fileID: 7317375539952967620}
-  - component: {fileID: 3637707678580728314}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -4486,18 +3861,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &3637707678580728314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958728
 GameObject:
   m_ObjectHideFlags: 0
@@ -4509,7 +3872,6 @@ GameObject:
   - component: {fileID: 7317375539954736616}
   - component: {fileID: 7317375539953933718}
   - component: {fileID: 7317375539952967638}
-  - component: {fileID: 5002737598974450029}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -4576,18 +3938,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5002737598974450029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958728}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958730
 GameObject:
   m_ObjectHideFlags: 0
@@ -4599,7 +3949,6 @@ GameObject:
   - component: {fileID: 7317375539954736618}
   - component: {fileID: 7317375539953933704}
   - component: {fileID: 7317375539952967624}
-  - component: {fileID: 5006881809296247085}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -4666,18 +4015,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5006881809296247085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958732
 GameObject:
   m_ObjectHideFlags: 0
@@ -4689,7 +4026,6 @@ GameObject:
   - component: {fileID: 7317375539954736620}
   - component: {fileID: 7317375539953933706}
   - component: {fileID: 7317375539952967626}
-  - component: {fileID: 8389932222725828278}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -4756,18 +4092,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8389932222725828278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958734
 GameObject:
   m_ObjectHideFlags: 0
@@ -4779,7 +4103,6 @@ GameObject:
   - component: {fileID: 7317375539954736622}
   - component: {fileID: 7317375539953933708}
   - component: {fileID: 7317375539952967628}
-  - component: {fileID: 348942375471296043}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -4846,18 +4169,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &348942375471296043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958736
 GameObject:
   m_ObjectHideFlags: 0
@@ -4869,7 +4180,6 @@ GameObject:
   - component: {fileID: 7317375539954736624}
   - component: {fileID: 7317375539953933726}
   - component: {fileID: 7317375539952967646}
-  - component: {fileID: 7386114925051930392}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -4936,18 +4246,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7386114925051930392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958738
 GameObject:
   m_ObjectHideFlags: 0
@@ -4959,7 +4257,6 @@ GameObject:
   - component: {fileID: 7317375539954736626}
   - component: {fileID: 7317375539953933712}
   - component: {fileID: 7317375539952967632}
-  - component: {fileID: 5074522713267274621}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -5026,18 +4323,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5074522713267274621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958740
 GameObject:
   m_ObjectHideFlags: 0
@@ -5049,7 +4334,6 @@ GameObject:
   - component: {fileID: 7317375539954736628}
   - component: {fileID: 7317375539953933714}
   - component: {fileID: 7317375539952967634}
-  - component: {fileID: 8111531478261534026}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -5116,18 +4400,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8111531478261534026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958742
 GameObject:
   m_ObjectHideFlags: 0
@@ -5139,7 +4411,6 @@ GameObject:
   - component: {fileID: 7317375539954736630}
   - component: {fileID: 7317375539953933716}
   - component: {fileID: 7317375539952967636}
-  - component: {fileID: 4501635838309077032}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -5206,18 +4477,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4501635838309077032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958742}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958744
 GameObject:
   m_ObjectHideFlags: 0
@@ -5229,7 +4488,6 @@ GameObject:
   - component: {fileID: 7317375539954736632}
   - component: {fileID: 7317375539953933798}
   - component: {fileID: 7317375539952967462}
-  - component: {fileID: 8114905701108594278}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -5296,18 +4554,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8114905701108594278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958746
 GameObject:
   m_ObjectHideFlags: 0
@@ -5319,7 +4565,6 @@ GameObject:
   - component: {fileID: 7317375539954736634}
   - component: {fileID: 7317375539953933720}
   - component: {fileID: 7317375539952967640}
-  - component: {fileID: 7851934695850149171}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -5386,18 +4631,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7851934695850149171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958748
 GameObject:
   m_ObjectHideFlags: 0
@@ -5409,7 +4642,6 @@ GameObject:
   - component: {fileID: 7317375539954736636}
   - component: {fileID: 7317375539953933722}
   - component: {fileID: 7317375539952967642}
-  - component: {fileID: 3947800622014995078}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -5476,18 +4708,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &3947800622014995078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958750
 GameObject:
   m_ObjectHideFlags: 0
@@ -5499,7 +4719,6 @@ GameObject:
   - component: {fileID: 7317375539954736638}
   - component: {fileID: 7317375539953933724}
   - component: {fileID: 7317375539952967644}
-  - component: {fileID: 471535225710159925}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -5566,18 +4785,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &471535225710159925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958752
 GameObject:
   m_ObjectHideFlags: 0
@@ -5589,7 +4796,6 @@ GameObject:
   - component: {fileID: 7317375539954736512}
   - component: {fileID: 7317375539953933742}
   - component: {fileID: 7317375539952967662}
-  - component: {fileID: 4811450204609547865}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -5656,18 +4862,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4811450204609547865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958752}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958754
 GameObject:
   m_ObjectHideFlags: 0
@@ -5679,7 +4873,6 @@ GameObject:
   - component: {fileID: 7317375539954736514}
   - component: {fileID: 7317375539953933728}
   - component: {fileID: 7317375539952967648}
-  - component: {fileID: 7377186085256346629}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -5746,18 +4939,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7377186085256346629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958756
 GameObject:
   m_ObjectHideFlags: 0
@@ -5769,7 +4950,6 @@ GameObject:
   - component: {fileID: 7317375539954736516}
   - component: {fileID: 7317375539953933730}
   - component: {fileID: 7317375539952967650}
-  - component: {fileID: 8800522665362767079}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -5836,18 +5016,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8800522665362767079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958758
 GameObject:
   m_ObjectHideFlags: 0
@@ -5859,7 +5027,6 @@ GameObject:
   - component: {fileID: 7317375539954736518}
   - component: {fileID: 7317375539953933732}
   - component: {fileID: 7317375539952967652}
-  - component: {fileID: 4938956062793561695}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -5926,18 +5093,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4938956062793561695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958758}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958760
 GameObject:
   m_ObjectHideFlags: 0
@@ -5949,7 +5104,6 @@ GameObject:
   - component: {fileID: 7317375539954736520}
   - component: {fileID: 7317375539953933750}
   - component: {fileID: 7317375539952967670}
-  - component: {fileID: 2504513197081620122}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -6016,18 +5170,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &2504513197081620122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958762
 GameObject:
   m_ObjectHideFlags: 0
@@ -6039,7 +5181,6 @@ GameObject:
   - component: {fileID: 7317375539954736522}
   - component: {fileID: 7317375539953933736}
   - component: {fileID: 7317375539952967656}
-  - component: {fileID: 1094627239838487857}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -6106,18 +5247,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1094627239838487857
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958764
 GameObject:
   m_ObjectHideFlags: 0
@@ -6129,7 +5258,6 @@ GameObject:
   - component: {fileID: 7317375539954736524}
   - component: {fileID: 7317375539953933738}
   - component: {fileID: 7317375539952967658}
-  - component: {fileID: 8965624808102644331}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -6196,18 +5324,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8965624808102644331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958766
 GameObject:
   m_ObjectHideFlags: 0
@@ -6219,7 +5335,6 @@ GameObject:
   - component: {fileID: 7317375539954736526}
   - component: {fileID: 7317375539953933740}
   - component: {fileID: 7317375539952967660}
-  - component: {fileID: 6662733487379181036}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -6286,18 +5401,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &6662733487379181036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958768
 GameObject:
   m_ObjectHideFlags: 0
@@ -6309,7 +5412,6 @@ GameObject:
   - component: {fileID: 7317375539954736528}
   - component: {fileID: 7317375539953933758}
   - component: {fileID: 7317375539952967678}
-  - component: {fileID: 4279731025467632559}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -6376,18 +5478,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4279731025467632559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958770
 GameObject:
   m_ObjectHideFlags: 0
@@ -6399,7 +5489,6 @@ GameObject:
   - component: {fileID: 7317375539954736530}
   - component: {fileID: 7317375539953933744}
   - component: {fileID: 7317375539952967664}
-  - component: {fileID: 5652297624273715071}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -6466,18 +5555,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5652297624273715071
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958772
 GameObject:
   m_ObjectHideFlags: 0
@@ -6489,7 +5566,6 @@ GameObject:
   - component: {fileID: 7317375539954736532}
   - component: {fileID: 7317375539953933746}
   - component: {fileID: 7317375539952967666}
-  - component: {fileID: 7287213001376208005}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -6556,18 +5632,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7287213001376208005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958774
 GameObject:
   m_ObjectHideFlags: 0
@@ -6579,7 +5643,6 @@ GameObject:
   - component: {fileID: 7317375539954736534}
   - component: {fileID: 7317375539953933748}
   - component: {fileID: 7317375539952967668}
-  - component: {fileID: 4967354503465696511}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -6646,18 +5709,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4967354503465696511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958774}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958776
 GameObject:
   m_ObjectHideFlags: 0
@@ -6669,7 +5720,6 @@ GameObject:
   - component: {fileID: 7317375539954736536}
   - component: {fileID: 7317375539953933702}
   - component: {fileID: 7317375539952967622}
-  - component: {fileID: 1477442772896427334}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -6736,18 +5786,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1477442772896427334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958776}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958778
 GameObject:
   m_ObjectHideFlags: 0
@@ -6759,7 +5797,6 @@ GameObject:
   - component: {fileID: 7317375539954736538}
   - component: {fileID: 7317375539953933752}
   - component: {fileID: 7317375539952967672}
-  - component: {fileID: 3008205606253683699}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -6826,18 +5863,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &3008205606253683699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958780
 GameObject:
   m_ObjectHideFlags: 0
@@ -6849,7 +5874,6 @@ GameObject:
   - component: {fileID: 7317375539954736540}
   - component: {fileID: 7317375539953933754}
   - component: {fileID: 7317375539952967674}
-  - component: {fileID: 2303334168299538205}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -6916,18 +5940,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &2303334168299538205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958782
 GameObject:
   m_ObjectHideFlags: 0
@@ -6939,7 +5951,6 @@ GameObject:
   - component: {fileID: 7317375539954736542}
   - component: {fileID: 7317375539953933756}
   - component: {fileID: 7317375539952967676}
-  - component: {fileID: 2825812716420410335}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -7006,18 +6017,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &2825812716420410335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958816
 GameObject:
   m_ObjectHideFlags: 0
@@ -7029,7 +6028,6 @@ GameObject:
   - component: {fileID: 7317375539954736576}
   - component: {fileID: 7317375539953933806}
   - component: {fileID: 7317375539952967470}
-  - component: {fileID: 307283844452328693}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -7096,18 +6094,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &307283844452328693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958816}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958818
 GameObject:
   m_ObjectHideFlags: 0
@@ -7119,7 +6105,6 @@ GameObject:
   - component: {fileID: 7317375539954736578}
   - component: {fileID: 7317375539953933792}
   - component: {fileID: 7317375539952967456}
-  - component: {fileID: 8957341722823857781}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -7186,18 +6171,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8957341722823857781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958820
 GameObject:
   m_ObjectHideFlags: 0
@@ -7209,7 +6182,6 @@ GameObject:
   - component: {fileID: 7317375539954736580}
   - component: {fileID: 7317375539953933794}
   - component: {fileID: 7317375539952967458}
-  - component: {fileID: 6440654264449806520}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -7276,18 +6248,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &6440654264449806520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958822
 GameObject:
   m_ObjectHideFlags: 0
@@ -7299,7 +6259,6 @@ GameObject:
   - component: {fileID: 7317375539954736582}
   - component: {fileID: 7317375539953933796}
   - component: {fileID: 7317375539952967460}
-  - component: {fileID: 8867719833832937757}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -7366,18 +6325,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8867719833832937757
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958824
 GameObject:
   m_ObjectHideFlags: 0
@@ -7389,7 +6336,6 @@ GameObject:
   - component: {fileID: 7317375539954736584}
   - component: {fileID: 7317375539953933814}
   - component: {fileID: 7317375539952967478}
-  - component: {fileID: 1905442841773260092}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -7456,18 +6402,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1905442841773260092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958826
 GameObject:
   m_ObjectHideFlags: 0
@@ -7479,7 +6413,6 @@ GameObject:
   - component: {fileID: 7317375539954736586}
   - component: {fileID: 7317375539953933800}
   - component: {fileID: 7317375539952967464}
-  - component: {fileID: 5348239303369137011}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -7546,18 +6479,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5348239303369137011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958828
 GameObject:
   m_ObjectHideFlags: 0
@@ -7569,7 +6490,6 @@ GameObject:
   - component: {fileID: 7317375539954736588}
   - component: {fileID: 7317375539953933802}
   - component: {fileID: 7317375539952967466}
-  - component: {fileID: 8829359973058953005}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -7636,18 +6556,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8829359973058953005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958830
 GameObject:
   m_ObjectHideFlags: 0
@@ -7659,7 +6567,6 @@ GameObject:
   - component: {fileID: 7317375539954736590}
   - component: {fileID: 7317375539953933804}
   - component: {fileID: 7317375539952967468}
-  - component: {fileID: 1735491548305450540}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -7726,18 +6633,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1735491548305450540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958832
 GameObject:
   m_ObjectHideFlags: 0
@@ -7749,7 +6644,6 @@ GameObject:
   - component: {fileID: 7317375539954736592}
   - component: {fileID: 7317375539953933822}
   - component: {fileID: 7317375539952967486}
-  - component: {fileID: 1757388663394976996}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -7816,18 +6710,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1757388663394976996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958834
 GameObject:
   m_ObjectHideFlags: 0
@@ -7839,7 +6721,6 @@ GameObject:
   - component: {fileID: 7317375539954736594}
   - component: {fileID: 7317375539953933808}
   - component: {fileID: 7317375539952967472}
-  - component: {fileID: 4248010467143684692}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -7906,18 +6787,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4248010467143684692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958836
 GameObject:
   m_ObjectHideFlags: 0
@@ -7929,7 +6798,6 @@ GameObject:
   - component: {fileID: 7317375539954736596}
   - component: {fileID: 7317375539953933810}
   - component: {fileID: 7317375539952967474}
-  - component: {fileID: 6025835995196304541}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -7996,18 +6864,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &6025835995196304541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958838
 GameObject:
   m_ObjectHideFlags: 0
@@ -8019,7 +6875,6 @@ GameObject:
   - component: {fileID: 7317375539954736598}
   - component: {fileID: 7317375539953933812}
   - component: {fileID: 7317375539952967476}
-  - component: {fileID: 8439326237084422586}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -8086,18 +6941,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8439326237084422586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958840
 GameObject:
   m_ObjectHideFlags: 0
@@ -8107,7 +6950,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7317375539954736600}
-  - component: {fileID: 1813241154873980378}
   m_Layer: 0
   m_Name: GCF_escalier_grand_prefab
   m_TagString: Untagged
@@ -8223,23 +7065,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1813241154873980378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ebe9e6c7651d234ca8f5dd02fd1ed4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _orbitTarget: {fileID: 0}
-  _distanceRotatingCube: 10
-  _customEventAmplitude: 10
-  _customEventSpeed: 10
-  _isSpecialEvent: 0
 --- !u!1 &7317375539954958842
 GameObject:
   m_ObjectHideFlags: 0
@@ -8251,7 +7076,6 @@ GameObject:
   - component: {fileID: 7317375539954736602}
   - component: {fileID: 7317375539953933816}
   - component: {fileID: 7317375539952967480}
-  - component: {fileID: 7860692662558196761}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -8318,18 +7142,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7860692662558196761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958844
 GameObject:
   m_ObjectHideFlags: 0
@@ -8341,7 +7153,6 @@ GameObject:
   - component: {fileID: 7317375539954736604}
   - component: {fileID: 7317375539953933818}
   - component: {fileID: 7317375539952967482}
-  - component: {fileID: 9094782710429002455}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -8408,18 +7219,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &9094782710429002455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958844}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7317375539954958846
 GameObject:
   m_ObjectHideFlags: 0
@@ -8431,7 +7230,6 @@ GameObject:
   - component: {fileID: 7317375539954736606}
   - component: {fileID: 7317375539953933820}
   - component: {fileID: 7317375539952967484}
-  - component: {fileID: 532286113320447583}
   m_Layer: 0
   m_Name: GCF_Big_Stairs_Child
   m_TagString: Untagged
@@ -8498,15 +7296,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &532286113320447583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317375539954958846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa51302c231c27948960d9558e4bf6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
