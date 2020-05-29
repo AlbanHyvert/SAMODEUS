@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEditor.Graphing.Util;
 using UnityEngine;
 
 public class Portal : MonoBehaviour
@@ -27,6 +28,7 @@ public class Portal : MonoBehaviour
         if (_portalID == PortalManager.PortalID.PORTAL_VERTUMNE)
         {
             PortalManager.Instance.PortalVertumne = this;
+            gameObject.SetActive(false);
         }
         else
         {
@@ -42,6 +44,7 @@ public class Portal : MonoBehaviour
             {
                 if(PortalManager.Instance.PortalVertumne != null)
                 {
+                    PortalManager.Instance.PortalVertumne.gameObject.SetActive(true);
                     _linkedPortal = PortalManager.Instance.PortalVertumne;
                 }
 
@@ -53,28 +56,6 @@ public class Portal : MonoBehaviour
                     _linkedPortal = PortalManager.Instance.PortalGCF;
                 }
             }
-        }
-
-        if (_portalID == PortalManager.PortalID.PORTAL_GCF)
-        {
-            if (PortalManager.Instance.PortalVertumne != null)
-            {
-                if (PortalManager.Instance.PortalVertumne.LinkedPortal == null)
-                {
-                    PortalManager.Instance.PortalVertumne.LinkedPortal = this;
-                }
-            }
-        }
-        else
-        {
-            if(PortalManager.Instance.PortalGCF != null)
-            {
-                if (PortalManager.Instance.PortalGCF.LinkedPortal == null)
-                {
-                    PortalManager.Instance.PortalGCF.LinkedPortal = this;
-                }
-            }
-
         }
 
         trackedTravellers = new List<PortalTraveller>();
