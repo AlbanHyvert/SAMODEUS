@@ -47,7 +47,10 @@ public class MovingDeathCube : MonoBehaviour
 
     private void OnDestroy()
     {
-        GameLoopManager.Instance.Puzzles -= OnUpdate;
-        GameLoopManager.Instance.Pause -= IsPaused;
+        if (GameLoopManager.Instance != null)
+        {
+            GameLoopManager.Instance.Puzzles -= OnUpdate;
+            GameLoopManager.Instance.Pause -= IsPaused;
+        }
     }
 }

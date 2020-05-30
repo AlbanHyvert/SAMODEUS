@@ -77,6 +77,7 @@ public class IllusionObject : MonoBehaviour
 
     private void OnDestroy()
     {
-        GameLoopManager.Instance.Puzzles -= OnUpdate;
+        if(GameLoopManager.Instance != null)
+            GameLoopManager.Instance.Puzzles -= OnUpdate;
     }
 }

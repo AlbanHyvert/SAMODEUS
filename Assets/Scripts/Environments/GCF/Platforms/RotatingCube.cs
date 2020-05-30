@@ -19,8 +19,8 @@ public class RotatingCube : MonoBehaviour
     [SerializeField] private bool _shouldRender = true;
     [Space]
     [Header("Max and Min Amplitude")]
-    [SerializeField] private int _maxAmplitude = 30;
-    [SerializeField] private int _minAmplitude = 10;
+    [SerializeField] private float _maxAmplitude = 30;
+    [SerializeField] private float _minAmplitude = 10;
     [Header("StayIn Amplitude")]
     [SerializeField] private float _stayAmplitude = 1.5f;
     [Space]
@@ -37,7 +37,7 @@ public class RotatingCube : MonoBehaviour
     #endregion SERIALIZEFIELD
 
     private bool _overrideState = false;
-    private int _amplitude = 0;
+    private float _amplitude = 0;
     private float _speed = 0;
     private Dictionary<Plateforms_ENUM, IPlateforms> _states = null;
     private Transform _player = null;
@@ -54,7 +54,7 @@ public class RotatingCube : MonoBehaviour
     public Transform Player { get { return _player; } }
     public float MaxDistFromPlayer { get { return _maxDistanceFromPlayer; } }
     public bool ShouldRender { get { return _shouldRender; } set { _shouldRender = value; } }
-    public int Amplitude { get { return _amplitude; } }
+    public float Amplitude { get { return _amplitude; } }
     public float StayAmplitude { get { return _stayAmplitude; } }
     public float Speed { get { return _speed; } }
     public float ReturnSpeed { get { return _returnSpeed; } }
@@ -147,5 +147,11 @@ public class RotatingCube : MonoBehaviour
         {
             _overrideState = false;
         }
+    }
+
+    private void OnDestroy()
+    {
+        if(GameLoopManager.Instance != null)
+            GameLoopManager.Instance.Puzzles -= OnUpdate;
     }
 }

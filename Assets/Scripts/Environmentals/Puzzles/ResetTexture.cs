@@ -30,6 +30,5 @@ public class ResetTexture : MonoBehaviour
                 _room2Event.StartSecondEvent();
             }
         }
-
     }
 }

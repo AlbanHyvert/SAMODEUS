@@ -150,9 +150,16 @@ public class DialBoxController : MonoBehaviour
 
     public void OnDestroy()
     {
-        PlayerManager.Instance.GetPlayer -= FindPlayer;
-        NarrativeManager.Instance.OnCallNarration -= OnTriggerNarration;
-        GameLoopManager.Instance.Pause -= IsPause;
-        GameLoopManager.Instance.UI -= OnUpdate;
+        if(PlayerManager.Instance != null)
+            PlayerManager.Instance.GetPlayer -= FindPlayer;
+
+        if(NarrativeManager.Instance != null)
+            NarrativeManager.Instance.OnCallNarration -= OnTriggerNarration;
+
+        if(GameLoopManager.Instance != null)
+        {
+            GameLoopManager.Instance.Pause -= IsPause;
+            GameLoopManager.Instance.UI -= OnUpdate;
+        }
     }
 }

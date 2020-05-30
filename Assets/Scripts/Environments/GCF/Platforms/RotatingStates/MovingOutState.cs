@@ -18,10 +18,12 @@ public class MovingOutState : IPlateforms
         }
 
         _time = 0;
-        int x = Random.Range(0, 5);
-        int y = Random.Range(0, 5);
-        int z = Random.Range(0, 5);
-        _extentedPosition = new Vector3(x,y,z) * _self.Amplitude;
+        float x = Random.Range(3, 50);
+        float y = Random.Range(3, 50);
+        float z = Random.Range(3, 50);
+
+        _extentedPosition = new Vector3(_self.Amplitude + _transform.position.x, _self.Amplitude + _transform.position.y, _self.Amplitude + _transform.position.z);
+        //_extentedPosition *= _self.Amplitude;
     }
 
     public void Exit()
@@ -54,7 +56,7 @@ public class MovingOutState : IPlateforms
             }
             else
             {
-                if (DistFromExtentedPosition <= 0.2f)
+                if (DistFromExtentedPosition <= 0.01f)
                 {
                     _self.SetState(Plateforms_ENUM.ROTATING);
                 }
