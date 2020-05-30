@@ -5,6 +5,7 @@ public class Pickable : MonoBehaviour, IAction
 {
     [SerializeField] private bool _shouldBeDestroyed = false;
 
+    private Pickable _self = null;
     private bool _sceneQuitted = false;
     private Rigidbody _rigidbody = null;
     private FixedJoint _joint = null;
@@ -17,21 +18,23 @@ public class Pickable : MonoBehaviour, IAction
     {
         Application.quitting += IsQuitting;
         _rigidbody = GetComponent<Rigidbody>();
+        _self = this;
         _startPosition = transform.position;
     }
 
     void IAction.Enter(PlayerController player)
     {
-        //_rigidbody.transform.SetParent(obj);
         _rigidbody.isKinematic = false;
         _rigidbody.useGravity = false;
         _joint = player.CameraController.HandTransform.gameObject.AddComponent<FixedJoint>();
+        transform.SetParent(player.CameraController.Camera.transform);
         _joint.connectedBody = _rigidbody;
     }
 
     void IAction.Exit()
     {
         _rigidbody.useGravity = true;
+        transform.SetParent(null);
         Destroy(_joint);
     }
 
@@ -50,7 +53,7 @@ public class Pickable : MonoBehaviour, IAction
         {
             if(_sceneQuitted == false && Application.isPlaying == true)
             {
-                CheckObjStatus.Instance.RespawnDestroyedObj(this);
+                CheckObjStatus.Instance.RespawnDestroyedObj(_self);
             }
         }
     }
