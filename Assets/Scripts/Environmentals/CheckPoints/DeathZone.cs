@@ -19,6 +19,13 @@ public class DeathZone : MonoBehaviour
         {
             CheckPointsManager.Instance.RespawnPlayer(playerController.transform);
         }
+
+        Pickable pickable = other.GetComponent<Pickable>();
+
+        if(pickable != null)
+        {
+            Destroy(pickable.gameObject);
+        }
     }
 
 }

@@ -57,28 +57,36 @@ public class CreateDeathCube : MonoBehaviour
 
     private void OnUpdate()
     {
-        if(Time.time > _timer)
+        float DistFromPlayer = Vector3.Distance(transform.position, PlayerManager.Instance.Player.transform.position);
+
+        if(DistFromPlayer < 100)
         {
-            if(_i < _spawnersPosition.Length)
+            if (Time.time > _timer)
             {
-                _timer = Time.time + _timeBeforeSpawn;
-                MovingDeathCube deathCube = Instantiate(_deathCube[_i], _spawnersPosition[_i].position, Quaternion.identity);
-                deathCube.DistanceBeforeDesctruction = _distanceBeforeDesctruction[_i];
-                deathCube.Speed = _deathCubeSpeed;
-                deathCube.transform.SetParent(_spawnersPosition[_i]);
-                _i += 1;
-                _deathCubeList.Add(deathCube);
-            }
-            else
-            {
-                _i = 0;
+                if (_i < _spawnersPosition.Length)
+                {
+                    _timer = Time.time + _timeBeforeSpawn;
+                    MovingDeathCube deathCube = Instantiate(_deathCube[_i], _spawnersPosition[_i].position, Quaternion.identity);
+                    deathCube.DistanceBeforeDesctruction = _distanceBeforeDesctruction[_i];
+                    deathCube.Speed = _deathCubeSpeed;
+                    deathCube.transform.SetParent(_spawnersPosition[_i]);
+                    _i += 1;
+                    _deathCubeList.Add(deathCube);
+                }
+                else
+                {
+                    _i = 0;
+                }
             }
         }
     }
 
     private void OnDestroy()
     {
-        GameLoopManager.Instance.Puzzles -= OnUpdate;
-        GameLoopManager.Instance.Pause -= IsPaused;
+        if (GameLoopManager.Instance != null)
+        {
+            GameLoopManager.Instance.Puzzles -= OnUpdate;
+            GameLoopManager.Instance.Pause -= IsPaused;
+        }
     }
 }

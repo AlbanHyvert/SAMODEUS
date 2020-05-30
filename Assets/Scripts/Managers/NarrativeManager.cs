@@ -6,8 +6,7 @@ using UnityEngine;
 public class NarrativeManager : Singleton<NarrativeManager>
 {
     [SerializeField, Header("Voice Dials Boxs Data")] private VoiceDialBoxData[] _voiceDialBoxData = null;
-    [SerializeField] private TextAsset _neTextAsset = null;
-    [SerializeField] private TextAsset _gcfTextAsset = null;
+    [SerializeField] private TextAsset _dialTextAsset = null;
     [SerializeField] private GameManager.Language _choosenLanguage = GameManager.Language.FRENCH;
 
     private DialBoxController _dialBoxController = null;
@@ -57,7 +56,7 @@ public class NarrativeManager : Singleton<NarrativeManager>
         _textDialBoxs = new Dictionary<string, TextDialBoxData>();
         _voiceDialBoxs = new Dictionary<string, VoiceDialBoxData>();
 
-        string[] dataNEText = _neTextAsset.text.Split(new char[] { '\n' });
+        string[] dataNEText = _dialTextAsset.text.Split(new char[] { '\n' });
 
         for (int i = 1; i < dataNEText.Length -1; i++)
         {
