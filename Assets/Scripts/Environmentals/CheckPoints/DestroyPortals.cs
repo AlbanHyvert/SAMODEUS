@@ -10,20 +10,18 @@ public class DestroyPortals : MonoBehaviour
     [SerializeField] private float _speedDisolve = 1;
     [SerializeField] private float _maximalTimerValue = 10;
 
-    private List<Portal> _portals = null;
-    private List<PortalNoScreen> _portalsNoScreen = null;
+    private List<GameObject> _portals = null;
     private List<MeshRenderer> _plane = null;
     private bool _isActive = false;
     private float _timer = 0f;
 
     private void Start()
     {
-        _portals = new List<Portal>();
-        _portalsNoScreen = new List<PortalNoScreen>();
+        _portals = new List<GameObject>();
         _plane = new List<MeshRenderer>();
 
-        _portals.Add(PortalManager.Instance.PortalVertumne);
-        _portals.Add(PortalManager.Instance.PortalVertumne.LinkedPortal);
+        _portals.Add(PortalManager.Instance.PortalVertumne.gameObject);
+        _portals.Add(PortalManager.Instance.PortalGCF.gameObject);
         _plane.Add(PortalManager.Instance.PortalVertumne.MeshScreen);
         _plane.Add(PortalManager.Instance.PortalGCF.MeshScreen);
 
@@ -45,15 +43,7 @@ public class DestroyPortals : MonoBehaviour
             {
                 for (int i = 0; i < _portals.Count; i++)
                 {
-                    Object.Destroy(_portals[i].gameObject, 1);
-                }
-            }
-
-            if (_portalsNoScreen != null)
-            {
-                for (int i = 0; i < _portalsNoScreen.Count; i++)
-                {
-                    Object.Destroy(_portalsNoScreen[i].gameObject, 1);
+                    Destroy(_portals[i].gameObject, 1);
                 }
             }
 

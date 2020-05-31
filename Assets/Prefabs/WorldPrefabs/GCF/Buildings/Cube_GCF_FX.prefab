@@ -4893,6 +4893,7 @@ GameObject:
   - component: {fileID: 2490809576230285435}
   - component: {fileID: 2490809576231579739}
   - component: {fileID: 2490809576232710811}
+  - component: {fileID: 6316528222187347815}
   m_Layer: 0
   m_Name: Cube_GCF_FX
   m_TagString: Untagged
@@ -4962,6 +4963,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &6316528222187347815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2490809576230710363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 074008a8b9514564092af43f72a55166, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _range: 100
 --- !u!1 &7813362353214778029
 GameObject:
   m_ObjectHideFlags: 0
