@@ -6,14 +6,18 @@ public class StayState : IPlateforms
     private Transform _target = null;
     private Transform _transform = null;
     private float _timePass = 0;
+    private MeshRenderer _renderer = null;
 
     public void Enter()
     {
         // FX
+        _renderer = _transform.GetComponent<MeshRenderer>();
+
+        _renderer.enabled = true;
+
         if (_self.StayMaterial)
         {
-            MeshRenderer renderer = _transform.GetComponent<MeshRenderer>();
-            renderer.material = _self.StayMaterial;
+            _renderer.material = _self.StayMaterial;
         }
         _timePass = 0;
     }

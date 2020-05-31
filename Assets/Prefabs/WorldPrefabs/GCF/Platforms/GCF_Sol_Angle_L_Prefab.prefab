@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6536565317476047897}
   - component: {fileID: 6536565317477146201}
   - component: {fileID: 6792072896942789850}
-  - component: {fileID: 1739562928}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -107,18 +106,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399441
 GameObject:
   m_ObjectHideFlags: 0
@@ -131,7 +118,6 @@ GameObject:
   - component: {fileID: 6536565317476047893}
   - component: {fileID: 6536565317477146197}
   - component: {fileID: 3527763387339358446}
-  - component: {fileID: 1739562934}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -226,18 +212,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562934
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399443
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,7 +224,6 @@ GameObject:
   - component: {fileID: 6536565317476047895}
   - component: {fileID: 6536565317477146199}
   - component: {fileID: 6968327441326982073}
-  - component: {fileID: 1739562933}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -336,7 +309,7 @@ MonoBehaviour:
   _currentState: 3
   _target: {fileID: 0}
   _maxDistanceFromPlayer: 20
-  _shouldRender: 1
+  _shouldRender: 0
   _maxAmplitude: 30
   _minAmplitude: 10
   _stayAmplitude: 1.5
@@ -345,18 +318,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399443}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399445
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,7 +330,6 @@ GameObject:
   - component: {fileID: 6536565317476047913}
   - component: {fileID: 6536565317477146217}
   - component: {fileID: 1500701201185994001}
-  - component: {fileID: 1739562936}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -455,7 +415,7 @@ MonoBehaviour:
   _currentState: 3
   _target: {fileID: 0}
   _maxDistanceFromPlayer: 20
-  _shouldRender: 1
+  _shouldRender: 0
   _maxAmplitude: 30
   _minAmplitude: 10
   _stayAmplitude: 1.5
@@ -464,18 +424,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399447
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,7 +436,6 @@ GameObject:
   - component: {fileID: 6536565317476047915}
   - component: {fileID: 6536565317477146219}
   - component: {fileID: 119349814886422275}
-  - component: {fileID: 1739562935}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -583,18 +530,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399449
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,7 +542,6 @@ GameObject:
   - component: {fileID: 6536565317476047901}
   - component: {fileID: 6536565317477146205}
   - component: {fileID: 4035091315871566536}
-  - component: {fileID: 1739562930}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -702,18 +636,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399451
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,7 +648,6 @@ GameObject:
   - component: {fileID: 6536565317476047903}
   - component: {fileID: 6536565317477146207}
   - component: {fileID: 8402743555919409202}
-  - component: {fileID: 1739562929}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -812,7 +733,7 @@ MonoBehaviour:
   _currentState: 3
   _target: {fileID: 0}
   _maxDistanceFromPlayer: 20
-  _shouldRender: 1
+  _shouldRender: 0
   _maxAmplitude: 30
   _minAmplitude: 10
   _stayAmplitude: 1.5
@@ -821,18 +742,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399453
 GameObject:
   m_ObjectHideFlags: 0
@@ -845,7 +754,6 @@ GameObject:
   - component: {fileID: 6536565317476047889}
   - component: {fileID: 6536565317477146193}
   - component: {fileID: 4871468983849565462}
-  - component: {fileID: 1739562932}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -940,18 +848,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399455
 GameObject:
   m_ObjectHideFlags: 0
@@ -964,7 +860,6 @@ GameObject:
   - component: {fileID: 6536565317476047891}
   - component: {fileID: 6536565317477146195}
   - component: {fileID: 5737496865415910977}
-  - component: {fileID: 1739562931}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -1050,7 +945,7 @@ MonoBehaviour:
   _currentState: 3
   _target: {fileID: 0}
   _maxDistanceFromPlayer: 20
-  _shouldRender: 1
+  _shouldRender: 0
   _maxAmplitude: 30
   _minAmplitude: 10
   _stayAmplitude: 1.5
@@ -1059,18 +954,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399457
 GameObject:
   m_ObjectHideFlags: 0
@@ -1083,7 +966,6 @@ GameObject:
   - component: {fileID: 6536565317476047909}
   - component: {fileID: 6536565317477146213}
   - component: {fileID: 1186887690020790574}
-  - component: {fileID: 1739562903}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -1169,7 +1051,7 @@ MonoBehaviour:
   _currentState: 3
   _target: {fileID: 0}
   _maxDistanceFromPlayer: 20
-  _shouldRender: 1
+  _shouldRender: 0
   _maxAmplitude: 30
   _minAmplitude: 10
   _stayAmplitude: 1.5
@@ -1178,18 +1060,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399459
 GameObject:
   m_ObjectHideFlags: 0
@@ -1202,7 +1072,6 @@ GameObject:
   - component: {fileID: 6536565317476047911}
   - component: {fileID: 6536565317477146215}
   - component: {fileID: 2849662990246877625}
-  - component: {fileID: 1739562941}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -1288,7 +1157,7 @@ MonoBehaviour:
   _currentState: 3
   _target: {fileID: 0}
   _maxDistanceFromPlayer: 20
-  _shouldRender: 1
+  _shouldRender: 0
   _maxAmplitude: 30
   _minAmplitude: 10
   _stayAmplitude: 1.5
@@ -1297,18 +1166,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399461
 GameObject:
   m_ObjectHideFlags: 0
@@ -1321,7 +1178,6 @@ GameObject:
   - component: {fileID: 6536565317476047929}
   - component: {fileID: 6536565317477146233}
   - component: {fileID: 8343404509964390880}
-  - component: {fileID: 1739562905}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -1407,7 +1263,7 @@ MonoBehaviour:
   _currentState: 3
   _target: {fileID: 0}
   _maxDistanceFromPlayer: 20
-  _shouldRender: 1
+  _shouldRender: 0
   _maxAmplitude: 30
   _minAmplitude: 10
   _stayAmplitude: 1.5
@@ -1416,18 +1272,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562905
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399463
 GameObject:
   m_ObjectHideFlags: 0
@@ -1440,7 +1284,6 @@ GameObject:
   - component: {fileID: 6536565317476047931}
   - component: {fileID: 6536565317477146235}
   - component: {fileID: 8223263390653389763}
-  - component: {fileID: 1739562904}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -1526,7 +1369,7 @@ MonoBehaviour:
   _currentState: 3
   _target: {fileID: 0}
   _maxDistanceFromPlayer: 20
-  _shouldRender: 1
+  _shouldRender: 0
   _maxAmplitude: 30
   _minAmplitude: 10
   _stayAmplitude: 1.5
@@ -1535,18 +1378,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399465
 GameObject:
   m_ObjectHideFlags: 0
@@ -1559,7 +1390,6 @@ GameObject:
   - component: {fileID: 6536565317476047917}
   - component: {fileID: 6536565317477146221}
   - component: {fileID: 4660417414679932101}
-  - component: {fileID: 1739562938}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -1654,18 +1484,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562938
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399467
 GameObject:
   m_ObjectHideFlags: 0
@@ -1678,7 +1496,6 @@ GameObject:
   - component: {fileID: 6536565317476047919}
   - component: {fileID: 6536565317477146223}
   - component: {fileID: 18973315419902514}
-  - component: {fileID: 1739562937}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -1764,7 +1581,7 @@ MonoBehaviour:
   _currentState: 3
   _target: {fileID: 0}
   _maxDistanceFromPlayer: 20
-  _shouldRender: 1
+  _shouldRender: 0
   _maxAmplitude: 30
   _minAmplitude: 10
   _stayAmplitude: 1.5
@@ -1773,18 +1590,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399469
 GameObject:
   m_ObjectHideFlags: 0
@@ -1797,7 +1602,6 @@ GameObject:
   - component: {fileID: 6536565317476047905}
   - component: {fileID: 6536565317477146209}
   - component: {fileID: 4948060565755459722}
-  - component: {fileID: 1739562940}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -1883,7 +1687,7 @@ MonoBehaviour:
   _currentState: 3
   _target: {fileID: 0}
   _maxDistanceFromPlayer: 20
-  _shouldRender: 1
+  _shouldRender: 0
   _maxAmplitude: 30
   _minAmplitude: 10
   _stayAmplitude: 1.5
@@ -1892,18 +1696,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399471
 GameObject:
   m_ObjectHideFlags: 0
@@ -1916,7 +1708,6 @@ GameObject:
   - component: {fileID: 6536565317476047907}
   - component: {fileID: 6536565317477146211}
   - component: {fileID: 2015393098599509071}
-  - component: {fileID: 1739562939}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -2002,7 +1793,7 @@ MonoBehaviour:
   _currentState: 3
   _target: {fileID: 0}
   _maxDistanceFromPlayer: 20
-  _shouldRender: 1
+  _shouldRender: 0
   _maxAmplitude: 30
   _minAmplitude: 10
   _stayAmplitude: 1.5
@@ -2011,18 +1802,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399473
 GameObject:
   m_ObjectHideFlags: 0
@@ -2035,7 +1814,6 @@ GameObject:
   - component: {fileID: 6536565317476047925}
   - component: {fileID: 6536565317477146229}
   - component: {fileID: 3150427268456573661}
-  - component: {fileID: 1739562911}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -2130,18 +1908,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399473}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399475
 GameObject:
   m_ObjectHideFlags: 0
@@ -2154,7 +1920,6 @@ GameObject:
   - component: {fileID: 6536565317476047927}
   - component: {fileID: 6536565317477146231}
   - component: {fileID: 284521878245256236}
-  - component: {fileID: 1739562910}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -2240,7 +2005,7 @@ MonoBehaviour:
   _currentState: 3
   _target: {fileID: 0}
   _maxDistanceFromPlayer: 20
-  _shouldRender: 1
+  _shouldRender: 0
   _maxAmplitude: 30
   _minAmplitude: 10
   _stayAmplitude: 1.5
@@ -2249,18 +2014,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399477
 GameObject:
   m_ObjectHideFlags: 0
@@ -2273,7 +2026,6 @@ GameObject:
   - component: {fileID: 6536565317476047945}
   - component: {fileID: 6536565317477146249}
   - component: {fileID: 8704851963963427091}
-  - component: {fileID: 1739562913}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -2359,7 +2111,7 @@ MonoBehaviour:
   _currentState: 3
   _target: {fileID: 0}
   _maxDistanceFromPlayer: 20
-  _shouldRender: 1
+  _shouldRender: 0
   _maxAmplitude: 30
   _minAmplitude: 10
   _stayAmplitude: 1.5
@@ -2368,18 +2120,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399477}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399479
 GameObject:
   m_ObjectHideFlags: 0
@@ -2392,7 +2132,6 @@ GameObject:
   - component: {fileID: 6536565317476047947}
   - component: {fileID: 6536565317477146251}
   - component: {fileID: 655057673446145985}
-  - component: {fileID: 1739562912}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -2478,7 +2217,7 @@ MonoBehaviour:
   _currentState: 3
   _target: {fileID: 0}
   _maxDistanceFromPlayer: 20
-  _shouldRender: 1
+  _shouldRender: 0
   _maxAmplitude: 30
   _minAmplitude: 10
   _stayAmplitude: 1.5
@@ -2487,18 +2226,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399481
 GameObject:
   m_ObjectHideFlags: 0
@@ -2511,7 +2238,6 @@ GameObject:
   - component: {fileID: 6536565317476047933}
   - component: {fileID: 6536565317477146237}
   - component: {fileID: 6726891174952828916}
-  - component: {fileID: 1739562907}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -2606,18 +2332,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399481}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399483
 GameObject:
   m_ObjectHideFlags: 0
@@ -2630,7 +2344,6 @@ GameObject:
   - component: {fileID: 6536565317476047935}
   - component: {fileID: 6536565317477146239}
   - component: {fileID: 4333564517748631299}
-  - component: {fileID: 1739562906}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -2716,7 +2429,7 @@ MonoBehaviour:
   _currentState: 3
   _target: {fileID: 0}
   _maxDistanceFromPlayer: 20
-  _shouldRender: 1
+  _shouldRender: 0
   _maxAmplitude: 30
   _minAmplitude: 10
   _stayAmplitude: 1.5
@@ -2725,18 +2438,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399485
 GameObject:
   m_ObjectHideFlags: 0
@@ -2749,7 +2450,6 @@ GameObject:
   - component: {fileID: 6536565317476047921}
   - component: {fileID: 6536565317477146225}
   - component: {fileID: 7237920531774571569}
-  - component: {fileID: 1739562909}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -2844,18 +2544,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399487
 GameObject:
   m_ObjectHideFlags: 0
@@ -2868,7 +2556,6 @@ GameObject:
   - component: {fileID: 6536565317476047923}
   - component: {fileID: 6536565317477146227}
   - component: {fileID: 3859753085187232169}
-  - component: {fileID: 1739562908}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -2963,18 +2650,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399489
 GameObject:
   m_ObjectHideFlags: 0
@@ -2987,7 +2662,6 @@ GameObject:
   - component: {fileID: 6536565317476047941}
   - component: {fileID: 6536565317477146245}
   - component: {fileID: 4694635350280099145}
-  - component: {fileID: 1739562919}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -3073,7 +2747,7 @@ MonoBehaviour:
   _currentState: 3
   _target: {fileID: 0}
   _maxDistanceFromPlayer: 20
-  _shouldRender: 1
+  _shouldRender: 0
   _maxAmplitude: 30
   _minAmplitude: 10
   _stayAmplitude: 1.5
@@ -3082,18 +2756,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399491
 GameObject:
   m_ObjectHideFlags: 0
@@ -3106,7 +2768,6 @@ GameObject:
   - component: {fileID: 6536565317476047943}
   - component: {fileID: 6536565317477146247}
   - component: {fileID: 2629338644221137175}
-  - component: {fileID: 1739562918}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -3201,18 +2862,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399491}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399493
 GameObject:
   m_ObjectHideFlags: 0
@@ -3225,7 +2874,6 @@ GameObject:
   - component: {fileID: 6536565317476047961}
   - component: {fileID: 6536565317477146265}
   - component: {fileID: 4346398148602767152}
-  - component: {fileID: 1739562921}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -3320,18 +2968,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399495
 GameObject:
   m_ObjectHideFlags: 0
@@ -3344,7 +2980,6 @@ GameObject:
   - component: {fileID: 6536565317476047963}
   - component: {fileID: 6536565317477146267}
   - component: {fileID: 666474777587207396}
-  - component: {fileID: 1739562920}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -3430,7 +3065,7 @@ MonoBehaviour:
   _currentState: 3
   _target: {fileID: 0}
   _maxDistanceFromPlayer: 20
-  _shouldRender: 1
+  _shouldRender: 0
   _maxAmplitude: 30
   _minAmplitude: 10
   _stayAmplitude: 1.5
@@ -3439,18 +3074,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399497
 GameObject:
   m_ObjectHideFlags: 0
@@ -3463,7 +3086,6 @@ GameObject:
   - component: {fileID: 6536565317476047949}
   - component: {fileID: 6536565317477146253}
   - component: {fileID: 7395052718951748420}
-  - component: {fileID: 1739562915}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -3558,18 +3180,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399497}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399499
 GameObject:
   m_ObjectHideFlags: 0
@@ -3582,7 +3192,6 @@ GameObject:
   - component: {fileID: 6536565317476047951}
   - component: {fileID: 6536565317477146255}
   - component: {fileID: 6313511306049998856}
-  - component: {fileID: 1739562914}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -3668,7 +3277,7 @@ MonoBehaviour:
   _currentState: 3
   _target: {fileID: 0}
   _maxDistanceFromPlayer: 20
-  _shouldRender: 1
+  _shouldRender: 0
   _maxAmplitude: 30
   _minAmplitude: 10
   _stayAmplitude: 1.5
@@ -3677,18 +3286,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399501
 GameObject:
   m_ObjectHideFlags: 0
@@ -3701,7 +3298,6 @@ GameObject:
   - component: {fileID: 6536565317476047937}
   - component: {fileID: 6536565317477146241}
   - component: {fileID: 2260742056705499091}
-  - component: {fileID: 1739562917}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -3787,7 +3383,7 @@ MonoBehaviour:
   _currentState: 3
   _target: {fileID: 0}
   _maxDistanceFromPlayer: 20
-  _shouldRender: 1
+  _shouldRender: 0
   _maxAmplitude: 30
   _minAmplitude: 10
   _stayAmplitude: 1.5
@@ -3796,18 +3392,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399503
 GameObject:
   m_ObjectHideFlags: 0
@@ -3820,7 +3404,6 @@ GameObject:
   - component: {fileID: 6536565317476047939}
   - component: {fileID: 6536565317477146243}
   - component: {fileID: 8955515456668130795}
-  - component: {fileID: 1739562916}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -3906,7 +3489,7 @@ MonoBehaviour:
   _currentState: 3
   _target: {fileID: 0}
   _maxDistanceFromPlayer: 20
-  _shouldRender: 1
+  _shouldRender: 0
   _maxAmplitude: 30
   _minAmplitude: 10
   _stayAmplitude: 1.5
@@ -3915,18 +3498,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399503}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399505
 GameObject:
   m_ObjectHideFlags: 0
@@ -3939,7 +3510,6 @@ GameObject:
   - component: {fileID: 6536565317476047957}
   - component: {fileID: 6536565317477146261}
   - component: {fileID: 5047670712343774167}
-  - component: {fileID: 1739562927}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -4025,7 +3595,7 @@ MonoBehaviour:
   _currentState: 3
   _target: {fileID: 0}
   _maxDistanceFromPlayer: 20
-  _shouldRender: 1
+  _shouldRender: 0
   _maxAmplitude: 30
   _minAmplitude: 10
   _stayAmplitude: 1.5
@@ -4034,18 +3604,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399507
 GameObject:
   m_ObjectHideFlags: 0
@@ -4058,7 +3616,6 @@ GameObject:
   - component: {fileID: 6536565317476047959}
   - component: {fileID: 6536565317477146263}
   - component: {fileID: 2609840662769035160}
-  - component: {fileID: 1739562926}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -4144,7 +3701,7 @@ MonoBehaviour:
   _currentState: 3
   _target: {fileID: 0}
   _maxDistanceFromPlayer: 20
-  _shouldRender: 1
+  _shouldRender: 0
   _maxAmplitude: 30
   _minAmplitude: 10
   _stayAmplitude: 1.5
@@ -4153,18 +3710,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399509
 GameObject:
   m_ObjectHideFlags: 0
@@ -4260,7 +3805,6 @@ GameObject:
   - component: {fileID: 6536565317476047965}
   - component: {fileID: 6536565317477146269}
   - component: {fileID: 8025817087605521922}
-  - component: {fileID: 1739562923}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -4346,7 +3890,7 @@ MonoBehaviour:
   _currentState: 3
   _target: {fileID: 0}
   _maxDistanceFromPlayer: 20
-  _shouldRender: 1
+  _shouldRender: 0
   _maxAmplitude: 30
   _minAmplitude: 10
   _stayAmplitude: 1.5
@@ -4355,18 +3899,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399513}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399515
 GameObject:
   m_ObjectHideFlags: 0
@@ -4379,7 +3911,6 @@ GameObject:
   - component: {fileID: 6536565317476047967}
   - component: {fileID: 6536565317477146271}
   - component: {fileID: 8903100933431629442}
-  - component: {fileID: 1739562922}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -4465,7 +3996,7 @@ MonoBehaviour:
   _currentState: 3
   _target: {fileID: 0}
   _maxDistanceFromPlayer: 20
-  _shouldRender: 1
+  _shouldRender: 0
   _maxAmplitude: 30
   _minAmplitude: 10
   _stayAmplitude: 1.5
@@ -4474,18 +4005,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399517
 GameObject:
   m_ObjectHideFlags: 0
@@ -4498,7 +4017,6 @@ GameObject:
   - component: {fileID: 6536565317476047953}
   - component: {fileID: 6536565317477146257}
   - component: {fileID: 8787723023080770837}
-  - component: {fileID: 1739562925}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -4584,7 +4102,7 @@ MonoBehaviour:
   _currentState: 3
   _target: {fileID: 0}
   _maxDistanceFromPlayer: 20
-  _shouldRender: 1
+  _shouldRender: 0
   _maxAmplitude: 30
   _minAmplitude: 10
   _stayAmplitude: 1.5
@@ -4593,18 +4111,6 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6536565317479399519
 GameObject:
   m_ObjectHideFlags: 0
@@ -4617,7 +4123,6 @@ GameObject:
   - component: {fileID: 6536565317476047955}
   - component: {fileID: 6536565317477146259}
   - component: {fileID: 5998317172891515752}
-  - component: {fileID: 1739562924}
   m_Layer: 0
   m_Name: GCF_Sol_Angle_L_Child
   m_TagString: Untagged
@@ -4712,15 +4217,3 @@ MonoBehaviour:
   _returnSpeed: 20
   _staySpeed: 2
   _isSpecialEvent: 0
---- !u!114 &1739562924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536565317479399519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc38b211518ce38419f076357174215e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

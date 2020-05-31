@@ -43,6 +43,10 @@ public class RotatingCube : MonoBehaviour
     private Transform _player = null;
     private Vector3 _startPosition = Vector3.zero;
     private Quaternion _startRotation = Quaternion.identity;
+    private MeshRenderer _renderer = null;
+    private bool _tempRendererEnabled = false;
+    private bool changeRendererValue = false;
+    private Transform _portal = null;
 
     #region PROPERTIES
     public bool IsSpecialEvent { get { return _isSpecialEvent; } }
@@ -53,7 +57,7 @@ public class RotatingCube : MonoBehaviour
     public Material RotatingMaterial { get { return _rotatingMaterial; } }
     public Transform Player { get { return _player; } }
     public float MaxDistFromPlayer { get { return _maxDistanceFromPlayer; } }
-    public bool ShouldRender { get { return _shouldRender; } set { _shouldRender = value; } }
+    public bool ShouldRender { get { return _shouldRender; } }
     public float Amplitude { get { return _amplitude; } }
     public float StayAmplitude { get { return _stayAmplitude; } }
     public float Speed { get { return _speed; } }
@@ -84,16 +88,14 @@ public class RotatingCube : MonoBehaviour
 
     private void Start()
     {
-        if(_shouldRender == false)
-        {
-            MeshRenderer renderer = GetComponent<MeshRenderer>();
-            renderer.enabled = false;
-        }
-
         _startPosition = transform.position;
         _startRotation = transform.rotation;
 
-        if(_target == null)
+        _renderer = GetComponent<MeshRenderer>();
+
+        _tempRendererEnabled = _renderer.enabled;
+
+        if (_target == null)
         {
             Transform target;
             target = transform;
@@ -107,27 +109,65 @@ public class RotatingCube : MonoBehaviour
 
         _player = PlayerManager.Instance.Player.transform;
 
+        if(PortalManager.Instance.PortalGCF != null)
+        {
+            _portal = null;
+            _portal = PortalManager.Instance.PortalGCF.transform;
+        }
+
         GameLoopManager.Instance.Puzzles += OnUpdate;
+    }
+
+    private void OnTick()
+    {
+        _states[_currentState].Tick();
     }
 
     private void OnUpdate()
     {
         float DistFromPlayer = Vector3.Distance(_player.position, _startPosition);
-        MeshRenderer renderer = GetComponent<MeshRenderer>();
 
-        if(DistFromPlayer <= _maxDistanceFromPlayer)
+        if(_portal != null)
         {
-            renderer.enabled = true;
+            float DistBetweenPlayerAndPortal = Vector3.Distance(_startPosition, _portal.position);
+
+            if (DistBetweenPlayerAndPortal >= 100)
+            {
+                if (changeRendererValue == false)
+                {
+                    _renderer.enabled = false;
+                    changeRendererValue = true;
+                }
+            }
         }
         else
         {
-            if(renderer.enabled != _shouldRender)
+            if (DistFromPlayer >= 100)
             {
-                renderer.enabled = _shouldRender;
+                if (changeRendererValue == false)
+                {
+                    _renderer.enabled = false;
+                    changeRendererValue = true;
+                }
+            }
+            else
+            {
+                if (changeRendererValue == true)
+                {
+                    if (_currentState == Plateforms_ENUM.STAY || _currentState == Plateforms_ENUM.MOVINGOUT)
+                    {
+                        _renderer.enabled = _tempRendererEnabled;
+                    }
+                    else
+                    {
+                        _renderer.enabled = _shouldRender;
+                    }
+
+                    changeRendererValue = false;
+                }
+                OnTick();
             }
         }
-
-        _states[_currentState].Tick();
     }
 
     public void SetState(Plateforms_ENUM nextState)

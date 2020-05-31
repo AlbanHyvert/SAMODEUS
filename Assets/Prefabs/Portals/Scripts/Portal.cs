@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using UnityEditor.Graphing.Util;
 using UnityEngine;
 
 public class Portal : MonoBehaviour
@@ -30,7 +29,7 @@ public class Portal : MonoBehaviour
             PortalManager.Instance.PortalVertumne = this;
             gameObject.SetActive(false);
         }
-        else
+        else if( _portalID == PortalManager.PortalID.PORTAL_GCF)
         {
             PortalManager.Instance.PortalGCF = this;
         }
@@ -49,7 +48,7 @@ public class Portal : MonoBehaviour
                 }
 
             }
-            else
+            else if(_portalID == PortalManager.PortalID.PORTAL_VERTUMNE)
             {
                 if(PortalManager.Instance.PortalGCF != null)
                 {

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5649797947699319419}
   - component: {fileID: 5649797947699319418}
   - component: {fileID: 5649797947699319397}
+  - component: {fileID: 4381876028610292106}
   m_Layer: 0
   m_Name: Faicseau
   m_TagString: Untagged
@@ -4718,6 +4719,19 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &4381876028610292106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5649797947699319396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 074008a8b9514564092af43f72a55166, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _range: 100
 --- !u!1 &5649797947713182721
 GameObject:
   m_ObjectHideFlags: 0
