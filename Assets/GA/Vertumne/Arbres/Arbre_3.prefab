@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7415657648749004977}
   - component: {fileID: 7415657648733363217}
+  - component: {fileID: 1807350723835767941}
   m_Layer: 0
   m_Name: Arbre_3
   m_TagString: Untagged
@@ -49,15 +50,15 @@ LODGroup:
   m_AnimateCrossFading: 1
   m_LastLODIsBillboard: 1
   m_LODs:
-  - screenRelativeHeight: 0.5
+  - screenRelativeHeight: 0.30620813
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 7415657648750774865}
-  - screenRelativeHeight: 0.25
+  - screenRelativeHeight: 0.152251
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 7415657648750774867}
-  - screenRelativeHeight: 0.125
+  - screenRelativeHeight: 0.06247275
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 7415657648750774869}
@@ -66,6 +67,20 @@ LODGroup:
     renderers:
     - renderer: {fileID: 7415657648750774871}
   m_Enabled: 1
+--- !u!136 &1807350723835767941
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7415657648748516497}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.2
+  m_Height: 12.7
+  m_Direction: 1
+  m_Center: {x: 0, y: 5.44, z: 0}
 --- !u!1 &7415657648748516499
 GameObject:
   m_ObjectHideFlags: 0
