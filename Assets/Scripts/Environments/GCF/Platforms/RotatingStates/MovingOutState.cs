@@ -7,28 +7,30 @@ public class MovingOutState : IPlateforms
     private Transform _transform = null;
     private Vector3 _extentedPosition = Vector3.zero;
     private float _time = 0;
+    private Renderer _renderer = null;
 
     public void Enter()
     {
         //FX
-        if(_self.MovingOutMaterial)
-        {
-            MeshRenderer renderer = _transform.GetComponent<MeshRenderer>();
-            renderer.material = _self.MovingOutMaterial;
-        }
+        _renderer = _transform.GetComponent<Renderer>();
 
+        if (_self.MovingOutMaterial)
+        {
+            _renderer.material = _self.MovingOutMaterial;
+        }
         _time = 0;
-        float x = Random.Range(3, 50);
-        float y = Random.Range(3, 50);
-        float z = Random.Range(3, 50);
 
         _extentedPosition = new Vector3(_self.Amplitude + _transform.position.x, _self.Amplitude + _transform.position.y, _self.Amplitude + _transform.position.z);
-        //_extentedPosition *= _self.Amplitude;
     }
 
     public void Exit()
     {
         //FX and Sound
+        if (_self.ShouldRender == false)
+        {
+            _renderer.enabled = false;
+        }
+
         _time = 0;
     }
 
