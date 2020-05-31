@@ -12,7 +12,9 @@ public class CheckObjStatus : Singleton<CheckObjStatus>
 
     public void RespawnDestroyedObj(Pickable pickable)
     {
-        Pickable obj = Instantiate(pickable, pickable.StartPos, pickable.transform.rotation);
+        Pickable newPickable = pickable;
+
+        Pickable obj = Instantiate(newPickable, pickable.StartPos, newPickable.transform.rotation);
 
         obj.gameObject.SetActive(true);
         obj.enabled = true;
