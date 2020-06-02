@@ -24,19 +24,13 @@ public class DialBoxController : MonoBehaviour
 
         NarrativeManager.Instance.DialBoxController = this;
         _text.text = string.Empty;
-        PlayerManager.Instance.GetPlayer += FindPlayer;
+
+        _source = PlayerManager.Instance.Player.DialsAudioSource;
+
         NarrativeManager.Instance.OnCallNarration += OnTriggerNarration;
         GameLoopManager.Instance.Pause += IsPause;
         GameLoopManager.Instance.UI += OnUpdate;
-    }
 
-    private void FindPlayer(PlayerController player)
-    {
-        if(player != null)
-        {
-            _source = player.DialsAudioSource;
-            player.transform.localPosition = PlayerManager.Instance.PlayerStartingPosition.localPosition;
-        }
     }
 
     private void IsPause(bool pause)
@@ -150,9 +144,6 @@ public class DialBoxController : MonoBehaviour
 
     public void OnDestroy()
     {
-        if(PlayerManager.Instance != null)
-            PlayerManager.Instance.GetPlayer -= FindPlayer;
-
         if(NarrativeManager.Instance != null)
             NarrativeManager.Instance.OnCallNarration -= OnTriggerNarration;
 
