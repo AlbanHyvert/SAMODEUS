@@ -5,6 +5,7 @@ public class DialBoxTrigger : MonoBehaviour
 {
     [SerializeField ,Header("Text Boxs ID")] private string[] _textBoxID = null;
     [SerializeField ,Header("Voice Boxs ID")] private string[] _voiceBoxID = null;
+    [SerializeField] private GameObject[] _activateNextObj = null;
     [SerializeField] private bool _shouldStopPlayer = false;
     [SerializeField] private float _stopPlayerDuration = 5;
 
@@ -52,6 +53,17 @@ public class DialBoxTrigger : MonoBehaviour
                 GameLoopManager.Instance.Puzzles += OnUpdate;
                 _stopPlayer = true;
                 _timer = Time.time + _stopPlayerDuration;
+            }
+
+            if(_activateNextObj != null)
+            {
+                for (int i = 0; i < _activateNextObj.Length; i++)
+                {
+                    if(_activateNextObj[i] != null)
+                    {
+                        _activateNextObj[i].SetActive(true);
+                    }
+                }
             }
         }
     }
