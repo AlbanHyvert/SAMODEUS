@@ -56,6 +56,8 @@ public class NarrativeManager : Singleton<NarrativeManager>
         _textDialBoxs = new Dictionary<string, TextDialBoxData>();
         _voiceDialBoxs = new Dictionary<string, VoiceDialBoxData>();
 
+        GameLoopManager.Instance.Managers += OnUpdate;
+
         string[] dataNEText = _dialTextAsset.text.Split(new char[] { '\n' });
 
         for (int i = 1; i < dataNEText.Length -1; i++)
@@ -85,6 +87,18 @@ public class NarrativeManager : Singleton<NarrativeManager>
         for (int i = 0; i < _voiceDialBoxData.Length; i++)
         {
             _voiceDialBoxs.Add(_voiceDialBoxData[i].ID, _voiceDialBoxData[i]);
+        }
+    }
+
+    private void OnUpdate()
+    {
+        if(_dialBoxController != null && _dialBoxController.AudioSource == null)
+        {
+            if (PlayerManager.Instance.Player != null)
+            {
+                _dialBoxController.AudioSource = PlayerManager.Instance.Player.DialsAudioSource;
+                GameLoopManager.Instance.Managers -= OnUpdate;
+            }
         }
     }
 

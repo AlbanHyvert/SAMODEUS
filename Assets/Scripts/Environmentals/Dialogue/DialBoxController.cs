@@ -17,6 +17,8 @@ public class DialBoxController : MonoBehaviour
 
     public bool TimerIsStarted { get { return _timerIsStarted; } }
 
+    public AudioSource AudioSource { get { return _source; } set { _source = value; } }
+
     private void Start()
     {
         if (_buttonsToPressText != null)
@@ -25,7 +27,8 @@ public class DialBoxController : MonoBehaviour
         NarrativeManager.Instance.DialBoxController = this;
         _text.text = string.Empty;
 
-        _source = PlayerManager.Instance.Player.DialsAudioSource;
+        if(PlayerManager.Instance.Player != null)
+            _source = PlayerManager.Instance.Player.DialsAudioSource;
 
         NarrativeManager.Instance.OnCallNarration += OnTriggerNarration;
         GameLoopManager.Instance.Pause += IsPause;
