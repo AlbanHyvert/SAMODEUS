@@ -26,10 +26,14 @@ public class PlayerController : MonoBehaviour
     public AudioSource DialsAudioSource { get { return _dialsAudioSource; } }
     public PlayerManager.WorldTag WorldTaged { get { return _worldTag; } set { _worldTag = value; } }
 
-    private void Start()
+    private void Awake()
     {
         DontDestroyOnLoad(this);
+        PlayerManager.Instance.AddPlayer(this);
+    }
 
+    private void Start()
+    {
         _controller = GetComponent<CharacterController>();
         _musicAudioSource.volume = PlayerManager.Instance.MusicVolume;
         _dialsAudioSource.volume = PlayerManager.Instance.DialsVolume;

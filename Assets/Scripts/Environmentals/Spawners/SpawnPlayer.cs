@@ -14,17 +14,7 @@ public class SpawnPlayer : MonoBehaviour
             _camera.enabled = false;
         }
 
-        PlayerManager.Instance.PlayerStartingPosition = transform;
-        PlayerManager.Instance.CreatePlayer(transform.position, transform.rotation);
-
-        _playerController = PlayerManager.Instance.Player;
-    }
-
-    private void Update()
-    {
-        if(_playerController != null && PlayerManager.Instance.Player == null)
-        {
-            PlayerManager.Instance.AddPlayer(_playerController);
-        }
+       /* PlayerManager.Instance.PlayerStartingPosition = transform;
+        PlayerManager.Instance.CreatePlayer(transform.position, transform.rotation);*/
     }
 }

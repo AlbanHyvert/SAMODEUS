@@ -13,8 +13,8 @@ public class PlayerManager : Singleton<PlayerManager>
 
     [SerializeField] private PlayerController _playerController = null;
 
-    private float _musicVolume = 0.0f;
-    private float _dialsVolume = 0.0f;
+    private float _musicVolume = 1f;
+    private float _dialsVolume = 1f;
     private PlayerController _player = null;
     private Transform _playerStartingPosition = null;
 

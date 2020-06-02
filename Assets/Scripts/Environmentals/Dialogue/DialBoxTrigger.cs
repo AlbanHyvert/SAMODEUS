@@ -32,7 +32,7 @@ public class DialBoxTrigger : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.tag.Equals("Player"))
         {

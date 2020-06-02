@@ -79,7 +79,7 @@ public class DialBoxController : MonoBehaviour
 
     private void OnUpdate()
     {
-        if(_timerIsStarted == true)
+        if(_source != null && _timerIsStarted == true)
         {
             _buttonsToPressText.text = InputManager.Instance.DataKeycode.KeyDialogue.ToString();
 
@@ -113,7 +113,9 @@ public class DialBoxController : MonoBehaviour
 
             if (_voiceDialBoxDataList == null && _textDialBoxDataList == null && _source.isPlaying == false)
             {
+                _source.clip = null;
                 _buttonsToPressText.text = string.Empty;
+                _text.text = string.Empty;
                 InputManager.Instance.PassDialogue -= PassDials;
                 _timerIsStarted = false;
             }
@@ -142,6 +144,7 @@ public class DialBoxController : MonoBehaviour
         if(_textDialBoxDataList != null)
             _textDialBoxDataList.Clear();
         _textDialBoxDataList = null;
+        _text.text = string.Empty;
         _timerIsStarted = false;
     }
 
