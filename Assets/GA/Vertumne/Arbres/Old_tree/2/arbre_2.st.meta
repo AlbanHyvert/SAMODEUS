@@ -1,0 +1,92 @@
+fileFormatVersion: 2
+guid: bfe737a1b804e3248be68c87c6852cd9
+SpeedTreeImporter:
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2_LOD0
+    second: {fileID: 2100000, guid: 0501d3fba1a304742bebe8bdfb2d9dad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2_LOD1
+    second: {fileID: 2100000, guid: 4ea134ccf5a868540921bebb7a7ef962, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2_LOD2
+    second: {fileID: 2100000, guid: 156e31cd2550a284290c5d278cd5d914, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: arbre_2_Billboard_LOD3
+    second: {fileID: 2100000, guid: f9912b0515dc2674a9fca2e3fb5d4e7f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: arbre_2_LOD0
+    second: {fileID: 2100000, guid: cd41a2049ccf41f46a7d22a2c902185a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: arbre_2_LOD1
+    second: {fileID: 2100000, guid: 9bc56790d015f0e4aaedd9b51aacbe12, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: arbre_2_LOD2
+    second: {fileID: 2100000, guid: 5d27011cbea59484c9f3aafad3eea134, type: 2}
+  serializedVersion: 5
+  mainColor: {r: 1, g: 1, b: 1, a: 1}
+  hueVariation: {r: 1, g: 0.5, b: 0, a: 0.1}
+  alphaTestRef: 0.33
+  bestWindQuality: 3
+  hasBillboard: 1
+  lODSettings:
+  - height: 0.5
+    castShadows: 1
+    receiveShadows: 1
+    useLightProbes: 1
+    reflectionProbeUsage: 1
+    enableBump: 1
+    enableHue: 1
+    enableSubsurface: 1
+    windQuality: 3
+  - height: 0.25
+    castShadows: 1
+    receiveShadows: 1
+    useLightProbes: 1
+    reflectionProbeUsage: 1
+    enableBump: 1
+    enableHue: 1
+    enableSubsurface: 1
+    windQuality: 3
+  - height: 0.125
+    castShadows: 1
+    receiveShadows: 1
+    useLightProbes: 1
+    reflectionProbeUsage: 1
+    enableBump: 1
+    enableHue: 1
+    enableSubsurface: 1
+    windQuality: 3
+  - height: 0.01
+    castShadows: 1
+    receiveShadows: 1
+    useLightProbes: 0
+    reflectionProbeUsage: 0
+    enableBump: 1
+    enableHue: 1
+    enableSubsurface: 1
+    windQuality: 1
+  enableSmoothLODTransition: 1
+  animateCrossFading: 1
+  billboardTransitionCrossFadeWidth: 0.25
+  fadeOutWidth: 0.25
+  scaleFactor: 0.6
+  materialVersion: 3
+  materialLocation: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
