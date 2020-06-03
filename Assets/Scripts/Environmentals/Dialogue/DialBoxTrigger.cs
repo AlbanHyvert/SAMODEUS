@@ -34,34 +34,37 @@ public class DialBoxTrigger : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag.Equals("Player"))
+        if(NarrativeManager.Instance.DialBoxController.AudioSource != null)
         {
-            if(NarrativeManager.Instance.DialBoxController.TimerIsStarted == false)
+            if (other.tag.Equals("Player"))
             {
-                NarrativeManager.Instance.TriggerNarrative(_textBoxID, _voiceBoxID);
-                gameObject.SetActive(false);
-            }
-            else
-            {
-                NarrativeManager.Instance.DialBoxController.ClearAll();
-                NarrativeManager.Instance.TriggerNarrative(_textBoxID, _voiceBoxID);
-                gameObject.SetActive(false);
-            }
-
-            if(_shouldStopPlayer == true)
-            {
-                GameLoopManager.Instance.Puzzles += OnUpdate;
-                _stopPlayer = true;
-                _timer = Time.time + _stopPlayerDuration;
-            }
-
-            if(_activateNextObj != null)
-            {
-                for (int i = 0; i < _activateNextObj.Length; i++)
+                if (NarrativeManager.Instance.DialBoxController.TimerIsStarted == false)
                 {
-                    if(_activateNextObj[i] != null)
+                    NarrativeManager.Instance.TriggerNarrative(_textBoxID, _voiceBoxID);
+                    gameObject.SetActive(false);
+                }
+                else
+                {
+                    NarrativeManager.Instance.DialBoxController.ClearAll();
+                    NarrativeManager.Instance.TriggerNarrative(_textBoxID, _voiceBoxID);
+                    gameObject.SetActive(false);
+                }
+
+                if (_shouldStopPlayer == true)
+                {
+                    GameLoopManager.Instance.Puzzles += OnUpdate;
+                    _stopPlayer = true;
+                    _timer = Time.time + _stopPlayerDuration;
+                }
+
+                if (_activateNextObj != null)
+                {
+                    for (int i = 0; i < _activateNextObj.Length; i++)
                     {
-                        _activateNextObj[i].SetActive(true);
+                        if (_activateNextObj[i] != null)
+                        {
+                            _activateNextObj[i].SetActive(true);
+                        }
                     }
                 }
             }

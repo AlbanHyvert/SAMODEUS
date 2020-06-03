@@ -97,6 +97,7 @@ public class NarrativeManager : Singleton<NarrativeManager>
             if (PlayerManager.Instance.Player != null)
             {
                 _dialBoxController.AudioSource = PlayerManager.Instance.Player.DialsAudioSource;
+                _dialBoxController.gameObject.SetActive(true);
                 GameLoopManager.Instance.Managers -= OnUpdate;
             }
         }

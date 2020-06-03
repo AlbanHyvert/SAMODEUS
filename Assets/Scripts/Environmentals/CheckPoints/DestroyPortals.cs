@@ -6,7 +6,7 @@ using UnityEngine;
 public class DestroyPortals : MonoBehaviour
 {
     [SerializeField] private GameObject[] _gameObject = null;
-    [SerializeField] private List<string> _scenesToUnload = new List<string>();
+    [SerializeField] private string[] _scenesToUnload = null;
     [SerializeField] private float _speedDisolve = 1;
     [SerializeField] private float _maximalTimerValue = 10;
 
@@ -57,7 +57,7 @@ public class DestroyPortals : MonoBehaviour
 
             if(_scenesToUnload != null)
             {
-                LoadingManager.Instance.UnloadScene(_scenesToUnload.ToArray());
+                LoadingManager.Instance.UnloadScene(_scenesToUnload);
             }
         }
     }

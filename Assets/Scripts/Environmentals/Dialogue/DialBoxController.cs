@@ -19,12 +19,17 @@ public class DialBoxController : MonoBehaviour
 
     public AudioSource AudioSource { get { return _source; } set { _source = value; } }
 
+    private void Awake()
+    {
+        NarrativeManager.Instance.DialBoxController = this;
+        gameObject.SetActive(false);
+    }
+
     private void Start()
     {
         if (_buttonsToPressText != null)
             _buttonsToPressText.text = string.Empty;
 
-        NarrativeManager.Instance.DialBoxController = this;
         _text.text = string.Empty;
 
         if(PlayerManager.Instance.Player != null)
@@ -92,6 +97,7 @@ public class DialBoxController : MonoBehaviour
                 else
                 {
                     _textDialBoxDataList = null;
+                    _text.text = string.Empty;
                 }
             }
             else if(Time.time >= _textTimeStamp - _blankThreshold)

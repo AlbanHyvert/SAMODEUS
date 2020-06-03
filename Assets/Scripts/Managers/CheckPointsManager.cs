@@ -4,22 +4,24 @@ using UnityEngine;
 
 public class CheckPointsManager : Singleton<CheckPointsManager>
 {
-    private Transform _firstCheckPoint = null;
-    private Transform _lastCheckpointPast = null;
+    private Vector3 _firstCheckPoint = Vector3.zero;
+    private Vector3 _lastCheckpointPast = Vector3.zero;
     private List<CheckPoints> _checkPointList = null;
     private List<DeathZone> _deathZoneList = null;
+    private bool _shouldRespawn = false;
 
     public List<CheckPoints> CheckPoints { get { return _checkPointList; } }
     public List<DeathZone> DeathZones { get { return _deathZoneList; } }
+
     private void Start()
     {
         _checkPointList = new List<CheckPoints>();
         _deathZoneList = new List<DeathZone>();
     }
 
-    public void UpdateFirstCheckPoint(Transform transform)
+    public void UpdateFirstCheckPoint(Vector3 pos)
     {
-        _firstCheckPoint = transform;
+        _firstCheckPoint = pos;
     }
 
     public void AddCheckPoints(CheckPoints checkPoints)
@@ -42,24 +44,30 @@ public class CheckPointsManager : Singleton<CheckPointsManager>
         _deathZoneList.Remove(deathZone);
     }
 
-    public void ChangeCheckPoint(Transform transform)
+    public void ChangeCheckPoint(Vector3 pos)
     {
-        _lastCheckpointPast = transform;
+        _lastCheckpointPast = pos;
     }
 
-    public void RespawnPlayer(Transform player)
+    public void RespawnPlayer()
     {
-        if(_lastCheckpointPast == null)
-        {
-            player.position = _firstCheckPoint.position;
-            player.rotation = _firstCheckPoint.rotation;
-        }
-        else
-        {
-            player.position = _lastCheckpointPast.position;
-            player.rotation = _lastCheckpointPast.rotation;
-        }
+        _shouldRespawn = true;
+    }
 
-        Debug.Log("RespawnPlayer");
+    private void LateUpdate()
+    {
+        if(_shouldRespawn == true)
+        {
+            if (_lastCheckpointPast == Vector3.zero)
+            {
+                PlayerManager.Instance.Player.transform.position = _firstCheckPoint;
+            }
+            else
+            {
+                PlayerManager.Instance.Player.transform.position = _lastCheckpointPast;
+            }
+
+            _shouldRespawn = false;
+        }
     }
 }

@@ -40,7 +40,7 @@ public class PlayerManager : Singleton<PlayerManager>
     public void CreatePlayer(Vector3 pos, Quaternion rot)
     {
         _player = Instantiate(_playerController, pos, rot);
-        _player.transform.position = _playerStartingPosition.position;
+        //_player.transform.position = _playerStartingPosition.position;
         _player.MusicAudioSource.volume = _musicVolume;
         _player.DialsAudioSource.volume = _dialsVolume;
     }

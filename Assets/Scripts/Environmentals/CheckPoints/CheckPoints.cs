@@ -14,7 +14,7 @@ public class CheckPoints : MonoBehaviour
 
         if(_isFirstCheckPoint == true)
         {
-            CheckPointsManager.Instance.UpdateFirstCheckPoint(transform);
+            CheckPointsManager.Instance.UpdateFirstCheckPoint(transform.position);
         }
     }
 
@@ -24,8 +24,7 @@ public class CheckPoints : MonoBehaviour
 
         if(playerController != null && _isFirstCheckPoint == false)
         {
-            Debug.Log("checkpoint hit");
-            CheckPointsManager.Instance.ChangeCheckPoint(transform);
+            CheckPointsManager.Instance.ChangeCheckPoint(transform.position);
         }
     }
 }

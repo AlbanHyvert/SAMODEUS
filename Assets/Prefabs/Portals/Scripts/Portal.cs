@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class Portal : MonoBehaviour
@@ -112,6 +113,9 @@ public class Portal : MonoBehaviour
                     _linkedPortal.OnTravellerEnterPortal(traveller);
                     trackedTravellers.RemoveAt(i);
                     i--;
+
+                    Destroy(_linkedPortal);
+                    Destroy(this);
                 }
                 else
                 {
@@ -119,7 +123,6 @@ public class Portal : MonoBehaviour
                 }
             }
         }
-
     }
 
     private void CreateViewTexture()
@@ -211,6 +214,13 @@ public class Portal : MonoBehaviour
 
     private void OnDestroy()
     {
+        Collider collider = gameObject.GetComponent<Collider>();
+
+        if(collider != null)
+        {
+            collider.isTrigger = false;
+        }
+
         if(GameLoopManager.Instance != null)
         {
             GameLoopManager.Instance.Puzzles -= OnUpdate;
