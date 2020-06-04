@@ -151,8 +151,6 @@ public class PlayerController : MonoBehaviour
         dir *= _currentSpeed / _mass;
 
         _controller.Move(dir * Time.deltaTime);
-
-        Debug.Log(_currentSpeed + " " + _speed);
     }
 
     private void OnGravity(Vector3 dir)
