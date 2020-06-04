@@ -47,9 +47,7 @@ public class RotatingState : IPlateforms
             }
             else
             {
-                _time += 0.01f * Time.deltaTime;
-
-                _transform.RotateAround(_target.position, Vector3.forward, _self.Speed * _time);
+                _transform.RotateAround(_target.position, Vector3.forward, _self.Speed * Time.deltaTime);
             }
         }
     }

@@ -1,129 +1,214 @@
 ﻿using UnityEngine;
-using SAMODEUS.Movements;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private DataMovements _dataMovements = null;
-    [SerializeField] private PlayerCamera _playerCamera = null;
+    #region SERIALIZEFIELD
+    [SerializeField, Header("Camera")] private CameraController _cameraController = null;
+    [Space]
+    [SerializeField, Header("Stats")] private PlayerStats _stats = null;
+    [Space]
+    [Header("Audio Sources")]
     [SerializeField] private AudioSource _musicAudioSource = null;
     [SerializeField] private AudioSource _dialsAudioSource = null;
-    [SerializeField] private LayerMask _activeLayer = 0;
-    [SerializeField] private int _distanceInteract = 5;
-    [SerializeField] private int _throwForce = 20;
-    [SerializeField] private float _smoothTime = 10;
+    [Space]
+    [SerializeField, Header("Interaction Settings")] private InteractionStats _interactionStats = null;
+    [Space]
+    [SerializeField, Header("World Tag")] private WorldEnum _currentWorld = WorldEnum.VERTUMNE;
+    #endregion SERIALIZEFIELD
 
-    private float _speed = 0;
+    #region PRIVATE
+    private bool _handFull = false;
+    private bool _isInteract = false;
+    private float _speed = 5;
+    private int _sprintMult;
+    private int _sprintMinMult = 1;
+    private int _sprintMaxMult = 2;
     private float _currentSpeed = 0;
+    private float _smoothTime = 10f;
+    private float _mass = 0;
+    private float _gravity = 9.81f;
+    private int _throwForce = 20;
+    private int _maxDistanceInteractable = 10;
+    private LayerMask _activeLayer = 0;
     private CharacterController _controller = null;
-    private bool _hit = false;
-    private GameObject _interactableObj = null;
+    private Transform _interactableObject = null;
+    #endregion PRIVATE
 
-    [SerializeField] private PlayerManager.WorldTag _worldTag = PlayerManager.WorldTag.VERTUMNE;
-
-    public PlayerCamera CameraController { get { return _playerCamera; } }
+    #region PROPERTIES
+    public PlayerStats Stats { get { return _stats; } }
     public AudioSource MusicAudioSource { get { return _musicAudioSource; } }
     public AudioSource DialsAudioSource { get { return _dialsAudioSource; } }
-    public PlayerManager.WorldTag WorldTaged { get { return _worldTag; } set { _worldTag = value; } }
+    public CameraController CameraController { get { return _cameraController; } }
+    public float Speed { get { return _speed; } }
+    public float Gravity { get { return _gravity; } }
+    public bool IsInteract { get { return _isInteract; } set { IsInteractable(value); } }
+    public WorldEnum CurrentWorld { get { return _currentWorld; } set { _currentWorld = value; } }
+    #endregion PROPERTIES
 
     private void Awake()
     {
         DontDestroyOnLoad(this);
-        PlayerManager.Instance.AddPlayer(this);
+
+        PlayerManager.Instance.Player = this;
     }
 
     private void Start()
     {
-        _controller = GetComponent<CharacterController>();
-        _musicAudioSource.volume = PlayerManager.Instance.MusicVolume;
-        _dialsAudioSource.volume = PlayerManager.Instance.DialsVolume;
-        GameLoopManager.Instance.Player += OnRaycast;
+        PlayerManager.Instance.ShouldMove += CanMove;
+        PlayerManager.Instance.HaveGravity += UseGravity;
+
+        GameLoopManager.Instance.Pause += IsPause;
         GameLoopManager.Instance.Player += OnUpdate;
-        GameLoopManager.Instance.Pause += IsPaused;
+
         InputManager.Instance.Movement += OnMovements;
         InputManager.Instance.Idle += OnIdle;
-        InputManager.Instance.Interaction += OnPickUp;
-        InputManager.Instance.Interaction += OnInteract;
         InputManager.Instance.PressSprint += OnSprint;
         InputManager.Instance.ReleaseSprint += OnWalk;
+        InputManager.Instance.Gravity += OnGravity;
+        
+        Init();
     }
 
-    private void IsPaused(bool pause)
+    private void Init()
     {
-        if(pause == true)
+        _controller = GetComponent<CharacterController>();
+
+        _throwForce = _interactionStats.ThrowForce;
+        _maxDistanceInteractable = _interactionStats.MaxDistanceInteract;
+        _activeLayer = _interactionStats.ActiveLayer;
+
+        _speed = _stats.Speed;
+        _sprintMult = _stats.SprintMult;
+        _sprintMinMult = _stats.SprintMinMult;
+        _sprintMaxMult = _stats.SprintMaxMult;
+        _mass = _stats.Mass;
+        _gravity = _stats.Gravity;
+    }
+
+    private void IsPause(bool value)
+    {
+        if(value == true)
         {
-            GameLoopManager.Instance.Player -= OnRaycast;
             GameLoopManager.Instance.Player -= OnUpdate;
-            InputManager.Instance.Movement -= OnMovements;
-            InputManager.Instance.Idle -= OnIdle;
         }
         else
         {
-            GameLoopManager.Instance.Player += OnRaycast;
             GameLoopManager.Instance.Player += OnUpdate;
+        }
+    }
+
+    private void CanMove(bool value)
+    {
+        if(value == true)
+        {
             InputManager.Instance.Movement += OnMovements;
-            InputManager.Instance.Idle += OnIdle;
+            InputManager.Instance.PressSprint += OnSprint;
+            InputManager.Instance.ReleaseSprint += OnWalk;
+        }
+        else
+        {
+            InputManager.Instance.Movement -= OnMovements;
+            InputManager.Instance.PressSprint -= OnSprint;
+            InputManager.Instance.ReleaseSprint -= OnWalk;
+        }
+    }
+
+    private void UseGravity(bool value)
+    {
+        if(value == true)
+        {
+            InputManager.Instance.Gravity += OnGravity;
+            _controller.enabled = true;
+        }
+        else
+        {
+            InputManager.Instance.Gravity -= OnGravity;
+            _controller.enabled = false;
         }
     }
 
     private void OnIdle()
     {
         _speed = 0;
-        _playerCamera.HeadBobbing.OnIdle();
-        OnGravity(Vector3.zero);
-    }
-
-    private void OnMovements(Vector3 dir)
-    {
-        _speed = _dataMovements.MoveSpeed * _dataMovements.SprintMult;
-
-        dir *= _currentSpeed;
-
-        _playerCamera.HeadBobbing.OnHeadBobbing(dir);
-
-        OnGravity(dir);
-
-        _controller.Move(dir * Time.deltaTime);
-    }
-
-    private void OnSprint()
-    {
-        _dataMovements.SprintMult = _dataMovements.SprintMaxMult;
+        //HeadBobbing.OnIdle();
     }
 
     private void OnWalk()
     {
-        _dataMovements.SprintMult = 1;
+        _sprintMult = _sprintMinMult;
     }
 
-    private void OnGravity(Vector3 direction)
-    { 
-        direction.y -= _dataMovements.Gravity;
+    private void OnSprint()
+    {
+        _sprintMult = _sprintMaxMult;
+    }
 
-        _controller.Move(direction * Time.deltaTime);
+    private void OnMovements(Vector3 dir)
+    {
+        _speed = (_stats.Speed * _sprintMult);
+
+        dir *= _currentSpeed / _mass;
+
+        _controller.Move(dir * Time.deltaTime);
+
+        Debug.Log(_currentSpeed + " " + _speed);
+    }
+
+    private void OnGravity(Vector3 dir)
+    {
+        dir.y -= _gravity;
+        _controller.Move(dir * Time.deltaTime);
+    }
+
+    private void OnRaycast()
+    {
+        if(_handFull == false)
+        {
+            RaycastHit hit;
+
+            bool isHit = Physics.Raycast(_cameraController.Camera.transform.position, _cameraController.Camera.transform.forward, out hit, _maxDistanceInteractable, _activeLayer);
+
+            if (isHit != IsInteract)
+            {
+                IsInteract = isHit;
+            }
+
+            if (isHit == true)
+            {
+                _interactableObject = hit.transform;
+            }
+        }
     }
 
     private void OnUpdate()
     {
         _currentSpeed = Mathf.Lerp(_currentSpeed, _speed, _smoothTime * Time.deltaTime);
+
+        OnRaycast();
     }
 
-    private void OnRaycast()
+    private void IsInteractable(bool value)
     {
-        RaycastHit raycastHit;
-        _hit = Physics.Raycast(_playerCamera.Camera.transform.position, _playerCamera.Camera.transform.forward, out raycastHit, _distanceInteract, _activeLayer);
+        _isInteract = value;
 
-        if(_hit == true)
+        if(value == true)
         {
-            _interactableObj = null;
-            _interactableObj = raycastHit.transform.gameObject;
+            InputManager.Instance.Interaction += OnPickUp;
+            InputManager.Instance.Interaction += OnInteract;
+        }
+        else
+        {
+            InputManager.Instance.Interaction -= OnPickUp;
+            InputManager.Instance.Interaction -= OnInteract;
         }
     }
 
     private void OnInteract()
     {
-        IInteract interact = _interactableObj.GetComponent<IInteract>();
-        if(_hit == true && interact != null)
+        IInteract interact = _interactableObject.GetComponent<IInteract>();
+
+        if(_interactableObject != null && interact != null)
         {
             interact.Enter();
         }
@@ -131,69 +216,68 @@ public class PlayerController : MonoBehaviour
 
     private void OnPickUp()
     {
-        IAction action = _interactableObj.GetComponent<IAction>();
+        IAction action = _interactableObject.GetComponent<IAction>();
 
-        if (_hit == true && action != null)
+        if(_interactableObject != null && action != null)
         {
-            Rigidbody rb = GetComponent<Rigidbody>();
             action.Enter(this);
+            
+            _handFull = true;
+
             InputManager.Instance.Interaction += OnDrop;
             InputManager.Instance.Throw += OnThrow;
             InputManager.Instance.Interaction -= OnPickUp;
+            InputManager.Instance.Interaction -= OnInteract;
         }
     }
 
     public void OnDrop()
     {
-        IAction action = _interactableObj.GetComponent<IAction>();
+        IAction action = _interactableObject.GetComponent<IAction>();
         action.Exit();
-        InputManager.Instance.Interaction += OnPickUp;
+
+        _handFull = false;
+
         InputManager.Instance.Interaction -= OnDrop;
         InputManager.Instance.Throw -= OnThrow;
     }
 
     private void OnThrow()
     {
-        IAction action = _interactableObj.GetComponent<IAction>();
-        Pickable pickable = _interactableObj.GetComponent<Pickable>();
+        IAction action = _interactableObject.GetComponent<IAction>();
+        Rigidbody rigidbody = _interactableObject.GetComponent<Rigidbody>();
 
         action.Exit();
-        pickable.Rigidbody.AddForce(_playerCamera.Camera.transform.forward * _throwForce, ForceMode.Impulse);
+        rigidbody.AddForce(_cameraController.Camera.transform.forward * _throwForce, ForceMode.Impulse);
+        
+        _handFull = false;
 
-        InputManager.Instance.Interaction += OnPickUp;
         InputManager.Instance.Interaction -= OnDrop;
         InputManager.Instance.Throw -= OnThrow;
     }
 
-    public void MovementShouldStop(bool status)
-    {
-        if(status == true)
-        {
-            InputManager.Instance.Movement -= OnMovements;
-        }
-        else
-        {
-            InputManager.Instance.Movement += OnMovements;
-        }
-    }
-
     private void OnDestroy()
     {
+        if(PlayerManager.Instance != null)
+        {
+            PlayerManager.Instance.HaveGravity -= UseGravity;
+            PlayerManager.Instance.ShouldMove -= CanMove;
+            PlayerManager.Instance.Player = null;
+        }
+
         if(GameLoopManager.Instance != null)
         {
-            GameLoopManager.Instance.Player -= OnRaycast;
-            GameLoopManager.Instance.Pause -= IsPaused;
+            GameLoopManager.Instance.Pause -= IsPause;
+            GameLoopManager.Instance.Player -= OnUpdate;
         }
 
         if(InputManager.Instance != null)
         {
             InputManager.Instance.Movement -= OnMovements;
             InputManager.Instance.Idle -= OnIdle;
-            InputManager.Instance.Interaction -= OnPickUp;
-            InputManager.Instance.Interaction -= OnInteract;
             InputManager.Instance.PressSprint -= OnSprint;
             InputManager.Instance.ReleaseSprint -= OnWalk;
+            InputManager.Instance.Gravity -= OnGravity;
         }
-
     }
 }

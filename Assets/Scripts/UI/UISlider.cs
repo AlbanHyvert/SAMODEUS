@@ -22,7 +22,7 @@ public class UISlider : MonoBehaviour
         if (PlayerManager.Instance.Player != null)
         {
             PlayerManager.Instance.Player.MusicAudioSource.volume = PlayerManager.Instance.MusicVolume / 100;
-            PlayerManager.Instance.Player.DialsAudioSource.volume = PlayerManager.Instance.DialsVolume / 100;
+            PlayerManager.Instance.Player.DialsAudioSource.volume = PlayerManager.Instance.DialVolume / 100;
         }
         else
         {
@@ -66,15 +66,15 @@ public class UISlider : MonoBehaviour
 
     public void OnDialsValueChanged()
     {
-        PlayerManager.Instance.DialsVolume = _dialogueSlider.value;
+        PlayerManager.Instance.DialVolume = _dialogueSlider.value;
 
         if(PlayerManager.Instance.Player != null)
-            PlayerManager.Instance.Player.DialsAudioSource.volume = PlayerManager.Instance.DialsVolume / 100;
+            PlayerManager.Instance.Player.DialsAudioSource.volume = PlayerManager.Instance.DialVolume / 100;
         else
         {
             if (_mainMenu != null)
             {
-                _mainMenu.MenuMusicAudio.volume = PlayerManager.Instance.DialsVolume / 100;
+                _mainMenu.MenuMusicAudio.volume = PlayerManager.Instance.DialVolume / 100;
             }
         }
     }

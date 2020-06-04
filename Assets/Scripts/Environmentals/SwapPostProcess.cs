@@ -7,7 +7,7 @@ public class SwapPostProcess : MonoBehaviour
 {
     [SerializeField] private PostProcessVolume _postProcessVolume = null;
     //[SerializeField] private Volume _volume = null;
-    [SerializeField] private PlayerManager.WorldTag _worldTag = PlayerManager.WorldTag.VERTUMNE;
+    [SerializeField] private WorldEnum _worldTag = WorldEnum.VERTUMNE;
 
     private void Start()
     {
@@ -18,17 +18,17 @@ public class SwapPostProcess : MonoBehaviour
     {
         PlayerController playerController = other.GetComponent<PlayerController>();
 
-        if (playerController != null && playerController.WorldTaged != _worldTag)
+        if (playerController != null && playerController.CurrentWorld != _worldTag)
         {
-            if(_worldTag == PlayerManager.WorldTag.VERTUMNE)
+            if(_worldTag == WorldEnum.VERTUMNE)
             {
                 PostProcessManager.Instance.ChangePostProcess(PostProcessManager.Instance.ProfileVertumne);
             }
-            else if( _worldTag == PlayerManager.WorldTag.GCF)
+            else if( _worldTag == WorldEnum.GCF)
             {
                 PostProcessManager.Instance.ChangePostProcess(PostProcessManager.Instance.ProfileGCF);
             }
-            playerController.WorldTaged = _worldTag;
+            playerController.CurrentWorld = _worldTag;
         }
     }
 }

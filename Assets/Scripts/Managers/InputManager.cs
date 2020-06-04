@@ -16,14 +16,14 @@ public class InputManager : Singleton<InputManager>
     }
 
     [SerializeField] private DataKeycode _dataKeyCode = null;
-    [SerializeField] private float _verticalSensitivity = 10f; 
-    [SerializeField] private float _horizontalSensitivity = 10f;
+    private int _verticalSensitivity = 10; 
+    private int _horizontalSensitivity = 10;
 
     private Vector3 _direction = Vector3.zero;
 
     public Vector3 Direction { get { return _direction; } }
-    public float VerticalSensitivity { get { return _verticalSensitivity; } set { _verticalSensitivity = value; } }
-    public float HorizontalSensitivity { get { return _horizontalSensitivity; } set { _horizontalSensitivity = value; } }
+    public int VerticalSensitivity { get { return _verticalSensitivity; } set { _verticalSensitivity = value; } }
+    public int HorizontalSensitivity { get { return _horizontalSensitivity; } set { _horizontalSensitivity = value; } }
     public  DataKeycode DataKeycode { get { return _dataKeyCode; } }
 
     #region EVENTS
@@ -80,6 +80,20 @@ public class InputManager : Singleton<InputManager>
         remove
         {
             _idle -= value;
+        }
+    }
+
+    private event Action<Vector3> _gravity = null;
+    public event Action<Vector3> Gravity
+    {
+        add
+        {
+            _gravity -= value;
+            _gravity += value;
+        }
+        remove
+        {
+            _gravity -= value;
         }
     }
 
@@ -255,10 +269,12 @@ public class InputManager : Singleton<InputManager>
         {
             _idle();
         }
-    }
 
-    private void LateUpdate()
-    {
+        if(_gravity != null)
+        {
+            _gravity(_direction);
+        }
+
         if (_changeInput != null)
         {
             _changeInput();

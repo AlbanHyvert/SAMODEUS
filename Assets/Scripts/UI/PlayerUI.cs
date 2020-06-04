@@ -38,7 +38,6 @@ public class PlayerUI : MonoBehaviour
 
     public void Restart()
     {
-        PlayerManager.Instance.DestroyPlayer();
         GameLoopManager.Instance.IsPaused = false;
         GameManager.Instance.ChangeState(GameManager.GameState.LOADING);
     }

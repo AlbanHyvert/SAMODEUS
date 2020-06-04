@@ -129,7 +129,7 @@ public class Room2 : MonoBehaviour
         {
             if (Time.time <= _stopPlayerTimer)
             {
-                PlayerManager.Instance.Player.MovementShouldStop(_shouldStopPlayer);
+                PlayerManager.Instance.PlayerCanMove = !_shouldStopPlayer;
             }
             else
             {
@@ -138,7 +138,7 @@ public class Room2 : MonoBehaviour
         }
         else
         {
-            PlayerManager.Instance.Player.MovementShouldStop(false);
+            PlayerManager.Instance.PlayerCanMove = true;
             _stopPlayerTimer = 0;
         }
 
@@ -160,7 +160,7 @@ public class Room2 : MonoBehaviour
 
     public void StartSecondEvent()
     {
-        if (_firstTextBoxID.Length >= 1)
+        if (_firstTextBoxID.Length > 1)
         {
             if (NarrativeManager.Instance.DialBoxController.TimerIsStarted == false)
             {
@@ -176,7 +176,7 @@ public class Room2 : MonoBehaviour
         _spawnObjTimer = Time.time + _timeBeforeSpawnObj;
         _shouldSpawnObj = true;
 
-        Object.Destroy(_objToDestroy);
+        Destroy(_objToDestroy);
         _objToDestroy = null;
 
         GameLoopManager.Instance.Puzzles += OnUpdate;
