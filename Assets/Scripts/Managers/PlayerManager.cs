@@ -4,58 +4,73 @@ using UnityEngine;
 
 public class PlayerManager : Singleton<PlayerManager>
 {
-    public enum WorldTag
-    {
-        VERTUMNE,
-        GCF,
-        DEV
-    }
+    [SerializeField] private PlayerController _playerPrefab = null;
 
-    [SerializeField] private PlayerController _playerController = null;
-
-    private float _musicVolume = 1f;
-    private float _dialsVolume = 1f;
     private PlayerController _player = null;
-    private Transform _playerStartingPosition = null;
+    private bool _playerCanMove = true;
+    private bool _useGravity = true;
+    private float _musicVolume = 1;
+    private float _dialsVolume = 1;
 
-    private event Action<PlayerController> _getPlayer = null;
-    public event Action<PlayerController> GetPlayer
+    private event Action<bool> _shouldMove = null;
+    public event Action<bool> ShouldMove
     {
         add
         {
-            _getPlayer -= value;
-            _getPlayer += value;
+            _shouldMove -= value;
+            _shouldMove += value;
         }
         remove
         {
-            _getPlayer -= value;
+            _shouldMove -= value;
         }
     }
 
-    public PlayerController Player { get { return _player; } set { _getPlayer(_player); } }
-    public float MusicVolume { get => _musicVolume; set => _musicVolume = value; }
-    public float DialsVolume { get => _dialsVolume; set => _dialsVolume = value; }
-    public Transform PlayerStartingPosition { get { return _playerStartingPosition; } set { _playerStartingPosition = value; } }
-
-    public void CreatePlayer(Vector3 pos, Quaternion rot)
+    private event Action<bool> _haveGravity = null;
+    public event Action<bool> HaveGravity
     {
-        _player = Instantiate(_playerController, pos, rot);
-        //_player.transform.position = _playerStartingPosition.position;
-        _player.MusicAudioSource.volume = _musicVolume;
-        _player.DialsAudioSource.volume = _dialsVolume;
-    }
-
-    public void AddPlayer(PlayerController playerController)
-    {
-        _player = playerController;
-    }
-
-    public void DestroyPlayer()
-    {
-        if(_player != null)
+        add
         {
-            Destroy(_player);
-            _player = null;
+            _haveGravity -= value;
+            _haveGravity += value;
         }
+        remove
+        {
+            _haveGravity -= value;
+        }
+    }
+
+    public PlayerController PlayerPrefab { get { return _playerPrefab; } }
+    public PlayerController Player { get { return _player; } set { SetPlayer(value); } }
+    public bool PlayerCanMove { get { return _playerCanMove; }
+        set
+        {
+            SetCanPlayerMove(value);
+            _shouldMove(_playerCanMove);
+        }
+    }
+    public bool UseGravity { get { return _useGravity; } 
+        set
+        {
+            SetUseGravity(value);
+            _haveGravity(_useGravity);
+        } 
+    }
+    public float MusicVolume { get { return _musicVolume; } set { _musicVolume = value; } }
+    public float DialVolume { get { return _dialsVolume; } set { _dialsVolume = value; } }
+
+    private void SetUseGravity(bool value)
+    {
+        _useGravity = value;
+    }
+
+    private void SetCanPlayerMove(bool value)
+    {
+        _playerCanMove = value;
+    }
+
+    private void SetPlayer(PlayerController player)
+    {
+        _player = player;
     }
 }

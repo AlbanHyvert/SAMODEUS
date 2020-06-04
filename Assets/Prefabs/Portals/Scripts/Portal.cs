@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Security.Cryptography;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class Portal : MonoBehaviour
 {
+    [SerializeField] private bool _shouldBeDestroyed = false;
     [SerializeField] private Portal _linkedPortal = null;
     [SerializeField] private MeshRenderer _screen = null;
     [SerializeField] private bool _shouldShake = false;
-    [SerializeField] private PortalManager.PortalID _portalID = PortalManager.PortalID.PORTAL_VERTUMNE;
+    [SerializeField] private Portal_ENUM _portalID = Portal_ENUM.VERTUMNE;
 
 
     private Camera _playerCamera = null;
@@ -22,15 +23,20 @@ public class Portal : MonoBehaviour
 
     private void Awake()
     {
+        Rigidbody rigidbody = GetComponent<Rigidbody>();
+
+        rigidbody.isKinematic = true;
+        rigidbody.useGravity = false;
+
         _portalCamera = GetComponentInChildren<Camera>();
         _portalCamera.enabled = false;
 
-        if (_portalID == PortalManager.PortalID.PORTAL_VERTUMNE)
+        if (_portalID == Portal_ENUM.VERTUMNE)
         {
             PortalManager.Instance.PortalVertumne = this;
             gameObject.SetActive(false);
         }
-        else if( _portalID == PortalManager.PortalID.PORTAL_GCF)
+        else if (_portalID == Portal_ENUM.GCF)
         {
             PortalManager.Instance.PortalGCF = this;
         }
@@ -40,7 +46,7 @@ public class Portal : MonoBehaviour
     {
         if(_linkedPortal == null)
         {
-            if(_portalID == PortalManager.PortalID.PORTAL_GCF)
+            if(_portalID == Portal_ENUM.GCF)
             {
                 if(PortalManager.Instance.PortalVertumne != null)
                 {
@@ -49,7 +55,7 @@ public class Portal : MonoBehaviour
                 }
 
             }
-            else if(_portalID == PortalManager.PortalID.PORTAL_VERTUMNE)
+            else if (_portalID == Portal_ENUM.VERTUMNE)
             {
                 if(PortalManager.Instance.PortalGCF != null)
                 {
@@ -60,7 +66,6 @@ public class Portal : MonoBehaviour
 
         trackedTravellers = new List<PortalTraveller>();
         GameLoopManager.Instance.Player += CheckPlayerStatus;
-        PlayerManager.Instance.GetPlayer += FindPlayer;
     }
 
     private void CheckPlayerStatus()
@@ -71,20 +76,6 @@ public class Portal : MonoBehaviour
             Render();
             GameLoopManager.Instance.Puzzles += OnUpdate;
             GameLoopManager.Instance.Player -= CheckPlayerStatus;
-        }
-    }
-
-    private void FindPlayer(PlayerController player)
-    {
-        if(player != null)
-        {
-            _playerCamera = player.CameraController.Camera;
-            Render();
-            GameLoopManager.Instance.Puzzles += OnUpdate;
-        }
-        else
-        {
-            GameLoopManager.Instance.Puzzles -= OnUpdate;
         }
     }
 
@@ -114,8 +105,10 @@ public class Portal : MonoBehaviour
                     trackedTravellers.RemoveAt(i);
                     i--;
 
-                    Destroy(_linkedPortal);
-                    Destroy(this);
+                    if(_shouldBeDestroyed == true)
+                    {
+                        Destroy(this);
+                    }
                 }
                 else
                 {
@@ -123,6 +116,7 @@ public class Portal : MonoBehaviour
                 }
             }
         }
+
     }
 
     private void CreateViewTexture()
@@ -214,22 +208,10 @@ public class Portal : MonoBehaviour
 
     private void OnDestroy()
     {
-        Collider collider = gameObject.GetComponent<Collider>();
-
-        if(collider != null)
-        {
-            collider.isTrigger = false;
-        }
-
         if(GameLoopManager.Instance != null)
         {
             GameLoopManager.Instance.Puzzles -= OnUpdate;
             GameLoopManager.Instance.Player -= CheckPlayerStatus;
-        }
-
-        if(PlayerManager.Instance != null)
-        {
-            PlayerManager.Instance.GetPlayer -= FindPlayer;
         }
     }
 }

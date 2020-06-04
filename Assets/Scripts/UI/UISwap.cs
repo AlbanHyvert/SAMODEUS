@@ -26,7 +26,7 @@ public class UISwap : MonoBehaviour
 
         if(playerController != null)
         {
-            if(playerController.WorldTaged == PlayerManager.WorldTag.VERTUMNE)
+            if(playerController.CurrentWorld == WorldEnum.VERTUMNE)
             {
                 for (int i = 0; i < _buttonsImg.Length; i++)
                 {
@@ -76,7 +76,7 @@ public class UISwap : MonoBehaviour
                     }
                 }
             }
-            else if(playerController.WorldTaged == PlayerManager.WorldTag.GCF)
+            else if(playerController.CurrentWorld == WorldEnum.GCF)
             {
                 for (int i = 0; i < _buttonsImg.Length; i++)
                 {
@@ -137,7 +137,7 @@ public class UISwap : MonoBehaviour
         {
             if (playerController != null)
             {
-                if (playerController.WorldTaged == PlayerManager.WorldTag.VERTUMNE)
+                if (playerController.CurrentWorld == WorldEnum.VERTUMNE)
                 {
                     for (int i = 0; i < _buttonsImg.Length; i++)
                     {
@@ -187,7 +187,7 @@ public class UISwap : MonoBehaviour
                         }
                     }
                 }
-                else if (playerController.WorldTaged == PlayerManager.WorldTag.GCF)
+                else if (playerController.CurrentWorld == WorldEnum.GCF)
                 {
                     for (int i = 0; i < _buttonsImg.Length; i++)
                     {

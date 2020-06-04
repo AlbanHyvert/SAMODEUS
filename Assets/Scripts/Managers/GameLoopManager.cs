@@ -1,17 +1,18 @@
-﻿using System;
+﻿using Engine.Singleton;
+using System;
 using UnityEngine;
-using Engine.Singleton;
 
 public class GameLoopManager : Singleton<GameLoopManager>
 {
-    [SerializeField] private DataKeycode _dataKeycode = null;
 
     private bool _isPaused = false;
 
-    public bool IsPaused { get { return _isPaused; }
+    public bool IsPaused
+    {
+        get { return _isPaused; }
         set
         {
-            _isPaused = value;
+            SetPause(value);
             _pause(_isPaused);
         }
     }
@@ -60,20 +61,6 @@ public class GameLoopManager : Singleton<GameLoopManager>
         }
     }
 
-    private event Action _camera = null;
-    public event Action Camera
-    {
-        add
-        {
-            _camera -= value;
-            _camera += value;
-        }
-        remove
-        {
-            _camera -= value;
-        }
-    }
-
     private event Action _puzzles = null;
     public event Action Puzzles
     {
@@ -88,17 +75,17 @@ public class GameLoopManager : Singleton<GameLoopManager>
         }
     }
 
-    private event Action _ui = null;
-    public event Action UI
+    private event Action _camera = null;
+    public event Action Camera
     {
         add
         {
-            _ui -= value;
-            _ui += value;
+            _camera -= value;
+            _camera += value;
         }
         remove
         {
-            _ui -= value;
+            _camera -= value;
         }
     }
 
@@ -116,6 +103,20 @@ public class GameLoopManager : Singleton<GameLoopManager>
         }
     }
 
+    private event Action _ui = null;
+    public event Action UI
+    {
+        add
+        {
+            _ui -= value;
+            _ui += value;
+        }
+        remove
+        {
+            _ui -= value;
+        }
+    }
+
     #endregion EVENTS
 
     private void Start()
@@ -123,31 +124,31 @@ public class GameLoopManager : Singleton<GameLoopManager>
         _isPaused = false;
     }
 
+    public void SetPause(bool value)
+    {
+        _isPaused = value;
+    }
+
     private void Update()
     {
-        if(Input.GetKeyDown(_dataKeycode.KeyPause) || Input.GetKeyDown(_dataKeycode.KeyPauseAlt))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
         {
             IsPaused = !IsPaused;
         }
 
-        if(_managers != null)
+        if (_managers != null)
         {
             _managers();
         }
 
-        if(_inputManager != null)
+        if (_inputManager != null)
         {
             _inputManager();
         }
 
-        if(_player != null)
+        if (_player != null)
         {
             _player();
-        }
-
-        if(_camera != null)
-        {
-            _camera();
         }
 
         if(_puzzles != null)
@@ -155,7 +156,12 @@ public class GameLoopManager : Singleton<GameLoopManager>
             _puzzles();
         }
 
-        if(_ui != null)
+        if (_camera != null)
+        {
+            _camera();
+        }
+
+        if (_ui != null)
         {
             _ui();
         }

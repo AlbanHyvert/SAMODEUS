@@ -7,11 +7,4 @@ public class PortalManager : Singleton<PortalManager>
 
     public PortalNoScreen PortalNSA { get; set; }
     public PortalNoScreen PortalNSB { get; set; }
-
-    public enum PortalID
-    {
-        PORTAL_VERTUMNE,
-        PORTAL_GCF,
-        PORTALS
-    }
 }

@@ -4,14 +4,14 @@ public class ResetTexture : MonoBehaviour
 {
     [SerializeField] private Material _material = null;
     [SerializeField] private bool _isPortal = false;
-    [SerializeField] private Room2 _room2Event = null;
+    [SerializeField] private Room2 _room2 = null;
 
  
     private void OnTriggerEnter(Collider other)
     {
         Pickable pickable = other.GetComponent<Pickable>();
 
-        if(pickable != null)
+        if(pickable != null && _material != null)
         {
             if (!pickable.gameObject.tag.Equals("WrongObj"))
             {
@@ -27,7 +27,8 @@ public class ResetTexture : MonoBehaviour
             }
             else
             {
-                _room2Event.StartSecondEvent();
+                if(_room2 != null)
+                    _room2.StartSecondEvent();
             }
         }
     }

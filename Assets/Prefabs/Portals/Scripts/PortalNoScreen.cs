@@ -5,32 +5,46 @@ public class PortalNoScreen : MonoBehaviour
 {
     [SerializeField] private PortalNoScreen _linkedPortal = null;
     [SerializeField] private bool _shouldShake = false;
-    [SerializeField] private PortalManager.PortalID _portalID = PortalManager.PortalID.PORTAL_VERTUMNE;
+    [SerializeField] private Portal_ENUM _portalID = Portal_ENUM.VERTUMNE;
 
     private List<PortalTraveller> trackedTravellers = null;
 
-    private void Start()
+    private void Awake()
     {
-        trackedTravellers = new List<PortalTraveller>();
-
-
-        if (_portalID == PortalManager.PortalID.PORTAL_VERTUMNE)
+        if (_portalID == Portal_ENUM.VERTUMNE)
         {
             PortalManager.Instance.PortalNSA = this;
+            gameObject.SetActive(false);
         }
-        else if (_portalID == PortalManager.PortalID.PORTAL_GCF)
+        else
         {
             PortalManager.Instance.PortalNSB = this;
         }
+    }
 
-        if (_linkedPortal == null && _portalID == PortalManager.PortalID.PORTAL_VERTUMNE)
+    private void Start()
+    {
+        if (_linkedPortal == null)
         {
-            _linkedPortal = PortalManager.Instance.PortalNSB;
+            if (_portalID == Portal_ENUM.GCF)
+            {
+                if (PortalManager.Instance.PortalVertumne != null)
+                {
+                    PortalManager.Instance.PortalVertumne.gameObject.SetActive(true);
+                    _linkedPortal = PortalManager.Instance.PortalNSA;
+                }
+
+            }
+            else
+            {
+                if (PortalManager.Instance.PortalGCF != null)
+                {
+                    _linkedPortal = PortalManager.Instance.PortalNSB;
+                }
+            }
         }
-        else if (_linkedPortal == null && _portalID == PortalManager.PortalID.PORTAL_GCF)
-        {
-            _linkedPortal = PortalManager.Instance.PortalNSA;
-        }
+
+        trackedTravellers = new List<PortalTraveller>();
     }
 
     private void Update()
@@ -95,5 +109,4 @@ public class PortalNoScreen : MonoBehaviour
             trackedTravellers.Remove(traveller);
         }
     }
-
 }

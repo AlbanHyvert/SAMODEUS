@@ -2,20 +2,25 @@
 
 public class HeadBobbing : MonoBehaviour
 {
-    [SerializeField] private float _bobbingSpeed = 0.18f;
-    [SerializeField] private float _bobbingAmount = 0.2f;    
-    [SerializeField] private float _midpoint = 0.0f;
-    [SerializeField] private float _timeMult = 0.1f;
+    private float _bobbingSpeed = 0.18f;
+    private float _bobbingAmount = 0.2f;    
+    private float _midpoint = 0.0f;
+    private float _timeMult = 0.1f;
 
     private Transform _cam = null;
     private Vector3 _camStartPos = Vector3.zero;
     private Vector3 _lerpCamPos = Vector3.zero;
     private float _idletimer = 0;
     private float _timer = 0.0f;
-    private void Start()
+
+    public void Init(Camera camera, float bobbingSpeed, float bobbingAmount, float midPoint, float timeMult)
     {
-        _cam = PlayerManager.Instance.Player.CameraController.Camera.transform;
+        _cam = camera.transform;
         _camStartPos = _cam.localPosition;
+        _bobbingSpeed = bobbingSpeed;
+        _bobbingAmount = bobbingAmount;
+        _midpoint = midPoint;
+        _timeMult = timeMult;
     }
 
     public void OnIdle()

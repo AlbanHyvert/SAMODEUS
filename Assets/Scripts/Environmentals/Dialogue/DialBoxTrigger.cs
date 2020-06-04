@@ -77,7 +77,7 @@ public class DialBoxTrigger : MonoBehaviour
         {
             if (Time.time <= _timer)
             {
-                PlayerManager.Instance.Player.MovementShouldStop(_shouldStopPlayer);
+                PlayerManager.Instance.PlayerCanMove = !_shouldStopPlayer;
             }
             else
             {
@@ -86,7 +86,7 @@ public class DialBoxTrigger : MonoBehaviour
         }
         else
         {
-            PlayerManager.Instance.Player.MovementShouldStop(false);
+            PlayerManager.Instance.PlayerCanMove = true;
             _timer = 0;
             GameLoopManager.Instance.Puzzles -= OnUpdate;
         }

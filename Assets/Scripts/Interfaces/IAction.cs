@@ -6,5 +6,5 @@ public interface IAction
 
     void Exit();
 
-    void DestroySelf(Transform parent);
+    void DestroySelf(Transform transform = null);
 }

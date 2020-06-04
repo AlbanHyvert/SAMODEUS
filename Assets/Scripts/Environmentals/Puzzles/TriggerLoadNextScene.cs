@@ -13,7 +13,6 @@ public class TriggerLoadNextScene : MonoBehaviour
 
         if(player != null)
         {
-            PlayerManager.Instance.DestroyPlayer();
             GameManager.Instance.ChoosenScene = _ChoosenScene;
             GameManager.Instance.ChangeState(GameManager.GameState.LOADING);
         }
