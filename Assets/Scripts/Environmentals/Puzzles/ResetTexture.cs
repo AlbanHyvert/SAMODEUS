@@ -11,9 +11,13 @@ public class ResetTexture : MonoBehaviour
     {
         Pickable pickable = other.GetComponent<Pickable>();
 
-        if(pickable != null && _material != null)
+        if(pickable != null)
         {
-            if (!pickable.gameObject.tag.Equals("WrongObj"))
+            if (pickable.gameObject.tag.Equals("WrongObj"))
+            {
+                _room2.StartSecondEvent();
+            }
+            else
             {
                 if (_isPortal == false && pickable != null)
                 {
@@ -24,11 +28,6 @@ public class ResetTexture : MonoBehaviour
                     GetComponent<Renderer>().material = _material;
                     GetComponent<Collider>().enabled = false;
                 }
-            }
-            else
-            {
-                if(_room2 != null)
-                    _room2.StartSecondEvent();
             }
         }
     }

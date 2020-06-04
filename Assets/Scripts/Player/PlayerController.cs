@@ -105,12 +105,14 @@ public class PlayerController : MonoBehaviour
             InputManager.Instance.Movement += OnMovements;
             InputManager.Instance.PressSprint += OnSprint;
             InputManager.Instance.ReleaseSprint += OnWalk;
+            InputManager.Instance.Gravity += OnGravity;
         }
         else
         {
             InputManager.Instance.Movement -= OnMovements;
             InputManager.Instance.PressSprint -= OnSprint;
             InputManager.Instance.ReleaseSprint -= OnWalk;
+            InputManager.Instance.Gravity -= OnGravity;
         }
     }
 

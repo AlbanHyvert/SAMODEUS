@@ -107,6 +107,7 @@ public class Portal : MonoBehaviour
 
                     if(_shouldBeDestroyed == true)
                     {
+                        Destroy(_linkedPortal);
                         Destroy(this);
                     }
                 }
@@ -208,6 +209,13 @@ public class Portal : MonoBehaviour
 
     private void OnDestroy()
     {
+        Collider collider = GetComponent<Collider>();
+
+        if(collider != null)
+        {
+            //collider.isTrigger = false;
+        }
+
         if(GameLoopManager.Instance != null)
         {
             GameLoopManager.Instance.Puzzles -= OnUpdate;
