@@ -365,7 +365,9 @@ MonoBehaviour:
   _stats:
     _rotationXSpeed: 10
     _rotationYSpeed: 10
-    _smoothTime: 5
+    _smoothTime: 8
+    _minClampXRotation: -80
+    _maxClampXRotation: 80
     _bobbingSpeed: 0.2
     _bobbingForce: 0.2
     _midPoint: 0

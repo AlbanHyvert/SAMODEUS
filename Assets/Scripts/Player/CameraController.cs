@@ -6,12 +6,15 @@ public class CameraController : MonoBehaviour
     [Space]
     [SerializeField] private Transform _body = null;
     [SerializeField] private Transform _hand = null;
+    [Space]
     [SerializeField] private Camera _camera = null;
     [SerializeField] private HeadBobbing _headBobbing = null;
 
     #region PRIVATE
     private int _rotationXSpeed = 0;
     private int _rotationYSpeed = 0;
+    private int _minClampXRotation = -70;
+    private int _maxClampXRotation = 70;
     private float _rotationX = 0;
     private float _rotationY = 0;
     private float _currentX = 0;
@@ -36,6 +39,9 @@ public class CameraController : MonoBehaviour
         _rotationXSpeed = _stats.RotationXSpeed;
         _rotationYSpeed = _stats.RotationYSpeed;
 
+        _minClampXRotation = _stats.MinClampXRotation;
+        _maxClampXRotation = _stats.MaxClampXRotation;
+
         InputManager.Instance.HorizontalSensitivity = _rotationXSpeed;
         InputManager.Instance.VerticalSensitivity = _rotationYSpeed;
 
@@ -51,7 +57,6 @@ public class CameraController : MonoBehaviour
         Init();
 
         _startPostion = _camera.transform.localPosition;
-        _rotationX = _body.localEulerAngles.y;
         _initialDuration = _duration;
 
         Cursor.lockState = CursorLockMode.Locked;
@@ -120,9 +125,11 @@ public class CameraController : MonoBehaviour
         _rotationX = _body.localEulerAngles.y + _currentX * _rotationXSpeed;
 
         _rotationY += _currentY * _rotationYSpeed;
-        _rotationY = Mathf.Clamp(_rotationY, -90, 90);
+        _rotationY = Mathf.Clamp(_rotationY, _minClampXRotation, _maxClampXRotation);
 
         _body.rotation = Quaternion.Euler(new Vector3(0, _rotationX, 0));
         _camera.transform.localRotation = Quaternion.Euler(-_rotationY, 0, 0);
+
+        _rotationX = _body.localEulerAngles.y;
     }
 }

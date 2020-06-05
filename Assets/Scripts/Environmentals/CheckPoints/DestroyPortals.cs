@@ -20,10 +20,13 @@ public class DestroyPortals : MonoBehaviour
         _portals = new List<GameObject>();
         _plane = new List<MeshRenderer>();
 
-        _portals.Add(PortalManager.Instance.PortalVertumne.gameObject);
-        _portals.Add(PortalManager.Instance.PortalGCF.gameObject);
-        _plane.Add(PortalManager.Instance.PortalVertumne.MeshScreen);
-        _plane.Add(PortalManager.Instance.PortalGCF.MeshScreen);
+        if(PortalManager.Instance.PortalGCF != null && PortalManager.Instance.PortalVertumne != null)
+        {
+            _portals.Add(PortalManager.Instance.PortalVertumne.gameObject);
+            _portals.Add(PortalManager.Instance.PortalGCF.gameObject);
+            _plane.Add(PortalManager.Instance.PortalVertumne.MeshScreen);
+            _plane.Add(PortalManager.Instance.PortalGCF.MeshScreen);
+        }
 
         GameLoopManager.Instance.Puzzles += OnUpdate;
         _timer = 0.0f;

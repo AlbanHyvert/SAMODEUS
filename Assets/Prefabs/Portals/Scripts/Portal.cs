@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -11,14 +10,13 @@ public class Portal : MonoBehaviour
     [SerializeField] private bool _shouldShake = false;
     [SerializeField] private Portal_ENUM _portalID = Portal_ENUM.VERTUMNE;
 
-
     private Camera _playerCamera = null;
     private Camera _portalCamera = null;
     private RenderTexture _viewTexture = null;
     private List<PortalTraveller> trackedTravellers = null;
 
     public Portal LinkedPortal { get { return _linkedPortal; } set { _linkedPortal = value;} }
-
+    public Portal_ENUM PortalID { get { return _portalID; } }
     public MeshRenderer MeshScreen { get { return _screen; } }
 
     private void Awake()
@@ -55,7 +53,7 @@ public class Portal : MonoBehaviour
                 }
 
             }
-            else if (_portalID == Portal_ENUM.VERTUMNE)
+            else if(_portalID == Portal_ENUM.VERTUMNE)
             {
                 if(PortalManager.Instance.PortalGCF != null)
                 {
@@ -98,6 +96,9 @@ public class Portal : MonoBehaviour
                 if (portalSide != portalSideOld)
                 {
                     Matrix4x4 m = _linkedPortal.transform.localToWorldMatrix * transform.worldToLocalMatrix * travellerT.localToWorldMatrix;
+
+                    PlayerManager.Instance.UseGravity = false;
+
                     traveller.Teleport(transform, _linkedPortal.transform, m.GetColumn(3), m.rotation, _shouldShake);
 
                     // Can't rely on OnTriggerEnter/Exit to be called next frame because it depends on when FixedUpdate runs
@@ -105,7 +106,9 @@ public class Portal : MonoBehaviour
                     trackedTravellers.RemoveAt(i);
                     i--;
 
-                    if(_shouldBeDestroyed == true)
+                    PlayerManager.Instance.UseGravity = true;
+
+                    if (_shouldBeDestroyed == true)
                     {
                         Destroy(_linkedPortal);
                         Destroy(this);
@@ -213,7 +216,7 @@ public class Portal : MonoBehaviour
 
         if(collider != null)
         {
-            //collider.isTrigger = false;
+            collider.isTrigger = false;
         }
 
         if(GameLoopManager.Instance != null)

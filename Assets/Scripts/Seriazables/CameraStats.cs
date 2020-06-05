@@ -7,6 +7,8 @@ public class CameraStats
     [SerializeField] private int _rotationXSpeed = 5;
     [SerializeField] private int _rotationYSpeed = 5;
     [SerializeField] private int _smoothTime = 5;
+    [SerializeField] private int _minClampXRotation = -70;
+    [SerializeField] private int _maxClampXRotation = 70;
     [Space]
     [Header("HeadBobbing")]
     [SerializeField] private float _bobbingSpeed = 0.2f;
@@ -23,6 +25,8 @@ public class CameraStats
     public int RotationXSpeed { get { return _rotationXSpeed; } }
     public int RotationYSpeed { get { return _rotationYSpeed; } }
     public int SmoothTime { get { return _smoothTime; } }
+    public int MinClampXRotation { get { return _minClampXRotation; } }
+    public int MaxClampXRotation { get { return _maxClampXRotation; } }
     public float BobbingSpeed { get { return _bobbingSpeed; } }
     public float BobbingForce { get { return _bobbingForce; } }
     public float MidPoint { get { return _midPoint; } }

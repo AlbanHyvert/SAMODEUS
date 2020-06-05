@@ -47,7 +47,7 @@ public class ReturnState : IPlateforms
             }
             else
             {
-                _timePass += 0.01f * Time.deltaTime;
+                _timePass = Time.deltaTime;
 
                 _transform.position = Vector3.Lerp(_transform.position, _self.StartPosition, _self.ReturnSpeed * _timePass);
                 _transform.rotation = _self.StartRotation;
@@ -67,7 +67,7 @@ public class ReturnState : IPlateforms
                 }
                 else
                 {
-                    _timePass = 0.01f * Time.deltaTime;
+                    _timePass = Time.deltaTime;
 
                     _transform.position = Vector3.Lerp(_transform.position, _self.StartPosition, _self.ReturnSpeed * _timePass);
                     _transform.rotation = _self.StartRotation;
