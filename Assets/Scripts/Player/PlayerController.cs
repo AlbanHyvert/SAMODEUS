@@ -234,8 +234,11 @@ public class PlayerController : MonoBehaviour
     public void OnDrop()
     {
         IAction action = _interactableObject.GetComponent<IAction>();
-        action.Exit();
 
+        if(action != null)
+            action.Exit();
+
+        _interactableObject = null;
         _handFull = false;
 
         InputManager.Instance.Interaction -= OnDrop;
@@ -247,9 +250,12 @@ public class PlayerController : MonoBehaviour
         IAction action = _interactableObject.GetComponent<IAction>();
         Rigidbody rigidbody = _interactableObject.GetComponent<Rigidbody>();
 
-        action.Exit();
+        if(action != null)
+            action.Exit();
+
         rigidbody.AddForce(_cameraController.Camera.transform.forward * _throwForce, ForceMode.Impulse);
-        
+
+        _interactableObject = null;
         _handFull = false;
 
         InputManager.Instance.Interaction -= OnDrop;
