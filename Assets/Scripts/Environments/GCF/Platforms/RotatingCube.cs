@@ -27,6 +27,9 @@ public class RotatingCube : MonoBehaviour
     [Header("Max and Min Speed")]
     [SerializeField] private float _maxSpeed = 30;
     [SerializeField] private float _minSpeed = 10;
+    [Space]
+    [Header("Speed When MovingOut")]
+    [SerializeField] private float _movingOutSpeed = 10;
     [Header("Return Speed")]
     [SerializeField] private float _returnSpeed = 20;
     [Header("Stay In Place Speed")]
@@ -61,6 +64,7 @@ public class RotatingCube : MonoBehaviour
     public float Amplitude { get { return _amplitude; } }
     public float StayAmplitude { get { return _stayAmplitude; } }
     public float Speed { get { return _speed; } }
+    public float MovingOutSpeed { get { return _movingOutSpeed; } }
     public float ReturnSpeed { get { return _returnSpeed; } }
     public float StaySpeed { get { return _staySpeed; } }
     public Vector3 StartPosition { get { return _startPosition; } }
@@ -109,10 +113,14 @@ public class RotatingCube : MonoBehaviour
 
         _player = PlayerManager.Instance.Player.transform;
 
-        if(PortalManager.Instance.PortalGCF != null)
+        if(PortalManager.Instance.PortalGCF != null && PortalManager.Instance.PortalGCF.PortalID == Portal_ENUM.GCF)
         {
             _portal = null;
             _portal = PortalManager.Instance.PortalGCF.transform;
+        }
+        else
+        {
+            _portal = null;
         }
 
         GameLoopManager.Instance.Puzzles += OnUpdate;

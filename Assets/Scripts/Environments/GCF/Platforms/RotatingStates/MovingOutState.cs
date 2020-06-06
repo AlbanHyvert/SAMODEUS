@@ -64,9 +64,9 @@ public class MovingOutState : IPlateforms
                 }
                 else
                 {
-                    _time = 0.01f * Time.deltaTime;
+                    _time = Time.deltaTime;
 
-                    _transform.position = Vector3.Lerp(_transform.position, _extentedPosition, _self.Speed * _time);
+                    _transform.position = Vector3.Lerp(_transform.position, _extentedPosition, _self.MovingOutSpeed * _time);
                     _transform.LookAt(_target);
                 }
             }
