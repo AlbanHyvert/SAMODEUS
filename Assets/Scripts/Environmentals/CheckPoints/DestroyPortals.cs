@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class DestroyPortals : MonoBehaviour
 {
-    [SerializeField] private GameObject[] _gameObject = null;
+    [SerializeField] private GameObject[] _dissolvingObject = null;
     [SerializeField] private string[] _scenesToUnload = null;
     [SerializeField] private float _speedDisolve = 1;
     [SerializeField] private float _maximalTimerValue = 10;
@@ -71,13 +71,13 @@ public class DestroyPortals : MonoBehaviour
         {
             _timer += 0.01f * (_speedDisolve* Time.deltaTime);
 
-            if (_gameObject != null)
+            if (_dissolvingObject != null)
             {
-                for (int i = 0; i < _gameObject.Length; i++)
+                for (int i = 0; i < _dissolvingObject.Length; i++)
                 {
-                    if (_gameObject[i] != null)
+                    if (_dissolvingObject[i] != null)
                     {
-                        Renderer renderer = _gameObject[i].GetComponent<Renderer>();
+                        Renderer renderer = _dissolvingObject[i].GetComponent<Renderer>();
 
                         if (renderer != null)
                             renderer.material.SetFloat("Vector1_3996BBE4", _timer);
@@ -87,9 +87,9 @@ public class DestroyPortals : MonoBehaviour
 
             if(_timer >= _maximalTimerValue)
             {
-                for (int i = 0; i < _gameObject.Length; i++)
+                for (int i = 0; i < _dissolvingObject.Length; i++)
                 {
-                    Object.Destroy(_gameObject[i]);
+                    Object.Destroy(_dissolvingObject[i]);
                 }
             }
         }
