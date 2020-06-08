@@ -8,6 +8,7 @@ namespace Engine.Loading
     public class LoadingManager : Singleton<LoadingManager>
     {
         [SerializeField] private int _defaultLoadingTime = 1;
+        [SerializeField] private int _defaultUnloadingTime = 5;
 
         private AsyncOperation _asyncOperationLoad = null;
         private AsyncOperation _asyncOperationUnLoad = null;
@@ -58,7 +59,7 @@ namespace Engine.Loading
 
         public void UnloadScene(string sceneName)
         {
-            _asyncOperationUnLoad = SceneManager.UnloadSceneAsync(sceneName);
+            StartCoroutine(UnLoadCoroutine(sceneName));
         }
 
         private void OnUpdate()
@@ -100,8 +101,17 @@ namespace Engine.Loading
 
         IEnumerator UnLoadCoroutine(string sceneName)
         {
-            _asyncOperationUnLoad = SceneManager.UnloadSceneAsync(sceneName);
-            //_asyncOperationUnLoad.completed += OnUnLoadCompleted;
+            if(GameManager.Instance.CurrentState != GameManager.GameState.MAINMENU && GameManager.Instance.CurrentState != GameManager.GameState.DEV)
+                yield return new WaitForSeconds(_defaultUnloadingTime);
+
+            if(sceneName != string.Empty && SceneManager.GetActiveScene().isLoaded == true)
+            {
+                _asyncOperationUnLoad = SceneManager.UnloadSceneAsync(sceneName);
+                
+                if(_asyncOperationUnLoad != null)
+                    _asyncOperationUnLoad.completed += OnUnLoadCompleted;
+            }
+
             yield return null;
         }
 

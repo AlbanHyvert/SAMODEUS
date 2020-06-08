@@ -7,10 +7,25 @@ public class PlayerManager : Singleton<PlayerManager>
     [SerializeField] private PlayerController _playerPrefab = null;
 
     private PlayerController _player = null;
+    private bool _playerCanMoveCamera = true;
     private bool _playerCanMove = true;
     private bool _useGravity = true;
     private float _musicVolume = 1;
     private float _dialsVolume = 1;
+
+    private event Action<bool> _cameraCanMove = null;
+    public event Action<bool> CameraCanMove
+    {
+        add
+        {
+            _cameraCanMove -= value;
+            _cameraCanMove += value;
+        }
+        remove
+        {
+            _cameraCanMove -= value;
+        }
+    }
 
     private event Action<bool> _shouldMove = null;
     public event Action<bool> ShouldMove
@@ -42,6 +57,13 @@ public class PlayerManager : Singleton<PlayerManager>
 
     public PlayerController PlayerPrefab { get { return _playerPrefab; } }
     public PlayerController Player { get { return _player; } set { SetPlayer(value); } }
+    public bool PlayerCanMoveCamera { get { return _playerCanMoveCamera; }
+        set
+        {
+            SetPlayerCanMoveCamera(value);
+            _cameraCanMove(_playerCanMoveCamera);
+        }
+    }
     public bool PlayerCanMove { get { return _playerCanMove; }
         set
         {
@@ -58,6 +80,11 @@ public class PlayerManager : Singleton<PlayerManager>
     }
     public float MusicVolume { get { return _musicVolume; } set { _musicVolume = value; } }
     public float DialVolume { get { return _dialsVolume; } set { _dialsVolume = value; } }
+
+    private void SetPlayerCanMoveCamera(bool value)
+    {
+        _playerCanMoveCamera = value;
+    }
 
     private void SetUseGravity(bool value)
     {

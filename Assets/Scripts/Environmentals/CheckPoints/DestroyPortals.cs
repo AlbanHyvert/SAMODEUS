@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class DestroyPortals : MonoBehaviour
 {
+    [SerializeField] private WorldEnum _newWorld = WorldEnum.GCF;
+    [Space]
     [SerializeField] private GameObject[] _dissolvingObject = null;
     [SerializeField] private string[] _scenesToUnload = null;
     [SerializeField] private float _speedDisolve = 1;
@@ -62,6 +64,8 @@ public class DestroyPortals : MonoBehaviour
             {
                 LoadingManager.Instance.UnloadScene(_scenesToUnload);
             }
+
+            player.CurrentWorld = _newWorld;
         }
     }
 
