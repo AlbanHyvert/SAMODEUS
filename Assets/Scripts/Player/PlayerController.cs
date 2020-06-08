@@ -239,7 +239,6 @@ public class PlayerController : MonoBehaviour
             InputManager.Instance.Interaction -= OnPickUp;
             InputManager.Instance.Interaction -= OnInteract;
         }
-
         PlayerManager.Instance.PlayerCanMoveCamera = true;
     }
 

@@ -26,11 +26,11 @@ public class GameManager : Singleton<GameManager>
 
     [SerializeField] private GameState _gameState = GameState.GAME;
 
-    private bool _isChangingState = false;
     private GameState _currentState = GameState.PRELOAD;
     private Dictionary<GameState, IGameStates> _states = null;
 
     public IGameStates CurrentStateType { get { return _states[_currentState]; } }
+    public GameState CurrentState { get { return _currentState; } }
     public GameState ChoosenScene { get { return _gameState; } set { _gameState = value; } }
 
     private void Start()
