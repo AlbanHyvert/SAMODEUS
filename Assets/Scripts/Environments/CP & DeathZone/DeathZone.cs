@@ -11,7 +11,6 @@ public class DeathZone : MonoBehaviour
 
     private List<string> _tempArrayText = null;
     private List<string> _tempArrayDial = null;
-    private int _iText = 0;
     private int _iDial = 0;
 
     private void Start()
@@ -20,7 +19,6 @@ public class DeathZone : MonoBehaviour
         _tempArrayText = new List<string>();
 
         _iDial = 0;
-        _iText = 0;
 
         NarrativeManager.Instance.ChangeLanguages += OnLanguageChange;
 
@@ -59,23 +57,23 @@ public class DeathZone : MonoBehaviour
             {
                 if (_isRandom == true)
                 {
-                    int Itext = Random.Range(0, _textBoxID.Length - 1);
+                    //int Itext = Random.Range(0, _textBoxID.Length - 1);
                     int IDial = Random.Range(0, _voiceBoxID.Length - 1);
 
                     _tempArrayDial.Add(_voiceBoxID[IDial]);
-                    _tempArrayText.Add(_textBoxID[Itext]);
+                    _tempArrayText.Add(_textBoxID[IDial]);
                 }
                 else
                 {
-                    if (_iText < _textBoxID.Length)
+                    if (_iDial < _textBoxID.Length)
                     {
-                        _tempArrayText.Add(_textBoxID[_iText]);
-                        _iText++;
+                        _tempArrayText.Add(_textBoxID[_iDial]);
+                        _iDial++;
                     }
                     else
                     {
-                        _iText = 0;
-                        _tempArrayText.Add(_textBoxID[_iText]);
+                        _iDial = 0;
+                        _tempArrayText.Add(_textBoxID[_iDial]);
                     }
 
                     if (_iDial < _voiceBoxID.Length)
