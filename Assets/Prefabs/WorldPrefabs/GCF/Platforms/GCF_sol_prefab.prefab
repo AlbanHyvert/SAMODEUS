@@ -172,14 +172,15 @@ MonoBehaviour:
   _rotatingMaterial: {fileID: 0}
   _currentState: 3
   _target: {fileID: 0}
-  _maxDistanceFromPlayer: 40
+  _maxDistanceFromPlayer: 25
   _shouldRender: 0
   _maxAmplitude: 10
   _minAmplitude: 3
   _stayAmplitude: 0.01
   _maxSpeed: 100
   _minSpeed: 30
-  _returnSpeed: 150
+  _movingOutSpeed: 10
+  _returnSpeed: 5
   _staySpeed: 1
   _isSpecialEvent: 0
 --- !u!1 &5430518350929575332
@@ -278,14 +279,15 @@ MonoBehaviour:
   _rotatingMaterial: {fileID: 0}
   _currentState: 3
   _target: {fileID: 0}
-  _maxDistanceFromPlayer: 40
+  _maxDistanceFromPlayer: 25
   _shouldRender: 0
   _maxAmplitude: 10
   _minAmplitude: 3
   _stayAmplitude: 0.01
   _maxSpeed: 100
   _minSpeed: 30
-  _returnSpeed: 150
+  _movingOutSpeed: 10
+  _returnSpeed: 5
   _staySpeed: 1
   _isSpecialEvent: 0
 --- !u!1 &5430518350929575334
@@ -384,14 +386,15 @@ MonoBehaviour:
   _rotatingMaterial: {fileID: 0}
   _currentState: 3
   _target: {fileID: 0}
-  _maxDistanceFromPlayer: 40
+  _maxDistanceFromPlayer: 25
   _shouldRender: 0
   _maxAmplitude: 10
   _minAmplitude: 3
   _stayAmplitude: 0.01
   _maxSpeed: 100
   _minSpeed: 30
-  _returnSpeed: 150
+  _movingOutSpeed: 10
+  _returnSpeed: 5
   _staySpeed: 1
   _isSpecialEvent: 0
 --- !u!1 &5430518350929575336
@@ -490,14 +493,15 @@ MonoBehaviour:
   _rotatingMaterial: {fileID: 0}
   _currentState: 3
   _target: {fileID: 0}
-  _maxDistanceFromPlayer: 40
+  _maxDistanceFromPlayer: 25
   _shouldRender: 0
   _maxAmplitude: 10
   _minAmplitude: 3
   _stayAmplitude: 0.01
   _maxSpeed: 100
   _minSpeed: 30
-  _returnSpeed: 150
+  _movingOutSpeed: 10
+  _returnSpeed: 5
   _staySpeed: 1
   _isSpecialEvent: 0
 --- !u!1 &5430518350929575338
@@ -596,14 +600,15 @@ MonoBehaviour:
   _rotatingMaterial: {fileID: 0}
   _currentState: 3
   _target: {fileID: 0}
-  _maxDistanceFromPlayer: 40
+  _maxDistanceFromPlayer: 25
   _shouldRender: 0
   _maxAmplitude: 10
   _minAmplitude: 3
   _stayAmplitude: 0.01
   _maxSpeed: 100
   _minSpeed: 30
-  _returnSpeed: 150
+  _movingOutSpeed: 10
+  _returnSpeed: 5
   _staySpeed: 1
   _isSpecialEvent: 0
 --- !u!1 &5430518350929575340
@@ -702,14 +707,15 @@ MonoBehaviour:
   _rotatingMaterial: {fileID: 0}
   _currentState: 3
   _target: {fileID: 0}
-  _maxDistanceFromPlayer: 40
+  _maxDistanceFromPlayer: 25
   _shouldRender: 0
   _maxAmplitude: 10
   _minAmplitude: 3
   _stayAmplitude: 0.01
   _maxSpeed: 100
   _minSpeed: 30
-  _returnSpeed: 150
+  _movingOutSpeed: 10
+  _returnSpeed: 5
   _staySpeed: 1
   _isSpecialEvent: 0
 --- !u!1 &5430518350929575342
@@ -808,14 +814,15 @@ MonoBehaviour:
   _rotatingMaterial: {fileID: 0}
   _currentState: 3
   _target: {fileID: 0}
-  _maxDistanceFromPlayer: 40
+  _maxDistanceFromPlayer: 25
   _shouldRender: 0
   _maxAmplitude: 10
   _minAmplitude: 3
   _stayAmplitude: 0.01
   _maxSpeed: 100
   _minSpeed: 30
-  _returnSpeed: 150
+  _movingOutSpeed: 10
+  _returnSpeed: 5
   _staySpeed: 1
   _isSpecialEvent: 0
 --- !u!1 &5430518350929575344
@@ -914,14 +921,15 @@ MonoBehaviour:
   _rotatingMaterial: {fileID: 0}
   _currentState: 3
   _target: {fileID: 0}
-  _maxDistanceFromPlayer: 40
+  _maxDistanceFromPlayer: 25
   _shouldRender: 0
   _maxAmplitude: 10
   _minAmplitude: 3
   _stayAmplitude: 0.01
   _maxSpeed: 100
   _minSpeed: 30
-  _returnSpeed: 150
+  _movingOutSpeed: 10
+  _returnSpeed: 5
   _staySpeed: 1
   _isSpecialEvent: 0
 --- !u!1 &5430518350929575346
@@ -1020,14 +1028,15 @@ MonoBehaviour:
   _rotatingMaterial: {fileID: 0}
   _currentState: 3
   _target: {fileID: 0}
-  _maxDistanceFromPlayer: 40
+  _maxDistanceFromPlayer: 25
   _shouldRender: 0
   _maxAmplitude: 10
   _minAmplitude: 3
   _stayAmplitude: 0.01
   _maxSpeed: 100
   _minSpeed: 30
-  _returnSpeed: 150
+  _movingOutSpeed: 10
+  _returnSpeed: 5
   _staySpeed: 1
   _isSpecialEvent: 0
 --- !u!1 &5430518350929575348
@@ -1126,14 +1135,15 @@ MonoBehaviour:
   _rotatingMaterial: {fileID: 0}
   _currentState: 3
   _target: {fileID: 0}
-  _maxDistanceFromPlayer: 40
+  _maxDistanceFromPlayer: 25
   _shouldRender: 0
   _maxAmplitude: 10
   _minAmplitude: 3
   _stayAmplitude: 0.01
   _maxSpeed: 100
   _minSpeed: 30
-  _returnSpeed: 150
+  _movingOutSpeed: 10
+  _returnSpeed: 5
   _staySpeed: 1
   _isSpecialEvent: 0
 --- !u!1 &5430518350929575350
@@ -1232,14 +1242,15 @@ MonoBehaviour:
   _rotatingMaterial: {fileID: 0}
   _currentState: 3
   _target: {fileID: 0}
-  _maxDistanceFromPlayer: 40
+  _maxDistanceFromPlayer: 25
   _shouldRender: 0
   _maxAmplitude: 10
   _minAmplitude: 3
   _stayAmplitude: 0.01
   _maxSpeed: 100
   _minSpeed: 30
-  _returnSpeed: 150
+  _movingOutSpeed: 10
+  _returnSpeed: 5
   _staySpeed: 1
   _isSpecialEvent: 0
 --- !u!1 &5430518350929575352
@@ -1338,14 +1349,15 @@ MonoBehaviour:
   _rotatingMaterial: {fileID: 0}
   _currentState: 3
   _target: {fileID: 0}
-  _maxDistanceFromPlayer: 40
+  _maxDistanceFromPlayer: 25
   _shouldRender: 0
   _maxAmplitude: 10
   _minAmplitude: 3
   _stayAmplitude: 0.01
   _maxSpeed: 100
   _minSpeed: 30
-  _returnSpeed: 150
+  _movingOutSpeed: 10
+  _returnSpeed: 5
   _staySpeed: 1
   _isSpecialEvent: 0
 --- !u!1 &5430518350929575354
@@ -1444,14 +1456,15 @@ MonoBehaviour:
   _rotatingMaterial: {fileID: 0}
   _currentState: 3
   _target: {fileID: 0}
-  _maxDistanceFromPlayer: 40
+  _maxDistanceFromPlayer: 25
   _shouldRender: 0
   _maxAmplitude: 10
   _minAmplitude: 3
   _stayAmplitude: 0.01
   _maxSpeed: 100
   _minSpeed: 30
-  _returnSpeed: 150
+  _movingOutSpeed: 10
+  _returnSpeed: 5
   _staySpeed: 1
   _isSpecialEvent: 0
 --- !u!1 &5430518350929575356
@@ -1550,14 +1563,15 @@ MonoBehaviour:
   _rotatingMaterial: {fileID: 0}
   _currentState: 3
   _target: {fileID: 0}
-  _maxDistanceFromPlayer: 40
+  _maxDistanceFromPlayer: 25
   _shouldRender: 0
   _maxAmplitude: 10
   _minAmplitude: 3
   _stayAmplitude: 0.01
   _maxSpeed: 100
   _minSpeed: 30
-  _returnSpeed: 150
+  _movingOutSpeed: 10
+  _returnSpeed: 5
   _staySpeed: 1
   _isSpecialEvent: 0
 --- !u!1 &5430518350929575358
@@ -1656,14 +1670,15 @@ MonoBehaviour:
   _rotatingMaterial: {fileID: 0}
   _currentState: 3
   _target: {fileID: 0}
-  _maxDistanceFromPlayer: 40
+  _maxDistanceFromPlayer: 25
   _shouldRender: 1
   _maxAmplitude: 10
   _minAmplitude: 3
   _stayAmplitude: 0.01
   _maxSpeed: 100
   _minSpeed: 30
-  _returnSpeed: 150
+  _movingOutSpeed: 10
+  _returnSpeed: 5
   _staySpeed: 1
   _isSpecialEvent: 0
 --- !u!1 &5430518350929575360
@@ -1762,14 +1777,15 @@ MonoBehaviour:
   _rotatingMaterial: {fileID: 0}
   _currentState: 3
   _target: {fileID: 0}
-  _maxDistanceFromPlayer: 40
+  _maxDistanceFromPlayer: 25
   _shouldRender: 1
   _maxAmplitude: 10
   _minAmplitude: 3
   _stayAmplitude: 0.01
   _maxSpeed: 100
   _minSpeed: 30
-  _returnSpeed: 150
+  _movingOutSpeed: 10
+  _returnSpeed: 5
   _staySpeed: 1
   _isSpecialEvent: 0
 --- !u!1 &5430518350929575362
@@ -1868,14 +1884,15 @@ MonoBehaviour:
   _rotatingMaterial: {fileID: 0}
   _currentState: 3
   _target: {fileID: 0}
-  _maxDistanceFromPlayer: 40
+  _maxDistanceFromPlayer: 25
   _shouldRender: 1
   _maxAmplitude: 10
   _minAmplitude: 3
   _stayAmplitude: 0.01
   _maxSpeed: 100
   _minSpeed: 30
-  _returnSpeed: 150
+  _movingOutSpeed: 10
+  _returnSpeed: 5
   _staySpeed: 1
   _isSpecialEvent: 0
 --- !u!1 &5430518350929575364
@@ -1974,14 +1991,15 @@ MonoBehaviour:
   _rotatingMaterial: {fileID: 0}
   _currentState: 3
   _target: {fileID: 0}
-  _maxDistanceFromPlayer: 40
+  _maxDistanceFromPlayer: 25
   _shouldRender: 1
   _maxAmplitude: 10
   _minAmplitude: 3
   _stayAmplitude: 0.01
   _maxSpeed: 100
   _minSpeed: 30
-  _returnSpeed: 150
+  _movingOutSpeed: 10
+  _returnSpeed: 5
   _staySpeed: 1
   _isSpecialEvent: 0
 --- !u!1 &5430518350929575366
@@ -2080,14 +2098,15 @@ MonoBehaviour:
   _rotatingMaterial: {fileID: 0}
   _currentState: 3
   _target: {fileID: 0}
-  _maxDistanceFromPlayer: 40
+  _maxDistanceFromPlayer: 25
   _shouldRender: 1
   _maxAmplitude: 10
   _minAmplitude: 3
   _stayAmplitude: 0.01
   _maxSpeed: 100
   _minSpeed: 30
-  _returnSpeed: 150
+  _movingOutSpeed: 10
+  _returnSpeed: 5
   _staySpeed: 1
   _isSpecialEvent: 0
 --- !u!1 &5430518350929575368
@@ -2186,14 +2205,15 @@ MonoBehaviour:
   _rotatingMaterial: {fileID: 0}
   _currentState: 3
   _target: {fileID: 0}
-  _maxDistanceFromPlayer: 40
+  _maxDistanceFromPlayer: 25
   _shouldRender: 1
   _maxAmplitude: 10
   _minAmplitude: 3
   _stayAmplitude: 0.01
   _maxSpeed: 100
   _minSpeed: 30
-  _returnSpeed: 150
+  _movingOutSpeed: 10
+  _returnSpeed: 5
   _staySpeed: 1
   _isSpecialEvent: 0
 --- !u!1 &5430518350929575370
@@ -2292,14 +2312,15 @@ MonoBehaviour:
   _rotatingMaterial: {fileID: 0}
   _currentState: 3
   _target: {fileID: 0}
-  _maxDistanceFromPlayer: 40
+  _maxDistanceFromPlayer: 25
   _shouldRender: 1
   _maxAmplitude: 10
   _minAmplitude: 3
   _stayAmplitude: 0.01
   _maxSpeed: 100
   _minSpeed: 30
-  _returnSpeed: 150
+  _movingOutSpeed: 10
+  _returnSpeed: 5
   _staySpeed: 1
   _isSpecialEvent: 0
 --- !u!1 &5430518350929575372
@@ -2398,14 +2419,15 @@ MonoBehaviour:
   _rotatingMaterial: {fileID: 0}
   _currentState: 3
   _target: {fileID: 0}
-  _maxDistanceFromPlayer: 40
+  _maxDistanceFromPlayer: 25
   _shouldRender: 1
   _maxAmplitude: 10
   _minAmplitude: 3
   _stayAmplitude: 0.01
   _maxSpeed: 100
   _minSpeed: 30
-  _returnSpeed: 150
+  _movingOutSpeed: 10
+  _returnSpeed: 5
   _staySpeed: 1
   _isSpecialEvent: 0
 --- !u!1 &5430518350929575374
@@ -2504,14 +2526,15 @@ MonoBehaviour:
   _rotatingMaterial: {fileID: 0}
   _currentState: 3
   _target: {fileID: 0}
-  _maxDistanceFromPlayer: 40
+  _maxDistanceFromPlayer: 25
   _shouldRender: 1
   _maxAmplitude: 10
   _minAmplitude: 3
   _stayAmplitude: 0.01
   _maxSpeed: 100
   _minSpeed: 30
-  _returnSpeed: 150
+  _movingOutSpeed: 10
+  _returnSpeed: 5
   _staySpeed: 1
   _isSpecialEvent: 0
 --- !u!1 &5430518350929575376
@@ -2610,14 +2633,15 @@ MonoBehaviour:
   _rotatingMaterial: {fileID: 0}
   _currentState: 3
   _target: {fileID: 0}
-  _maxDistanceFromPlayer: 40
+  _maxDistanceFromPlayer: 25
   _shouldRender: 1
   _maxAmplitude: 10
   _minAmplitude: 3
   _stayAmplitude: 0.01
   _maxSpeed: 100
   _minSpeed: 30
-  _returnSpeed: 150
+  _movingOutSpeed: 10
+  _returnSpeed: 5
   _staySpeed: 1
   _isSpecialEvent: 0
 --- !u!1 &5430518350929575378
@@ -2716,14 +2740,15 @@ MonoBehaviour:
   _rotatingMaterial: {fileID: 0}
   _currentState: 3
   _target: {fileID: 0}
-  _maxDistanceFromPlayer: 40
+  _maxDistanceFromPlayer: 25
   _shouldRender: 1
   _maxAmplitude: 10
   _minAmplitude: 3
   _stayAmplitude: 0.01
   _maxSpeed: 100
   _minSpeed: 30
-  _returnSpeed: 150
+  _movingOutSpeed: 10
+  _returnSpeed: 5
   _staySpeed: 1
   _isSpecialEvent: 0
 --- !u!1 &5430518350929575380
@@ -2822,14 +2847,15 @@ MonoBehaviour:
   _rotatingMaterial: {fileID: 0}
   _currentState: 3
   _target: {fileID: 0}
-  _maxDistanceFromPlayer: 40
+  _maxDistanceFromPlayer: 25
   _shouldRender: 1
   _maxAmplitude: 10
   _minAmplitude: 3
   _stayAmplitude: 0.01
   _maxSpeed: 100
   _minSpeed: 30
-  _returnSpeed: 150
+  _movingOutSpeed: 10
+  _returnSpeed: 5
   _staySpeed: 1
   _isSpecialEvent: 0
 --- !u!1 &5430518350929575382
@@ -2928,14 +2954,15 @@ MonoBehaviour:
   _rotatingMaterial: {fileID: 0}
   _currentState: 3
   _target: {fileID: 0}
-  _maxDistanceFromPlayer: 40
+  _maxDistanceFromPlayer: 25
   _shouldRender: 0
   _maxAmplitude: 10
   _minAmplitude: 3
   _stayAmplitude: 0.01
   _maxSpeed: 100
   _minSpeed: 30
-  _returnSpeed: 150
+  _movingOutSpeed: 10
+  _returnSpeed: 5
   _staySpeed: 1
   _isSpecialEvent: 0
 --- !u!1 &5430518350929575384
@@ -3034,14 +3061,15 @@ MonoBehaviour:
   _rotatingMaterial: {fileID: 0}
   _currentState: 3
   _target: {fileID: 0}
-  _maxDistanceFromPlayer: 40
+  _maxDistanceFromPlayer: 25
   _shouldRender: 0
   _maxAmplitude: 10
   _minAmplitude: 3
   _stayAmplitude: 0.01
   _maxSpeed: 100
   _minSpeed: 30
-  _returnSpeed: 150
+  _movingOutSpeed: 10
+  _returnSpeed: 5
   _staySpeed: 1
   _isSpecialEvent: 0
 --- !u!1 &5430518350929575386
@@ -3140,14 +3168,15 @@ MonoBehaviour:
   _rotatingMaterial: {fileID: 0}
   _currentState: 3
   _target: {fileID: 0}
-  _maxDistanceFromPlayer: 40
+  _maxDistanceFromPlayer: 25
   _shouldRender: 0
   _maxAmplitude: 10
   _minAmplitude: 3
   _stayAmplitude: 0.01
   _maxSpeed: 100
   _minSpeed: 30
-  _returnSpeed: 150
+  _movingOutSpeed: 10
+  _returnSpeed: 5
   _staySpeed: 1
   _isSpecialEvent: 0
 --- !u!1 &5430518350929575388
@@ -3246,14 +3275,15 @@ MonoBehaviour:
   _rotatingMaterial: {fileID: 0}
   _currentState: 3
   _target: {fileID: 0}
-  _maxDistanceFromPlayer: 40
+  _maxDistanceFromPlayer: 25
   _shouldRender: 0
   _maxAmplitude: 10
   _minAmplitude: 3
   _stayAmplitude: 0.01
   _maxSpeed: 100
   _minSpeed: 30
-  _returnSpeed: 150
+  _movingOutSpeed: 10
+  _returnSpeed: 5
   _staySpeed: 1
   _isSpecialEvent: 0
 --- !u!1 &5430518350929575390
@@ -3352,14 +3382,15 @@ MonoBehaviour:
   _rotatingMaterial: {fileID: 0}
   _currentState: 3
   _target: {fileID: 0}
-  _maxDistanceFromPlayer: 40
+  _maxDistanceFromPlayer: 25
   _shouldRender: 0
   _maxAmplitude: 10
   _minAmplitude: 3
   _stayAmplitude: 0.01
   _maxSpeed: 100
   _minSpeed: 30
-  _returnSpeed: 150
+  _movingOutSpeed: 10
+  _returnSpeed: 5
   _staySpeed: 1
   _isSpecialEvent: 0
 --- !u!1 &5430518350929575392
@@ -3458,13 +3489,14 @@ MonoBehaviour:
   _rotatingMaterial: {fileID: 0}
   _currentState: 3
   _target: {fileID: 0}
-  _maxDistanceFromPlayer: 40
+  _maxDistanceFromPlayer: 25
   _shouldRender: 0
   _maxAmplitude: 10
   _minAmplitude: 3
   _stayAmplitude: 0.01
   _maxSpeed: 100
   _minSpeed: 30
-  _returnSpeed: 150
+  _movingOutSpeed: 10
+  _returnSpeed: 5
   _staySpeed: 1
   _isSpecialEvent: 0
