@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
-using TMPro;
 
 public class DialBoxTrigger : MonoBehaviour
 {
     [SerializeField ,Header("Text Boxs ID")] private string[] _textBoxID = null;
     [SerializeField ,Header("Voice Boxs ID")] private string[] _voiceBoxID = null;
+    [Space]
     [SerializeField] private GameObject[] _activateNextObj = null;
+    [SerializeField] private GameObject[] _desactivateNextObj = null;
+    [Space]
     [SerializeField] private bool _shouldStopPlayer = false;
     [SerializeField] private float _stopPlayerDuration = 5;
 
@@ -67,6 +69,17 @@ public class DialBoxTrigger : MonoBehaviour
                         }
                     }
                 }
+
+                if (_desactivateNextObj != null)
+                {
+                    for (int i = 0; i < _desactivateNextObj.Length; i++)
+                    {
+                        if (_desactivateNextObj[i] != null)
+                        {
+                            _desactivateNextObj[i].SetActive(false);
+                        }
+                    }
+                }
             }
         }
     }
@@ -88,6 +101,19 @@ public class DialBoxTrigger : MonoBehaviour
         {
             PlayerManager.Instance.PlayerCanMove = true;
             _timer = 0;
+            GameLoopManager.Instance.Puzzles -= OnUpdate;
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if(NarrativeManager.Instance != null)
+        {
+            NarrativeManager.Instance.ChangeLanguages -= OnLanguageChange;
+        }
+
+        if(GameLoopManager.Instance != null)
+        {
             GameLoopManager.Instance.Puzzles -= OnUpdate;
         }
     }
