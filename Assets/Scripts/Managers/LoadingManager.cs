@@ -101,7 +101,7 @@ namespace Engine.Loading
 
         IEnumerator UnLoadCoroutine(string sceneName)
         {
-            if(GameManager.Instance.CurrentState == GameManager.GameState.GAME)
+            if(GameManager.Instance.CurrentState != GameManager.GameState.MAINMENU && GameManager.Instance.CurrentState != GameManager.GameState.DEV)
                 yield return new WaitForSeconds(_defaultUnloadingTime);
 
             if(sceneName != string.Empty && SceneManager.GetActiveScene().isLoaded == true)
