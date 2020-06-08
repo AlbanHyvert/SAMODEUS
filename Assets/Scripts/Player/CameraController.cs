@@ -62,8 +62,22 @@ public class CameraController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
+        PlayerManager.Instance.CameraCanMove += CameraCanMove;
+
         GameLoopManager.Instance.Camera += OnUpdate;
         GameLoopManager.Instance.Pause += IsPaused;
+    }
+
+    private void CameraCanMove(bool value)
+    {
+        if(value == true)
+        {
+            GameLoopManager.Instance.Camera += OnUpdate;
+        }
+        else
+        {
+            GameLoopManager.Instance.Camera -= OnUpdate;
+        }
     }
 
     private void IsPaused(bool pause)
@@ -131,5 +145,17 @@ public class CameraController : MonoBehaviour
         _camera.transform.localRotation = Quaternion.Euler(-_rotationY, 0, 0);
 
         _rotationX = _body.localEulerAngles.y;
+    }
+
+    private void OnDestroy()
+    {
+        if(PlayerManager.Instance !=null)
+            PlayerManager.Instance.CameraCanMove -= CameraCanMove;
+
+        if(GameLoopManager.Instance != null)
+        {
+            GameLoopManager.Instance.Camera -= OnUpdate;
+            GameLoopManager.Instance.Pause -= IsPaused;
+        }
     }
 }

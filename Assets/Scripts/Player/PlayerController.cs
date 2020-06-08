@@ -13,8 +13,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioSource _dialsAudioSource = null;
     [Space]
     [SerializeField, Header("Interaction Settings")] private InteractionStats _interactionStats = null;
-    [Space]
-    [SerializeField, Header("World Tag")] private WorldEnum _currentWorld = WorldEnum.VERTUMNE;
     #endregion SERIALIZEFIELD
 
     #region PRIVATE
@@ -33,6 +31,7 @@ public class PlayerController : MonoBehaviour
     private LayerMask _activeLayer = 0;
     private CharacterController _controller = null;
     private Transform _interactableObject = null;
+    private WorldEnum _currentWorld = WorldEnum.VERTUMNE;
     #endregion PRIVATE
 
     #region PROPERTIES
@@ -43,7 +42,12 @@ public class PlayerController : MonoBehaviour
     public float Speed { get { return _speed; } }
     public float Gravity { get { return _gravity; } }
     public bool IsInteract { get { return _isInteract; } set { IsInteractable(value); } }
-    public WorldEnum CurrentWorld { get { return _currentWorld; } set { _currentWorld = value; } }
+    public WorldEnum CurrentWorld { get { return _currentWorld; } 
+        set
+        {
+            SetCurrentWorld(value);
+        }
+    }
     #endregion PROPERTIES
 
     private void Awake()
@@ -163,7 +167,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnRaycast()
     {
-        if(_handFull == false)
+        if(_handFull == false && _interactableObject == null)
         {
             RaycastHit hit;
 
@@ -210,8 +214,12 @@ public class PlayerController : MonoBehaviour
 
         if(_interactableObject != null && interact != null)
         {
+            PlayerManager.Instance.PlayerCanMoveCamera = false;
+
             interact.Enter();
         }
+
+        PlayerManager.Instance.PlayerCanMoveCamera = true;
     }
 
     private void OnPickUp()
@@ -220,6 +228,8 @@ public class PlayerController : MonoBehaviour
 
         if(_interactableObject != null && action != null)
         {
+            PlayerManager.Instance.PlayerCanMoveCamera = false;
+
             action.Enter(this);
             
             _handFull = true;
@@ -229,17 +239,20 @@ public class PlayerController : MonoBehaviour
             InputManager.Instance.Interaction -= OnPickUp;
             InputManager.Instance.Interaction -= OnInteract;
         }
+
+        PlayerManager.Instance.PlayerCanMoveCamera = true;
     }
 
     public void OnDrop()
     {
+        PlayerManager.Instance.PlayerCanMoveCamera = false;
+
         IAction action = _interactableObject.GetComponent<IAction>();
+        action.Exit();
 
-        if(action != null)
-            action.Exit();
-
-        _interactableObject = null;
         _handFull = false;
+
+        PlayerManager.Instance.PlayerCanMoveCamera = true;
 
         InputManager.Instance.Interaction -= OnDrop;
         InputManager.Instance.Throw -= OnThrow;
@@ -247,19 +260,25 @@ public class PlayerController : MonoBehaviour
 
     private void OnThrow()
     {
+        PlayerManager.Instance.PlayerCanMoveCamera = false;
+
         IAction action = _interactableObject.GetComponent<IAction>();
         Rigidbody rigidbody = _interactableObject.GetComponent<Rigidbody>();
 
-        if(action != null)
-            action.Exit();
-
+        action.Exit();
         rigidbody.AddForce(_cameraController.Camera.transform.forward * _throwForce, ForceMode.Impulse);
-
-        _interactableObject = null;
+        
         _handFull = false;
+
+        PlayerManager.Instance.PlayerCanMoveCamera = true;
 
         InputManager.Instance.Interaction -= OnDrop;
         InputManager.Instance.Throw -= OnThrow;
+    }
+
+    private void SetCurrentWorld(WorldEnum world)
+    {
+        _currentWorld = world;
     }
 
     private void OnDestroy()
