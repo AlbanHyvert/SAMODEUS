@@ -123,4 +123,25 @@ public class NarrativeManager : Singleton<NarrativeManager>
             _onCallNarration(voiceDialBoxData.ToArray(), textDialBoxDatas.ToArray());
         }
     }
+
+    public void TriggerNarrative(DialogueSystem[] dialogue)
+    {
+        if (_onCallNarration != null)
+        {
+            List<VoiceDialBoxData> voiceDialBoxData = new List<VoiceDialBoxData>();
+            List<TextDialBoxData> textDialBoxDatas = new List<TextDialBoxData>();
+
+            for (int i = 0; i < dialogue.Length; i++)
+            {
+                for (int j = 0; j < dialogue[i].TextID.Length; j++)
+                {
+                    textDialBoxDatas.Add(_textDialBoxs[dialogue[i].TextID[j]]);
+                }
+
+                voiceDialBoxData.Add(_voiceDialBoxs[dialogue[i].VoiceID]);
+            }
+
+            _onCallNarration(voiceDialBoxData.ToArray(), textDialBoxDatas.ToArray());
+        }
+    }
 }

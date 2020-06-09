@@ -8,10 +8,11 @@ public class Pickable : MonoBehaviour, IAction
     private Rigidbody _rigidbody = null;
     private FixedJoint _joint = null;
     private Vector3 _startPosition = Vector3.zero;
-
+    private bool _hasAlreadyStarted = false;
     public Rigidbody Rigidbody { get { return _rigidbody; } }
     public Vector3 StartPos { get { return _startPosition; } }
     public bool ShouldBeDestroyed { get { return _shouldBeDestroyed; } }
+    public bool HasAlreadyStarted { get { return _hasAlreadyStarted; } set { _hasAlreadyStarted = value; } }
 
     private void Start()
     {
