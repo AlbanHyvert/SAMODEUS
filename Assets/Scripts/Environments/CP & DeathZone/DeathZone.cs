@@ -5,16 +5,20 @@ using UnityEngine;
 public class DeathZone : MonoBehaviour
 {
     [SerializeField] private DialogueSystem[] _dialogues = null;
-    [Space]
-    [SerializeField] private bool _isRandom = true;
 
     private List<DialogueSystem> _dialogueList = null;
     private int _i = 0;
 
+    private void Awake()
+    {
+        Rigidbody rigidbody = GetComponent<Rigidbody>();
+
+        rigidbody.isKinematic = true;
+        rigidbody.useGravity = false;
+    }
+
     private void Start()
     {
-        _dialogueList = new List<DialogueSystem>();
-
         _i = 0;
 
         NarrativeManager.Instance.ChangeLanguages += OnLanguageChange;
@@ -39,14 +43,6 @@ public class DeathZone : MonoBehaviour
                 _dialogues[i].TextID[j] = newID;
             }
         }
-    }
-
-    private void Awake()
-    {
-        Rigidbody rigidbody = GetComponent<Rigidbody>();
-
-        rigidbody.isKinematic = true;
-        rigidbody.useGravity = false;
     }
 
     private void OnTriggerEnter(Collider other)

@@ -178,7 +178,7 @@ public class PlayerController : MonoBehaviour
                 IsInteract = isHit;
             }
 
-            if (isHit == true)
+            if (IsInteract == true)
             {
                 _interactableObject = hit.transform;
             }
@@ -217,6 +217,8 @@ public class PlayerController : MonoBehaviour
             PlayerManager.Instance.PlayerCanMoveCamera = false;
 
             interact.Enter();
+
+            _interactableObject = null;
         }
 
         PlayerManager.Instance.PlayerCanMoveCamera = true;
@@ -253,6 +255,8 @@ public class PlayerController : MonoBehaviour
 
         PlayerManager.Instance.PlayerCanMoveCamera = true;
 
+        _interactableObject = null;
+
         InputManager.Instance.Interaction -= OnDrop;
         InputManager.Instance.Throw -= OnThrow;
     }
@@ -270,6 +274,8 @@ public class PlayerController : MonoBehaviour
         _handFull = false;
 
         PlayerManager.Instance.PlayerCanMoveCamera = true;
+
+        _interactableObject = null;
 
         InputManager.Instance.Interaction -= OnDrop;
         InputManager.Instance.Throw -= OnThrow;

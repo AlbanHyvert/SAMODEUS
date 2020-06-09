@@ -6,17 +6,22 @@ public class ResetTexture : MonoBehaviour
     [SerializeField] private Material _material = null;
     [SerializeField] private bool _isPortal = false;
     [SerializeField] private Room2 _room2 = null;
+    [Space]
     [SerializeField] private DialogueSystem _dials = null;
 
     private void Start()
     {
-        NarrativeManager.Instance.ChangeLanguages += OnLanguageChange;
-
-        for (int i = 0; i < _dials.TextID.Length; i++)
+        if(_dials != null)
         {
-            string newID = _dials.TextID[i] + "_" + NarrativeManager.Instance.ChoosenLanguage.ToString();
-            _dials.TextID[i] = newID;
+            NarrativeManager.Instance.ChangeLanguages += OnLanguageChange;
+
+            for (int i = 0; i < _dials.TextID.Length; i++)
+            {
+                string newID = _dials.TextID[i] + "_" + NarrativeManager.Instance.ChoosenLanguage.ToString();
+                _dials.TextID[i] = newID;
+            }
         }
+
     }
 
     private void OnLanguageChange(GameManager.Language language)

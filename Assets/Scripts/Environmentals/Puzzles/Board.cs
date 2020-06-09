@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class Board : MonoBehaviour
 {
+    [SerializeField] private DialogueSystem _dialogues = null;
+    [Space]
     [SerializeField] private string _objectTag = "Diamond";
     [SerializeField] private Transform _setPosition = null;
     [SerializeField] private Transform[] _bridgeParts = null;
@@ -12,6 +14,14 @@ public class Board : MonoBehaviour
 
     private void Start()
     {
+        NarrativeManager.Instance.ChangeLanguages += OnLanguageChange;
+
+        for (int i = 0; i < _dialogues.TextID.Length; i++)
+        {
+            string newID = _dialogues.TextID[i] + "_" + NarrativeManager.Instance.ChoosenLanguage.ToString();
+            _dialogues.TextID[i] = newID;
+        }
+
         _activatedBridge = new List<RotatingCube>();
 
         for (int i = 0; i < _bridgeParts.Length; i++)
@@ -36,6 +46,15 @@ public class Board : MonoBehaviour
         }
     }
 
+    private void OnLanguageChange(GameManager.Language language)
+    {
+        for (int i = 0; i < _dialogues.TextID.Length; i++)
+        {
+            string newID = _dialogues.TextID[i] + "_" + NarrativeManager.Instance.ChoosenLanguage.ToString();
+            _dialogues.TextID[i] = newID;
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         IAction action = other.GetComponent<IAction>();
@@ -44,6 +63,15 @@ public class Board : MonoBehaviour
         {
             PlayerManager.Instance.Player.GetComponent<PlayerController>().OnDrop();
             action.DestroySelf(_setPosition);
+
+            if(_dialogues != null)
+            {
+                List<DialogueSystem> dialogueSystems = new List<DialogueSystem>();
+
+                dialogueSystems.Add(_dialogues);
+
+                NarrativeManager.Instance.TriggerNarrative(dialogueSystems.ToArray());
+            }
 
             if(_colliders != null)
             {
