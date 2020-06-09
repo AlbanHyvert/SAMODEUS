@@ -1,12 +1,33 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class ResetTexture : MonoBehaviour
 {
     [SerializeField] private Material _material = null;
     [SerializeField] private bool _isPortal = false;
     [SerializeField] private Room2 _room2 = null;
+    [SerializeField] private DialogueSystem _dials = null;
 
- 
+    private void Start()
+    {
+        NarrativeManager.Instance.ChangeLanguages += OnLanguageChange;
+
+        for (int i = 0; i < _dials.TextID.Length; i++)
+        {
+            string newID = _dials.TextID[i] + "_" + NarrativeManager.Instance.ChoosenLanguage.ToString();
+            _dials.TextID[i] = newID;
+        }
+    }
+
+    private void OnLanguageChange(GameManager.Language language)
+    {
+        for (int i = 0; i < _dials.TextID.Length; i++)
+        {
+            string newID = _dials.TextID[i] + "_" + NarrativeManager.Instance.ChoosenLanguage.ToString();
+            _dials.TextID[i] = newID;
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         Pickable pickable = other.GetComponent<Pickable>();
@@ -19,6 +40,20 @@ public class ResetTexture : MonoBehaviour
             }
             else
             {
+                if (pickable.HasAlreadyStarted == false)
+                {
+                    if(_dials != null)
+                    {
+                        List<DialogueSystem> dialogueSystems = new List<DialogueSystem>();
+
+                        dialogueSystems.Add(_dials);
+
+                        NarrativeManager.Instance.TriggerNarrative(dialogueSystems.ToArray());
+                    }
+
+                    pickable.HasAlreadyStarted = true;
+                }
+
                 if (_isPortal == false && pickable != null)
                 {
                     GetComponent<Renderer>().material = _material;
