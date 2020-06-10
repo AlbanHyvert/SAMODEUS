@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -64,7 +65,7 @@ public class RoomsDoor : MonoBehaviour
 
         if (player != null)
         {
-            if (_dialogues != null)
+            if (_dialogues != null && _dialogues.Length > 1)
             {
                 if (_i < _dialogues.Length)
                 {

@@ -16,13 +16,13 @@ public class UISlider : MonoBehaviour
 
     private void Start()
     {
-        _musicSlider.value = _musicSlider.maxValue;
-        _dialogueSlider.value = _dialogueSlider.maxValue;
+        _musicSlider.value = PlayerManager.Instance.MusicVolume;
+        _dialogueSlider.value = PlayerManager.Instance.DialVolume;
 
         if (PlayerManager.Instance.Player != null)
         {
-            PlayerManager.Instance.Player.MusicAudioSource.volume = PlayerManager.Instance.MusicVolume / 100;
-            PlayerManager.Instance.Player.DialsAudioSource.volume = PlayerManager.Instance.DialVolume / 100;
+            PlayerManager.Instance.Player.MusicAudioSource.volume = _musicSlider.value;
+            PlayerManager.Instance.Player.DialsAudioSource.volume =  _dialogueSlider.value;
         }
         else
         {

@@ -22,12 +22,38 @@ public class SoundManager : Singleton<SoundManager>
         }
     }
 
+    private event Action<SoundBoxData> _onChooseMusic = null;
+    public event Action<SoundBoxData> OnChooseMusic
+    {
+        add
+        {
+            _onChooseMusic -= value;
+            _onChooseMusic += value;
+        }
+        remove
+        {
+            _onChooseMusic -= value;
+        }
+    }
+
     private void Start()
     {
         _soundBoxs = new Dictionary<string, SoundBoxData>();
-        for (int i = 0; i < _soundBoxData.Length; i++)
+
+        if(_soundBoxData != null && _soundBoxData.Length > 1)
         {
-            _soundBoxs.Add(_soundBoxData[i].ID, _soundBoxData[i]);
+            for (int i = 0; i < _soundBoxData.Length; i++)
+            {
+                _soundBoxs.Add(_soundBoxData[i].ID, _soundBoxData[i]);
+            }
+        }
+    }
+
+    public void OnStartMusic(string ID)
+    {
+        if(_onChooseMusic != null)
+        {
+            _onChooseMusic(_soundBoxs[ID]);
         }
     }
 
