@@ -19,6 +19,7 @@ public class DeathZone : MonoBehaviour
 
     private void Start()
     {
+        _dialogueList = new List<DialogueSystem>();
         _i = 0;
 
         NarrativeManager.Instance.ChangeLanguages += OnLanguageChange;

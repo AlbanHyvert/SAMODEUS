@@ -45,18 +45,39 @@ public class ResetTexture : MonoBehaviour
             }
             else
             {
-                if (pickable.HasAlreadyStarted == false)
+                if(_isPortal == false)
                 {
-                    if(_dials != null)
+                    if (pickable.HasAlreadyStarted == false)
                     {
-                        List<DialogueSystem> dialogueSystems = new List<DialogueSystem>();
+                        if (_dials != null)
+                        {
+                            List<DialogueSystem> dialogueSystems = new List<DialogueSystem>();
 
-                        dialogueSystems.Add(_dials);
+                            dialogueSystems.Add(_dials);
 
-                        NarrativeManager.Instance.TriggerNarrative(dialogueSystems.ToArray());
+                            NarrativeManager.Instance.TriggerNarrative(dialogueSystems.ToArray());
+                        }
+
+                        pickable.HasAlreadyStarted = true;
                     }
+                }
+                else
+                {
+                    pickable.HasAlreadyStarted = false;
 
-                    pickable.HasAlreadyStarted = true;
+                    if (pickable.HasAlreadyStarted == false)
+                    {
+                        if (_dials != null)
+                        {
+                            List<DialogueSystem> dialogueSystems = new List<DialogueSystem>();
+
+                            dialogueSystems.Add(_dials);
+
+                            NarrativeManager.Instance.TriggerNarrative(dialogueSystems.ToArray());
+                        }
+
+                        pickable.HasAlreadyStarted = true;
+                    }
                 }
 
                 if (_isPortal == false && pickable != null)

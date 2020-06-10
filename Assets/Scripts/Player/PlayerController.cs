@@ -167,7 +167,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnRaycast()
     {
-        if(_handFull == false && _interactableObject == null)
+        if(_handFull == false)
         {
             RaycastHit hit;
 
@@ -176,11 +176,15 @@ public class PlayerController : MonoBehaviour
             if (isHit != IsInteract)
             {
                 IsInteract = isHit;
-            }
 
-            if (IsInteract == true)
-            {
-                _interactableObject = hit.transform;
+                if (IsInteract == true)
+                {
+                    _interactableObject = hit.transform;
+                }
+                else
+                {
+                    _interactableObject = null;
+                }
             }
         }
     }
