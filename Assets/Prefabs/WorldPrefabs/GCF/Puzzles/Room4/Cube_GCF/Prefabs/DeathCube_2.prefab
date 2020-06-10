@@ -2018,7 +2018,7 @@ GameObject:
   - component: {fileID: 8426337015551865784}
   - component: {fileID: 8426337015551865785}
   - component: {fileID: 4519793366607931310}
-  - component: {fileID: 2975370132307333400}
+  - component: {fileID: 114151025123082026}
   m_Layer: 0
   m_Name: DeathCube_2
   m_TagString: Untagged
@@ -2084,7 +2084,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2975370132307333400
+--- !u!114 &114151025123082026
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2093,6 +2093,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8426337015551865786}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58da423ef1234274ba311949255d9e09, type: 3}
+  m_Script: {fileID: 11500000, guid: d3f9402248e13d844baba8466d7bb44b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _dialogues:
+  - _textID:
+    - GCF1_Death03-1
+    _voiceID: GCF_DeathCube03
