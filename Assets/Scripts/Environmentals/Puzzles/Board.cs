@@ -7,6 +7,7 @@ public class Board : MonoBehaviour
     [Space]
     [SerializeField] private string _objectTag = "Diamond";
     [SerializeField] private Transform _setPosition = null;
+    [Space]
     [SerializeField] private Transform[] _bridgeParts = null;
     [SerializeField] private Collider[] _colliders = null;
 

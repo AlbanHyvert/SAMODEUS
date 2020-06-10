@@ -93,7 +93,7 @@ MonoBehaviour:
   renderingPath: 0
   volumeLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 29495
   volumeAnchorOverride: {fileID: 0}
   aperture: 8
   shutterSpeed: 0.005
@@ -495,7 +495,7 @@ GameObject:
   - component: {fileID: 3289561592814387870}
   - component: {fileID: 3289561592814387868}
   - component: {fileID: 1102583056}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -565,7 +565,6 @@ MonoBehaviour:
     _activeLayer:
       serializedVersion: 2
       m_Bits: 512
-  _currentWorld: 0
 --- !u!114 &1102583056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -801,7 +800,7 @@ MonoBehaviour:
   renderingPath: 0
   volumeLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 29495
   volumeAnchorOverride: {fileID: 0}
   aperture: 8
   shutterSpeed: 0.005
