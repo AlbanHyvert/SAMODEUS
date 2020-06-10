@@ -14,6 +14,7 @@ public class PlayerUI : MonoBehaviour
         _hudCredits.SetActive(false);
         GameLoopManager.Instance.Pause += IsPaused;
     }
+
     private void IsPaused(bool pause)
     {
         if(pause == true)
@@ -39,6 +40,7 @@ public class PlayerUI : MonoBehaviour
     public void Restart()
     {
         GameLoopManager.Instance.IsPaused = false;
+        GameManager.Instance.ChoosenScene = GameManager.GameState.GAME;
         GameManager.Instance.ChangeState(GameManager.GameState.LOADING);
     }
 

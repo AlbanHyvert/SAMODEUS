@@ -63,28 +63,23 @@ public class ResetTexture : MonoBehaviour
                 }
                 else
                 {
-                    pickable.HasAlreadyStarted = false;
+                    NarrativeManager.Instance.DialBoxController.ClearAll();
 
-                    if (pickable.HasAlreadyStarted == false)
-                    {
-                        if (_dials != null)
-                        {
-                            List<DialogueSystem> dialogueSystems = new List<DialogueSystem>();
+                    if (_dials != null)
+                     {
+                        List<DialogueSystem> dialogueSystems = new List<DialogueSystem>();
 
-                            dialogueSystems.Add(_dials);
+                        dialogueSystems.Add(_dials);
 
-                            NarrativeManager.Instance.TriggerNarrative(dialogueSystems.ToArray());
-                        }
-
-                        pickable.HasAlreadyStarted = true;
+                        NarrativeManager.Instance.TriggerNarrative(dialogueSystems.ToArray());
                     }
                 }
 
-                if (_isPortal == false && pickable != null)
+                if (_isPortal == false)
                 {
                     GetComponent<Renderer>().material = _material;
                 }
-                else if (_isPortal == true && pickable != null)
+                else
                 {
                     GetComponent<Renderer>().material = _material;
                     GetComponent<Collider>().enabled = false;

@@ -36,7 +36,7 @@ public class DialBoxTrigger : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if(NarrativeManager.Instance.DialBoxController.AudioSource != null)
+        if(NarrativeManager.Instance.DialBoxController.DialAudioSource != null)
         {
             if (other.tag.Equals("Player"))
             {

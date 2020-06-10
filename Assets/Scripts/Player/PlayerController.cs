@@ -70,8 +70,13 @@ public class PlayerController : MonoBehaviour
         InputManager.Instance.PressSprint += OnSprint;
         InputManager.Instance.ReleaseSprint += OnWalk;
         InputManager.Instance.Gravity += OnGravity;
-        
+
+        _dialsAudioSource.volume = PlayerManager.Instance.DialVolume;
+        _musicAudioSource.volume = PlayerManager.Instance.MusicVolume;
+
         Init();
+
+        SetCurrentWorld(_currentWorld);
     }
 
     private void Init()
@@ -288,6 +293,7 @@ public class PlayerController : MonoBehaviour
     private void SetCurrentWorld(WorldEnum world)
     {
         _currentWorld = world;
+        PlayerManager.Instance.SetCurrentWorldMusic(_currentWorld);
     }
 
     private void OnDestroy()

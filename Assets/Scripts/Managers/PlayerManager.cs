@@ -55,6 +55,20 @@ public class PlayerManager : Singleton<PlayerManager>
         }
     }
 
+    private event Action<WorldEnum> _worldMusic = null;
+    public event Action<WorldEnum> WorldMusic
+    {
+        add
+        {
+            _worldMusic -= value;
+            _worldMusic += value;
+        }
+        remove
+        {
+            _worldMusic -= value;
+        }
+    }
+
     public PlayerController PlayerPrefab { get { return _playerPrefab; } }
     public PlayerController Player { get { return _player; } set { SetPlayer(value); } }
     public bool PlayerCanMoveCamera { get { return _playerCanMoveCamera; }
@@ -80,6 +94,14 @@ public class PlayerManager : Singleton<PlayerManager>
     }
     public float MusicVolume { get { return _musicVolume; } set { _musicVolume = value; } }
     public float DialVolume { get { return _dialsVolume; } set { _dialsVolume = value; } }
+
+    public void SetCurrentWorldMusic(WorldEnum world)
+    {
+        if(_worldMusic != null)
+        {
+            _worldMusic(world);
+        }
+    }
 
     private void SetPlayerCanMoveCamera(bool value)
     {

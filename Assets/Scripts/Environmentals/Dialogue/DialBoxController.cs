@@ -7,21 +7,27 @@ public class DialBoxController : MonoBehaviour
     [SerializeField ,Header("TmPro Text Zone")] private TextMeshProUGUI _text = null;
     [SerializeField ,Header("Blank Time Between Text")] private float _blankThreshold = 0.1f;
     [SerializeField] private TextMeshProUGUI _buttonsToPressText = null;
+    [Space]
+    [SerializeField] private AudioClip[] _musics = null;
 
-    private AudioSource _source = null;
+    private AudioSource _dialSource = null;
+    private AudioSource _musicSource = null;
+    private AudioClip _currentMusic = null;
     private float _textTimeStamp = 0.0f;
     private float _voiceTimeStamp = 0.0f;
     private List<TextDialBoxData> _textDialBoxDataList = null;
     private List<VoiceDialBoxData> _voiceDialBoxDataList = null;
     private bool _timerIsStarted = false;
-
+ 
     public bool TimerIsStarted { get { return _timerIsStarted; } }
 
-    public AudioSource AudioSource { get { return _source; } set { _source = value; } }
+    public AudioSource DialAudioSource { get { return _dialSource; } set { _dialSource = value; } }
+    public AudioSource MusicAudioSource { get { return _musicSource; } set { _musicSource = value; } }
 
     private void Awake()
     {
         NarrativeManager.Instance.DialBoxController = this;
+        PlayerManager.Instance.WorldMusic += GetWorldMusic;
         gameObject.SetActive(false);
     }
 
@@ -32,13 +38,15 @@ public class DialBoxController : MonoBehaviour
 
         _text.text = string.Empty;
 
-        if(PlayerManager.Instance.Player != null)
-            _source = PlayerManager.Instance.Player.DialsAudioSource;
+        if (PlayerManager.Instance.Player != null)
+        {
+            _dialSource = PlayerManager.Instance.Player.DialsAudioSource;
+            _musicSource = PlayerManager.Instance.Player.MusicAudioSource;
+        }
 
         NarrativeManager.Instance.OnCallNarration += OnTriggerNarration;
         GameLoopManager.Instance.Pause += IsPause;
         GameLoopManager.Instance.UI += OnUpdate;
-
     }
 
     private void IsPause(bool pause)
@@ -66,7 +74,7 @@ public class DialBoxController : MonoBehaviour
 
     private void TriggerFirstAudioDialsElement()
     {
-        _source.PlayOneShot(_voiceDialBoxDataList[0].Clip);
+        _dialSource.PlayOneShot(_voiceDialBoxDataList[0].Clip);
         _voiceTimeStamp = Time.time + (_voiceDialBoxDataList[0].Clip.length + _voiceDialBoxDataList[0].LifeTime);
         _voiceDialBoxDataList.RemoveAt(0);
     }
@@ -82,9 +90,29 @@ public class DialBoxController : MonoBehaviour
         }
     }
 
+    private void GetWorldMusic(WorldEnum world)
+    {
+        if (PlayerManager.Instance.Player != null)
+        {
+            _musicSource = PlayerManager.Instance.Player.MusicAudioSource;
+        }
+
+        if (world == WorldEnum.VERTUMNE)
+        {
+            _currentMusic = _musics[0];
+        }
+        else if(world == WorldEnum.GCF)
+        {
+            _currentMusic = _musics[1];
+        }
+
+        _musicSource.clip = _currentMusic;
+        _musicSource.Play();
+    }
+
     private void OnUpdate()
     {
-        if(_source != null && _timerIsStarted == true)
+        if(_dialSource != null && _timerIsStarted == true)
         {
             _buttonsToPressText.text = InputManager.Instance.DataKeycode.KeyDialogue.ToString();
 
@@ -117,9 +145,9 @@ public class DialBoxController : MonoBehaviour
                 }
             }
 
-            if (_voiceDialBoxDataList == null && _textDialBoxDataList == null && _source.isPlaying == false)
+            if (_voiceDialBoxDataList == null && _textDialBoxDataList == null && _dialSource.isPlaying == false)
             {
-                _source.clip = null;
+                _dialSource.clip = null;
                 _buttonsToPressText.text = string.Empty;
                 _text.text = string.Empty;
                 InputManager.Instance.PassDialogue -= PassDials;
@@ -138,7 +166,7 @@ public class DialBoxController : MonoBehaviour
         _text.text = string.Empty;
         _buttonsToPressText.text = string.Empty;
         _textTimeStamp = 0;
-        _source.Stop();
+        _dialSource.Stop();
     }
 
     public void ClearAll()

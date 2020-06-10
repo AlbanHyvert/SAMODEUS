@@ -92,11 +92,11 @@ public class NarrativeManager : Singleton<NarrativeManager>
 
     private void OnUpdate()
     {
-        if(_dialBoxController != null && _dialBoxController.AudioSource == null)
+        if(_dialBoxController != null && _dialBoxController.DialAudioSource == null)
         {
             if (PlayerManager.Instance.Player != null)
             {
-                _dialBoxController.AudioSource = PlayerManager.Instance.Player.DialsAudioSource;
+                _dialBoxController.DialAudioSource = PlayerManager.Instance.Player.DialsAudioSource;
                 _dialBoxController.gameObject.SetActive(true);
                 GameLoopManager.Instance.Managers -= OnUpdate;
             }
