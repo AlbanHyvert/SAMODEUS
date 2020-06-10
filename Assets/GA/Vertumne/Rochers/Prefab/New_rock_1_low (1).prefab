@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1166076851236085035}
   - component: {fileID: 1166076851233217803}
   - component: {fileID: 1166076851234185163}
-  - component: {fileID: 6541143823565759549}
+  - component: {fileID: 8579368434146196905}
   m_Layer: 0
   m_Name: New_rock_1_low (1)
   m_TagString: Untagged
@@ -78,8 +78,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &6541143823565759549
-MeshCollider:
+--- !u!135 &8579368434146196905
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -87,8 +87,7 @@ MeshCollider:
   m_GameObject: {fileID: 1166076851236110603}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: b0e631f632dd7ca49af5f3e54a682760, type: 3}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 74.17951
+  m_Center: {x: 0, y: 0, z: 0}
