@@ -46,7 +46,12 @@ public class MovingOutState : IPlateforms
         float DistFromExtentedPosition = Vector3.Distance(_transform.position, _extentedPosition);
         float DistFromPlayer = Vector3.Distance(_self.StartPosition, _self.Player.position);
 
-        if(_self.OverrideState == true)
+        if (_self.ShouldRender == false)
+        {
+            _transform.localScale = Vector3.Lerp(_transform.localScale, Vector3.zero, _self.MovingOutSpeed * Time.deltaTime);
+        }
+
+        if (_self.OverrideState == true)
         {
             _self.SetState(Plateforms_ENUM.RETURN);
         }

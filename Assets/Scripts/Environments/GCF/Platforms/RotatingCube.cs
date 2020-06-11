@@ -45,6 +45,7 @@ public class RotatingCube : MonoBehaviour
     private Dictionary<Plateforms_ENUM, IPlateforms> _states = null;
     private Transform _player = null;
     private Vector3 _startPosition = Vector3.zero;
+    private Vector3 _tempScale = Vector3.zero;
     private Quaternion _startRotation = Quaternion.identity;
     private MeshRenderer _renderer = null;
     private bool _tempRendererEnabled = false;
@@ -68,6 +69,7 @@ public class RotatingCube : MonoBehaviour
     public float ReturnSpeed { get { return _returnSpeed; } }
     public float StaySpeed { get { return _staySpeed; } }
     public Vector3 StartPosition { get { return _startPosition; } }
+    public Vector3 TempScale { get { return _tempScale; } }
     public Quaternion StartRotation { get { return _startRotation; } }
     #endregion PROPERTIES
 
@@ -94,6 +96,7 @@ public class RotatingCube : MonoBehaviour
     {
         _startPosition = transform.position;
         _startRotation = transform.rotation;
+        _tempScale = transform.localScale;
 
         _renderer = GetComponent<MeshRenderer>();
 

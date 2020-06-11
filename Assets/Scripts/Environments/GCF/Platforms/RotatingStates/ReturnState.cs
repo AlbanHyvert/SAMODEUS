@@ -39,7 +39,12 @@ public class ReturnState : IPlateforms
         float DistFromStartPosition = Vector3.Distance(_transform.position, _self.StartPosition);
         float DistFromPlayer = Vector3.Distance(_self.StartPosition, _self.Player.position);
 
-        if(_self.OverrideState == true)
+        if (_self.ShouldRender == false)
+        {
+            _transform.localScale = Vector3.Lerp(_self.transform.localScale, _self.TempScale, _self.ReturnSpeed * Time.deltaTime);
+        }
+
+        if (_self.OverrideState == true)
         {
             if (DistFromStartPosition <= 0.01f)
             {

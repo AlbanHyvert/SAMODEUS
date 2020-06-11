@@ -71,8 +71,11 @@ public class PlayerController : MonoBehaviour
         InputManager.Instance.ReleaseSprint += OnWalk;
         InputManager.Instance.Gravity += OnGravity;
 
-        _dialsAudioSource.volume = PlayerManager.Instance.DialVolume;
-        _musicAudioSource.volume = PlayerManager.Instance.MusicVolume;
+        float musicVolume = PlayerManager.Instance.MusicVolume / 100;
+        float dialVolume = PlayerManager.Instance.DialVolume / 100;
+
+        _dialsAudioSource.volume = dialVolume;
+        _musicAudioSource.volume = musicVolume;
 
         Init();
 

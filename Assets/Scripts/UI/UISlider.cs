@@ -21,15 +21,24 @@ public class UISlider : MonoBehaviour
 
         if (PlayerManager.Instance.Player != null)
         {
-            PlayerManager.Instance.Player.MusicAudioSource.volume = _musicSlider.value;
-            PlayerManager.Instance.Player.DialsAudioSource.volume =  _dialogueSlider.value;
+            float musicVolume = _musicSlider.value / 100;
+            float dialVolume = _dialogueSlider.value / 100;
+
+            PlayerManager.Instance.Player.MusicAudioSource.volume = musicVolume;
+            PlayerManager.Instance.Player.DialsAudioSource.volume = dialVolume;
         }
         else
         {
+            PlayerManager.Instance.DialVolume = _dialogueSlider.value;
+            PlayerManager.Instance.MusicVolume = _musicSlider.value;
+
             if(_mainMenu != null)
             {
-                _mainMenu.MenuMusicAudio.volume = _musicSlider.value;
-                _mainMenu.MenuDialsAudio.volume = _dialogueSlider.value;
+                float musicVolume = _musicSlider.value / 100;
+                float dialVolume = _dialogueSlider.value / 100;
+
+                _mainMenu.MenuMusicAudio.volume = musicVolume;
+                _mainMenu.MenuDialsAudio.volume = dialVolume;
             }
         }
 
@@ -53,13 +62,15 @@ public class UISlider : MonoBehaviour
     {
         PlayerManager.Instance.MusicVolume = _musicSlider.value;
 
-        if(PlayerManager.Instance.Player != null)
-            PlayerManager.Instance.Player.MusicAudioSource.volume = PlayerManager.Instance.MusicVolume / 100;
+        float musicVolume = _musicSlider.value / 100;
+
+        if (PlayerManager.Instance.Player != null)
+            PlayerManager.Instance.Player.MusicAudioSource.volume = musicVolume;
         else
         {
             if (_mainMenu != null)
             {
-                _mainMenu.MenuMusicAudio.volume = PlayerManager.Instance.MusicVolume / 100;
+                _mainMenu.MenuMusicAudio.volume = musicVolume;
             }
         }
     }
@@ -68,13 +79,15 @@ public class UISlider : MonoBehaviour
     {
         PlayerManager.Instance.DialVolume = _dialogueSlider.value;
 
-        if(PlayerManager.Instance.Player != null)
-            PlayerManager.Instance.Player.DialsAudioSource.volume = PlayerManager.Instance.DialVolume / 100;
+        float dialVolume = _dialogueSlider.value / 100;
+
+        if (PlayerManager.Instance.Player != null)
+            PlayerManager.Instance.Player.DialsAudioSource.volume = dialVolume;
         else
         {
             if (_mainMenu != null)
             {
-                _mainMenu.MenuMusicAudio.volume = PlayerManager.Instance.DialVolume / 100;
+                _mainMenu.MenuMusicAudio.volume = dialVolume;
             }
         }
     }
