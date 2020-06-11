@@ -113,8 +113,6 @@ public class Room2 : MonoBehaviour
             Collider collider = gameObject.GetComponent<Collider>();
 
             collider.enabled = false;
-
-
         }
     }
 

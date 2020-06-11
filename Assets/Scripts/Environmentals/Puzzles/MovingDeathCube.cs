@@ -40,11 +40,11 @@ public class MovingDeathCube : MonoBehaviour
 
         if ( distBeforeDesctruct > 0.1f)
         {
-            _timer = _speed * Time.deltaTime;
+            _timer = Time.deltaTime;
             _rescaleTime = Time.deltaTime;
 
             transform.localScale = Vector3.Lerp(transform.localScale, _tempScale, _rescaleTime);
-            transform.position = Vector3.Lerp(transform.position, _distanceBeforeDesctruction.position, _timer);
+            transform.position = Vector3.Lerp(transform.position, _distanceBeforeDesctruction.position, _speed * _timer);
         }
         else
         {

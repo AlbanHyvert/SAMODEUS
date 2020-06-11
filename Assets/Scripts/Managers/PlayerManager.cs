@@ -10,8 +10,8 @@ public class PlayerManager : Singleton<PlayerManager>
     private bool _playerCanMoveCamera = true;
     private bool _playerCanMove = true;
     private bool _useGravity = true;
-    private float _musicVolume = 1;
-    private float _dialsVolume = 1;
+    [Range(0,100)] private float _musicVolume = 30f;
+    [Range(0,100)] private float _dialsVolume = 70f;
 
     private event Action<bool> _cameraCanMove = null;
     public event Action<bool> CameraCanMove
