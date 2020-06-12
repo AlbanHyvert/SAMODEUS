@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5303438042498232450}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.928, z: -1.032}
+  m_LocalPosition: {x: 0, y: 1.296, z: 0.977}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8613916066520780769}
@@ -78,7 +78,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 0.7731919, z: 1}
-  m_Center: {x: 0, y: 1.113404, z: -1.03}
+  m_Center: {x: 0, y: 1.54, z: 0.98}
 --- !u!114 &9049158153783731849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,6 +93,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objectTag: Diamond
   _setPosition: {fileID: 7825690671232729694}
+  _activatedObject: []
+  _desactivedObject: []
+  _dialogues:
+    _textID: []
+    _voiceID: 
 --- !u!1 &8613916066521273283
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,6 +204,7 @@ GameObject:
   - component: {fileID: 8613916066520780773}
   - component: {fileID: 8613916066524172227}
   - component: {fileID: 8613916066523204867}
+  - component: {fileID: 5168174544518543806}
   m_Layer: 0
   m_Name: Boucle_chaine_3
   m_TagString: Untagged
@@ -265,6 +271,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &5168174544518543806
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8613916066521273285}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 63.866795, y: 7.775259, z: 65.73253}
+  m_Center: {x: -0.93287826, y: -60.237633, z: 0}
 --- !u!1 &8613916066521273287
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,7 +295,6 @@ GameObject:
   - component: {fileID: 8613916066520780775}
   - component: {fileID: 8613916066524172229}
   - component: {fileID: 8613916066523204869}
-  - component: {fileID: 3991347149271483843}
   m_Layer: 0
   m_Name: Chaine64
   m_TagString: Untagged
@@ -343,19 +361,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &3991347149271483843
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8613916066521273287}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 63.866795, y: 7.775259, z: 65.73253}
-  m_Center: {x: -0.93287826, y: -60.237633, z: 0}
 --- !u!1 &8613916066521273289
 GameObject:
   m_ObjectHideFlags: 0
