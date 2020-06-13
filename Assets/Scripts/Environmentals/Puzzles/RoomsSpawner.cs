@@ -16,6 +16,8 @@ public class RoomsSpawner : MonoBehaviour
 
     private void Start()
     {
+        InfiniteRoomManager.Instance.RoomsSpawner = this;
+
         _roomsList = new List<GameObject>();
         _player = PlayerManager.Instance.Player.transform;
         GameLoopManager.Instance.Puzzles += OnUpdate;

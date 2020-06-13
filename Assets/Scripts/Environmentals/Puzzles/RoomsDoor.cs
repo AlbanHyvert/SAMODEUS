@@ -8,10 +8,9 @@ public class RoomsDoor : MonoBehaviour
     [SerializeField] private DialogueSystem[] _dialogues = null;
     [Space]
     [SerializeField] private GameObject[] _door = null;
+    [SerializeField] private int _roomStatus = 1;
 
     private List<bool> _isActive = null;
-
-    private int _i = 0;
     private List<DialogueSystem> _dialogueList = null;
 
     private void Start()
@@ -67,15 +66,15 @@ public class RoomsDoor : MonoBehaviour
         {
             if (_dialogues != null && _dialogues.Length > 1)
             {
-                if (_i < _dialogues.Length)
+                if (InfiniteRoomManager.Instance.DialRoom1 < _dialogues.Length)
                 {
-                    _dialogueList.Add(_dialogues[_i]);
-                    _i++;
+                    _dialogueList.Add(_dialogues[InfiniteRoomManager.Instance.DialRoom1]);
+                    InfiniteRoomManager.Instance.DialRoom1++;
                 }
                 else
                 {
-                    _i = 0;
-                    _dialogueList.Add(_dialogues[_i]);
+                    InfiniteRoomManager.Instance.DialRoom1 = 0;
+                    _dialogueList.Add(_dialogues[InfiniteRoomManager.Instance.DialRoom1]);
                 }
 
                 NarrativeManager.Instance.TriggerNarrative(_dialogueList.ToArray());
@@ -85,9 +84,9 @@ public class RoomsDoor : MonoBehaviour
 
             if (_door != null)
             {
-                for (int i = 0; i < _door.Length; i++)
+                for (int j = 0; j < _door.Length; j++)
                 {
-                    _door[i].SetActive(!_isActive[i]);
+                    _door[j].SetActive(!_isActive[j]);
                 }
             }
             gameObject.SetActive(false);

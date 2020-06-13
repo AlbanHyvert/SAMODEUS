@@ -6,6 +6,9 @@ public class CreateDeathCube : MonoBehaviour
     [SerializeField] private Transform[] _distanceBeforeDesctruction = null;
     [SerializeField] private Transform[] _spawnersPosition = null;
     [SerializeField] private MovingDeathCube[] _deathCube = null;
+    [Space]
+    [SerializeField] private float _distanceBeforeActivation = 150;
+    [Space]
     [SerializeField] private float _timeBeforeSpawn = 3;
     [SerializeField] private float _deathCubeSpeed = 3;
 
@@ -59,7 +62,7 @@ public class CreateDeathCube : MonoBehaviour
     {
         float DistFromPlayer = Vector3.Distance(transform.position, PlayerManager.Instance.Player.transform.position);
 
-        if(DistFromPlayer < 100)
+        if(DistFromPlayer < _distanceBeforeActivation)
         {
             if (Time.time > _timer)
             {

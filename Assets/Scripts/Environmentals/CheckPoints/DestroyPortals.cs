@@ -7,11 +7,11 @@ public class DestroyPortals : MonoBehaviour
 {
     [SerializeField] private WorldEnum _newWorld = WorldEnum.GCF;
     [Space]
-    [SerializeField] private GameObject[] _dissolvingObject = null;
+    [SerializeField] private MeshRenderer[] _dissolvingObject = null;
     [SerializeField] private string[] _scenesToUnload = null;
-    [SerializeField] private float _speedDisolve = 1;
-    [SerializeField] private float _maximalTimerValue = 10;
+    [SerializeField, Range(-1, 1)] private float _startValueDissolve = 1;
 
+    [Range(-1,1)] private float _dissolveValue = 1;
     private List<GameObject> _portals = null;
     private List<MeshRenderer> _plane = null;
     private bool _isActive = false;
@@ -30,9 +30,22 @@ public class DestroyPortals : MonoBehaviour
             _plane.Add(PortalManager.Instance.PortalGCF.MeshScreen);
         }
 
-        GameLoopManager.Instance.Puzzles += OnUpdate;
-        _timer = 0.0f;
+        _dissolveValue = _startValueDissolve;
 
+        if (_dissolvingObject != null)
+        {
+            for (int i = 0; i < _dissolvingObject.Length; i++)
+            {
+                if (_dissolvingObject[i] != null)
+                {
+                    Material mat = _dissolvingObject[i].sharedMaterial;
+
+                    mat.SetFloat("_Dissolve", _dissolveValue);
+                }
+            }
+        }
+
+        _timer = 0.0f;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -41,16 +54,25 @@ public class DestroyPortals : MonoBehaviour
 
         if (player != null && _isActive == false)
         {
-            _timer = 0.0f;
-            _isActive = true;
+            player.CurrentWorld = _newWorld;
 
-            if(_portals != null)
+            if (_portals != null)
             {
                 for (int i = 0; i < _portals.Count; i++)
                 {
                     Destroy(_portals[i].gameObject, 1);
                 }
             }
+
+            if (_scenesToUnload != null)
+            {
+                LoadingManager.Instance.UnloadScene(_scenesToUnload);
+            }
+
+            _timer = 0.0f;
+            _isActive = true;
+
+            GameLoopManager.Instance.Puzzles += OnUpdate;
 
             if (_plane != null)
             {
@@ -59,13 +81,6 @@ public class DestroyPortals : MonoBehaviour
                     Object.Destroy(_plane[i], 1);
                 }
             }
-
-            if(_scenesToUnload != null)
-            {
-                LoadingManager.Instance.UnloadScene(_scenesToUnload);
-            }
-
-            player.CurrentWorld = _newWorld;
         }
     }
 
@@ -73,23 +88,24 @@ public class DestroyPortals : MonoBehaviour
     {
         if(_isActive == true)
         {
-            _timer += 0.01f * (_speedDisolve* Time.deltaTime);
+            _timer = Time.deltaTime;
 
             if (_dissolvingObject != null)
             {
+                _dissolveValue -= (0.5f * _timer);
+
                 for (int i = 0; i < _dissolvingObject.Length; i++)
                 {
                     if (_dissolvingObject[i] != null)
                     {
-                        Renderer renderer = _dissolvingObject[i].GetComponent<Renderer>();
+                        Material mat = _dissolvingObject[i].sharedMaterial;
 
-                        if (renderer != null)
-                            renderer.material.SetFloat("Vector1_3996BBE4", _timer);
+                        mat.SetFloat("_Dissolve", _dissolveValue);
                     }
                 }
             }
 
-            if(_timer >= _maximalTimerValue)
+            if(_dissolveValue <= -0.1f)
             {
                 for (int i = 0; i < _dissolvingObject.Length; i++)
                 {
@@ -101,5 +117,11 @@ public class DestroyPortals : MonoBehaviour
         {
             _timer = 0.0f;
         }
+    }
+
+    private void OnDestroy()
+    {
+        if (GameLoopManager.Instance != null)
+            GameLoopManager.Instance.Puzzles -= OnUpdate;
     }
 }

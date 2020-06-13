@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
     public float Speed { get { return _speed; } }
     public float Gravity { get { return _gravity; } }
     public bool IsInteract { get { return _isInteract; } set { IsInteractable(value); } }
+    public bool HandFull { get { return _handFull; } }
     public WorldEnum CurrentWorld { get { return _currentWorld; } 
         set
         {

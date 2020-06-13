@@ -100,7 +100,8 @@ public class RotatingCube : MonoBehaviour
 
         _renderer = GetComponent<MeshRenderer>();
 
-        _tempRendererEnabled = _renderer.enabled;
+        if(_renderer != null)
+         _tempRendererEnabled = _renderer.enabled;
 
         if (_target == null)
         {
@@ -136,9 +137,7 @@ public class RotatingCube : MonoBehaviour
 
     private void OnUpdate()
     {
-        float DistFromPlayer = Vector3.Distance(_player.position, _startPosition);
-
-        if(_portal != null)
+        if(_portal != null && _renderer != null)
         {
             float DistBetweenPlayerAndPortal = Vector3.Distance(_startPosition, _portal.position);
 
@@ -153,31 +152,8 @@ public class RotatingCube : MonoBehaviour
         }
         else
         {
-            if (DistFromPlayer >= 100)
-            {
-                if (changeRendererValue == false)
-                {
-                    _renderer.enabled = false;
-                    changeRendererValue = true;
-                }
-            }
-            else
-            {
-                if (changeRendererValue == true)
-                {
-                    if (_currentState == Plateforms_ENUM.STAY || _currentState == Plateforms_ENUM.MOVINGOUT)
-                    {
-                        _renderer.enabled = _tempRendererEnabled;
-                    }
-                    else
-                    {
-                        _renderer.enabled = _shouldRender;
-                    }
-
-                    changeRendererValue = false;
-                }
+            if(_renderer != null)
                 OnTick();
-            }
         }
     }
 
