@@ -62,6 +62,7 @@ public class Pickable : MonoBehaviour, IAction
         Destroy(_joint);
         _rigidbody.transform.SetParent(parent);
         transform.position = parent.position;
+        transform.rotation = parent.rotation;
         _rigidbody.useGravity = true;
         Destroy(this, 1);
     }

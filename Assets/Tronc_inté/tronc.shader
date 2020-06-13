@@ -5,7 +5,7 @@ Shader "tronc"
     Properties
     {
 		_TextureSample0("Texture Sample 0", 2D) = "white" {}
-		_Dissolve("Dissolve", Range( -1 , 1)) = 0.4792375
+		_Dissolve("Dissolve", Range( -1 , 1)) = 1
 
     }
 

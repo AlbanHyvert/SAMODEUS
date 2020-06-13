@@ -58,12 +58,19 @@ public class Board : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Pickable pickable = other.GetComponent<Pickable>();
         IAction action = other.GetComponent<IAction>();
 
         if (action != null && other.tag == _objectTag)
         {
-            PlayerManager.Instance.Player.GetComponent<PlayerController>().OnDrop();
+            if(PlayerManager.Instance.Player.HandFull == true)
+            {
+                PlayerManager.Instance.Player.OnDrop();
+            }
+
             action.DestroySelf(_setPosition);
+            pickable.Rigidbody.isKinematic = true;
+            pickable.Rigidbody.useGravity = false;
 
             if(_dialogues != null)
             {
