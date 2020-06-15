@@ -262,7 +262,7 @@ public class InputManager : Singleton<InputManager>
 
         if(_movement != null && _direction != Vector3.zero)
         {
-            _movement(_direction);
+            _movement(_direction.normalized);
         }
 
         if(_idle != null && _direction == Vector3.zero)
@@ -272,7 +272,7 @@ public class InputManager : Singleton<InputManager>
 
         if(_gravity != null)
         {
-            _gravity(_direction);
+            _gravity(_direction.normalized);
         }
 
         if (_changeInput != null)
