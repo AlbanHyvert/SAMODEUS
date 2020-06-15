@@ -126,12 +126,12 @@ public class CameraController : MonoBehaviour
     private void CameraRotation()
     {
         _rotationX = _body.localEulerAngles.y;
-
+        
         float mouseX = Input.GetAxis("Mouse X");
         float mouseY = Input.GetAxis("Mouse Y");
 
-        mouseX *= _rotationXSpeed * Time.deltaTime;
-        mouseY *= _rotationYSpeed * Time.deltaTime;
+        mouseX *= _rotationXSpeed / 10;
+        mouseY *= _rotationYSpeed / 10;
 
         _currentX = Mathf.Lerp(_currentX, mouseX, _smoothTime * Time.deltaTime);
         _currentY = Mathf.Lerp(_currentY, mouseY, _smoothTime * Time.deltaTime);

@@ -20,7 +20,6 @@ public class DialBoxController : MonoBehaviour
     private bool _timerIsStarted = false;
  
     public bool TimerIsStarted { get { return _timerIsStarted; } }
-
     public AudioSource DialAudioSource { get { return _dialSource; } set { _dialSource = value; } }
     public AudioSource MusicAudioSource { get { return _musicSource; } set { _musicSource = value; } }
 
@@ -45,7 +44,7 @@ public class DialBoxController : MonoBehaviour
         }
 
         NarrativeManager.Instance.OnCallNarration += OnTriggerNarration;
-        GameLoopManager.Instance.Pause += IsPause;
+        //GameLoopManager.Instance.Pause += IsPause;
         GameLoopManager.Instance.UI += OnUpdate;
     }
 
@@ -54,12 +53,12 @@ public class DialBoxController : MonoBehaviour
         if(pause == false)
         {
             GameLoopManager.Instance.UI += OnUpdate;
-            InputManager.Instance.PassDialogue += PassDials;
+            //InputManager.Instance.PassDialogue += PassDials;
         }
         else
         {
             GameLoopManager.Instance.UI -= OnUpdate;
-            InputManager.Instance.PassDialogue -= PassDials;
+            //InputManager.Instance.PassDialogue -= PassDials;
         }
     }
 
@@ -69,7 +68,7 @@ public class DialBoxController : MonoBehaviour
         _textDialBoxDataList = new List<TextDialBoxData>(textDials);
         TriggerFirstAudioDialsElement();
         TriggerFirstTextDialsElement();
-        InputManager.Instance.PassDialogue += PassDials;
+        //InputManager.Instance.PassDialogue += PassDials;
     }
 
     private void TriggerFirstAudioDialsElement()
@@ -114,7 +113,7 @@ public class DialBoxController : MonoBehaviour
     {
         if(_dialSource != null && _timerIsStarted == true)
         {
-            _buttonsToPressText.text = InputManager.Instance.DataKeycode.KeyDialogue.ToString();
+           // _buttonsToPressText.text = InputManager.Instance.DataKeycode.KeyDialogue.ToString();
 
             if (Time.time >= _textTimeStamp)
             {
@@ -150,28 +149,28 @@ public class DialBoxController : MonoBehaviour
                 _dialSource.clip = null;
                 _buttonsToPressText.text = string.Empty;
                 _text.text = string.Empty;
-                InputManager.Instance.PassDialogue -= PassDials;
+                //InputManager.Instance.PassDialogue -= PassDials;
                 _timerIsStarted = false;
             }
         }
         else
         {
             _buttonsToPressText.text = string.Empty;
-            InputManager.Instance.PassDialogue -= PassDials;
+           // InputManager.Instance.PassDialogue -= PassDials;
         }
     }
 
-    private void PassDials()
+   /* private void PassDials()
     {      
         _text.text = string.Empty;
         _buttonsToPressText.text = string.Empty;
         _textTimeStamp = 0;
         _dialSource.Stop();
-    }
+    }*/
 
     public void ClearAll()
     {
-        PassDials();
+        //PassDials();
         if (_voiceDialBoxDataList != null)
             _voiceDialBoxDataList.Clear();
         _voiceDialBoxDataList = null;
@@ -190,7 +189,7 @@ public class DialBoxController : MonoBehaviour
         if(GameLoopManager.Instance != null)
         {
             GameLoopManager.Instance.Pause -= IsPause;
-            GameLoopManager.Instance.UI -= OnUpdate;
+            //GameLoopManager.Instance.UI -= OnUpdate;
         }
     }
 }

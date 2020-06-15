@@ -5,6 +5,8 @@ public class DialBoxTrigger : MonoBehaviour
     [SerializeField ,Header("Text Boxs ID")] private string[] _textBoxID = null;
     [SerializeField ,Header("Voice Boxs ID")] private string[] _voiceBoxID = null;
     [Space]
+    [SerializeField] private DialogueSystem[] _dialogues = null;
+    [Space]
     [SerializeField] private GameObject[] _activateNextObj = null;
     [SerializeField] private GameObject[] _desactivateNextObj = null;
     [Space]
@@ -18,6 +20,19 @@ public class DialBoxTrigger : MonoBehaviour
     {
         NarrativeManager.Instance.ChangeLanguages += OnLanguageChange;
 
+        if(_dialogues != null)
+        {
+            for (int i = 0; i < _dialogues.Length; i++)
+            {
+                for (int j = 0; j < _dialogues[i].TextID.Length; j++)
+                {
+                    string newID = _dialogues[i].TextID[j] + "_" + NarrativeManager.Instance.ChoosenLanguage.ToString();
+                    _dialogues[i].TextID[j] = newID;
+                }
+            }
+        }
+
+
         for (int i = 0; i < _textBoxID.Length; i++)
         {
             string newID = _textBoxID[i] + "_" + NarrativeManager.Instance.ChoosenLanguage.ToString();
@@ -27,6 +42,19 @@ public class DialBoxTrigger : MonoBehaviour
 
     private void OnLanguageChange(GameManager.Language language)
     {
+
+        if (_dialogues != null)
+        {
+            for (int i = 0; i < _dialogues.Length; i++)
+            {
+                for (int j = 0; j < _dialogues[i].TextID.Length; j++)
+                {
+                    string newID = _dialogues[i].TextID[j] + "_" + NarrativeManager.Instance.ChoosenLanguage.ToString();
+                    _dialogues[i].TextID[j] = newID;
+                }
+            }
+        }
+
         for (int i = 0; i < _textBoxID.Length; i++)
         {
             string newID = _textBoxID[i] + "_" + language.ToString();
@@ -42,13 +70,13 @@ public class DialBoxTrigger : MonoBehaviour
             {
                 if (NarrativeManager.Instance.DialBoxController.TimerIsStarted == false)
                 {
-                    NarrativeManager.Instance.TriggerNarrative(_textBoxID, _voiceBoxID);
+                    NarrativeManager.Instance.TriggerNarrative(_dialogues);
                     gameObject.SetActive(false);
                 }
                 else
                 {
                     NarrativeManager.Instance.DialBoxController.ClearAll();
-                    NarrativeManager.Instance.TriggerNarrative(_textBoxID, _voiceBoxID);
+                    NarrativeManager.Instance.TriggerNarrative(_dialogues);
                     gameObject.SetActive(false);
                 }
 
