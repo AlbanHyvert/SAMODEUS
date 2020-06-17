@@ -53,10 +53,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3610189288240180406}
     m_Modifications:
-    - target: {fileID: 100000, guid: 6a31ce44247377e47891ef0f5e247a1c, type: 3}
-      propertyPath: m_Name
-      value: Block_2
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6a31ce44247377e47891ef0f5e247a1c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -100,6 +96,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 6a31ce44247377e47891ef0f5e247a1c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6a31ce44247377e47891ef0f5e247a1c, type: 3}
+      propertyPath: m_Name
+      value: Block_2
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 6a31ce44247377e47891ef0f5e247a1c, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -199,6 +199,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.682361
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251354623051996779, guid: 44de445c9cd43dc4ebd36b6d775456e1,
+        type: 3}
+      propertyPath: displayLightIntensity
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251354623051996778, guid: 44de445c9cd43dc4ebd36b6d775456e1,
+        type: 3}
+      propertyPath: m_Range
+      value: 1.2902222
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251354623051996778, guid: 44de445c9cd43dc4ebd36b6d775456e1,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 15.915494
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44de445c9cd43dc4ebd36b6d775456e1, type: 3}
