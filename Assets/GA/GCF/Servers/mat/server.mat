@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: server
+  m_Shader: {fileID: 4800000, guid: 9014164c0ed469f4d82b90218721f62e, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _TextureSample1:
+        m_Texture: {fileID: 2800000, guid: 0b14267b7369cbe4ebde49ab902aaace, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _op_baterry:
+        m_Texture: {fileID: 2800000, guid: e1a8c38953f18ab48857e06d78c4c1c3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _op_bouton:
+        m_Texture: {fileID: 2800000, guid: f014c329656e6804890cb771e560151f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _op_fond:
+        m_Texture: {fileID: 2800000, guid: 5acd45ab3ecd2e34594649669a0fb711, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _op_fond_contour:
+        m_Texture: {fileID: 2800000, guid: 2580a40c986ce0346b7b63129a169741, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _op_fond_contour_int:
+        m_Texture: {fileID: 2800000, guid: 5a12c0e5b2c32294fa33339e6d0b7fa3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _op_test2:
+        m_Texture: {fileID: 2800000, guid: 29b3c62e65dc31d43ac4b83c5a32eb52, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _op_test22:
+        m_Texture: {fileID: 2800000, guid: b829acd96f4aba943948e5e34f7eb206, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _op_test3:
+        m_Texture: {fileID: 2800000, guid: 19618bd571f9d0d4a81deac9261c5613, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Speed1: {r: 0, g: 0.1, b: 0, a: 0}
