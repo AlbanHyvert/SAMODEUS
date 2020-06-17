@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2363945642251353220}
   - component: {fileID: 5767829871211064894}
   - component: {fileID: 6746563367436799917}
-  - component: {fileID: 6719596807992906348}
   m_Layer: 0
   m_Name: New_rock_1_low (1)
   m_TagString: Untagged
@@ -78,19 +77,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &6719596807992906348
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1862927156812912752}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 74.17951
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1924992152208298657
 GameObject:
   m_ObjectHideFlags: 0
@@ -102,7 +88,6 @@ GameObject:
   - component: {fileID: 1924992152208526977}
   - component: {fileID: 1924992152211394211}
   - component: {fileID: 1924992152210295907}
-  - component: {fileID: 4539566321925144021}
   m_Layer: 0
   m_Name: New_rock_1_low
   m_TagString: Untagged
@@ -169,19 +154,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &4539566321925144021
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1924992152208298657}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 71.04
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1924992152208298661
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,7 +165,6 @@ GameObject:
   - component: {fileID: 1924992152208526981}
   - component: {fileID: 1924992152211394215}
   - component: {fileID: 1924992152210295911}
-  - component: {fileID: 368520697797835004}
   m_Layer: 0
   m_Name: New_rock_3_low
   m_TagString: Untagged
@@ -260,19 +231,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &368520697797835004
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1924992152208298661}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 174.5
-  m_Center: {x: 0.0000076293945, y: -0.0000076293945, z: 5.190857}
 --- !u!1 &1924992152208298663
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,7 +319,6 @@ GameObject:
   - component: {fileID: 1924992152208526985}
   - component: {fileID: 1924992152211394219}
   - component: {fileID: 1924992152210295915}
-  - component: {fileID: 7776218653808423347}
   m_Layer: 0
   m_Name: New_rock_5_low
   m_TagString: Untagged
@@ -428,19 +385,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &7776218653808423347
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1924992152208298665}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 61.8
-  m_Center: {x: -10.593748, y: -8.06, z: 4.59}
 --- !u!1 &1924992152208298667
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,7 +396,6 @@ GameObject:
   - component: {fileID: 1924992152208526987}
   - component: {fileID: 1924992152211394213}
   - component: {fileID: 1924992152210295909}
-  - component: {fileID: 9136039347715751903}
   m_Layer: 0
   m_Name: New_rock_4_low
   m_TagString: Untagged
@@ -519,20 +462,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &9136039347715751903
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1924992152208298667}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 141
-  m_Height: 421.3
-  m_Direction: 2
-  m_Center: {x: -0.0000076293945, y: 0.0000038146973, z: 0.0000076293945}
 --- !u!1 &1966165861940324622
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,7 +473,6 @@ GameObject:
   - component: {fileID: 3417668106379870581}
   - component: {fileID: 4221475082522090143}
   - component: {fileID: 684652009367934638}
-  - component: {fileID: 2009428057625660897}
   m_Layer: 0
   m_Name: New_rock_2_low (3)
   m_TagString: Untagged
@@ -611,19 +539,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &2009428057625660897
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1966165861940324622}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 73.4
-  m_Center: {x: 0, y: -0.0000019073486, z: 0}
 --- !u!1 &2999311486850578777
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,7 +550,6 @@ GameObject:
   - component: {fileID: 3562334158552485198}
   - component: {fileID: 4014710931570886510}
   - component: {fileID: 7969505133632624883}
-  - component: {fileID: 6376381235115794342}
   m_Layer: 0
   m_Name: New_rock_1_low (2)
   m_TagString: Untagged
@@ -702,19 +616,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &6376381235115794342
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2999311486850578777}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 74.17953
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3412163820303554904
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,7 +627,6 @@ GameObject:
   - component: {fileID: 7091042938909367547}
   - component: {fileID: 3507396853826268973}
   - component: {fileID: 5716284908896557665}
-  - component: {fileID: 7024390288898675972}
   m_Layer: 0
   m_Name: New_rock_2_low (2)
   m_TagString: Untagged
@@ -793,19 +693,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &7024390288898675972
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3412163820303554904}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 88.63
-  m_Center: {x: 0, y: -0.0000019073485, z: 0}
 --- !u!1 &4190876429615220694
 GameObject:
   m_ObjectHideFlags: 0
@@ -817,7 +704,6 @@ GameObject:
   - component: {fileID: 6358058292800036162}
   - component: {fileID: 2749997460168847896}
   - component: {fileID: 6972194134054572586}
-  - component: {fileID: 9006481976863807778}
   m_Layer: 0
   m_Name: New_rock_2_low (1)
   m_TagString: Untagged
@@ -884,19 +770,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &9006481976863807778
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4190876429615220694}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 91.42
-  m_Center: {x: 0, y: -35.2, z: 0}
 --- !u!1 &4784844194472395137
 GameObject:
   m_ObjectHideFlags: 0
@@ -906,6 +779,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8184252236254668769}
+  - component: {fileID: 2146904755610637183}
   m_Layer: 0
   m_Name: Rock_4
   m_TagString: Untagged
@@ -940,6 +814,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &2146904755610637183
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4784844194472395137}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 3.4
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0.04, y: 0, z: 0.44}
 --- !u!1 &7125171317637142985
 GameObject:
   m_ObjectHideFlags: 0
@@ -951,7 +839,6 @@ GameObject:
   - component: {fileID: 1600500955016099177}
   - component: {fileID: 97683330291403753}
   - component: {fileID: 7216989811530156365}
-  - component: {fileID: 2274886631941339606}
   m_Layer: 0
   m_Name: New_rock_2_low (5)
   m_TagString: Untagged
@@ -1018,19 +905,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &2274886631941339606
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7125171317637142985}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 74.07
-  m_Center: {x: 0, y: -20.9, z: 0}
 --- !u!1 &7508399299890288623
 GameObject:
   m_ObjectHideFlags: 0
@@ -1119,7 +993,6 @@ GameObject:
   - component: {fileID: 3753071386338803618}
   - component: {fileID: 6897540679387922328}
   - component: {fileID: 8264505532318323015}
-  - component: {fileID: 3752339113938232696}
   m_Layer: 0
   m_Name: New_rock_2_low (4)
   m_TagString: Untagged
@@ -1186,16 +1059,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &3752339113938232696
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8797861304658594594}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 79.6
-  m_Center: {x: 0, y: -0.0000019073485, z: 0}
