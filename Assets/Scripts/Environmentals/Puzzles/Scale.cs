@@ -6,6 +6,7 @@ public class Scale : MonoBehaviour
 {
     [SerializeField] private string _objectTag = "Diamond";
     [SerializeField] private Transform _setPosition = null;
+    [SerializeField] private Animator _animator = null;
     [SerializeField] private GameObject[] _activatedObject = null;
     [SerializeField] private GameObject[] _desactivedObject = null;
     [Space]
@@ -63,6 +64,11 @@ public class Scale : MonoBehaviour
                 dialogueSystems.Add(_dialogues);
 
                 NarrativeManager.Instance.TriggerNarrative(dialogueSystems.ToArray());
+            }
+
+            if (_animator != null)
+            {
+                _animator.SetBool("Rebuild", true);
             }
 
             if (_activatedObject != null)
